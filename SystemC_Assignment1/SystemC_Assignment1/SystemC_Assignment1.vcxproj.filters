@@ -18,6 +18,9 @@
     <ClInclude Include="ModuleSingle.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="ModuleDouble.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="SystemC_Assignment1.cpp">

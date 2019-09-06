@@ -6,7 +6,7 @@
 #include <systemc.h>
 SC_MODULE(ModuleDouble) {
 	sc_event  eA,eB,Aack,Back;
-	char LastEvent = 'b';
+	char LastEvent = '0';
 
 	SC_CTOR(ModuleDouble) {
 		SC_THREAD(AThread);
@@ -48,6 +48,11 @@ SC_MODULE(ModuleDouble) {
 		{
 			Back.notify();
 			std::cout << "Timestamp: " << sc_time_stamp() << " Event B" << std::endl;
+			next_trigger(eA);
+			LastEvent = 'b';
+		}
+		else
+		{
 			next_trigger(eA);
 			LastEvent = 'b';
 		}

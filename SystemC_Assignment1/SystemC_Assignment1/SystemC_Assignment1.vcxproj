@@ -161,9 +161,11 @@
   <ItemGroup>
     <ClInclude Include="ModuleDouble.h" />
     <ClInclude Include="ModuleSingle.h" />
+    <ClInclude Include="TCPPacket.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="SystemC_Assignment1.cpp" />
+    <ClCompile Include="TcpConsumerProducer.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

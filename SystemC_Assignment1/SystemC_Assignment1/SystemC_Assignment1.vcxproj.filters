@@ -21,10 +21,16 @@
     <ClInclude Include="ModuleDouble.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="TCPPacket.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="SystemC_Assignment1.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TcpConsumerProducer.h">
+      <Filter>Header Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

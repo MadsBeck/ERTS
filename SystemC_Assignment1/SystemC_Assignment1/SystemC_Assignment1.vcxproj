@@ -161,11 +161,22 @@
   <ItemGroup>
     <ClInclude Include="ModuleDouble.h" />
     <ClInclude Include="ModuleSingle.h" />
+    <ClInclude Include="STDefines.h" />
+    <ClInclude Include="STMaster.h" />
+    <ClInclude Include="STSlave.h" />
     <ClInclude Include="TCPPacket.h" />
+    <ClInclude Include="TCP_Consumer.h" />
+    <ClInclude Include="Top.h" />
+    <ClInclude Include="TopST.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="SystemC_Assignment1.cpp" />
-    <ClCompile Include="TcpConsumerProducer.h" />
+    <ClCompile Include="TcpProducer.h" />
+    <ClCompile Include="Top.cpp" />
+    <ClCompile Include="TopST.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="in_data_arch.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -14,19 +14,15 @@ SC_MODULE(ModuleSingle) {
 	void ModuleSingle_thread(void)
 	{
 		for (;;)
-		{	
+		{
 			wait(2, SC_MS);
 			e1.notify();
-
 		}
 	}
-
 	void countAndPrint(void)
 	{
-
-			
-			std::cout << "Timestamp: " << sc_time_stamp() << " Counter: " << ModuleSingle::counter << std::endl;
-			ModuleSingle::counter++;
+		std::cout << "Timestamp: " << sc_time_stamp() << " Counter: " << ModuleSingle::counter << std::endl;
+		ModuleSingle::counter++;
 	}
 };
 

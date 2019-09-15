@@ -36,7 +36,6 @@ SC_MODULE(ModuleDouble) {
 
 	void AMethod(void)
 	{
-#ifdef KIM1
 		if (LastEvent == 'b') //Triggered by event A
 		{
 			Aack.notify();
@@ -56,15 +55,6 @@ SC_MODULE(ModuleDouble) {
 			next_trigger(eA);
 			LastEvent = 'b';
 		}
-
-#endif // KIM1
-
-#ifdef KIM2
-		std::cout << "Timestamp: " << sc_time_stamp() << " Event A or B called" << std::endl;
-		next_trigger(eA | eB);
-#endif // KIM2
-
-
 	}
 };
 

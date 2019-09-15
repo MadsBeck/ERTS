@@ -18,8 +18,6 @@ SC_MODULE(TCP_Consumer) {
 			TCPHeader *tempMSG = fifo_input.read();
 			std::cout << name() << " MSG RECIVED @ "<< sc_time_stamp() << " -- SEQ: " << tempMSG->SequenceNumber << std::endl;
 			delete tempMSG;
-
-
 		}
 	}
 };

@@ -33,11 +33,8 @@ public:
 		int tmp_val;
 		fopen_s(&fp_data,"in_data_arch.txt", "r");
 
-
-
 		for (;;)
 		{
-
 			do
 			{
 				wait();
@@ -58,10 +55,7 @@ public:
 				wait();
 			} while (ready == true);
 
-			valid.write(false);
-
-
-
+			valid.write(false);					   
 		}
 
 	}

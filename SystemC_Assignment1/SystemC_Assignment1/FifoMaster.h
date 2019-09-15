@@ -25,7 +25,6 @@ public:
 
 		for (;;)
 		{
-
 			if (fscanf_s(fp_data, "%d", &tmp_val) == EOF)
 			{
 				cout << "End of Input Stream: Simulation Stops" << endl;
@@ -33,8 +32,6 @@ public:
 				break;
 			}
 			fifo.write(tmp_val);
-
-
 		}
 
 	}

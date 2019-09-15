@@ -26,7 +26,7 @@ public:
 
 	}
 
-	void entry()
+	void entry() //Slave
 	{
 		ready.write(true);
 		FILE* fp_data;
@@ -57,13 +57,8 @@ public:
 
 			ready.write(true);
 
-
 		}
-
-
-
-
-
+			   		 	  
 	}
 
 };

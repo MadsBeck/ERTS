@@ -31,7 +31,7 @@ public:
 		ready.write(true);
 		FILE* fp_data;
 		int tmp_val;
-		fopen_s(&fp_data, "output.txt", "w");
+		fopen_s(&fp_data, "outputAdapter.txt", "w");
 
 		for (;;)
 		{

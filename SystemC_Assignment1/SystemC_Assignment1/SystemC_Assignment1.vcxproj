@@ -159,8 +159,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="AdapterTop.h" />
+    <ClInclude Include="FifoMaster.h" />
     <ClInclude Include="ModuleDouble.h" />
     <ClInclude Include="ModuleSingle.h" />
+    <ClInclude Include="StAdapter.h" />
     <ClInclude Include="STDefines.h" />
     <ClInclude Include="STMaster.h" />
     <ClInclude Include="STSlave.h" />
@@ -170,6 +173,7 @@
     <ClInclude Include="TopST.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AdapterTop.cpp" />
     <ClCompile Include="SystemC_Assignment1.cpp" />
     <ClCompile Include="TcpProducer.h" />
     <ClCompile Include="Top.cpp" />

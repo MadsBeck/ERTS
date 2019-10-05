@@ -15,8 +15,22 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="SystemC_Assignment1.cpp">
+    <ClCompile Include="advios.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="advios_tb.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="advios_driver.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="advios.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="advios_driver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

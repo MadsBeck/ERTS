@@ -159,7 +159,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="SystemC_Assignment1.cpp" />
+    <ClCompile Include="advios.cpp" />
+    <ClCompile Include="advios_driver.cpp" />
+    <ClCompile Include="advios_tb.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="advios.h" />
+    <ClInclude Include="advios_driver.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -24,10 +24,10 @@ int sc_main(int argc, char *argv[])
 	sc_signal<sc_uint<8> > s_switch;
 	sc_signal<sc_uint<8> > s_ctrl;
 	sc_signal<sc_uint<8> > s_leds;
-	sc_signal<bool> time;
+	sc_signal<bool> s_time;
 
 	// Create a 10ns period clock signal
-	sc_clock s_clk("s_clk", 10, SC_NS);
+	sc_clock s_clk("s_clk", 20, SC_NS);
 	adviosc U_iosc("U_iosc");
 	advios_driver U_tb_driver("U_tb_driver");
 
@@ -36,9 +36,10 @@ int sc_main(int argc, char *argv[])
 	if (!tracefile) cout << "Could not create trace file." << endl;
 
 	// Set resolution of trace file to be in 10 US
-	tracefile->set_time_unit(1, SC_NS);
+	tracefile->set_time_unit(10, SC_NS);
 
 	sc_trace(tracefile, s_clk, "clock");
+	sc_trace(tracefile, s_time, "Time");
 
 	sc_trace(tracefile, s_reset, "reset");
 
@@ -48,7 +49,7 @@ int sc_main(int argc, char *argv[])
 	sc_trace(tracefile, s_switch, "switch");
 
 	// Connect the DUT
-	U_iosc.timer(time);
+	U_iosc.timer(s_time);
 	U_iosc.clk(s_clk);
 	U_iosc.reset(s_reset);
 
@@ -66,10 +67,10 @@ int sc_main(int argc, char *argv[])
 	U_tb_driver.ctrl(s_ctrl);
 
 	// Sim for 200
-	int end_time = 2000000;
+	int end_time = 2;
 	std::cout << "INFO: Simulating" << std::endl;
 	// start simulation
-	sc_start(end_time, SC_NS);
+	sc_start(end_time, SC_MS);
 
 	if (U_tb_driver.retval == 0) {
 		printf("Test passed !\n");

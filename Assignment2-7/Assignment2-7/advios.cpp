@@ -6,7 +6,7 @@ void adviosc::adviosThread() {
 
 //Initialization
 	wait();
-	int count = 0;
+	unsigned char count = 0;
 	// Process the data
 	while (true) {
 		// Wait for start
@@ -15,9 +15,17 @@ void adviosc::adviosThread() {
 		{
 			count = 0;
 		}
-		if (ctrl.read() == 0 && timer.read() == 1)
+		if (ctrl.read() == 0)
 		{
-			outLeds.write(++count);
+			if (timer.read() == 1)
+			{
+				outLeds.write(++count);
+			}
+			else
+			{
+				outLeds.write(count);
+			}
+			
 		}
 		else
 		{
@@ -40,7 +48,7 @@ void adviosc::timeThread()
 	while (true)
 	{
 		wait();
-		if (count < 100000)
+		if (count < 5000)
 		{
 			count++;
 			timer.write(0);

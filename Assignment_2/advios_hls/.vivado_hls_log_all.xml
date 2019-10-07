@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog>
+        <logs message="Error: Sensitivity expression must be placed after a process instance.&#xD;&#xA;&#x9;sensitive &lt;&lt; clk.pos(); in ../Assignment2-7/Assignment2-7/advios_driver.h:26&#xD;&#xA;SystemC element preprocessor failed&#xD;&#xA;    while executing&#xD;&#xA;&quot;source C:/ERTS_Repo/Assignment_2/advios_hls/solution1/csynth.tcl&quot;&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;hls::main C:/ERTS_Repo/Assignment_2/advios_hls/solution1/csynth.tcl&quot;&#xD;&#xA;    (&quot;uplevel&quot; body line 1)&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;uplevel 1 hls::main {*}$args&quot;&#xD;&#xA;    (procedure &quot;hls_proc&quot; line 5)&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;hls_proc $argv&quot;&#xD;&#xA;" projectName="advios_hls" solutionName="solution1" date="2019-10-06T10:53:45.052+0200"/>
+        <logs message="ERROR: [HLS 200-70] SystemC include path (absolut): C:\Xilinx\Vivado_HLS\2017.2\common\technology\autopilot\ap_sysc&#xD;&#xA;SystemC design file: C:/ERTS_Repo/Assignment_2/advios_hls/solution1/.autopilot/db/advios_driver.scpp.0.cpp&#xD;&#xA;Analyzing advios_driver.scpp.0.cpp...&#xD;&#xA;Analyze module (advios_driver) ... " projectName="advios_hls" solutionName="solution1" date="2019-10-06T10:53:44.414+0200"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

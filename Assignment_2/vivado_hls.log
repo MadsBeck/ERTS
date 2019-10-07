@@ -1,0 +1,29 @@
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vivado_HLS/2017.2/bin/unwrapped/win64.o/vivado_hls.exe'
+INFO: [HLS 200-10] For user 'Rasmus BL' on host 'desktop-6ls69j8' (Windows NT_amd64 version 6.2) on Sun Oct 06 10:52:36 +0200 2019
+INFO: [HLS 200-10] In directory 'C:/ERTS_Repo/Assignment_2'
+INFO: [HLS 200-10] Opening project 'C:/ERTS_Repo/Assignment_2/advios_hls'.
+INFO: [HLS 200-10] Adding design file '../Assignment2-7/Assignment2-7/advios.cpp' to the project
+INFO: [HLS 200-10] Adding design file '../Assignment2-7/Assignment2-7/advios_driver.cpp' to the project
+INFO: [HLS 200-10] Adding test bench file '../Assignment2-7/Assignment2-7/advios_tb.cpp' to the project
+INFO: [HLS 200-10] Opening solution 'C:/ERTS_Repo/Assignment_2/advios_hls/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z010clg400-1'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Analyzing design file '../Assignment2-7/Assignment2-7/advios_driver.cpp' ... 
+ERROR: [HLS 200-70] SystemC include path (absolut): C:\Xilinx\Vivado_HLS\2017.2\common\technology\autopilot\ap_sysc
+SystemC design file: C:/ERTS_Repo/Assignment_2/advios_hls/solution1/.autopilot/db/advios_driver.scpp.0.cpp
+Analyzing advios_driver.scpp.0.cpp...
+Analyze module (advios_driver) ... 
+Error: Sensitivity expression must be placed after a process instance.
+	sensitive << clk.pos(); in ../Assignment2-7/Assignment2-7/advios_driver.h:26
+SystemC element preprocessor failed
+    while executing
+"source C:/ERTS_Repo/Assignment_2/advios_hls/solution1/csynth.tcl"
+    invoked from within
+"hls::main C:/ERTS_Repo/Assignment_2/advios_hls/solution1/csynth.tcl"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel 1 hls::main {*}$args"
+    (procedure "hls_proc" line 5)
+    invoked from within
+"hls_proc $argv"

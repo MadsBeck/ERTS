@@ -1,0 +1,53 @@
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vivado_HLS/2017.2/bin/unwrapped/win64.o/vivado_hls.exe'
+INFO: [HLS 200-10] For user 'Rasmus BL' on host 'desktop-6ls69j8' (Windows NT_amd64 version 6.2) on Mon Oct 07 13:32:06 +0200 2019
+INFO: [HLS 200-10] In directory 'C:/ERTS_Repo/Assignment_2/SC_IO_test'
+INFO: [HLS 200-10] Opening project 'C:/ERTS_Repo/Assignment_2/SC_IO_test/SC_IO'.
+INFO: [HLS 200-10] Opening solution 'C:/ERTS_Repo/Assignment_2/SC_IO_test/SC_IO/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg484-1'
+INFO: [COSIM 212-2] Generating simulation wrapper in SystemC ...
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+   Build using "C:/Xilinx/Vivado_HLS/2017.2/msys/bin/g++.exe"
+   Compiling ios_driver.cpp
+   Compiling iosc.cpp
+   Compiling iosc_iosThread.cpp
+   Compiling iosc_timeThread.cpp
+   Compiling tb_ios.cpp
+tb_ios.cpp: In function 'int sc_main(int, char**)':
+tb_ios.cpp:53:20: error: no match for call to '(sc_core::sc_in<sc_dt::sc_uint<4> >) (sc_core::sc_signal<sc_dt::sc_uint<8> >&)'
+C:/Xilinx/Vivado_HLS/2017.2/win64/tools/systemc/include/sysc/communication/sc_signal_ports.h:75:7: note: candidates are:
+C:/Xilinx/Vivado_HLS/2017.2/win64/tools/systemc/include/sysc/communication/sc_signal_ports.h:166:10: note: void sc_core::sc_in<DATA>::operator()(const in_if_type&) [with T = sc_dt::sc_uint<4>, sc_core::sc_in<DATA>::in_if_type = sc_core::sc_signal_in_if<sc_dt::sc_uint<4> >]
+C:/Xilinx/Vivado_HLS/2017.2/win64/tools/systemc/include/sysc/communication/sc_signal_ports.h:166:10: note:   no known conversion for argument 1 from 'sc_core::sc_signal<sc_dt::sc_uint<8> >' to 'const in_if_type& {aka const sc_core::sc_signal_in_if<sc_dt::sc_uint<4> >&}'
+C:/Xilinx/Vivado_HLS/2017.2/win64/tools/systemc/include/sysc/communication/sc_signal_ports.h:175:10: note: void sc_core::sc_in<DATA>::operator()(sc_core::sc_in<DATA>::in_port_type&) [with T = sc_dt::sc_uint<4>, sc_core::sc_in<DATA>::in_port_type = sc_core::sc_port<sc_core::sc_signal_in_if<sc_dt::sc_uint<4> >, 1, (sc_core::sc_port_policy)0u>]
+C:/Xilinx/Vivado_HLS/2017.2/win64/tools/systemc/include/sysc/communication/sc_signal_ports.h:175:10: note:   no known conversion for argument 1 from 'sc_core::sc_signal<sc_dt::sc_uint<8> >' to 'sc_core::sc_in<sc_dt::sc_uint<4> >::in_port_type& {aka sc_core::sc_port<sc_core::sc_signal_in_if<sc_dt::sc_uint<4> >, 1, (sc_core::sc_port_policy)0u>&}'
+C:/Xilinx/Vivado_HLS/2017.2/win64/tools/systemc/include/sysc/communication/sc_signal_ports.h:184:10: note: void sc_core::sc_in<DATA>::operator()(sc_core::sc_in<DATA>::inout_port_type&) [with T = sc_dt::sc_uint<4>, sc_core::sc_in<DATA>::inout_port_type = sc_core::sc_port<sc_core::sc_signal_inout_if<sc_dt::sc_uint<4> >, 1, (sc_core::sc_port_policy)0u>]
+C:/Xilinx/Vivado_HLS/2017.2/win64/tools/systemc/include/sysc/communication/sc_signal_ports.h:184:10: note:   no known conversion for argument 1 from 'sc_core::sc_signal<sc_dt::sc_uint<8> >' to 'sc_core::sc_in<sc_dt::sc_uint<4> >::inout_port_type& {aka sc_core::sc_port<sc_core::sc_signal_inout_if<sc_dt::sc_uint<4> >, 1, (sc_core::sc_port_policy)0u>&}'
+tb_ios.cpp:54:23: error: no match for call to '(sc_core::sc_out<sc_dt::sc_uint<4> >) (sc_core::sc_signal<sc_dt::sc_uint<8> >&)'
+C:/Xilinx/Vivado_HLS/2017.2/win64/tools/systemc/include/sysc/communication/sc_signal_ports.h:1694:7: note: candidates are:
+C:/Xilinx/Vivado_HLS/2017.2/win64/tools/systemc/include/sysc/communication/sc_port.h:270:10: note: void sc_core::sc_port_b<IF>::operator()(IF&) [with IF = sc_core::sc_signal_inout_if<sc_dt::sc_uint<4> >]
+C:/Xilinx/Vivado_HLS/2017.2/win64/tools/systemc/include/sysc/communication/sc_port.h:270:10: note:   no known conversion for argument 1 from 'sc_core::sc_signal<sc_dt::sc_uint<8> >' to 'sc_core::sc_signal_inout_if<sc_dt::sc_uint<4> >&'
+C:/Xilinx/Vivado_HLS/2017.2/win64/tools/systemc/include/sysc/communication/sc_port.h:279:10: note: void sc_core::sc_port_b<IF>::operator()(sc_core::sc_port_b<IF>::port_type&) [with IF = sc_core::sc_signal_inout_if<sc_dt::sc_uint<4> >, sc_core::sc_port_b<IF>::port_type = sc_core::sc_port_b<sc_core::sc_signal_inout_if<sc_dt::sc_uint<4> > >]
+C:/Xilinx/Vivado_HLS/2017.2/win64/tools/systemc/include/sysc/communication/sc_port.h:279:10: note:   no known conversion for argument 1 from 'sc_core::sc_signal<sc_dt::sc_uint<8> >' to 'sc_core::sc_port_b<sc_core::sc_signal_inout_if<sc_dt::sc_uint<4> > >::port_type& {aka sc_core::sc_port_b<sc_core::sc_signal_inout_if<sc_dt::sc_uint<4> > >&}'
+tb_ios.cpp:55:26: error: no match for call to '(sc_core::sc_in<sc_dt::sc_uint<4> >) (sc_core::sc_signal<sc_dt::sc_uint<8> >&)'
+C:/Xilinx/Vivado_HLS/2017.2/win64/tools/systemc/include/sysc/communication/sc_signal_ports.h:75:7: note: candidates are:
+C:/Xilinx/Vivado_HLS/2017.2/win64/tools/systemc/include/sysc/communication/sc_signal_ports.h:166:10: note: void sc_core::sc_in<DATA>::operator()(const in_if_type&) [with T = sc_dt::sc_uint<4>, sc_core::sc_in<DATA>::in_if_type = sc_core::sc_signal_in_if<sc_dt::sc_uint<4> >]
+C:/Xilinx/Vivado_HLS/2017.2/win64/tools/systemc/include/sysc/communication/sc_signal_ports.h:166:10: note:   no known conversion for argument 1 from 'sc_core::sc_signal<sc_dt::sc_uint<8> >' to 'const in_if_type& {aka const sc_core::sc_signal_in_if<sc_dt::sc_uint<4> >&}'
+C:/Xilinx/Vivado_HLS/2017.2/win64/tools/systemc/include/sysc/communication/sc_signal_ports.h:175:10: note: void sc_core::sc_in<DATA>::operator()(sc_core::sc_in<DATA>::in_port_type&) [with T = sc_dt::sc_uint<4>, sc_core::sc_in<DATA>::in_port_type = sc_core::sc_port<sc_core::sc_signal_in_if<sc_dt::sc_uint<4> >, 1, (sc_core::sc_port_policy)0u>]
+C:/Xilinx/Vivado_HLS/2017.2/win64/tools/systemc/include/sysc/communication/sc_signal_ports.h:175:10: note:   no known conversion for argument 1 from 'sc_core::sc_signal<sc_dt::sc_uint<8> >' to 'sc_core::sc_in<sc_dt::sc_uint<4> >::in_port_type& {aka sc_core::sc_port<sc_core::sc_signal_in_if<sc_dt::sc_uint<4> >, 1, (sc_core::sc_port_policy)0u>&}'
+C:/Xilinx/Vivado_HLS/2017.2/win64/tools/systemc/include/sysc/communication/sc_signal_ports.h:184:10: note: void sc_core::sc_in<DATA>::operator()(sc_core::sc_in<DATA>::inout_port_type&) [with T = sc_dt::sc_uint<4>, sc_core::sc_in<DATA>::inout_port_type = sc_core::sc_port<sc_core::sc_signal_inout_if<sc_dt::sc_uint<4> >, 1, (sc_core::sc_port_policy)0u>]
+C:/Xilinx/Vivado_HLS/2017.2/win64/tools/systemc/include/sysc/communication/sc_signal_ports.h:184:10: note:   no known conversion for argument 1 from 'sc_core::sc_signal<sc_dt::sc_uint<8> >' to 'sc_core::sc_in<sc_dt::sc_uint<4> >::inout_port_type& {aka sc_core::sc_port<sc_core::sc_signal_inout_if<sc_dt::sc_uint<4> >, 1, (sc_core::sc_port_policy)0u>&}'
+make: *** [obj/tb_ios.o] Error 1
+ERROR: [COSIM 212-317] C++ compile error.
+ERROR: [COSIM 212-321] EXE file generate failed.
+ERROR: [COSIM 212-4] *** C/RTL co-simulation finished: FAIL ***
+7
+    while executing
+"source C:/ERTS_Repo/Assignment_2/SC_IO_test/SC_IO/solution1/cosim.tcl"
+    invoked from within
+"hls::main C:/ERTS_Repo/Assignment_2/SC_IO_test/SC_IO/solution1/cosim.tcl"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel 1 hls::main {*}$args"
+    (procedure "hls_proc" line 5)
+    invoked from within
+"hls_proc $argv"

@@ -1,0 +1,30 @@
+
+#include "xiosc.h"
+
+
+int main (void)
+{
+
+	XIosc ioscHLS; // Create an instance of the iosc driver
+	u32 result;
+
+	// Initialize the iosc driver
+	if (XIosc_Initialize(&ioscHLS, XPAR_IOSC_0_DEVICE_ID) != XST_SUCCESS) return XST_FAILURE;
+
+	// Writing 0xff to the ctrl register of the iosc IP core
+	 XIosc_SetCtrl(&ioscHLS, 0xFF);
+
+
+	// Reading from the ctrl register of the iosc IP core
+	result = XIosc_GetCtrl(&ioscHLS);
+
+	if(result == 0xff)
+		xil_printf("Successful \r\n");
+	else
+		xil_printf("Unsuccessful \r\n");
+
+	XIosc_SetCtrl(&ioscHLS, 0x0);
+
+
+	xil_printf("Program will now terminate \r\n");
+}

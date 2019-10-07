@@ -1,0 +1,8 @@
+13:47:59 **** Incremental Build of configuration Debug for project part3 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Ingenting at gøre for 'main-build'.
+
+13:48:01 Build Finished (took 1s.172ms)
+

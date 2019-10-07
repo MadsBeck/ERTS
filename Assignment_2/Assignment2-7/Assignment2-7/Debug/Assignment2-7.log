@@ -1,0 +1,9 @@
+﻿  advios.cpp
+  Unknown compiler version - please run the configure tests and report the results
+c:\erts_repo\assignment2-7\assignment2-7\advios.cpp(5): warning C4068: unknown pragma
+  advios_driver.cpp
+  Unknown compiler version - please run the configure tests and report the results
+  advios_tb.cpp
+  Unknown compiler version - please run the configure tests and report the results
+  Generating Code...
+  Assignment2-7.vcxproj -> C:\ERTS_Repo\Assignment2-7\Debug\Assignment2-7.exe

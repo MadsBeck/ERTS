@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog>
+        <logs message="ERROR: [COSIM 212-4] *** C/RTL co-simulation finished: FAIL ***&#xD;&#xA;7&#xD;&#xA;    while executing&#xD;&#xA;&quot;source C:/ERTS_Repo/Assignment_2/SC_IO_test/SC_IO/solution1/cosim.tcl&quot;&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;hls::main C:/ERTS_Repo/Assignment_2/SC_IO_test/SC_IO/solution1/cosim.tcl&quot;&#xD;&#xA;    (&quot;uplevel&quot; body line 1)&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;uplevel 1 hls::main {*}$args&quot;&#xD;&#xA;    (procedure &quot;hls_proc&quot; line 5)&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;hls_proc $argv&quot;&#xD;&#xA;" projectName="SC_IO" solutionName="solution1" date="2019-10-07T13:32:20.818+0200"/>
+        <logs message="ERROR: [COSIM 212-321] EXE file generate failed." projectName="SC_IO" solutionName="solution1" date="2019-10-07T13:32:20.539+0200"/>
+        <logs message="ERROR: [COSIM 212-317] C++ compile error." projectName="SC_IO" solutionName="solution1" date="2019-10-07T13:32:20.509+0200"/>
+        <logs message="ERROR: [COSIM 212-4] *** C/RTL co-simulation finished: FAIL ***&#xD;&#xA;7&#xD;&#xA;    while executing&#xD;&#xA;&quot;source C:/ERTS_Repo/Assignment_2/SC_IO_test/SC_IO/solution1/cosim.tcl&quot;&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;hls::main C:/ERTS_Repo/Assignment_2/SC_IO_test/SC_IO/solution1/cosim.tcl&quot;&#xD;&#xA;    (&quot;uplevel&quot; body line 1)&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;uplevel 1 hls::main {*}$args&quot;&#xD;&#xA;    (procedure &quot;hls_proc&quot; line 5)&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;hls_proc $argv&quot;&#xD;&#xA;" projectName="SC_IO" solutionName="solution1" date="2019-10-07T13:31:36.306+0200"/>
+        <logs message="ERROR: [COSIM 212-321] EXE file generate failed." projectName="SC_IO" solutionName="solution1" date="2019-10-07T13:31:35.935+0200"/>
+        <logs message="ERROR: [COSIM 212-317] C++ compile error." projectName="SC_IO" solutionName="solution1" date="2019-10-07T13:31:35.868+0200"/>
+      </simLog>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [SCA 200-202] Signal 'timer' has no reset." projectName="SC_IO" solutionName="solution1" date="2019-10-07T13:28:36.851+0200" type="Warning"/>
+        <logs message="WARNING: [SCA 200-202] Port 'outLeds' has no reset." projectName="SC_IO" solutionName="solution1" date="2019-10-07T13:28:36.710+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] 'Loop-1' (ios.cpp:18:7) in function 'iosc::iosThread' is an infinite loop." projectName="SC_IO" solutionName="solution1" date="2019-10-07T13:28:36.683+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] 'Loop-1' (ios.cpp:45:3) in function 'iosc::timeThread' is an infinite loop." projectName="SC_IO" solutionName="solution1" date="2019-10-07T13:28:36.304+0200" type="Warning"/>
+        <logs message="WARNING: [HLS 200-41] Resource core 'AXI4LiteS' on port '&amp;ctrl' is deprecated. Please use the interface directive to specify the AXI interface." projectName="SC_IO" solutionName="solution1" date="2019-10-07T13:28:32.788+0200" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

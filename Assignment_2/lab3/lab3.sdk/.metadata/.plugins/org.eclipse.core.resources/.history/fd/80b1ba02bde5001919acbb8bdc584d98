@@ -1,0 +1,91 @@
+/*
+ * part3.h
+ *
+ *  Created on: 27. sep. 2019
+ *      Author: Rasmus BL
+ */
+
+#ifndef SRC_PART3_H_
+#define SRC_PART3_H_
+
+#include "xparameters.h"
+#include "xgpio.h"
+#include "led_ip.h"
+#include "xscutimer.h"
+
+typedef union{
+    unsigned char comp[4];
+    unsigned int vect;
+} vectorType;
+
+typedef vectorType VectorArray[4];
+
+void setInputMatrices(VectorArray A, VectorArray B);
+void displayMatrix(VectorArray input);
+void multiMatrixSoft(VectorArray A, VectorArray B, VectorArray P);
+
+
+void multiMatrixSoft(VectorArray A, VectorArray B, VectorArray P)
+{
+    int i, j;
+    for (i = 0; i < 4; i++)
+    {
+        for (j = 0; j < 4; j++)
+        {
+            P[i].comp[j] = A[i].comp[0]*B[j].comp[0] + A[i].comp[1] * B[j].comp[1] + A[i].comp[2] * B[j].comp[2] + A[i].comp[3] * B[j].comp[3];
+        }
+    }
+}
+
+void multiMatrixHard(VectorArray A, VectorArray B, VectorArray P)
+{
+    int i, j;
+    for (i = 0; i < 4; i++)
+    {
+        for (j = 0; j < 4; j++)
+        {
+        	Xil_Out32(XPAR_MATRIX_IP_0_S00_AXI_BASEADDR + 0, A[i].vect);
+        	Xil_Out32(XPAR_MATRIX_IP_0_S00_AXI_BASEADDR + 32, B[j].vect);
+        	P[i].comp[j] = Xil_In32(XPAR_MATRIX_IP_0_S_AXI_BASEADDR + 64);
+        }
+    }
+}
+
+void setInputMatrices(VectorArray A, VectorArray B)
+{
+    //Set input matrix A:
+
+    for(int i = 0; i<4;i++)
+    {
+        for (int j = 0; j<4;j++)
+        {
+            A[i].comp[j] = (j+1)+(i*4);
+        }
+    }
+
+    //Set input for matrix b:
+    for(int i = 0; i<4;i++)
+    {
+        for (int j = 0; j<4;j++)
+        {
+            B[i].comp[j] = i+1;
+        }
+    }
+}
+
+
+void displayMatrix(VectorArray input)
+{
+
+    for(int i = 0; i<4;i++)
+    {
+        for (int j = 0; j<4;j++)
+        {
+        	xil_printf("%d ",input[i].comp[j]);
+        }
+        xil_printf("\n");
+    }
+}
+
+
+#endif /* SRC_PART3_H_ */

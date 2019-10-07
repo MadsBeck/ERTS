@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="advios.cpp" path="C:\ERTS_Repo\Assignment2-7\Assignment2-7\advios.cpp"/>
+    <originFiles name="advios.h" path="C:\ERTS_Repo\Assignment2-7\Assignment2-7\advios.h"/>
+    <originFiles name="advios_driver.cpp" path="C:\ERTS_Repo\Assignment2-7\Assignment2-7\advios_driver.cpp"/>
+    <originFiles name="advios_driver.h" path="C:\ERTS_Repo\Assignment2-7\Assignment2-7\advios_driver.h"/>
+    <originFiles name="advios.cpp" path="C:\ERTS_Repo\Assignment2-7\Assignment2-7\advios.cpp"/>
+    <originFiles name="advios.h" path="C:\ERTS_Repo\Assignment2-7\Assignment2-7\advios.h"/>
+    <originFiles name="advios_driver.cpp" path="C:\ERTS_Repo\Assignment2-7\Assignment2-7\advios_driver.cpp"/>
+    <originFiles name="advios_driver.h" path="C:\ERTS_Repo\Assignment2-7\Assignment2-7\advios_driver.h"/>
+  </source>
+  <testbench>
+    <originFiles name="advios_tb.cpp" path="C:\ERTS_Repo\Assignment2-7\Assignment2-7\advios_tb.cpp"/>
+    <originFiles name="advios_tb.cpp" path="C:\ERTS_Repo\Assignment2-7\Assignment2-7\advios_tb.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

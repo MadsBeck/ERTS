@@ -1,0 +1,2 @@
+﻿  KimsNeoNet.cpp
+d:\etrsgit\erts\kimsneonet\kimsneonet\kimsneonet.cpp(28): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "pch.h"' to your source?

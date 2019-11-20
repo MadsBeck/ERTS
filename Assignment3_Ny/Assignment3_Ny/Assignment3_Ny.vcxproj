@@ -155,6 +155,8 @@
   <ItemGroup>
     <ClCompile Include="Assignment3_Ny.cpp" />
     <ClCompile Include="Configuration.cpp" />
+    <ClCompile Include="ConfigurationEnded.cpp" />
+    <ClCompile Include="Configure.cpp" />
     <ClCompile Include="EmbeddedSystemX.cpp" />
     <ClCompile Include="EmbedSysState.cpp" />
     <ClCompile Include="Failure.cpp" />
@@ -167,7 +169,10 @@
     <ClCompile Include="Suspended.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Command.h" />
     <ClInclude Include="Configuration.h" />
+    <ClInclude Include="ConfigurationEnded.h" />
+    <ClInclude Include="Configure.h" />
     <ClInclude Include="EmbeddedSystemX.h" />
     <ClInclude Include="EmbedSysState.h" />
     <ClInclude Include="Failure.h" />

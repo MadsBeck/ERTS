@@ -1,6 +1,8 @@
 #pragma once
 #include "EmbedSysState.h"
 #include "OPState.h"
+#include "Command.h"
+#include "Configure.h"
 class Operational :
 	public EmbedSysState
 {
@@ -13,15 +15,10 @@ private:
 
 public: //STM type
 	Operational();
-	void Configure();
-	void ConfigurationEnded();
-	void Stop();
-	void Start();
-	void Suspend();
-	void Resume();
+	void cmdHandler(Command* c);
+
 private:
 	OPState* _MainState;
-	void ChangeSubState(OPState*);
 	friend class OPState;
 };
 

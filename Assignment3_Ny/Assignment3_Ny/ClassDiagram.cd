@@ -8,7 +8,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="EmbedSysState" Collapsed="true">
-    <Position X="3.75" Y="3.5" Width="1.5" />
+    <Position X="3.75" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAABAAABAABAAAAAAAAAABAAAAAAAAAAAAACAAAAE=</HashCode>
       <FileName>EmbedSysState.h</FileName>

@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include "Command.h"
 class Operational;
 
 class OPState
@@ -13,6 +14,6 @@ public:
 	virtual void Resume(Operational * x) { std::cerr << "BASE CLASS CALLED THIS IS ERROR" << std::endl; };
 
 protected:
-	void ChangeSubState(Operational* x, OPState* newState);
+	void ChangeSubState(Operational* x, Command* cmd);
 };
 

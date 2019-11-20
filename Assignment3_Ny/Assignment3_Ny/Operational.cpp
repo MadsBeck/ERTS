@@ -14,34 +14,9 @@ Operational::Operational()
 	std::cout << "Now in substate: " << "ready" << std::endl;
 }
 
-void Operational::Configure()
+void Operational::cmdHandler(Command * c)
 {
-	_MainState->Configure(this);
-}
-
-void Operational::ConfigurationEnded()
-{
-	_MainState->ConfigurationEnded(this);
-}
-
-void Operational::Stop()
-{
-	_MainState->Stop(this);
-}
-
-void Operational::Start()
-{
-	_MainState->Start(this);
-}
-
-void Operational::Suspend()
-{
-	_MainState->Suspend(this);
-}
-
-void Operational::Resume()
-{
-	_MainState->Resume(this);
+	c->Execute(this, _MainState);
 }
 
 EmbedSysState * Operational::Instance()
@@ -53,7 +28,3 @@ EmbedSysState * Operational::Instance()
 	return _instance;
 }
 
-void Operational::ChangeSubState(OPState * s)
-{
-	_MainState = s;
-}

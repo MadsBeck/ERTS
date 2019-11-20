@@ -6,12 +6,10 @@ class PowerOnSelfTest : public EmbedSysState
 {
 public:
 	
-	virtual void SelfTestFailed(EmbeddedSystemX * x);
-	virtual void SelfTestOk(EmbeddedSystemX * x);
+	void selfTestFailed(EmbeddedSystemX * x) override;
+	void selfTestOK(EmbeddedSystemX * x) override;
 
 	static EmbedSysState* Instance();
-protected:
-	PowerOnSelfTest() {};
 private:
 	static PowerOnSelfTest* _instance;
 };

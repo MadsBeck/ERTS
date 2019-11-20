@@ -1,11 +1,11 @@
 #include "PowerOnSelfTest.h"
 PowerOnSelfTest* PowerOnSelfTest::_instance = nullptr; //fixes compiler specific code!
-void PowerOnSelfTest::SelfTestFailed(EmbeddedSystemX * x)
+void PowerOnSelfTest::selfTestFailed(EmbeddedSystemX * x)
 {
 	ChangeState(x, Failure::Instance());
 }
 
-void PowerOnSelfTest::SelfTestOk(EmbeddedSystemX * x)
+void PowerOnSelfTest::selfTestOK(EmbeddedSystemX * x)
 {
 	ChangeState(x, Initializing::Instance());
 }

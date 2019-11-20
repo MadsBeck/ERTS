@@ -12,7 +12,6 @@ public:
 	virtual void initialized(EmbeddedSystemX * x) { std::cerr << "BASE CLASS CALLED THIS IS ERROR" << std::endl; };
 	virtual void exit(EmbeddedSystemX * x) { std::cerr << "BASE CLASS CALLED THIS IS ERROR" << std::endl; };
 
-
 protected:
 	void ChangeState(EmbeddedSystemX* x, EmbedSysState* newState);
 };

@@ -13,10 +13,12 @@ EmbedSysState * Failure::Instance()
 
 void Failure::exit(EmbeddedSystemX * x)
 {
+	std::cout << "System exited " << std::endl;
 }
 
 void Failure::restart(EmbeddedSystemX * x)
 {
+	std::cout << "Now in state: " << "PowerOnSelfTest" << std::endl;
 	ChangeState(x, PowerOnSelfTest::Instance());
 }
 

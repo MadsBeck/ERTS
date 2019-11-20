@@ -4,7 +4,7 @@
 class Initializing : public EmbedSysState
 {
 public:
-	void Initialized(EmbeddedSystemX * x);
+	void initialized(EmbeddedSystemX * x) override;
 
 	static EmbedSysState* Instance();
 protected:

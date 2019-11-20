@@ -2,7 +2,9 @@
 
 EmbeddedSystemX::EmbeddedSystemX()
 {
+	op = new Operational();
 	_MainState = PowerOnSelfTest::Instance(); // Start state
+	std::cout << "Now in state: " << "PowerOnSelfTest" << std::endl;
 }
 
 void EmbeddedSystemX::restart()
@@ -28,6 +30,11 @@ void EmbeddedSystemX::initialized()
 void EmbeddedSystemX::exit()
 {
 	_MainState->exit(this);
+}
+
+Operational * EmbeddedSystemX::getObj()
+{
+	return op;
 }
 
 void EmbeddedSystemX::ChangeState(EmbedSysState * s)

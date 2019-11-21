@@ -1,6 +1,6 @@
 #include "ConfigurationEnded.h"
 
-
+ConfigurationEnded* ConfigurationEnded::_instance = nullptr; //fixes compiler specific code!
 
 void ConfigurationEnded::Execute(Operational * x, OPState * s)
 {

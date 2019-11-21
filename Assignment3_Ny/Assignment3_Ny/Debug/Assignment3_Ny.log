@@ -1,17 +1,2 @@
 ﻿  ConfigurationEnded.cpp
-  Ready.cpp
-d:\etrsgit\erts\assignment3_ny\assignment3_ny\ready.cpp(9): error C2664: 'void OPState::ChangeSubState(Operational *,Command *)': cannot convert argument 2 from 'OPState *' to 'Command *'
-  d:\etrsgit\erts\assignment3_ny\assignment3_ny\ready.cpp(9): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
-d:\etrsgit\erts\assignment3_ny\assignment3_ny\ready.cpp(15): error C2664: 'void OPState::ChangeSubState(Operational *,Command *)': cannot convert argument 2 from 'OPState *' to 'Command *'
-  d:\etrsgit\erts\assignment3_ny\assignment3_ny\ready.cpp(15): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
-  RealTimeLoop.cpp
-d:\etrsgit\erts\assignment3_ny\assignment3_ny\realtimeloop.cpp(11): error C2664: 'void OPState::ChangeSubState(Operational *,Command *)': cannot convert argument 2 from 'OPState *' to 'Command *'
-  d:\etrsgit\erts\assignment3_ny\assignment3_ny\realtimeloop.cpp(11): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
-d:\etrsgit\erts\assignment3_ny\assignment3_ny\realtimeloop.cpp(17): error C2664: 'void OPState::ChangeSubState(Operational *,Command *)': cannot convert argument 2 from 'OPState *' to 'Command *'
-  d:\etrsgit\erts\assignment3_ny\assignment3_ny\realtimeloop.cpp(17): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
-  Suspended.cpp
-d:\etrsgit\erts\assignment3_ny\assignment3_ny\suspended.cpp(10): error C2664: 'void OPState::ChangeSubState(Operational *,Command *)': cannot convert argument 2 from 'OPState *' to 'Command *'
-  d:\etrsgit\erts\assignment3_ny\assignment3_ny\suspended.cpp(10): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
-d:\etrsgit\erts\assignment3_ny\assignment3_ny\suspended.cpp(16): error C2664: 'void OPState::ChangeSubState(Operational *,Command *)': cannot convert argument 2 from 'OPState *' to 'Command *'
-  d:\etrsgit\erts\assignment3_ny\assignment3_ny\suspended.cpp(16): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
-  Generating Code...
+  Assignment3_Ny.vcxproj -> D:\ETRSGit\ERTS\Assignment3_Ny\Debug\Assignment3_Ny.exe

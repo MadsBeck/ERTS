@@ -14,6 +14,6 @@ public:
 	virtual void Resume(Operational * x) { std::cerr << "BASE CLASS CALLED THIS IS ERROR" << std::endl; };
 
 protected:
-	void ChangeSubState(Operational* x, Command* cmd);
+	void ChangeSubState(Operational* x, OPState* s);
 };
 

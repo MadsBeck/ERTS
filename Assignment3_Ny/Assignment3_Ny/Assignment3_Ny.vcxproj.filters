@@ -57,6 +57,18 @@
     <ClCompile Include="ConfigurationEnded.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Stop.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Start.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Suspend.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Resume.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="EmbeddedSystemX.h">
@@ -99,6 +111,18 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ConfigurationEnded.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Stop.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Start.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Suspend.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Resume.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

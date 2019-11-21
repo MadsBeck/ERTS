@@ -19,6 +19,16 @@ void Operational::cmdHandler(Command * c)
 	c->Execute(this, _MainState);
 }
 
+void Operational::Start()
+{
+	_MainState->Start(this);
+}
+
+void Operational::Stop()
+{
+	_MainState->Stop(this);
+}
+
 EmbedSysState * Operational::Instance()
 {
 	if (_instance == nullptr)

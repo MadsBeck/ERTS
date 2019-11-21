@@ -4,9 +4,8 @@ class Ready :
 	public OPState
 {
 public:
-	void Configure(Operational * x) override;
-	void Start(Operational * x) override;
 	static OPState* Instance();
+	void Configure(Operational * x);
 private:
 	static Ready* _instance;
 };

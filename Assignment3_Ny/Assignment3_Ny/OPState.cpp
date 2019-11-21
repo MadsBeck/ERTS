@@ -1,7 +1,7 @@
 #include "OPState.h"
 #include "Operational.h"
 
-void OPState::ChangeSubState(Operational * x, Command* cmd)
+void OPState::ChangeSubState(Operational * x, OPState* s)
 {
-	x->cmdHandler(cmd);
+	;
 }

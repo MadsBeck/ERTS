@@ -16,6 +16,12 @@ private:
 public: //STM type
 	Operational();
 	void cmdHandler(Command* c);
+	void Start();
+	void Stop();
+	void Suspend();
+	void Resume();
+	void Configure();
+	void ConfigurationEnded();
 
 private:
 	OPState* _MainState;

@@ -11,3 +11,9 @@ OPState * Configutation::Instance()
 	}
 	return _instance;
 }
+
+void Configutation::ConfigurationEnded(Operational * x)
+{
+	ChangeSubState(x, Ready::Instance());
+	std::cout << "Now in substate: " << "Ready" << std::endl;
+}

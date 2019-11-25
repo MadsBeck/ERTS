@@ -6,7 +6,7 @@ Stop* Stop::_instance = nullptr; //fixes compiler specific code!
 
 void Stop::Execute(Operational * x, OPState* s)
 {
-	s->Configure(x);
+	s->Stop(x);
 }
 
 Command * Stop::Instance()

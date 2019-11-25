@@ -4,7 +4,7 @@ Configure* Configure::_instance = nullptr; //fixes compiler specific code!
 
 void Configure::Execute(Operational * x, OPState* s)
 {
-	s.;
+	s->Configure(x);
 }
 
 Command * Configure::Instance()

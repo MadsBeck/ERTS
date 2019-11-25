@@ -6,7 +6,7 @@ Resume* Resume::_instance = nullptr; //fixes compiler specific code!
 
 void Resume::Execute(Operational * x, OPState* s)
 {
-	s->Configure(x);
+	s->Resume(x);
 }
 
 Command * Resume::Instance()

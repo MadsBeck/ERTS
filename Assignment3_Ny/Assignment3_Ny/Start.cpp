@@ -5,7 +5,7 @@ Start* Start::_instance = nullptr; //fixes compiler specific code!
 
 void Start::Execute(Operational * x, OPState* s)
 {
-	s->Configure(x);
+	s->Start(x);
 }
 
 Command * Start::Instance()

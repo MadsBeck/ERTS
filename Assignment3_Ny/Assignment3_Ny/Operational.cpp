@@ -11,7 +11,7 @@ void Operational::restart(EmbeddedSystemX * x)
 Operational::Operational()
 {
 	_MainState = Ready::Instance(); // Start state
-	std::cout << "Now in substate: " << "ready" << std::endl;
+	std::cout << "Now in substate: " << "Ready" << std::endl;
 }
 
 void Operational::cmdHandler(Command * c)
@@ -19,14 +19,9 @@ void Operational::cmdHandler(Command * c)
 	c->Execute(this, _MainState);
 }
 
-void Operational::Start()
+void Operational::changeSubState(OPState* s)
 {
-	_MainState->Start(this);
-}
-
-void Operational::Stop()
-{
-	_MainState->Stop(this);
+	_MainState = s;
 }
 
 EmbedSysState * Operational::Instance()

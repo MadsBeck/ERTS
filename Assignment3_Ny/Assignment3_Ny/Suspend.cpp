@@ -6,7 +6,7 @@ Suspend* Suspend::_instance = nullptr; //fixes compiler specific code!
 
 void Suspend::Execute(Operational * x, OPState* s)
 {
-	s->Configure(x);
+	s->Suspend(x);
 }
 
 Command * Suspend::Instance()

@@ -1,2 +1,20 @@
-﻿  ConfigurationEnded.cpp
-  Assignment3_Ny.vcxproj -> D:\ETRSGit\ERTS\Assignment3_Ny\Debug\Assignment3_Ny.exe
+﻿  Assignment3_Ny.cpp
+  Configuration.cpp
+  ConfigurationEnded.cpp
+  Configure.cpp
+  EmbeddedSystemX.cpp
+  EmbedSysState.cpp
+  Failure.cpp
+  Initializing.cpp
+  Operational.cpp
+  OPState.cpp
+  PowerOnSelfTest.cpp
+  Ready.cpp
+  RealTimeLoop.cpp
+  Resume.cpp
+  Start.cpp
+  Stop.cpp
+  Suspend.cpp
+  Suspended.cpp
+  Generating Code...
+  Assignment3_Ny.vcxproj -> E:\Filer\ERTS\Assignment3_Ny\Debug\Assignment3_Ny.exe

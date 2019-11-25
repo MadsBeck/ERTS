@@ -19,6 +19,7 @@ public: //STM type
 	void Start();
 	void Stop();
 	void Suspend();
+	void changeSubState(OPState * s);
 	void Resume();
 	void Configure();
 	void ConfigurationEnded();

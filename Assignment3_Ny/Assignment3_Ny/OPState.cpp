@@ -3,5 +3,5 @@
 
 void OPState::ChangeSubState(Operational * x, OPState* s)
 {
-	;
+	x->changeSubState(s);
 }

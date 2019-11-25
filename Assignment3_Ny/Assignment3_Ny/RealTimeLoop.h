@@ -5,6 +5,8 @@ class RealTimeLoop :
 {
 public:
 	static OPState* Instance();
+	void Stop(Operational* x);
+	void Suspend(Operational* x);
 private:
 	static RealTimeLoop* _instance;
 };

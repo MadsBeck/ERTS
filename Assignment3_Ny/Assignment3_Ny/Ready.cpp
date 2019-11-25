@@ -15,5 +15,12 @@ OPState * Ready::Instance()
 
 void Ready::Configure(Operational * x)
 {
-	
+	ChangeSubState(x, Configutation::Instance());
+	std::cout << "Now in substate: " << "Configuration" << std::endl;
+}
+
+void Ready::Start(Operational * x)
+{
+	ChangeSubState(x, RealTimeLoop::Instance());
+	std::cout << "Now in substate: " << "RealTimeLoop" << std::endl;
 }

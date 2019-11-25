@@ -5,6 +5,7 @@ class Configutation :
 {
 public:
 	static OPState* Instance();
+	void ConfigurationEnded(Operational* x);
 private:
 	static Configutation* _instance;
 };

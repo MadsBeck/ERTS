@@ -5,6 +5,8 @@ class Suspended :
 {
 public:
 	static OPState* Instance();
+	void Resume(Operational* x);
+	void Stop(Operational* x);
 private:
 	static Suspended* _instance;
 };

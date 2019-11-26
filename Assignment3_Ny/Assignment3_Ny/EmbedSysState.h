@@ -16,3 +16,4 @@ protected:
 	void ChangeState(EmbeddedSystemX* x, EmbedSysState* newState);
 };
 
+

@@ -1,6 +1,7 @@
 #pragma once
 class Operational;
 class OPState;
+
 class Command
 {
 public:

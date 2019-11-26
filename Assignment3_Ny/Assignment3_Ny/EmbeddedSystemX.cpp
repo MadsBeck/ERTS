@@ -12,6 +12,16 @@ void EmbeddedSystemX::restart()
 	_MainState->restart(this);
 }
 
+Operational * EmbeddedSystemX::getObj()
+{
+	return op;
+}
+
+void EmbeddedSystemX::ChangeState(EmbedSysState * s)
+{
+	_MainState = s;
+}
+
 void EmbeddedSystemX::selfTestFailed()
 {
 	_MainState->selfTestFailed(this);
@@ -30,14 +40,4 @@ void EmbeddedSystemX::initialized()
 void EmbeddedSystemX::exit()
 {
 	_MainState->exit(this);
-}
-
-Operational * EmbeddedSystemX::getObj()
-{
-	return op;
-}
-
-void EmbeddedSystemX::ChangeState(EmbedSysState * s)
-{
-	_MainState = s;
 }

@@ -1,5 +1,6 @@
 #include "PowerOnSelfTest.h"
 #include <iostream>
+
 PowerOnSelfTest* PowerOnSelfTest::_instance = nullptr; //fixes compiler specific code!
 void PowerOnSelfTest::selfTestFailed(EmbeddedSystemX * x)
 {

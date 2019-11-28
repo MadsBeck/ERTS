@@ -3,7 +3,7 @@ d:\etrsgit\erts\kimsneonet\kimsneonet\network.h(616): warning C4305: 'initializi
 d:\etrsgit\erts\kimsneonet\kimsneonet\network.h(616): warning C4309: 'initializing': truncation of constant value
 d:\etrsgit\erts\kimsneonet\kimsneonet\network.h(976): warning C4309: 'initializing': truncation of constant value
 d:\etrsgit\erts\kimsneonet\kimsneonet\network.h(976): warning C4305: 'initializing': truncation from 'int' to 'int8_t'
-d:\etrsgit\erts\kimsneonet\kimsneonet\kimsneonet.cpp(50): warning C4244: '+=': conversion from 'int64_t' to 'int', possible loss of data
-d:\etrsgit\erts\kimsneonet\kimsneonet\kimsneonet.cpp(87): warning C4244: 'initializing': conversion from 'int64_t' to 'int', possible loss of data
-d:\etrsgit\erts\kimsneonet\kimsneonet\kimsneonet.cpp(94): warning C4244: '=': conversion from 'int64_t' to 'int', possible loss of data
+d:\etrsgit\erts\kimsneonet\kimsneonet\kimsneonet.cpp(51): warning C4244: '+=': conversion from 'int64_t' to 'int', possible loss of data
+d:\etrsgit\erts\kimsneonet\kimsneonet\kimsneonet.cpp(88): warning C4244: 'initializing': conversion from 'int64_t' to 'int', possible loss of data
+d:\etrsgit\erts\kimsneonet\kimsneonet\kimsneonet.cpp(95): warning C4244: '=': conversion from 'int64_t' to 'int', possible loss of data
   KimsNeoNet.vcxproj -> D:\ETRSGit\ERTS\KimsNeoNet\x64\Debug\KimsNeoNet.exe

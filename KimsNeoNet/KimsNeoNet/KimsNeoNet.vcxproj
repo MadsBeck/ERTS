@@ -170,6 +170,7 @@
     <ClCompile Include="KimsNeoNet.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="KimsNeoNet.h" />
     <ClInclude Include="Network.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

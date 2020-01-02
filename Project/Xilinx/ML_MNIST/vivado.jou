@@ -1,0 +1,57 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Tue Dec 31 12:20:39 2019
+# Process ID: 10952
+# Current directory: C:/ERTS_repo/Project/Xilinx/ML_MNIST
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent3168 C:\ERTS_repo\Project\Xilinx\ML_MNIST\ML_MNIST.xpr
+# Log file: C:/ERTS_repo/Project/Xilinx/ML_MNIST/vivado.log
+# Journal file: C:/ERTS_repo/Project/Xilinx/ML_MNIST\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.xpr
+update_compile_order -fileset sources_1
+launch_sdk -workspace C:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.sdk -hwspec C:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.sdk/system_wrapper.hdf
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+open_bd_design {C:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/system.bd}
+delete_bd_objs [get_bd_intf_nets ps7_0_axi_periph_M01_AXI] [get_bd_cells classify_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:hls:classify:1.0 classify_0
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master "/processing_system7_0/M_AXI_GP0" intc_ip "/ps7_0_axi_periph" Clk_xbar "Auto" Clk_master "Auto" Clk_slave "Auto" }  [get_bd_intf_pins classify_0/s_axi_NNIO]
+validate_bd_design
+remove_files  C:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/hdl/system_wrapper.vhd
+open_bd_design {C:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/system.bd}
+make_wrapper -files [get_files C:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/system.bd] -top
+add_files -norecurse C:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/hdl/system_wrapper.vhd
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+file copy -force C:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.runs/impl_1/system_wrapper.sysdef C:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.sdk/system_wrapper.hdf
+
+file copy -force C:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.runs/impl_1/system_wrapper.sysdef C:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.sdk/system_wrapper.hdf
+
+launch_sdk -workspace C:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.sdk -hwspec C:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.sdk/system_wrapper.hdf
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+delete_bd_objs [get_bd_intf_nets ps7_0_axi_periph_M01_AXI] [get_bd_cells classify_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:hls:classify:1.0 classify_0
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master "/processing_system7_0/M_AXI_GP0" intc_ip "/ps7_0_axi_periph" Clk_xbar "Auto" Clk_master "Auto" Clk_slave "Auto" }  [get_bd_intf_pins classify_0/s_axi_NNIO]
+regenerate_bd_layout
+regenerate_bd_layout -routing
+regenerate_bd_layout
+validate_bd_design
+report_ip_status -name ip_status 
+remove_files  C:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/hdl/system_wrapper.vhd
+make_wrapper -files [get_files C:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/system.bd] -top
+add_files -norecurse C:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/hdl/system_wrapper.vhd
+save_bd_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+file copy -force C:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.runs/impl_1/system_wrapper.sysdef C:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.sdk/system_wrapper.hdf
+

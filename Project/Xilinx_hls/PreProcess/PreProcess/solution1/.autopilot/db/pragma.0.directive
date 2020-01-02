@@ -1,0 +1,355 @@
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+<sourceFile name="">
+<directive functionLabel="" functionName="Scalar" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="val"/>
+<option name="complete" positionalBoolean="type" value=""/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="Scalar" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="val"/>
+<option name="complete" positionalBoolean="type" value=""/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="Scalar" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="val"/>
+<option name="complete" positionalBoolean="type" value=""/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="Scalar" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="val"/>
+<option name="complete" positionalBoolean="type" value=""/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="Scalar" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="val"/>
+<option name="complete" positionalBoolean="type" value=""/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="Scalar&lt;N, T&gt;::operator =" label="">
+<pragma name="INLINE"/>
+</directive>
+<directive functionLabel="" functionName="Scalar&lt;N, T&gt;::operator =" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="Scalar&lt;N, T&gt;::operator +" label="">
+<pragma name="INLINE"/>
+</directive>
+<directive functionLabel="" functionName="Scalar&lt;N, T&gt;::operator +" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="Scalar&lt;N, T&gt;::operator +" label="">
+<pragma name="INLINE"/>
+</directive>
+<directive functionLabel="" functionName="Scalar&lt;N, T&gt;::operator +" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="Scalar&lt;N, T&gt;::operator -" label="">
+<pragma name="INLINE"/>
+</directive>
+<directive functionLabel="" functionName="Scalar&lt;N, T&gt;::operator -" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="Scalar&lt;N, T&gt;::operator -" label="">
+<pragma name="INLINE"/>
+</directive>
+<directive functionLabel="" functionName="Scalar&lt;N, T&gt;::operator -" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="Scalar&lt;N, T&gt;::operator *" label="">
+<pragma name="INLINE"/>
+</directive>
+<directive functionLabel="" functionName="Scalar&lt;N, T&gt;::operator *" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="Scalar&lt;N, T&gt;::operator *" label="">
+<pragma name="INLINE"/>
+</directive>
+<directive functionLabel="" functionName="Scalar&lt;N, T&gt;::operator *" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="Scalar&lt;N, T&gt;::operator /" label="">
+<pragma name="INLINE"/>
+</directive>
+<directive functionLabel="" functionName="Scalar&lt;N, T&gt;::operator /" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="Scalar&lt;N, T&gt;::operator /" label="">
+<pragma name="INLINE"/>
+</directive>
+<directive functionLabel="" functionName="Scalar&lt;N, T&gt;::operator /" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="Mat&lt;T, ROWS, COLS, NPC&gt;::type" label="">
+<pragma name="INLINE"/>
+</directive>
+<directive functionLabel="" functionName="Mat&lt;T, ROWS, COLS, NPC&gt;::depth" label="">
+<pragma name="INLINE"/>
+</directive>
+<directive functionLabel="" functionName="Mat&lt;T, ROWS, COLS, NPC&gt;::channels" label="">
+<pragma name="INLINE"/>
+</directive>
+<directive functionLabel="" functionName="Mat&lt;T, ROWS, COLS, NPPC&gt;::init" label="">
+<pragma name="INLINE"/>
+</directive>
+<directive functionLabel="" functionName="Mat&lt;T, ROWS, COLS, NPPC&gt;::Mat" label="">
+<pragma name="INLINE"/>
+</directive>
+<directive functionLabel="" functionName="Mat&lt;T, ROWS, COLS, NPPC&gt;::Mat" label="">
+<pragma name="INLINE"/>
+</directive>
+<directive functionLabel="" functionName="Mat&lt;T, ROWS, COLS, NPPC&gt;::Mat" label="">
+<pragma name="INLINE"/>
+</directive>
+<directive functionLabel="" functionName="Mat&lt;T, ROWS, COLS, NPPC&gt;::Mat" label="">
+<pragma name="INLINE"/>
+</directive>
+<directive functionLabel="" functionName="Mat&lt;T, ROWS, COLS, NPPC&gt;::copyTo" label="">
+<pragma name="INLINE"/>
+</directive>
+<directive functionLabel="" functionName="Mat&lt;T, ROWS, COLS, NPPC&gt;::copyFrom" label="">
+<pragma name="INLINE"/>
+</directive>
+<directive functionLabel="" functionName="xFPyrDownApplykernel" label="">
+<pragma name="INLINE"/>
+</directive>
+<directive functionLabel="" functionName="xFPyrDownApplykernel" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="array"/>
+<option name="complete" positionalBoolean="type" value=""/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="xFPyrDownApplykernel" label="">
+<pragma name="LOOP_TRIPCOUNT">
+<option name="min" value="1"/>
+<option name="max" value="WIN_SZ"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="xFPyrDownApplykernel" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="xFPyrDownApplykernel" label="">
+<pragma name="LOOP_TRIPCOUNT">
+<option name="min" value="1"/>
+<option name="max" value="WIN_SZ"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="xFPyrDownApplykernel" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="xFPyrDownApplykernel" label="">
+<pragma name="PIPELINE">
+<option name="II" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="xFPyrDownprocessgaussian" label="">
+<pragma name="INLINE"/>
+</directive>
+<directive functionLabel="" functionName="xFPyrDownprocessgaussian" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="buf_cop"/>
+<option name="complete" positionalBoolean="type" value=""/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="xFPyrDownprocessgaussian" label="">
+<pragma name="LOOP_FLATTEN">
+<option name="OFF" positionalBoolean="1" value=""/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="xFPyrDownprocessgaussian" label="">
+<pragma name="LOOP_TRIPCOUNT">
+<option name="min" value="1"/>
+<option name="max" value="TC"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="xFPyrDownprocessgaussian" label="">
+<pragma name="PIPELINE"/>
+</directive>
+<directive functionLabel="" functionName="xFPyrDownprocessgaussian" label="">
+<pragma name="LOOP_TRIPCOUNT">
+<option name="min" value="1"/>
+<option name="max" value="WIN_SZ"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="xFPyrDownprocessgaussian" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="xFPyrDownprocessgaussian" label="">
+<pragma name="LOOP_TRIPCOUNT">
+<option name="min" value="1"/>
+<option name="max" value="WIN_SZ"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="xFPyrDownprocessgaussian" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="xFPyrDownprocessgaussian" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="xFPyrDownprocessgaussian" label="">
+<pragma name="LOOP_TRIPCOUNT">
+<option name="min" value="1"/>
+<option name="max" value="WIN_SZ"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="xFPyrDownprocessgaussian" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="xFPyrDownprocessgaussian" label="">
+<pragma name="LOOP_TRIPCOUNT">
+<option name="min" value="1"/>
+<option name="max" value="WIN_SZ"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="xf_pyrdown_gaussian_nxn" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="row_ind"/>
+<option name="complete" positionalBoolean="type" value=""/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="xf_pyrdown_gaussian_nxn" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="OutputValues"/>
+<option name="complete" positionalBoolean="type" value=""/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="xf_pyrdown_gaussian_nxn" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="src_buf"/>
+<option name="complete" positionalBoolean="type" value=""/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="xf_pyrdown_gaussian_nxn" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="src_buf"/>
+<option name="complete" positionalBoolean="type" value=""/>
+<option name="dim" value="2"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="xf_pyrdown_gaussian_nxn" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="buf"/>
+<option name="complete" positionalBoolean="type" value=""/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="xf_pyrdown_gaussian_nxn" label="">
+<pragma name="RESOURCE">
+<option name="variable" positionalBoolean="4" value="buf"/>
+<option name="core" value="RAM_S2P_BRAM"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="xf_pyrdown_gaussian_nxn" label="">
+<pragma name="LOOP_TRIPCOUNT">
+<option name="min" value="1"/>
+<option name="max" value="WIN_SZ"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="xf_pyrdown_gaussian_nxn" label="">
+<pragma name="LOOP_TRIPCOUNT">
+<option name="min" value="1"/>
+<option name="max" value="WIN_SZ"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="xf_pyrdown_gaussian_nxn" label="">
+<pragma name="LOOP_TRIPCOUNT">
+<option name="min" value="1"/>
+<option name="max" value="TC"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="xf_pyrdown_gaussian_nxn" label="">
+<pragma name="LOOP_FLATTEN">
+<option name="OFF" positionalBoolean="1" value=""/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="xf_pyrdown_gaussian_nxn" label="">
+<pragma name="PIPELINE"/>
+</directive>
+<directive functionLabel="" functionName="xf_pyrdown_gaussian_nxn" label="">
+<pragma name="LOOP_TRIPCOUNT">
+<option name="min" value="1"/>
+<option name="max" value="TC"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="xf_pyrdown_gaussian_nxn" label="">
+<pragma name="LOOP_TRIPCOUNT">
+<option name="min" value="1"/>
+<option name="max" value="WIN_SZ"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="xf_pyrdown_gaussian_nxn" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="xf_pyrdown_gaussian_nxn" label="">
+<pragma name="LOOP_TRIPCOUNT">
+<option name="min" value="1"/>
+<option name="max" value="ROWS"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="xf_pyrdown_gaussian_nxn" label="">
+<pragma name="LOOP_TRIPCOUNT">
+<option name="min" value="1"/>
+<option name="max" value="WIN_SZ"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="xf_pyrdown_gaussian_nxn" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="xFpyrDownKernel" label="">
+<pragma name="DATAFLOW"/>
+</directive>
+<directive functionLabel="" functionName="xFpyrDownKernel" label="">
+<pragma name="LOOP_TRIPCOUNT">
+<option name="min" value="1"/>
+<option name="max" value="ROWS"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="xFpyrDownKernel" label="">
+<pragma name="LOOP_TRIPCOUNT">
+<option name="min" value="1"/>
+<option name="max" value="COLS"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="xFpyrDownKernel" label="">
+<pragma name="PIPELINE">
+<option name="II" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="xFpyrDownKernel" label="">
+<pragma name="LOOP_TRIPCOUNT">
+<option name="min" value="1"/>
+<option name="max" value="ROWS"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="xFpyrDownKernel" label="">
+<pragma name="LOOP_TRIPCOUNT">
+<option name="min" value="1"/>
+<option name="max" value="COLS"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="xFpyrDownKernel" label="">
+<pragma name="PIPELINE">
+<option name="II" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="pyrDown" label="">
+<pragma name="INLINE">
+<option name="OFF" positionalBoolean="1" value=""/>
+</pragma>
+</directive>
+</sourceFile>
+</AutoPilot:ProjectResources>

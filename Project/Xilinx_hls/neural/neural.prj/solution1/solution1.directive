@@ -1,0 +1,28 @@
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+    <sourceFile name="">
+        <directive functionName="Classifier::RELU" label="RELU_label6" functionLabel="">
+            <pragma name="UNROLL"/>
+        </directive>
+        <directive functionName="Classifier::Classifier" label="Classifier_label7" functionLabel="">
+            <pragma name="UNROLL"/>
+        </directive>
+        <directive functionName="Classifier::nnLayer" label="nnLayer_label9" functionLabel="">
+            <pragma name="UNROLL"/>
+        </directive>
+        <directive functionName="classify" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="s_axilite" value="" positionalBoolean="mode"/>
+                <option name="port" value="return" positionalBoolean="4"/>
+                <option name="bundle" value="NNIO"/>
+            </pragma>
+        </directive>
+        <directive functionName="classify" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="s_axilite" value="" positionalBoolean="mode"/>
+                <option name="port" value="img" positionalBoolean="4"/>
+                <option name="bundle" value="NNIO"/>
+            </pragma>
+        </directive>
+    </sourceFile>
+</AutoPilot:ProjectResources>
+

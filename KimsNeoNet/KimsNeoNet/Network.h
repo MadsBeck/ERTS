@@ -580,7 +580,7 @@ const int8_t W[32][16] = {
   }
 };
 
-const int8_t B[32] = {
+const int16_t B[32] = {
   -2,
   57,
   -57,
@@ -962,7 +962,7 @@ const int8_t W_sm[10][32] = {
 };
 
 
-int8_t b_sm[10] = {
+int16_t b_sm[10] = {
 	-96,
 	243,
 	-75,

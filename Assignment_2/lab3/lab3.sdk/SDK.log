@@ -278,3 +278,121 @@ If you want to increase the timeout value, goto Windows-> Preferences -> Xilinx 
 13:48:25 INFO  : ps7_init is completed.
 13:48:25 INFO  : ps7_post_config is completed.
 13:51:18 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+14:30:36 INFO  : Registering command handlers for SDK TCF services
+14:30:37 INFO  : Launching XSCT server: xsct.bat -interactive C:\ERTS_repo\Assignment_2\lab3\lab3.sdk\temp_xsdb_launch_script.tcl
+14:30:43 INFO  : XSCT server has started successfully.
+14:30:43 INFO  : Successfully done setting XSCT server connection channel  
+14:30:54 INFO  : Successfully done setting SDK workspace  
+14:30:54 INFO  : Processing command line option -hwspec C:/ERTS_repo/Assignment_2/lab3/lab3.sdk/system_wrapper.hdf.
+14:31:20 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1576592484475,  Project:1570183563326
+14:31:20 INFO  : Project system_wrapper_hw_platform_0's source hardware specification located at C:/ERTS_Repo/Assignment_2/lab3/lab3.sdk/system_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+14:32:10 INFO  : Copied contents of C:/ERTS_Repo/Assignment_2/lab3/lab3.sdk/system_wrapper.hdf into \system_wrapper_hw_platform_0\system.hdf.
+14:32:19 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+14:32:29 INFO  : 
+14:32:31 INFO  : Updating hardware inferred compiler options for part3.
+14:32:31 INFO  : Clearing existing target manager status.
+14:45:42 ERROR : Unexpected error while launching program.
+org.eclipse.core.runtime.CoreException: Target selection failed.
+	at org.eclipse.cdt.debug.mi.core.AbstractGDBCDIDebugger.newCoreException(AbstractGDBCDIDebugger.java:215)
+	at org.eclipse.cdt.debug.mi.core.GDBServerCDIDebugger2.startGDBServerSession(GDBServerCDIDebugger2.java:111)
+	at org.eclipse.cdt.debug.mi.core.GDBServerCDIDebugger2.doStartSession(GDBServerCDIDebugger2.java:47)
+	at org.eclipse.cdt.debug.mi.core.AbstractGDBCDIDebugger.createSession(AbstractGDBCDIDebugger.java:86)
+	at com.xilinx.sdk.launch.remote.internal.RemoteLaunchDelegate.createCDISession(RemoteLaunchDelegate.java:354)
+	at com.xilinx.sdk.launch.remote.internal.RemoteLaunchDelegate.debug(RemoteLaunchDelegate.java:223)
+	at com.xilinx.sdk.launch.remote.internal.RemoteLaunchDelegate.launch(RemoteLaunchDelegate.java:161)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: org.eclipse.cdt.debug.mi.core.MIException: LOCALHOST:1234: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+	at org.eclipse.cdt.debug.mi.core.command.Command.throwMIException(Command.java:105)
+	at org.eclipse.cdt.debug.mi.core.command.Command.getMIInfo(Command.java:79)
+	at org.eclipse.cdt.debug.mi.core.GDBServerCDIDebugger2.startGDBServerSession(GDBServerCDIDebugger2.java:105)
+	... 10 more
+Contains: LOCALHOST:1234: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+org.eclipse.cdt.debug.mi.core.MIException: LOCALHOST:1234: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+	at org.eclipse.cdt.debug.mi.core.command.Command.throwMIException(Command.java:105)
+	at org.eclipse.cdt.debug.mi.core.command.Command.getMIInfo(Command.java:79)
+	at org.eclipse.cdt.debug.mi.core.GDBServerCDIDebugger2.startGDBServerSession(GDBServerCDIDebugger2.java:105)
+	at org.eclipse.cdt.debug.mi.core.GDBServerCDIDebugger2.doStartSession(GDBServerCDIDebugger2.java:47)
+	at org.eclipse.cdt.debug.mi.core.AbstractGDBCDIDebugger.createSession(AbstractGDBCDIDebugger.java:86)
+	at com.xilinx.sdk.launch.remote.internal.RemoteLaunchDelegate.createCDISession(RemoteLaunchDelegate.java:354)
+	at com.xilinx.sdk.launch.remote.internal.RemoteLaunchDelegate.debug(RemoteLaunchDelegate.java:223)
+	at com.xilinx.sdk.launch.remote.internal.RemoteLaunchDelegate.launch(RemoteLaunchDelegate.java:161)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+14:49:52 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+21:08:23 INFO  : Registering command handlers for SDK TCF services
+21:08:23 INFO  : Launching XSCT server: xsct.bat -interactive C:\ERTS_repo\Assignment_2\lab3\lab3.sdk\temp_xsdb_launch_script.tcl
+21:08:30 INFO  : XSCT server has started successfully.
+21:08:42 INFO  : Processing command line option -hwspec C:/ERTS_repo/Assignment_2/lab3/lab3.sdk/system_wrapper.hdf.
+21:08:42 INFO  : Successfully done setting XSCT server connection channel  
+21:08:44 INFO  : Checking for hwspec changes in the project system_wrapper_hw_platform_1.
+21:08:47 INFO  : Successfully done setting SDK workspace  
+21:10:25 WARN  : Unable to obtain port 2350 for use by XMD, java.net.SocketException: Unrecognized Windows Sockets error: 0: JVM_Bind
+21:10:32 INFO  : System reset is completed.
+21:10:35 INFO  : FPGA configured successfully with bitstream "C:/ERTS_repo/Assignment_2/lab3/lab3.sdk/system_wrapper_hw_platform_0/system_wrapper.bit"
+21:10:36 INFO  : ps7_init is completed.
+21:10:36 INFO  : ps7_post_config is completed.
+21:11:44 INFO  : System reset is completed.
+21:11:46 INFO  : FPGA configured successfully with bitstream "C:/ERTS_repo/Assignment_2/lab3/lab3.sdk/system_wrapper_hw_platform_0/system_wrapper.bit"
+21:11:47 INFO  : ps7_init is completed.
+21:11:47 INFO  : ps7_post_config is completed.
+21:12:20 INFO  : System reset is completed.
+21:12:23 INFO  : FPGA configured successfully with bitstream "C:/ERTS_repo/Assignment_2/lab3/lab3.sdk/system_wrapper_hw_platform_0/system_wrapper.bit"
+21:12:24 INFO  : ps7_init is completed.
+21:12:24 INFO  : ps7_post_config is completed.
+21:19:42 INFO  : System reset is completed.
+21:19:44 INFO  : FPGA configured successfully with bitstream "C:/ERTS_repo/Assignment_2/lab3/lab3.sdk/system_wrapper_hw_platform_0/system_wrapper.bit"
+21:19:47 INFO  : ps7_init is completed.
+21:19:47 INFO  : ps7_post_config is completed.
+21:21:00 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:21:01 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279A6A710A" && level==0} -index 1' command is executed.
+21:21:03 INFO  : FPGA configured successfully with bitstream "C:/ERTS_repo/Assignment_2/lab3/lab3.sdk/system_wrapper_hw_platform_1/system_wrapper.bit"
+21:21:27 INFO  : System reset is completed.
+21:21:29 INFO  : FPGA configured successfully with bitstream "C:/ERTS_repo/Assignment_2/lab3/lab3.sdk/system_wrapper_hw_platform_0/system_wrapper.bit"
+21:21:30 INFO  : ps7_init is completed.
+21:21:30 INFO  : ps7_post_config is completed.
+21:22:26 INFO  : Processor reset is completed for ps7_cortexa9_0
+21:23:12 INFO  : System reset is completed.
+21:23:14 INFO  : FPGA configured successfully with bitstream "C:/ERTS_repo/Assignment_2/lab3/lab3.sdk/system_wrapper_hw_platform_0/system_wrapper.bit"
+21:23:15 INFO  : ps7_init is completed.
+21:23:15 INFO  : ps7_post_config is completed.
+21:25:14 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+21:25:19 INFO  : System reset is completed.
+21:25:23 INFO  : FPGA configured successfully with bitstream "C:/ERTS_repo/Assignment_2/lab3/lab3.sdk/system_wrapper_hw_platform_0/system_wrapper.bit"
+21:25:24 INFO  : ps7_init is completed.
+21:25:24 INFO  : ps7_post_config is completed.
+21:25:24 INFO  : ps7_debug is completed.
+21:26:30 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+21:26:36 INFO  : System reset is completed.
+21:26:45 INFO  : FPGA configured successfully with bitstream "C:/ERTS_repo/Assignment_2/lab3/lab3.sdk/system_wrapper_hw_platform_0/system_wrapper.bit"
+21:26:46 INFO  : ps7_init is completed.
+21:26:46 INFO  : ps7_post_config is completed.
+21:26:46 INFO  : ps7_debug is completed.
+21:31:55 INFO  : Refreshed build settings on project lab4
+21:31:55 INFO  : Refreshed build settings on project part3
+21:38:45 INFO  : System reset is completed.
+21:38:47 INFO  : FPGA configured successfully with bitstream "C:/ERTS_repo/Assignment_2/lab3/lab3.sdk/system_wrapper_hw_platform_0/system_wrapper.bit"
+21:38:47 INFO  : ps7_init is completed.
+21:38:48 INFO  : ps7_post_config is completed.
+21:39:44 INFO  : Refreshed build settings on project lab4
+21:39:44 INFO  : Refreshed build settings on project part3
+21:41:48 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+21:41:52 INFO  : System reset is completed.
+21:41:54 INFO  : FPGA configured successfully with bitstream "C:/ERTS_repo/Assignment_2/lab3/lab3.sdk/system_wrapper_hw_platform_0/system_wrapper.bit"
+21:41:54 INFO  : ps7_init is completed.
+21:41:54 INFO  : ps7_post_config is completed.
+21:43:08 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+22:00:51 INFO  : Launching XSCT server: xsct.bat -interactive C:\ERTS_repo\Assignment_2\lab3\lab3.sdk\temp_xsdb_launch_script.tcl
+22:00:53 INFO  : XSCT server has started successfully.
+22:00:59 INFO  : Successfully done setting XSCT server connection channel  
+22:00:59 INFO  : Successfully done setting SDK workspace  
+22:01:10 INFO  : Registering command handlers for SDK TCF services
+22:01:10 INFO  : Processing command line option -hwspec C:/ERTS_repo/Assignment_2/lab3/lab3.sdk/system_wrapper.hdf.
+22:01:15 INFO  : Checking for hwspec changes in the project system_wrapper_hw_platform_1.

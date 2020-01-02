@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="com.xilinx.sdk.launch.remote.launchConfigurationType">
+<stringAttribute key="org.eclipse.cdt.debug.mi.core.HOST" value="LOCALHOST"/>
+<stringAttribute key="org.eclipse.cdt.debug.mi.core.PORT" value="1234"/>
+<booleanAttribute key="org.eclipse.cdt.debug.mi.core.REMOTE_TCP" value="true"/>
+<booleanAttribute key="org.eclipse.cdt.debug.mi.core.verboseMode" value="true"/>
+<stringAttribute key="org.eclipse.cdt.launch.COREFILE_PATH" value=""/>
+<stringAttribute key="org.eclipse.cdt.launch.DEBUGGER_ID" value="com.xilinx.sdk.launch.remote.arm.gdb"/>
+<stringAttribute key="org.eclipse.cdt.launch.PROGRAM_NAME" value="Debug\testOpenCV.elf"/>
+<stringAttribute key="org.eclipse.cdt.launch.PROJECT_ATTR" value="testOpenCV"/>
+<booleanAttribute key="org.eclipse.cdt.launch.PROJECT_BUILD_CONFIG_AUTO_ATTR" value="true"/>
+<stringAttribute key="org.eclipse.cdt.launch.PROJECT_BUILD_CONFIG_ID_ATTR" value="xilinx.gnu.armv7.linux.exe.debug.508518966"/>
+<stringAttribute key="org.eclipse.debug.core.ATTR_PRERUN_CMDS" value="setenv LD_LIBRARY_PATH=/usr/lib/opencv"/>
+<booleanAttribute key="org.eclipse.debug.core.ATTR_SKIP_DOWNLOAD_TO_TARGET" value="false"/>
+<stringAttribute key="org.eclipse.debug.core.ATTR_TARGET_PATH" value="C:\Users\Rasmus\Desktop\XAPP1167_2014.4\software\boot\zynq_fsbl.elf"/>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/testOpenCV"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="4"/>
+</listAttribute>
+<stringAttribute key="org.eclipse.debug.core.REMOTE_TCP" value="Local"/>
+</launchConfiguration>

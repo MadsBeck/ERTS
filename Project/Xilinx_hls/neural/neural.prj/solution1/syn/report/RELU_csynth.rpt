@@ -1,0 +1,128 @@
+
+
+================================================================
+== Vivado HLS Report for 'RELU'
+================================================================
+* Date:           Tue Dec 31 14:49:07 2019
+
+* Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
+* Project:        neural.prj
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z010clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   8.00|      2.32|        1.00|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |   32|   32|   32|   32|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+-------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF  |  LUT  |
++-----------------+---------+-------+-------+-------+
+|DSP              |        -|      -|      -|      -|
+|Expression       |        -|      -|      -|      -|
+|FIFO             |        -|      -|      -|      -|
+|Instance         |        -|      -|      -|      -|
+|Memory           |        -|      -|      -|      -|
+|Multiplexer      |        -|      -|      -|    451|
+|Register         |        -|      -|     33|      -|
++-----------------+---------+-------+-------+-------+
+|Total            |        0|      0|     33|    451|
++-----------------+---------+-------+-------+-------+
+|Available        |      120|     80|  35200|  17600|
++-----------------+---------+-------+-------+-------+
+|Utilization (%)  |        0|      0|   ~0  |      2|
++-----------------+---------+-------+-------+-------+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    +---------------+-----+-----------+-----+-----------+
+    |      Name     | LUT | Input Size| Bits| Total Bits|
+    +---------------+-----+-----------+-----+-----------+
+    |ap_NS_fsm      |  153|         34|    1|         34|
+    |data_address0  |  149|         33|    5|        165|
+    |data_address1  |  149|         33|    5|        165|
+    +---------------+-----+-----------+-----+-----------+
+    |Total          |  451|        100|   11|        364|
+    +---------------+-----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------+----+----+-----+-----------+
+    |    Name   | FF | LUT| Bits| Const Bits|
+    +-----------+----+----+-----+-----------+
+    |ap_CS_fsm  |  33|   0|   33|          0|
+    +-----------+----+----+-----+-----------+
+    |Total      |  33|   0|   33|          0|
+    +-----------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------+-----+-----+------------+--------------+--------------+
+|   RTL Ports   | Dir | Bits|  Protocol  | Source Object|    C Type    |
++---------------+-----+-----+------------+--------------+--------------+
+|ap_clk         |  in |    1| ap_ctrl_hs |     RELU     | return value |
+|ap_rst         |  in |    1| ap_ctrl_hs |     RELU     | return value |
+|ap_start       |  in |    1| ap_ctrl_hs |     RELU     | return value |
+|ap_done        | out |    1| ap_ctrl_hs |     RELU     | return value |
+|ap_idle        | out |    1| ap_ctrl_hs |     RELU     | return value |
+|ap_ready       | out |    1| ap_ctrl_hs |     RELU     | return value |
+|data_address0  | out |    5|  ap_memory |     data     |     array    |
+|data_ce0       | out |    1|  ap_memory |     data     |     array    |
+|data_we0       | out |    1|  ap_memory |     data     |     array    |
+|data_d0        | out |   19|  ap_memory |     data     |     array    |
+|data_q0        |  in |   19|  ap_memory |     data     |     array    |
+|data_address1  | out |    5|  ap_memory |     data     |     array    |
+|data_ce1       | out |    1|  ap_memory |     data     |     array    |
+|data_we1       | out |    1|  ap_memory |     data     |     array    |
+|data_d1        | out |   19|  ap_memory |     data     |     array    |
+|data_q1        |  in |   19|  ap_memory |     data     |     array    |
++---------------+-----+-----+------------+--------------+--------------+
+

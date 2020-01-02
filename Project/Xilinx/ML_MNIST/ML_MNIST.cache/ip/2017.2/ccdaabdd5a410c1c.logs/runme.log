@@ -1,0 +1,1291 @@
+
+*** Running vivado
+    with args -log system_classify_0_5.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_classify_0_5.tcl
+
+
+****** Vivado v2017.2 (64-bit)
+  **** SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+  **** IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source system_classify_0_5.tcl -notrace
+Command: synth_design -top system_classify_0_5 -part xc7z010clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010-clg400'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010-clg400'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 16056 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:10 . Memory (MB): peak = 304.785 ; gain = 76.973
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'system_classify_0_5' [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ip/system_classify_0_5/synth/system_classify_0_5.vhd:81]
+	Parameter C_S_AXI_NNIO_ADDR_WIDTH bound to: 6 - type: integer 
+	Parameter C_S_AXI_NNIO_DATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'classify' declared at 'c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:12' bound to instance 'U0' of component 'classify' [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ip/system_classify_0_5/synth/system_classify_0_5.vhd:140]
+INFO: [Synth 8-638] synthesizing module 'classify' [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:40]
+	Parameter C_S_AXI_NNIO_ADDR_WIDTH bound to: 6 - type: integer 
+	Parameter C_S_AXI_NNIO_DATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:324]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:327]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:338]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:340]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:342]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:344]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:346]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:348]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:350]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:352]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:354]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:356]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:358]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:360]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:362]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:364]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:366]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:368]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:370]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:372]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:374]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:376]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:378]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:380]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:382]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:384]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:386]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:388]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:390]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:392]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:394]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:396]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:398]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:400]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:405]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:410]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:413]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:417]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:421]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:425]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:429]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:433]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:437]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:441]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:445]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:449]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:453]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:457]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:461]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:465]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:469]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:473]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:478]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:481]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:485]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:489]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:493]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:497]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:501]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:505]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:509]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:513]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:517]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:521]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:525]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:529]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:533]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:537]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:541]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:545]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:549]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:553]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:557]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:561]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:565]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:569]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:573]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:578]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:581]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:585]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:589]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:593]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:598]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:601]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:605]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:609]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:613]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:618]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:621]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:625]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:629]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:633]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:637]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:641]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:645]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:649]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:653]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:657]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:661]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:665]
+INFO: [Common 17-14] Message 'Synth 8-5534' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+	Parameter DataWidth bound to: 8 - type: integer 
+	Parameter AddressRange bound to: 512 - type: integer 
+	Parameter AddressWidth bound to: 9 - type: integer 
+INFO: [Synth 8-3491] module 'classify_W' declared at 'c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify_W.vhd:192' bound to instance 'W_U' of component 'classify_W' [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:1056]
+INFO: [Synth 8-638] synthesizing module 'classify_W' [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify_W.vhd:205]
+	Parameter DataWidth bound to: 8 - type: integer 
+	Parameter AddressRange bound to: 512 - type: integer 
+	Parameter AddressWidth bound to: 9 - type: integer 
+INFO: [Synth 8-3491] module 'classify_W_rom' declared at 'c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify_W.vhd:12' bound to instance 'classify_W_rom_U' of component 'classify_W_rom' [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify_W.vhd:217]
+INFO: [Synth 8-638] synthesizing module 'classify_W_rom' [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify_W.vhd:27]
+	Parameter dwidth bound to: 8 - type: integer 
+	Parameter awidth bound to: 9 - type: integer 
+	Parameter mem_size bound to: 512 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'classify_W_rom' (1#1) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify_W.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'classify_W' (2#1) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify_W.vhd:205]
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 6 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'classify_NNIO_s_axi' declared at 'c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify_NNIO_s_axi.vhd:12' bound to instance 'classify_NNIO_s_axi_U' of component 'classify_NNIO_s_axi' [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:1068]
+INFO: [Synth 8-638] synthesizing module 'classify_NNIO_s_axi' [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify_NNIO_s_axi.vhd:82]
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 6 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter BYTES bound to: 4 - type: integer 
+	Parameter DEPTH bound to: 4 - type: integer 
+	Parameter AWIDTH bound to: 2 - type: integer 
+INFO: [Synth 8-3491] module 'classify_NNIO_s_axi_ram' declared at 'c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify_NNIO_s_axi.vhd:501' bound to instance 'int_img' of component 'classify_NNIO_s_axi_ram' [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify_NNIO_s_axi.vhd:172]
+INFO: [Synth 8-638] synthesizing module 'classify_NNIO_s_axi_ram' [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify_NNIO_s_axi.vhd:524]
+	Parameter BYTES bound to: 4 - type: integer 
+	Parameter DEPTH bound to: 4 - type: integer 
+	Parameter AWIDTH bound to: 2 - type: integer 
+WARNING: [Synth 8-6014] Unused sequential element gen_write[0].mem_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element gen_write[0].mem_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element gen_write[2].mem_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element gen_write[2].mem_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element gen_write[3].mem_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element gen_write[3].mem_reg was removed. 
+INFO: [Synth 8-256] done synthesizing module 'classify_NNIO_s_axi_ram' (3#1) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify_NNIO_s_axi.vhd:524]
+WARNING: [Synth 8-6014] Unused sequential element int_isr_reg was removed.  [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify_NNIO_s_axi.vhd:308]
+WARNING: [Synth 8-6014] Unused sequential element int_isr_reg was removed.  [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify_NNIO_s_axi.vhd:416]
+INFO: [Synth 8-256] done synthesizing module 'classify_NNIO_s_axi' (4#1) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify_NNIO_s_axi.vhd:82]
+	Parameter DataWidth bound to: 19 - type: integer 
+	Parameter AddressRange bound to: 32 - type: integer 
+	Parameter AddressWidth bound to: 5 - type: integer 
+INFO: [Synth 8-3491] module 'classify_tempOut' declared at 'c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify_tempOut.vhd:107' bound to instance 'tempOut_U' of component 'classify_tempOut' [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:1103]
+INFO: [Synth 8-638] synthesizing module 'classify_tempOut' [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify_tempOut.vhd:127]
+	Parameter DataWidth bound to: 19 - type: integer 
+	Parameter AddressRange bound to: 32 - type: integer 
+	Parameter AddressWidth bound to: 5 - type: integer 
+INFO: [Synth 8-3491] module 'classify_tempOut_ram' declared at 'c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify_tempOut.vhd:13' bound to instance 'classify_tempOut_ram_U' of component 'classify_tempOut_ram' [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify_tempOut.vhd:146]
+INFO: [Synth 8-638] synthesizing module 'classify_tempOut_ram' [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify_tempOut.vhd:36]
+	Parameter mem_type bound to: block - type: string 
+	Parameter dwidth bound to: 19 - type: integer 
+	Parameter awidth bound to: 5 - type: integer 
+	Parameter mem_size bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'classify_tempOut_ram' (5#1) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify_tempOut.vhd:36]
+INFO: [Synth 8-256] done synthesizing module 'classify_tempOut' (6#1) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify_tempOut.vhd:127]
+INFO: [Synth 8-3491] module 'RELU' declared at 'c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/RELU.vhd:12' bound to instance 'grp_RELU_fu_1756' of component 'RELU' [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:1122]
+INFO: [Synth 8-638] synthesizing module 'RELU' [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/RELU.vhd:33]
+INFO: [Synth 8-256] done synthesizing module 'RELU' (7#1) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/RELU.vhd:33]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 8 - type: integer 
+	Parameter din1_WIDTH bound to: 8 - type: integer 
+	Parameter din2_WIDTH bound to: 19 - type: integer 
+	Parameter dout_WIDTH bound to: 19 - type: integer 
+INFO: [Synth 8-3491] module 'classify_mac_mulabkb' declared at 'c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify_mac_mulabkb.vhd:45' bound to instance 'classify_mac_mulabkb_U1' of component 'classify_mac_mulabkb' [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:1141]
+INFO: [Synth 8-638] synthesizing module 'classify_mac_mulabkb' [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify_mac_mulabkb.vhd:60]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 8 - type: integer 
+	Parameter din1_WIDTH bound to: 8 - type: integer 
+	Parameter din2_WIDTH bound to: 19 - type: integer 
+	Parameter dout_WIDTH bound to: 19 - type: integer 
+INFO: [Synth 8-3491] module 'classify_mac_mulabkb_DSP48_0' declared at 'c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify_mac_mulabkb.vhd:12' bound to instance 'classify_mac_mulabkb_DSP48_0_U' of component 'classify_mac_mulabkb_DSP48_0' [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify_mac_mulabkb.vhd:72]
+INFO: [Synth 8-638] synthesizing module 'classify_mac_mulabkb_DSP48_0' [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify_mac_mulabkb.vhd:24]
+WARNING: [Synth 8-5974] attribute "use_dsp48" has been deprecated, please use "use_dsp" instead 
+INFO: [Synth 8-256] done synthesizing module 'classify_mac_mulabkb_DSP48_0' (8#1) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify_mac_mulabkb.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 'classify_mac_mulabkb' (9#1) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify_mac_mulabkb.vhd:60]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 8 - type: integer 
+	Parameter din1_WIDTH bound to: 8 - type: integer 
+	Parameter din2_WIDTH bound to: 19 - type: integer 
+	Parameter dout_WIDTH bound to: 19 - type: integer 
+INFO: [Synth 8-3491] module 'classify_mac_mulabkb' declared at 'c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify_mac_mulabkb.vhd:45' bound to instance 'classify_mac_mulabkb_U2' of component 'classify_mac_mulabkb' [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:1155]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 8 - type: integer 
+	Parameter din1_WIDTH bound to: 8 - type: integer 
+	Parameter din2_WIDTH bound to: 19 - type: integer 
+	Parameter dout_WIDTH bound to: 19 - type: integer 
+INFO: [Synth 8-3491] module 'classify_mac_mulabkb' declared at 'c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify_mac_mulabkb.vhd:45' bound to instance 'classify_mac_mulabkb_U3' of component 'classify_mac_mulabkb' [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:1169]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 8 - type: integer 
+	Parameter din1_WIDTH bound to: 8 - type: integer 
+	Parameter din2_WIDTH bound to: 19 - type: integer 
+	Parameter dout_WIDTH bound to: 19 - type: integer 
+INFO: [Synth 8-3491] module 'classify_mac_mulabkb' declared at 'c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify_mac_mulabkb.vhd:45' bound to instance 'classify_mac_mulabkb_U4' of component 'classify_mac_mulabkb' [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:1183]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 8 - type: integer 
+	Parameter din1_WIDTH bound to: 8 - type: integer 
+	Parameter din2_WIDTH bound to: 19 - type: integer 
+	Parameter dout_WIDTH bound to: 19 - type: integer 
+INFO: [Synth 8-3491] module 'classify_mac_mulabkb' declared at 'c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify_mac_mulabkb.vhd:45' bound to instance 'classify_mac_mulabkb_U5' of component 'classify_mac_mulabkb' [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:1197]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 8 - type: integer 
+	Parameter din1_WIDTH bound to: 8 - type: integer 
+	Parameter din2_WIDTH bound to: 19 - type: integer 
+	Parameter dout_WIDTH bound to: 19 - type: integer 
+INFO: [Synth 8-3491] module 'classify_mac_mulabkb' declared at 'c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify_mac_mulabkb.vhd:45' bound to instance 'classify_mac_mulabkb_U6' of component 'classify_mac_mulabkb' [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:1211]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 8 - type: integer 
+	Parameter din1_WIDTH bound to: 8 - type: integer 
+	Parameter din2_WIDTH bound to: 19 - type: integer 
+	Parameter dout_WIDTH bound to: 19 - type: integer 
+INFO: [Synth 8-3491] module 'classify_mac_mulabkb' declared at 'c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify_mac_mulabkb.vhd:45' bound to instance 'classify_mac_mulabkb_U7' of component 'classify_mac_mulabkb' [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:1225]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 8 - type: integer 
+	Parameter din1_WIDTH bound to: 8 - type: integer 
+	Parameter din2_WIDTH bound to: 19 - type: integer 
+	Parameter dout_WIDTH bound to: 19 - type: integer 
+INFO: [Synth 8-3491] module 'classify_mac_mulabkb' declared at 'c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify_mac_mulabkb.vhd:45' bound to instance 'classify_mac_mulabkb_U8' of component 'classify_mac_mulabkb' [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:1239]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 8 - type: integer 
+	Parameter din1_WIDTH bound to: 8 - type: integer 
+	Parameter din2_WIDTH bound to: 19 - type: integer 
+	Parameter dout_WIDTH bound to: 19 - type: integer 
+INFO: [Synth 8-3491] module 'classify_mac_mulabkb' declared at 'c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify_mac_mulabkb.vhd:45' bound to instance 'classify_mac_mulabkb_U9' of component 'classify_mac_mulabkb' [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:1253]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 8 - type: integer 
+	Parameter din1_WIDTH bound to: 8 - type: integer 
+	Parameter din2_WIDTH bound to: 19 - type: integer 
+	Parameter dout_WIDTH bound to: 19 - type: integer 
+INFO: [Synth 8-3491] module 'classify_mac_mulabkb' declared at 'c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify_mac_mulabkb.vhd:45' bound to instance 'classify_mac_mulabkb_U10' of component 'classify_mac_mulabkb' [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:1267]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 8 - type: integer 
+	Parameter din1_WIDTH bound to: 8 - type: integer 
+	Parameter din2_WIDTH bound to: 19 - type: integer 
+	Parameter dout_WIDTH bound to: 19 - type: integer 
+INFO: [Synth 8-3491] module 'classify_mac_mulabkb' declared at 'c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify_mac_mulabkb.vhd:45' bound to instance 'classify_mac_mulabkb_U11' of component 'classify_mac_mulabkb' [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:1281]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 8 - type: integer 
+	Parameter din1_WIDTH bound to: 8 - type: integer 
+	Parameter din2_WIDTH bound to: 19 - type: integer 
+	Parameter dout_WIDTH bound to: 19 - type: integer 
+INFO: [Synth 8-3491] module 'classify_mac_mulabkb' declared at 'c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify_mac_mulabkb.vhd:45' bound to instance 'classify_mac_mulabkb_U12' of component 'classify_mac_mulabkb' [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:1295]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 8 - type: integer 
+	Parameter din1_WIDTH bound to: 8 - type: integer 
+	Parameter din2_WIDTH bound to: 19 - type: integer 
+	Parameter dout_WIDTH bound to: 19 - type: integer 
+INFO: [Synth 8-3491] module 'classify_mac_mulabkb' declared at 'c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify_mac_mulabkb.vhd:45' bound to instance 'classify_mac_mulabkb_U13' of component 'classify_mac_mulabkb' [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:1309]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 8 - type: integer 
+	Parameter din1_WIDTH bound to: 8 - type: integer 
+	Parameter din2_WIDTH bound to: 19 - type: integer 
+	Parameter dout_WIDTH bound to: 19 - type: integer 
+INFO: [Synth 8-3491] module 'classify_mac_mulabkb' declared at 'c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify_mac_mulabkb.vhd:45' bound to instance 'classify_mac_mulabkb_U14' of component 'classify_mac_mulabkb' [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:1323]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 8 - type: integer 
+	Parameter din1_WIDTH bound to: 8 - type: integer 
+	Parameter din2_WIDTH bound to: 19 - type: integer 
+	Parameter dout_WIDTH bound to: 19 - type: integer 
+INFO: [Synth 8-3491] module 'classify_mac_mulabkb' declared at 'c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify_mac_mulabkb.vhd:45' bound to instance 'classify_mac_mulabkb_U15' of component 'classify_mac_mulabkb' [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:1337]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 8 - type: integer 
+	Parameter din1_WIDTH bound to: 8 - type: integer 
+	Parameter din2_WIDTH bound to: 19 - type: integer 
+	Parameter dout_WIDTH bound to: 19 - type: integer 
+INFO: [Synth 8-3491] module 'classify_mac_mulabkb' declared at 'c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify_mac_mulabkb.vhd:45' bound to instance 'classify_mac_mulabkb_U16' of component 'classify_mac_mulabkb' [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:1351]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 8 - type: integer 
+	Parameter din1_WIDTH bound to: 8 - type: integer 
+	Parameter din2_WIDTH bound to: 19 - type: integer 
+	Parameter dout_WIDTH bound to: 19 - type: integer 
+INFO: [Synth 8-3491] module 'classify_mac_mulabkb' declared at 'c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify_mac_mulabkb.vhd:45' bound to instance 'classify_mac_mulabkb_U17' of component 'classify_mac_mulabkb' [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:1365]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 8 - type: integer 
+	Parameter din1_WIDTH bound to: 8 - type: integer 
+	Parameter din2_WIDTH bound to: 19 - type: integer 
+	Parameter dout_WIDTH bound to: 19 - type: integer 
+INFO: [Synth 8-3491] module 'classify_mac_mulabkb' declared at 'c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify_mac_mulabkb.vhd:45' bound to instance 'classify_mac_mulabkb_U18' of component 'classify_mac_mulabkb' [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:1379]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 8 - type: integer 
+	Parameter din1_WIDTH bound to: 8 - type: integer 
+	Parameter din2_WIDTH bound to: 19 - type: integer 
+	Parameter dout_WIDTH bound to: 19 - type: integer 
+INFO: [Synth 8-3491] module 'classify_mac_mulabkb' declared at 'c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify_mac_mulabkb.vhd:45' bound to instance 'classify_mac_mulabkb_U19' of component 'classify_mac_mulabkb' [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:1393]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 8 - type: integer 
+	Parameter din1_WIDTH bound to: 8 - type: integer 
+	Parameter din2_WIDTH bound to: 19 - type: integer 
+	Parameter dout_WIDTH bound to: 19 - type: integer 
+INFO: [Synth 8-3491] module 'classify_mac_mulabkb' declared at 'c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify_mac_mulabkb.vhd:45' bound to instance 'classify_mac_mulabkb_U20' of component 'classify_mac_mulabkb' [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:1407]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 8 - type: integer 
+	Parameter din1_WIDTH bound to: 8 - type: integer 
+	Parameter din2_WIDTH bound to: 19 - type: integer 
+	Parameter dout_WIDTH bound to: 19 - type: integer 
+INFO: [Synth 8-3491] module 'classify_mac_mulabkb' declared at 'c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify_mac_mulabkb.vhd:45' bound to instance 'classify_mac_mulabkb_U21' of component 'classify_mac_mulabkb' [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:1421]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 8 - type: integer 
+	Parameter din1_WIDTH bound to: 8 - type: integer 
+	Parameter din2_WIDTH bound to: 19 - type: integer 
+	Parameter dout_WIDTH bound to: 19 - type: integer 
+INFO: [Synth 8-3491] module 'classify_mac_mulabkb' declared at 'c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify_mac_mulabkb.vhd:45' bound to instance 'classify_mac_mulabkb_U22' of component 'classify_mac_mulabkb' [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:1435]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 8 - type: integer 
+	Parameter din1_WIDTH bound to: 8 - type: integer 
+	Parameter din2_WIDTH bound to: 19 - type: integer 
+	Parameter dout_WIDTH bound to: 19 - type: integer 
+INFO: [Synth 8-3491] module 'classify_mac_mulabkb' declared at 'c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify_mac_mulabkb.vhd:45' bound to instance 'classify_mac_mulabkb_U23' of component 'classify_mac_mulabkb' [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:1449]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 8 - type: integer 
+	Parameter din1_WIDTH bound to: 8 - type: integer 
+	Parameter din2_WIDTH bound to: 19 - type: integer 
+	Parameter dout_WIDTH bound to: 19 - type: integer 
+INFO: [Synth 8-3491] module 'classify_mac_mulabkb' declared at 'c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify_mac_mulabkb.vhd:45' bound to instance 'classify_mac_mulabkb_U24' of component 'classify_mac_mulabkb' [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:1463]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 8 - type: integer 
+	Parameter din1_WIDTH bound to: 8 - type: integer 
+	Parameter din2_WIDTH bound to: 19 - type: integer 
+	Parameter dout_WIDTH bound to: 19 - type: integer 
+INFO: [Synth 8-3491] module 'classify_mac_mulabkb' declared at 'c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify_mac_mulabkb.vhd:45' bound to instance 'classify_mac_mulabkb_U25' of component 'classify_mac_mulabkb' [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:1477]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 8 - type: integer 
+	Parameter din1_WIDTH bound to: 8 - type: integer 
+	Parameter din2_WIDTH bound to: 19 - type: integer 
+	Parameter dout_WIDTH bound to: 19 - type: integer 
+INFO: [Synth 8-3491] module 'classify_mac_mulabkb' declared at 'c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify_mac_mulabkb.vhd:45' bound to instance 'classify_mac_mulabkb_U26' of component 'classify_mac_mulabkb' [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:1491]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 8 - type: integer 
+	Parameter din1_WIDTH bound to: 8 - type: integer 
+	Parameter din2_WIDTH bound to: 19 - type: integer 
+	Parameter dout_WIDTH bound to: 19 - type: integer 
+INFO: [Synth 8-3491] module 'classify_mac_mulabkb' declared at 'c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify_mac_mulabkb.vhd:45' bound to instance 'classify_mac_mulabkb_U27' of component 'classify_mac_mulabkb' [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:1505]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 8 - type: integer 
+	Parameter din1_WIDTH bound to: 8 - type: integer 
+	Parameter din2_WIDTH bound to: 19 - type: integer 
+	Parameter dout_WIDTH bound to: 19 - type: integer 
+INFO: [Synth 8-3491] module 'classify_mac_mulabkb' declared at 'c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify_mac_mulabkb.vhd:45' bound to instance 'classify_mac_mulabkb_U28' of component 'classify_mac_mulabkb' [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:1519]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 8 - type: integer 
+	Parameter din1_WIDTH bound to: 8 - type: integer 
+	Parameter din2_WIDTH bound to: 19 - type: integer 
+	Parameter dout_WIDTH bound to: 19 - type: integer 
+INFO: [Synth 8-3491] module 'classify_mac_mulabkb' declared at 'c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify_mac_mulabkb.vhd:45' bound to instance 'classify_mac_mulabkb_U29' of component 'classify_mac_mulabkb' [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:1533]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 8 - type: integer 
+	Parameter din1_WIDTH bound to: 8 - type: integer 
+	Parameter din2_WIDTH bound to: 19 - type: integer 
+	Parameter dout_WIDTH bound to: 19 - type: integer 
+INFO: [Synth 8-3491] module 'classify_mac_mulabkb' declared at 'c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify_mac_mulabkb.vhd:45' bound to instance 'classify_mac_mulabkb_U30' of component 'classify_mac_mulabkb' [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:1547]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 8 - type: integer 
+	Parameter din1_WIDTH bound to: 8 - type: integer 
+	Parameter din2_WIDTH bound to: 19 - type: integer 
+	Parameter dout_WIDTH bound to: 19 - type: integer 
+INFO: [Synth 8-3491] module 'classify_mac_mulabkb' declared at 'c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify_mac_mulabkb.vhd:45' bound to instance 'classify_mac_mulabkb_U31' of component 'classify_mac_mulabkb' [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:1561]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 8 - type: integer 
+	Parameter din1_WIDTH bound to: 8 - type: integer 
+	Parameter din2_WIDTH bound to: 19 - type: integer 
+	Parameter dout_WIDTH bound to: 19 - type: integer 
+INFO: [Synth 8-3491] module 'classify_mac_mulabkb' declared at 'c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify_mac_mulabkb.vhd:45' bound to instance 'classify_mac_mulabkb_U32' of component 'classify_mac_mulabkb' [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:1575]
+WARNING: [Synth 8-6014] Unused sequential element ap_ready_reg was removed.  [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:1095]
+WARNING: [Synth 8-6014] Unused sequential element img_ce0_reg was removed.  [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:1099]
+INFO: [Synth 8-256] done synthesizing module 'classify' (10#1) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'system_classify_0_5' (11#1) [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ip/system_classify_0_5/synth/system_classify_0_5.vhd:81]
+WARNING: [Synth 8-3331] design RELU has unconnected port data_q0[17]
+WARNING: [Synth 8-3331] design RELU has unconnected port data_q0[16]
+WARNING: [Synth 8-3331] design RELU has unconnected port data_q0[15]
+WARNING: [Synth 8-3331] design RELU has unconnected port data_q0[14]
+WARNING: [Synth 8-3331] design RELU has unconnected port data_q0[13]
+WARNING: [Synth 8-3331] design RELU has unconnected port data_q0[12]
+WARNING: [Synth 8-3331] design RELU has unconnected port data_q0[11]
+WARNING: [Synth 8-3331] design RELU has unconnected port data_q0[10]
+WARNING: [Synth 8-3331] design RELU has unconnected port data_q0[9]
+WARNING: [Synth 8-3331] design RELU has unconnected port data_q0[8]
+WARNING: [Synth 8-3331] design RELU has unconnected port data_q0[7]
+WARNING: [Synth 8-3331] design RELU has unconnected port data_q0[6]
+WARNING: [Synth 8-3331] design RELU has unconnected port data_q0[5]
+WARNING: [Synth 8-3331] design RELU has unconnected port data_q0[4]
+WARNING: [Synth 8-3331] design RELU has unconnected port data_q0[3]
+WARNING: [Synth 8-3331] design RELU has unconnected port data_q0[2]
+WARNING: [Synth 8-3331] design RELU has unconnected port data_q0[1]
+WARNING: [Synth 8-3331] design RELU has unconnected port data_q0[0]
+WARNING: [Synth 8-3331] design RELU has unconnected port data_q1[17]
+WARNING: [Synth 8-3331] design RELU has unconnected port data_q1[16]
+WARNING: [Synth 8-3331] design RELU has unconnected port data_q1[15]
+WARNING: [Synth 8-3331] design RELU has unconnected port data_q1[14]
+WARNING: [Synth 8-3331] design RELU has unconnected port data_q1[13]
+WARNING: [Synth 8-3331] design RELU has unconnected port data_q1[12]
+WARNING: [Synth 8-3331] design RELU has unconnected port data_q1[11]
+WARNING: [Synth 8-3331] design RELU has unconnected port data_q1[10]
+WARNING: [Synth 8-3331] design RELU has unconnected port data_q1[9]
+WARNING: [Synth 8-3331] design RELU has unconnected port data_q1[8]
+WARNING: [Synth 8-3331] design RELU has unconnected port data_q1[7]
+WARNING: [Synth 8-3331] design RELU has unconnected port data_q1[6]
+WARNING: [Synth 8-3331] design RELU has unconnected port data_q1[5]
+WARNING: [Synth 8-3331] design RELU has unconnected port data_q1[4]
+WARNING: [Synth 8-3331] design RELU has unconnected port data_q1[3]
+WARNING: [Synth 8-3331] design RELU has unconnected port data_q1[2]
+WARNING: [Synth 8-3331] design RELU has unconnected port data_q1[1]
+WARNING: [Synth 8-3331] design RELU has unconnected port data_q1[0]
+WARNING: [Synth 8-3331] design classify_tempOut has unconnected port reset
+WARNING: [Synth 8-3331] design classify_W has unconnected port reset
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:17 . Memory (MB): peak = 356.887 ; gain = 129.074
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:18 . Memory (MB): peak = 356.887 ; gain = 129.074
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ip/system_classify_0_5/constraints/classify_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ip/system_classify_0_5/constraints/classify_ooc.xdc] for cell 'U0'
+Parsing XDC File [C:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.runs/system_classify_0_5_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.runs/system_classify_0_5_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.152 . Memory (MB): peak = 676.219 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:33 ; elapsed = 00:00:43 . Memory (MB): peak = 676.219 ; gain = 448.406
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:33 ; elapsed = 00:00:43 . Memory (MB): peak = 676.219 ; gain = 448.406
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for U0. (constraint file  C:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.runs/system_classify_0_5_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:33 ; elapsed = 00:00:43 . Memory (MB): peak = 676.219 ; gain = 448.406
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6014] Unused sequential element q0_reg was removed.  [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify_W.vhd:181]
+INFO: [Synth 8-5544] ROM "AWREADY_t" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "WREADY_t" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "BVALID" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ARREADY_t" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+WARNING: [Synth 8-6014] Unused sequential element int_img_shift_reg was removed.  [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify_NNIO_s_axi.vhd:446]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5546] ROM "exitcond_i_i_fu_1769_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond_i7_i_fu_1825_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond_i27_i_fu_1880_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond_i47_i_fu_1933_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond_i67_i_fu_1988_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond_i87_i_fu_2026_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond_i107_i_fu_2081_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond_i126_i_fu_2126_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond_i146_i_fu_2174_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond_i166_i_fu_2230_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond_i185_i_fu_2285_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond_i205_i_fu_2338_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond_i225_i_fu_2386_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond_i245_i_fu_2431_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond_i265_i_fu_2486_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond_i285_i_fu_2531_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond_i305_i_fu_2579_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond_i325_i_fu_2624_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond_i345_i_fu_2672_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond_i365_i_fu_2717_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond_i385_i_fu_2772_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond_i405_i_fu_2828_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond_i425_i_fu_2883_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond_i445_i_fu_2939_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond_i465_i_fu_2994_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond_i485_i_fu_3050_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond_i505_i_fu_3105_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond_i525_i_fu_3158_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond_i545_i_fu_3213_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond_i565_i_fu_3258_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond_i585_i_fu_3313_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond_i605_i_fu_3358_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond_i_i_fu_1769_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond_i7_i_fu_1825_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond_i27_i_fu_1880_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond_i47_i_fu_1933_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond_i67_i_fu_1988_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond_i87_i_fu_2026_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond_i107_i_fu_2081_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond_i126_i_fu_2126_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond_i146_i_fu_2174_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond_i166_i_fu_2230_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond_i185_i_fu_2285_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond_i205_i_fu_2338_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond_i225_i_fu_2386_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond_i245_i_fu_2431_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond_i265_i_fu_2486_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond_i285_i_fu_2531_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond_i305_i_fu_2579_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond_i325_i_fu_2624_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond_i345_i_fu_2672_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond_i365_i_fu_2717_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond_i385_i_fu_2772_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond_i405_i_fu_2828_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond_i425_i_fu_2883_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond_i445_i_fu_2939_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond_i465_i_fu_2994_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond_i485_i_fu_3050_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond_i505_i_fu_3105_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond_i525_i_fu_3158_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond_i545_i_fu_3213_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond_i565_i_fu_3258_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond_i585_i_fu_3313_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond_i605_i_fu_3358_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-3971] The signal gen_write[1].mem_reg was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal ram_reg was recognized as a true dual port RAM template.
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:35 ; elapsed = 00:00:46 . Memory (MB): peak = 676.219 ; gain = 448.406
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     19 Bit       Adders := 26    
+	   2 Input     11 Bit       Adders := 3     
+	   2 Input     10 Bit       Adders := 8     
+	   2 Input      9 Bit       Adders := 8     
+	   2 Input      8 Bit       Adders := 6     
+	   2 Input      7 Bit       Adders := 3     
+	   2 Input      6 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 32    
++---XORs : 
+	   2 Input      5 Bit         XORs := 3     
+	   2 Input      1 Bit         XORs := 2     
++---Registers : 
+	               33 Bit    Registers := 1     
+	               32 Bit    Registers := 3     
+	               19 Bit    Registers := 34    
+	               11 Bit    Registers := 1     
+	                8 Bit    Registers := 6     
+	                7 Bit    Registers := 3     
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 64    
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 9     
++---RAMs : 
+	              608 Bit         RAMs := 1     
+	              128 Bit         RAMs := 1     
++---ROMs : 
+	                              ROMs := 1     
++---Muxes : 
+	   2 Input    105 Bit        Muxes := 1     
+	 106 Input    105 Bit        Muxes := 1     
+	   2 Input    104 Bit        Muxes := 1     
+	   2 Input    100 Bit        Muxes := 1     
+	   2 Input     97 Bit        Muxes := 1     
+	   2 Input     94 Bit        Muxes := 1     
+	   2 Input     91 Bit        Muxes := 1     
+	   2 Input     88 Bit        Muxes := 1     
+	   2 Input     85 Bit        Muxes := 1     
+	   2 Input     82 Bit        Muxes := 1     
+	   2 Input     78 Bit        Muxes := 1     
+	   2 Input     75 Bit        Muxes := 1     
+	   2 Input     71 Bit        Muxes := 1     
+	   2 Input     68 Bit        Muxes := 1     
+	   2 Input     64 Bit        Muxes := 1     
+	   2 Input     61 Bit        Muxes := 1     
+	   2 Input     58 Bit        Muxes := 1     
+	   2 Input     55 Bit        Muxes := 1     
+	   2 Input     52 Bit        Muxes := 1     
+	   2 Input     49 Bit        Muxes := 1     
+	   2 Input     46 Bit        Muxes := 1     
+	   2 Input     43 Bit        Muxes := 1     
+	   2 Input     40 Bit        Muxes := 1     
+	   2 Input     37 Bit        Muxes := 1     
+	   2 Input     34 Bit        Muxes := 1     
+	  34 Input     33 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 13    
+	   6 Input     32 Bit        Muxes := 1     
+	   2 Input     31 Bit        Muxes := 1     
+	   2 Input     27 Bit        Muxes := 1     
+	   2 Input     24 Bit        Muxes := 1     
+	   2 Input     21 Bit        Muxes := 1     
+	   2 Input     19 Bit        Muxes := 32    
+	   2 Input     18 Bit        Muxes := 1     
+	   2 Input     15 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 3     
+	   2 Input      6 Bit        Muxes := 1     
+	  31 Input      5 Bit        Muxes := 2     
+	   5 Input      3 Bit        Muxes := 1     
+	   6 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 74    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module classify_W_rom 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
++---ROMs : 
+	                              ROMs := 1     
+Module classify_NNIO_s_axi_ram 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 2     
++---RAMs : 
+	              128 Bit         RAMs := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 12    
+	   2 Input      8 Bit        Muxes := 2     
+Module classify_NNIO_s_axi 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 8     
++---Muxes : 
+	   6 Input     32 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   5 Input      3 Bit        Muxes := 1     
+	   6 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 7     
+Module classify_tempOut_ram 
+Detailed RTL Component Info : 
++---Registers : 
+	               19 Bit    Registers := 2     
++---RAMs : 
+	              608 Bit         RAMs := 1     
+Module RELU 
+Detailed RTL Component Info : 
++---Registers : 
+	               33 Bit    Registers := 1     
++---Muxes : 
+	  34 Input     33 Bit        Muxes := 1     
+	  31 Input      5 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 1     
+Module classify 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     19 Bit       Adders := 26    
+	   2 Input     11 Bit       Adders := 3     
+	   2 Input     10 Bit       Adders := 8     
+	   2 Input      9 Bit       Adders := 8     
+	   2 Input      8 Bit       Adders := 6     
+	   2 Input      7 Bit       Adders := 3     
+	   2 Input      6 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 32    
++---XORs : 
+	   2 Input      5 Bit         XORs := 3     
++---Registers : 
+	               19 Bit    Registers := 32    
+	               11 Bit    Registers := 1     
+	                8 Bit    Registers := 4     
+	                7 Bit    Registers := 3     
+	                5 Bit    Registers := 64    
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    105 Bit        Muxes := 1     
+	 106 Input    105 Bit        Muxes := 1     
+	   2 Input    104 Bit        Muxes := 1     
+	   2 Input    100 Bit        Muxes := 1     
+	   2 Input     97 Bit        Muxes := 1     
+	   2 Input     94 Bit        Muxes := 1     
+	   2 Input     91 Bit        Muxes := 1     
+	   2 Input     88 Bit        Muxes := 1     
+	   2 Input     85 Bit        Muxes := 1     
+	   2 Input     82 Bit        Muxes := 1     
+	   2 Input     78 Bit        Muxes := 1     
+	   2 Input     75 Bit        Muxes := 1     
+	   2 Input     71 Bit        Muxes := 1     
+	   2 Input     68 Bit        Muxes := 1     
+	   2 Input     64 Bit        Muxes := 1     
+	   2 Input     61 Bit        Muxes := 1     
+	   2 Input     58 Bit        Muxes := 1     
+	   2 Input     55 Bit        Muxes := 1     
+	   2 Input     52 Bit        Muxes := 1     
+	   2 Input     49 Bit        Muxes := 1     
+	   2 Input     46 Bit        Muxes := 1     
+	   2 Input     43 Bit        Muxes := 1     
+	   2 Input     40 Bit        Muxes := 1     
+	   2 Input     37 Bit        Muxes := 1     
+	   2 Input     34 Bit        Muxes := 1     
+	   2 Input     31 Bit        Muxes := 1     
+	   2 Input     27 Bit        Muxes := 1     
+	   2 Input     24 Bit        Muxes := 1     
+	   2 Input     21 Bit        Muxes := 1     
+	   2 Input     19 Bit        Muxes := 32    
+	   2 Input     18 Bit        Muxes := 1     
+	   2 Input     15 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 67    
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+DSP Report: Generating DSP p, operation Mode is: C+A*B.
+DSP Report: operator p is absorbed into DSP p.
+DSP Report: operator m is absorbed into DSP p.
+DSP Report: Generating DSP p, operation Mode is: C+A*B.
+DSP Report: operator p is absorbed into DSP p.
+DSP Report: operator m is absorbed into DSP p.
+DSP Report: Generating DSP p, operation Mode is: C+A*B.
+DSP Report: operator p is absorbed into DSP p.
+DSP Report: operator m is absorbed into DSP p.
+DSP Report: Generating DSP p, operation Mode is: C+A*B.
+DSP Report: operator p is absorbed into DSP p.
+DSP Report: operator m is absorbed into DSP p.
+DSP Report: Generating DSP p, operation Mode is: C+A*B.
+DSP Report: operator p is absorbed into DSP p.
+DSP Report: operator m is absorbed into DSP p.
+DSP Report: Generating DSP p, operation Mode is: C+A*B.
+DSP Report: operator p is absorbed into DSP p.
+DSP Report: operator m is absorbed into DSP p.
+DSP Report: Generating DSP p, operation Mode is: C+A*B.
+DSP Report: operator p is absorbed into DSP p.
+DSP Report: operator m is absorbed into DSP p.
+DSP Report: Generating DSP p, operation Mode is: C+A*B.
+DSP Report: operator p is absorbed into DSP p.
+DSP Report: operator m is absorbed into DSP p.
+DSP Report: Generating DSP p, operation Mode is: C+A*B.
+DSP Report: operator p is absorbed into DSP p.
+DSP Report: operator m is absorbed into DSP p.
+DSP Report: Generating DSP p, operation Mode is: C+A*B.
+DSP Report: operator p is absorbed into DSP p.
+DSP Report: operator m is absorbed into DSP p.
+DSP Report: Generating DSP p, operation Mode is: C+A*B.
+DSP Report: operator p is absorbed into DSP p.
+DSP Report: operator m is absorbed into DSP p.
+DSP Report: Generating DSP p, operation Mode is: C+A*B.
+DSP Report: operator p is absorbed into DSP p.
+DSP Report: operator m is absorbed into DSP p.
+DSP Report: Generating DSP p, operation Mode is: C+A*B.
+DSP Report: operator p is absorbed into DSP p.
+DSP Report: operator m is absorbed into DSP p.
+DSP Report: Generating DSP p, operation Mode is: C+A*B.
+DSP Report: operator p is absorbed into DSP p.
+DSP Report: operator m is absorbed into DSP p.
+DSP Report: Generating DSP p, operation Mode is: C+A*B.
+DSP Report: operator p is absorbed into DSP p.
+DSP Report: operator m is absorbed into DSP p.
+DSP Report: Generating DSP p, operation Mode is: C+A*B.
+DSP Report: operator p is absorbed into DSP p.
+DSP Report: operator m is absorbed into DSP p.
+DSP Report: Generating DSP p, operation Mode is: C+A*B.
+DSP Report: operator p is absorbed into DSP p.
+DSP Report: operator m is absorbed into DSP p.
+DSP Report: Generating DSP p, operation Mode is: C+A*B.
+DSP Report: operator p is absorbed into DSP p.
+DSP Report: operator m is absorbed into DSP p.
+DSP Report: Generating DSP p, operation Mode is: C+A*B.
+DSP Report: operator p is absorbed into DSP p.
+DSP Report: operator m is absorbed into DSP p.
+DSP Report: Generating DSP p, operation Mode is: C+A*B.
+DSP Report: operator p is absorbed into DSP p.
+DSP Report: operator m is absorbed into DSP p.
+DSP Report: Generating DSP p, operation Mode is: C+A*B.
+DSP Report: operator p is absorbed into DSP p.
+DSP Report: operator m is absorbed into DSP p.
+DSP Report: Generating DSP p, operation Mode is: C+A*B.
+DSP Report: operator p is absorbed into DSP p.
+DSP Report: operator m is absorbed into DSP p.
+DSP Report: Generating DSP p, operation Mode is: C+A*B.
+DSP Report: operator p is absorbed into DSP p.
+DSP Report: operator m is absorbed into DSP p.
+DSP Report: Generating DSP p, operation Mode is: C+A*B.
+DSP Report: operator p is absorbed into DSP p.
+DSP Report: operator m is absorbed into DSP p.
+DSP Report: Generating DSP p, operation Mode is: C+A*B.
+DSP Report: operator p is absorbed into DSP p.
+DSP Report: operator m is absorbed into DSP p.
+DSP Report: Generating DSP p, operation Mode is: C+A*B.
+DSP Report: operator p is absorbed into DSP p.
+DSP Report: operator m is absorbed into DSP p.
+DSP Report: Generating DSP p, operation Mode is: C+A*B.
+DSP Report: operator p is absorbed into DSP p.
+DSP Report: operator m is absorbed into DSP p.
+DSP Report: Generating DSP p, operation Mode is: C+A*B.
+DSP Report: operator p is absorbed into DSP p.
+DSP Report: operator m is absorbed into DSP p.
+DSP Report: Generating DSP p, operation Mode is: C+A*B.
+DSP Report: operator p is absorbed into DSP p.
+DSP Report: operator m is absorbed into DSP p.
+DSP Report: Generating DSP p, operation Mode is: C+A*B.
+DSP Report: operator p is absorbed into DSP p.
+DSP Report: operator m is absorbed into DSP p.
+DSP Report: Generating DSP p, operation Mode is: C+A*B.
+DSP Report: operator p is absorbed into DSP p.
+DSP Report: operator m is absorbed into DSP p.
+DSP Report: Generating DSP p, operation Mode is: C+A*B.
+DSP Report: operator p is absorbed into DSP p.
+DSP Report: operator m is absorbed into DSP p.
+WARNING: [Synth 8-6014] Unused sequential element W_U/classify_W_rom_U/q0_reg was removed.  [c:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.srcs/sources_1/bd/system/ipshared/cd5d/hdl/vhdl/classify_W.vhd:181]
+WARNING: [Synth 8-3331] design RELU has unconnected port data_q0[17]
+WARNING: [Synth 8-3331] design RELU has unconnected port data_q0[16]
+WARNING: [Synth 8-3331] design RELU has unconnected port data_q0[15]
+WARNING: [Synth 8-3331] design RELU has unconnected port data_q0[14]
+WARNING: [Synth 8-3331] design RELU has unconnected port data_q0[13]
+WARNING: [Synth 8-3331] design RELU has unconnected port data_q0[12]
+WARNING: [Synth 8-3331] design RELU has unconnected port data_q0[11]
+WARNING: [Synth 8-3331] design RELU has unconnected port data_q0[10]
+WARNING: [Synth 8-3331] design RELU has unconnected port data_q0[9]
+WARNING: [Synth 8-3331] design RELU has unconnected port data_q0[8]
+WARNING: [Synth 8-3331] design RELU has unconnected port data_q0[7]
+WARNING: [Synth 8-3331] design RELU has unconnected port data_q0[6]
+WARNING: [Synth 8-3331] design RELU has unconnected port data_q0[5]
+WARNING: [Synth 8-3331] design RELU has unconnected port data_q0[4]
+WARNING: [Synth 8-3331] design RELU has unconnected port data_q0[3]
+WARNING: [Synth 8-3331] design RELU has unconnected port data_q0[2]
+WARNING: [Synth 8-3331] design RELU has unconnected port data_q0[1]
+WARNING: [Synth 8-3331] design RELU has unconnected port data_q0[0]
+WARNING: [Synth 8-3331] design RELU has unconnected port data_q1[17]
+WARNING: [Synth 8-3331] design RELU has unconnected port data_q1[16]
+WARNING: [Synth 8-3331] design RELU has unconnected port data_q1[15]
+WARNING: [Synth 8-3331] design RELU has unconnected port data_q1[14]
+WARNING: [Synth 8-3331] design RELU has unconnected port data_q1[13]
+WARNING: [Synth 8-3331] design RELU has unconnected port data_q1[12]
+WARNING: [Synth 8-3331] design RELU has unconnected port data_q1[11]
+WARNING: [Synth 8-3331] design RELU has unconnected port data_q1[10]
+WARNING: [Synth 8-3331] design RELU has unconnected port data_q1[9]
+WARNING: [Synth 8-3331] design RELU has unconnected port data_q1[8]
+WARNING: [Synth 8-3331] design RELU has unconnected port data_q1[7]
+WARNING: [Synth 8-3331] design RELU has unconnected port data_q1[6]
+WARNING: [Synth 8-3331] design RELU has unconnected port data_q1[5]
+WARNING: [Synth 8-3331] design RELU has unconnected port data_q1[4]
+WARNING: [Synth 8-3331] design RELU has unconnected port data_q1[3]
+WARNING: [Synth 8-3331] design RELU has unconnected port data_q1[2]
+WARNING: [Synth 8-3331] design RELU has unconnected port data_q1[1]
+WARNING: [Synth 8-3331] design RELU has unconnected port data_q1[0]
+INFO: [Synth 8-3971] The signal int_img/gen_write[1].mem_reg was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal tempOut_U/classify_tempOut_ram_U/ram_reg was recognized as a true dual port RAM template.
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (U0/classify_NNIO_s_axi_U/\rstate_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/classify_NNIO_s_axi_U/\wstate_reg[2] )
+WARNING: [Synth 8-3332] Sequential element (i_32_0) is unused and will be removed from module classify_NNIO_s_axi.
+WARNING: [Synth 8-3332] Sequential element (i_32_2) is unused and will be removed from module classify_NNIO_s_axi.
+WARNING: [Synth 8-3332] Sequential element (i_32_4) is unused and will be removed from module classify_NNIO_s_axi.
+WARNING: [Synth 8-3332] Sequential element (i_32_6) is unused and will be removed from module classify_NNIO_s_axi.
+WARNING: [Synth 8-3332] Sequential element (i_32_8) is unused and will be removed from module classify_NNIO_s_axi.
+WARNING: [Synth 8-3332] Sequential element (i_32_10) is unused and will be removed from module classify_NNIO_s_axi.
+WARNING: [Synth 8-3332] Sequential element (i_32_12) is unused and will be removed from module classify_NNIO_s_axi.
+WARNING: [Synth 8-3332] Sequential element (i_32_14) is unused and will be removed from module classify_NNIO_s_axi.
+WARNING: [Synth 8-3332] Sequential element (i_32_16) is unused and will be removed from module classify_NNIO_s_axi.
+WARNING: [Synth 8-3332] Sequential element (i_32_18) is unused and will be removed from module classify_NNIO_s_axi.
+WARNING: [Synth 8-3332] Sequential element (i_32_20) is unused and will be removed from module classify_NNIO_s_axi.
+WARNING: [Synth 8-3332] Sequential element (i_32_22) is unused and will be removed from module classify_NNIO_s_axi.
+WARNING: [Synth 8-3332] Sequential element (i_32_24) is unused and will be removed from module classify_NNIO_s_axi.
+WARNING: [Synth 8-3332] Sequential element (i_32_26) is unused and will be removed from module classify_NNIO_s_axi.
+WARNING: [Synth 8-3332] Sequential element (i_32_28) is unused and will be removed from module classify_NNIO_s_axi.
+WARNING: [Synth 8-3332] Sequential element (i_32_30) is unused and will be removed from module classify_NNIO_s_axi.
+WARNING: [Synth 8-3332] Sequential element (i_32_32) is unused and will be removed from module classify_NNIO_s_axi.
+WARNING: [Synth 8-3332] Sequential element (i_32_34) is unused and will be removed from module classify_NNIO_s_axi.
+WARNING: [Synth 8-3332] Sequential element (i_32_36) is unused and will be removed from module classify_NNIO_s_axi.
+WARNING: [Synth 8-3332] Sequential element (i_32_38) is unused and will be removed from module classify_NNIO_s_axi.
+WARNING: [Synth 8-3332] Sequential element (i_32_40) is unused and will be removed from module classify_NNIO_s_axi.
+WARNING: [Synth 8-3332] Sequential element (i_32_42) is unused and will be removed from module classify_NNIO_s_axi.
+WARNING: [Synth 8-3332] Sequential element (i_32_44) is unused and will be removed from module classify_NNIO_s_axi.
+WARNING: [Synth 8-3332] Sequential element (i_32_46) is unused and will be removed from module classify_NNIO_s_axi.
+WARNING: [Synth 8-3332] Sequential element (i_32_48) is unused and will be removed from module classify_NNIO_s_axi.
+WARNING: [Synth 8-3332] Sequential element (i_32_50) is unused and will be removed from module classify_NNIO_s_axi.
+WARNING: [Synth 8-3332] Sequential element (i_32_52) is unused and will be removed from module classify_NNIO_s_axi.
+WARNING: [Synth 8-3332] Sequential element (i_32_54) is unused and will be removed from module classify_NNIO_s_axi.
+WARNING: [Synth 8-3332] Sequential element (i_32_56) is unused and will be removed from module classify_NNIO_s_axi.
+WARNING: [Synth 8-3332] Sequential element (i_32_58) is unused and will be removed from module classify_NNIO_s_axi.
+WARNING: [Synth 8-3332] Sequential element (i_32_60) is unused and will be removed from module classify_NNIO_s_axi.
+WARNING: [Synth 8-3332] Sequential element (i_32_62) is unused and will be removed from module classify_NNIO_s_axi.
+WARNING: [Synth 8-3332] Sequential element (i_32_64) is unused and will be removed from module classify_NNIO_s_axi.
+WARNING: [Synth 8-3332] Sequential element (wstate_reg[2]) is unused and will be removed from module classify_NNIO_s_axi.
+WARNING: [Synth 8-3332] Sequential element (rstate_reg[2]) is unused and will be removed from module classify_NNIO_s_axi.
+WARNING: [Synth 8-3332] Sequential element (int_img_shift_reg[1]) is unused and will be removed from module classify_NNIO_s_axi.
+WARNING: [Synth 8-3332] Sequential element (int_img_shift_reg[0]) is unused and will be removed from module classify_NNIO_s_axi.
+WARNING: [Synth 8-3332] Sequential element (result_62_reg_1731_reg[18]) is unused and will be removed from module classify.
+WARNING: [Synth 8-3332] Sequential element (result_62_reg_1731_reg[17]) is unused and will be removed from module classify.
+WARNING: [Synth 8-3332] Sequential element (result_62_reg_1731_reg[16]) is unused and will be removed from module classify.
+WARNING: [Synth 8-3332] Sequential element (result_62_reg_1731_reg[15]) is unused and will be removed from module classify.
+WARNING: [Synth 8-3332] Sequential element (result_62_reg_1731_reg[14]) is unused and will be removed from module classify.
+WARNING: [Synth 8-3332] Sequential element (result_62_reg_1731_reg[13]) is unused and will be removed from module classify.
+WARNING: [Synth 8-3332] Sequential element (result_62_reg_1731_reg[12]) is unused and will be removed from module classify.
+WARNING: [Synth 8-3332] Sequential element (result_62_reg_1731_reg[11]) is unused and will be removed from module classify.
+WARNING: [Synth 8-3332] Sequential element (result_62_reg_1731_reg[10]) is unused and will be removed from module classify.
+WARNING: [Synth 8-3332] Sequential element (result_62_reg_1731_reg[9]) is unused and will be removed from module classify.
+WARNING: [Synth 8-3332] Sequential element (result_62_reg_1731_reg[8]) is unused and will be removed from module classify.
+WARNING: [Synth 8-3332] Sequential element (result_62_reg_1731_reg[7]) is unused and will be removed from module classify.
+WARNING: [Synth 8-3332] Sequential element (result_62_reg_1731_reg[6]) is unused and will be removed from module classify.
+WARNING: [Synth 8-3332] Sequential element (result_62_reg_1731_reg[5]) is unused and will be removed from module classify.
+WARNING: [Synth 8-3332] Sequential element (result_62_reg_1731_reg[4]) is unused and will be removed from module classify.
+WARNING: [Synth 8-3332] Sequential element (result_62_reg_1731_reg[3]) is unused and will be removed from module classify.
+WARNING: [Synth 8-3332] Sequential element (result_62_reg_1731_reg[2]) is unused and will be removed from module classify.
+WARNING: [Synth 8-3332] Sequential element (result_62_reg_1731_reg[1]) is unused and will be removed from module classify.
+WARNING: [Synth 8-3332] Sequential element (result_62_reg_1731_reg[0]) is unused and will be removed from module classify.
+WARNING: [Synth 8-3332] Sequential element (result_i583_i_reg_1708_reg[18]) is unused and will be removed from module classify.
+WARNING: [Synth 8-3332] Sequential element (result_i583_i_reg_1708_reg[17]) is unused and will be removed from module classify.
+WARNING: [Synth 8-3332] Sequential element (result_i583_i_reg_1708_reg[16]) is unused and will be removed from module classify.
+WARNING: [Synth 8-3332] Sequential element (result_i583_i_reg_1708_reg[15]) is unused and will be removed from module classify.
+WARNING: [Synth 8-3332] Sequential element (result_i583_i_reg_1708_reg[14]) is unused and will be removed from module classify.
+WARNING: [Synth 8-3332] Sequential element (result_i583_i_reg_1708_reg[13]) is unused and will be removed from module classify.
+WARNING: [Synth 8-3332] Sequential element (result_i583_i_reg_1708_reg[12]) is unused and will be removed from module classify.
+WARNING: [Synth 8-3332] Sequential element (result_i583_i_reg_1708_reg[11]) is unused and will be removed from module classify.
+WARNING: [Synth 8-3332] Sequential element (result_i583_i_reg_1708_reg[10]) is unused and will be removed from module classify.
+WARNING: [Synth 8-3332] Sequential element (result_i583_i_reg_1708_reg[9]) is unused and will be removed from module classify.
+WARNING: [Synth 8-3332] Sequential element (result_i583_i_reg_1708_reg[8]) is unused and will be removed from module classify.
+WARNING: [Synth 8-3332] Sequential element (result_i583_i_reg_1708_reg[7]) is unused and will be removed from module classify.
+WARNING: [Synth 8-3332] Sequential element (result_i583_i_reg_1708_reg[6]) is unused and will be removed from module classify.
+WARNING: [Synth 8-3332] Sequential element (result_i583_i_reg_1708_reg[5]) is unused and will be removed from module classify.
+WARNING: [Synth 8-3332] Sequential element (result_i583_i_reg_1708_reg[4]) is unused and will be removed from module classify.
+WARNING: [Synth 8-3332] Sequential element (result_i583_i_reg_1708_reg[3]) is unused and will be removed from module classify.
+WARNING: [Synth 8-3332] Sequential element (result_i583_i_reg_1708_reg[2]) is unused and will be removed from module classify.
+WARNING: [Synth 8-3332] Sequential element (result_i583_i_reg_1708_reg[1]) is unused and will be removed from module classify.
+WARNING: [Synth 8-3332] Sequential element (result_i583_i_reg_1708_reg[0]) is unused and will be removed from module classify.
+WARNING: [Synth 8-3332] Sequential element (result_i563_i_reg_1685_reg[18]) is unused and will be removed from module classify.
+WARNING: [Synth 8-3332] Sequential element (result_i563_i_reg_1685_reg[17]) is unused and will be removed from module classify.
+WARNING: [Synth 8-3332] Sequential element (result_i563_i_reg_1685_reg[16]) is unused and will be removed from module classify.
+WARNING: [Synth 8-3332] Sequential element (result_i563_i_reg_1685_reg[15]) is unused and will be removed from module classify.
+WARNING: [Synth 8-3332] Sequential element (result_i563_i_reg_1685_reg[14]) is unused and will be removed from module classify.
+WARNING: [Synth 8-3332] Sequential element (result_i563_i_reg_1685_reg[13]) is unused and will be removed from module classify.
+WARNING: [Synth 8-3332] Sequential element (result_i563_i_reg_1685_reg[12]) is unused and will be removed from module classify.
+WARNING: [Synth 8-3332] Sequential element (result_i563_i_reg_1685_reg[11]) is unused and will be removed from module classify.
+WARNING: [Synth 8-3332] Sequential element (result_i563_i_reg_1685_reg[10]) is unused and will be removed from module classify.
+WARNING: [Synth 8-3332] Sequential element (result_i563_i_reg_1685_reg[9]) is unused and will be removed from module classify.
+WARNING: [Synth 8-3332] Sequential element (result_i563_i_reg_1685_reg[8]) is unused and will be removed from module classify.
+WARNING: [Synth 8-3332] Sequential element (result_i563_i_reg_1685_reg[7]) is unused and will be removed from module classify.
+WARNING: [Synth 8-3332] Sequential element (result_i563_i_reg_1685_reg[6]) is unused and will be removed from module classify.
+WARNING: [Synth 8-3332] Sequential element (result_i563_i_reg_1685_reg[5]) is unused and will be removed from module classify.
+WARNING: [Synth 8-3332] Sequential element (result_i563_i_reg_1685_reg[4]) is unused and will be removed from module classify.
+WARNING: [Synth 8-3332] Sequential element (result_i563_i_reg_1685_reg[3]) is unused and will be removed from module classify.
+WARNING: [Synth 8-3332] Sequential element (result_i563_i_reg_1685_reg[2]) is unused and will be removed from module classify.
+WARNING: [Synth 8-3332] Sequential element (result_i563_i_reg_1685_reg[1]) is unused and will be removed from module classify.
+WARNING: [Synth 8-3332] Sequential element (result_i563_i_reg_1685_reg[0]) is unused and will be removed from module classify.
+WARNING: [Synth 8-3332] Sequential element (result_i543_i_reg_1662_reg[18]) is unused and will be removed from module classify.
+WARNING: [Synth 8-3332] Sequential element (result_i543_i_reg_1662_reg[17]) is unused and will be removed from module classify.
+WARNING: [Synth 8-3332] Sequential element (result_i543_i_reg_1662_reg[16]) is unused and will be removed from module classify.
+WARNING: [Synth 8-3332] Sequential element (result_i543_i_reg_1662_reg[15]) is unused and will be removed from module classify.
+WARNING: [Synth 8-3332] Sequential element (result_i543_i_reg_1662_reg[14]) is unused and will be removed from module classify.
+WARNING: [Synth 8-3332] Sequential element (result_i543_i_reg_1662_reg[13]) is unused and will be removed from module classify.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:39 ; elapsed = 00:00:50 . Memory (MB): peak = 676.219 ; gain = 448.406
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++---------------+-----------------------------+---------------+----------------+
+|Module Name    | RTL Object                  | Depth x Width | Implemented As | 
++---------------+-----------------------------+---------------+----------------+
+|classify_W_rom | q0_reg                      | 512x8         | Block RAM      | 
+|classify       | W_U/classify_W_rom_U/q0_reg | 512x8         | Block RAM      | 
++---------------+-----------------------------+---------------+----------------+
+
+
+Block RAM: Preliminary Mapping  Report (see note below)
++-------------------------+----------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name              | RTL Object           | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++-------------------------+----------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|classify_NNIO_s_axi_ram: | gen_write[1].mem_reg | 4 x 32(READ_FIRST)     | W | R | 4 x 32(READ_FIRST)     | W | R | Port A and B     | 0      | 1      | 
++-------------------------+----------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+DSP: Preliminary Mapping  Report (see note below)
++-----------------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name                  | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++-----------------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|classify_mac_mulabkb_DSP48_0 | C+A*B       | 8      | 8      | 19     | -      | 19     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|classify_mac_mulabkb_DSP48_0 | C+A*B       | 8      | 8      | 19     | -      | 19     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|classify_mac_mulabkb_DSP48_0 | C+A*B       | 8      | 8      | 19     | -      | 19     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|classify_mac_mulabkb_DSP48_0 | C+A*B       | 8      | 8      | 19     | -      | 19     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|classify_mac_mulabkb_DSP48_0 | C+A*B       | 8      | 8      | 19     | -      | 19     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|classify_mac_mulabkb_DSP48_0 | C+A*B       | 8      | 8      | 19     | -      | 19     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|classify_mac_mulabkb_DSP48_0 | C+A*B       | 8      | 8      | 19     | -      | 19     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|classify_mac_mulabkb_DSP48_0 | C+A*B       | 8      | 8      | 19     | -      | 19     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|classify_mac_mulabkb_DSP48_0 | C+A*B       | 8      | 8      | 19     | -      | 19     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|classify_mac_mulabkb_DSP48_0 | C+A*B       | 8      | 8      | 19     | -      | 19     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|classify_mac_mulabkb_DSP48_0 | C+A*B       | 8      | 8      | 19     | -      | 19     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|classify_mac_mulabkb_DSP48_0 | C+A*B       | 8      | 8      | 19     | -      | 19     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|classify_mac_mulabkb_DSP48_0 | C+A*B       | 8      | 8      | 19     | -      | 19     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|classify_mac_mulabkb_DSP48_0 | C+A*B       | 8      | 8      | 19     | -      | 19     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|classify_mac_mulabkb_DSP48_0 | C+A*B       | 8      | 8      | 19     | -      | 19     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|classify_mac_mulabkb_DSP48_0 | C+A*B       | 8      | 8      | 19     | -      | 19     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|classify_mac_mulabkb_DSP48_0 | C+A*B       | 8      | 8      | 19     | -      | 19     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|classify_mac_mulabkb_DSP48_0 | C+A*B       | 8      | 8      | 19     | -      | 19     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|classify_mac_mulabkb_DSP48_0 | C+A*B       | 8      | 8      | 19     | -      | 19     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|classify_mac_mulabkb_DSP48_0 | C+A*B       | 8      | 8      | 19     | -      | 19     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|classify_mac_mulabkb_DSP48_0 | C+A*B       | 8      | 8      | 19     | -      | 19     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|classify_mac_mulabkb_DSP48_0 | C+A*B       | 8      | 8      | 19     | -      | 19     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|classify_mac_mulabkb_DSP48_0 | C+A*B       | 8      | 8      | 19     | -      | 19     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|classify_mac_mulabkb_DSP48_0 | C+A*B       | 8      | 8      | 19     | -      | 19     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|classify_mac_mulabkb_DSP48_0 | C+A*B       | 8      | 8      | 19     | -      | 19     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|classify_mac_mulabkb_DSP48_0 | C+A*B       | 8      | 8      | 19     | -      | 19     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|classify_mac_mulabkb_DSP48_0 | C+A*B       | 8      | 8      | 19     | -      | 19     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|classify_mac_mulabkb_DSP48_0 | C+A*B       | 8      | 8      | 19     | -      | 19     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|classify_mac_mulabkb_DSP48_0 | C+A*B       | 8      | 8      | 19     | -      | 19     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|classify_mac_mulabkb_DSP48_0 | C+A*B       | 8      | 8      | 19     | -      | 19     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|classify_mac_mulabkb_DSP48_0 | C+A*B       | 8      | 8      | 19     | -      | 19     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|classify_mac_mulabkb_DSP48_0 | C+A*B       | 8      | 8      | 19     | -      | 19     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
++-----------------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:53 ; elapsed = 00:01:04 . Memory (MB): peak = 676.219 ; gain = 448.406
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3971] The signal int_img/gen_write[1].mem_reg was recognized as a true dual port RAM template.
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:55 ; elapsed = 00:01:06 . Memory (MB): peak = 676.219 ; gain = 448.406
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4480] The timing for the instance U0/classify_NNIO_s_axi_U/int_img/gen_write[1].mem_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:55 ; elapsed = 00:01:06 . Memory (MB): peak = 676.219 ; gain = 448.406
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:56 ; elapsed = 00:01:07 . Memory (MB): peak = 676.219 ; gain = 448.406
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:56 ; elapsed = 00:01:07 . Memory (MB): peak = 676.219 ; gain = 448.406
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:56 ; elapsed = 00:01:07 . Memory (MB): peak = 676.219 ; gain = 448.406
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:56 ; elapsed = 00:01:07 . Memory (MB): peak = 676.219 ; gain = 448.406
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:56 ; elapsed = 00:01:07 . Memory (MB): peak = 676.219 ; gain = 448.406
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:56 ; elapsed = 00:01:07 . Memory (MB): peak = 676.219 ; gain = 448.406
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |LUT1     |    33|
+|2     |LUT2     |    71|
+|3     |LUT3     |   117|
+|4     |LUT4     |    57|
+|5     |LUT5     |    55|
+|6     |LUT6     |   132|
+|7     |MUXF7    |     2|
+|8     |RAMB36E1 |     1|
+|9     |FDRE     |   547|
+|10    |FDSE     |     5|
++------+---------+------+
+
+Report Instance Areas: 
++------+--------------------------+------------------------+------+
+|      |Instance                  |Module                  |Cells |
++------+--------------------------+------------------------+------+
+|1     |top                       |                        |  1020|
+|2     |  U0                      |classify                |  1020|
+|3     |    classify_NNIO_s_axi_U |classify_NNIO_s_axi     |   195|
+|4     |      int_img             |classify_NNIO_s_axi_ram |    85|
+|5     |    grp_RELU_fu_1756      |RELU                    |    47|
++------+--------------------------+------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:56 ; elapsed = 00:01:07 . Memory (MB): peak = 676.219 ; gain = 448.406
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 781 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:29 ; elapsed = 00:00:48 . Memory (MB): peak = 676.219 ; gain = 129.074
+Synthesis Optimization Complete : Time (s): cpu = 00:00:56 ; elapsed = 00:01:07 . Memory (MB): peak = 676.219 ; gain = 448.406
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+288 Infos, 188 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:59 ; elapsed = 00:01:11 . Memory (MB): peak = 676.219 ; gain = 449.031
+INFO: [Common 17-1381] The checkpoint 'C:/ERTS_repo/Project/Xilinx/ML_MNIST/ML_MNIST.runs/system_classify_0_5_synth_1/system_classify_0_5.dcp' has been generated.

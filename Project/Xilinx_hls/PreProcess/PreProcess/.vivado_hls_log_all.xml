@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog>
+        <logs message="ERROR: [HLS 200-70] Synthesizability check failed.&#xD;&#xA;command 'ap_source' returned error code&#xD;&#xA;    while executing&#xD;&#xA;&quot;source C:/ERTS_repo/Project/Xilinx_hls/PreProcess/PreProcess/solution1/csynth.tcl&quot;&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;hls::main C:/ERTS_repo/Project/Xilinx_hls/PreProcess/PreProcess/solution1/csynth.tcl&quot;&#xD;&#xA;    (&quot;uplevel&quot; body line 1)&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;uplevel 1 hls::main {*}$args&quot;&#xD;&#xA;    (procedure &quot;hls_proc&quot; line 5)&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;hls_proc $argv&quot;&#xD;&#xA;" projectName="PreProcess" solutionName="solution1" date="2019-12-28T18:29:32.036+0100"/>
+        <logs message="ERROR: [SYNCHK 200-61] C:/Users/Rasmus/Desktop/xfopencv-master/include\common/xf_structs.h:650: unsupported memory access on variable 'Mat&lt;0, 28, 28, 1>.data.V' which is (or contains) an array with unknown size at compile time." projectName="PreProcess" solutionName="solution1" date="2019-12-28T18:29:31.688+0100"/>
+        <logs message="ERROR: [SYNCHK 200-11] C:/Users/Rasmus/Desktop/xfopencv-master/include\imgproc/xf_pyr_down.hpp:41: Argument '_src.data.V' of function 'pyrDown&lt;0, 28, 28, 1, false>' (C:/Users/Rasmus/Desktop/xfopencv-master/include\imgproc/xf_pyr_down.hpp:88) has an unsynthesizable type (possible cause(s): pointer to pointer or global pointer)." projectName="PreProcess" solutionName="solution1" date="2019-12-28T18:29:31.653+0100"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [SYNCHK 200-23] C:/Users/Rasmus/Desktop/xfopencv-master/include\imgproc/xf_pyr_down_gaussian_blur.hpp:73: variable-indexed range selection may cause suboptimal QoR." projectName="PreProcess" solutionName="solution1" date="2019-12-28T18:29:31.612+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] In file included from ../../../../Users/Rasmus/Desktop/xfopencv-master/examples/pyrdown/xf_pyr_down_accel.cpp:30:&#xD;&#xA;In file included from ../../../../Users/Rasmus/Desktop/xfopencv-master/examples/pyrdown/xf_pyr_down_config.h:38:&#xD;&#xA;C:/Users/Rasmus/Desktop/xfopencv-master/include\imgproc/xf_pyr_down.hpp:87:54: warning: default template arguments for a function template are a C++11 extension [-Wc++11-extensions]&#xD;&#xA;template&lt;int TYPE, int ROWS, int COLS, int NPC, bool USE_URAM = false> &#xD;&#xA;                                                     ^          ~~~~~&#xD;&#xA;1 warning generated." projectName="PreProcess" solutionName="solution1" date="2019-12-28T18:29:24.779+0100" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

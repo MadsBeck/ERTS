@@ -1,0 +1,4390 @@
+
+
+================================================================
+== Vivado HLS Report for 'classify'
+================================================================
+* Date:           Tue Dec 31 14:49:05 2019
+
+* Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
+* Project:        neural.prj
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z010clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   8.00|      6.38|        1.00|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +------+------+------+------+---------+
+    |   Latency   |   Interval  | Pipeline|
+    |  min |  max |  min |  max |   Type  |
+    +------+------+------+------+---------+
+    |  3317|  3317|  3318|  3318|   none  |
+    +------+------+------+------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------------+------+------+----------+-----------+-----------+------+----------+
+        |                          |   Latency   | Iteration|  Initiation Interval  | Trip |          |
+        |         Loop Name        |  min |  max |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------------+------+------+----------+-----------+-----------+------+----------+
+        |- Loop 1                  |    64|    64|         4|          -|          -|    16|    no    |
+        |- Loop 2                  |    48|    48|         3|          -|          -|    16|    no    |
+        |- Loop 3                  |    48|    48|         3|          -|          -|    16|    no    |
+        |- Loop 4                  |    64|    64|         4|          -|          -|    16|    no    |
+        |- Loop 5                  |    64|    64|         4|          -|          -|    16|    no    |
+        |- Loop 6                  |    64|    64|         4|          -|          -|    16|    no    |
+        |- Loop 7                  |    64|    64|         4|          -|          -|    16|    no    |
+        |- Loop 8                  |    64|    64|         4|          -|          -|    16|    no    |
+        |- Loop 9                  |    64|    64|         4|          -|          -|    16|    no    |
+        |- Loop 10                 |    48|    48|         3|          -|          -|    16|    no    |
+        |- Loop 11                 |    48|    48|         3|          -|          -|    16|    no    |
+        |- Loop 12                 |    64|    64|         4|          -|          -|    16|    no    |
+        |- Loop 13                 |    64|    64|         4|          -|          -|    16|    no    |
+        |- Loop 14                 |    64|    64|         4|          -|          -|    16|    no    |
+        |- Loop 15                 |    64|    64|         4|          -|          -|    16|    no    |
+        |- Loop 16                 |    64|    64|         4|          -|          -|    16|    no    |
+        |- Loop 17                 |    64|    64|         4|          -|          -|    16|    no    |
+        |- Loop 18                 |    64|    64|         4|          -|          -|    16|    no    |
+        |- Loop 19                 |    64|    64|         4|          -|          -|    16|    no    |
+        |- Loop 20                 |    64|    64|         4|          -|          -|    16|    no    |
+        |- Loop 21                 |    64|    64|         4|          -|          -|    16|    no    |
+        |- Loop 22                 |    64|    64|         4|          -|          -|    16|    no    |
+        |- Loop 23                 |    64|    64|         4|          -|          -|    16|    no    |
+        |- Loop 24                 |    64|    64|         4|          -|          -|    16|    no    |
+        |- Loop 25                 |    64|    64|         4|          -|          -|    16|    no    |
+        |- Loop 26                 |    64|    64|         4|          -|          -|    16|    no    |
+        |- Loop 27                 |    48|    48|         3|          -|          -|    16|    no    |
+        |- Loop 28                 |    48|    48|         3|          -|          -|    16|    no    |
+        |- Loop 29                 |    48|    48|         3|          -|          -|    16|    no    |
+        |- Loop 30                 |    48|    48|         3|          -|          -|    16|    no    |
+        |- Loop 31                 |    48|    48|         3|          -|          -|    16|    no    |
+        |- Loop 32                 |    48|    48|         3|          -|          -|    16|    no    |
+        |- SoftMaxLayer_label8     |  1330|  1330|       133|          -|          -|    10|    no    |
+        | + SoftMaxLayer_label8.1  |   128|   128|         4|          -|          -|    32|    no    |
+        |- Loop 34                 |    30|    30|         3|          -|          -|    10|    no    |
+        +--------------------------+------+------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 133
+* Pipeline: 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / (!exitcond_i)
+	6  / (exitcond_i)
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	2  / true
+6 --> 
+	7  / (!exitcond_i5)
+	9  / (exitcond_i5)
+7 --> 
+	8  / true
+8 --> 
+	6  / true
+9 --> 
+	10  / (!exitcond_i1)
+	12  / (exitcond_i1)
+10 --> 
+	11  / true
+11 --> 
+	9  / true
+12 --> 
+	13  / (!exitcond_i2)
+	16  / (exitcond_i2)
+13 --> 
+	14  / true
+14 --> 
+	15  / true
+15 --> 
+	12  / true
+16 --> 
+	17  / (!exitcond_i3)
+	20  / (exitcond_i3)
+17 --> 
+	18  / true
+18 --> 
+	19  / true
+19 --> 
+	16  / true
+20 --> 
+	21  / (!exitcond_i4)
+	24  / (exitcond_i4)
+21 --> 
+	22  / true
+22 --> 
+	23  / true
+23 --> 
+	20  / true
+24 --> 
+	25  / (!exitcond_i6)
+	28  / (exitcond_i6)
+25 --> 
+	26  / true
+26 --> 
+	27  / true
+27 --> 
+	24  / true
+28 --> 
+	29  / (!exitcond_i7)
+	32  / (exitcond_i7)
+29 --> 
+	30  / true
+30 --> 
+	31  / true
+31 --> 
+	28  / true
+32 --> 
+	33  / (!exitcond_i8)
+	36  / (exitcond_i8)
+33 --> 
+	34  / true
+34 --> 
+	35  / true
+35 --> 
+	32  / true
+36 --> 
+	37  / (!exitcond_i9)
+	39  / (exitcond_i9)
+37 --> 
+	38  / true
+38 --> 
+	36  / true
+39 --> 
+	40  / (!exitcond_i10)
+	42  / (exitcond_i10)
+40 --> 
+	41  / true
+41 --> 
+	39  / true
+42 --> 
+	43  / (!exitcond_i11)
+	46  / (exitcond_i11)
+43 --> 
+	44  / true
+44 --> 
+	45  / true
+45 --> 
+	42  / true
+46 --> 
+	47  / (!exitcond_i12)
+	50  / (exitcond_i12)
+47 --> 
+	48  / true
+48 --> 
+	49  / true
+49 --> 
+	46  / true
+50 --> 
+	51  / (!exitcond_i13)
+	54  / (exitcond_i13)
+51 --> 
+	52  / true
+52 --> 
+	53  / true
+53 --> 
+	50  / true
+54 --> 
+	55  / (!exitcond_i14)
+	58  / (exitcond_i14)
+55 --> 
+	56  / true
+56 --> 
+	57  / true
+57 --> 
+	54  / true
+58 --> 
+	59  / (!exitcond_i15)
+	62  / (exitcond_i15)
+59 --> 
+	60  / true
+60 --> 
+	61  / true
+61 --> 
+	58  / true
+62 --> 
+	63  / (!exitcond_i16)
+	66  / (exitcond_i16)
+63 --> 
+	64  / true
+64 --> 
+	65  / true
+65 --> 
+	62  / true
+66 --> 
+	67  / (!exitcond_i17)
+	70  / (exitcond_i17)
+67 --> 
+	68  / true
+68 --> 
+	69  / true
+69 --> 
+	66  / true
+70 --> 
+	71  / (!exitcond_i18)
+	74  / (exitcond_i18)
+71 --> 
+	72  / true
+72 --> 
+	73  / true
+73 --> 
+	70  / true
+74 --> 
+	75  / (!exitcond_i19)
+	78  / (exitcond_i19)
+75 --> 
+	76  / true
+76 --> 
+	77  / true
+77 --> 
+	74  / true
+78 --> 
+	79  / (!exitcond_i20)
+	82  / (exitcond_i20)
+79 --> 
+	80  / true
+80 --> 
+	81  / true
+81 --> 
+	78  / true
+82 --> 
+	83  / (!exitcond_i21)
+	86  / (exitcond_i21)
+83 --> 
+	84  / true
+84 --> 
+	85  / true
+85 --> 
+	82  / true
+86 --> 
+	87  / (!exitcond_i22)
+	90  / (exitcond_i22)
+87 --> 
+	88  / true
+88 --> 
+	89  / true
+89 --> 
+	86  / true
+90 --> 
+	91  / (!exitcond_i23)
+	94  / (exitcond_i23)
+91 --> 
+	92  / true
+92 --> 
+	93  / true
+93 --> 
+	90  / true
+94 --> 
+	95  / (!exitcond_i24)
+	98  / (exitcond_i24)
+95 --> 
+	96  / true
+96 --> 
+	97  / true
+97 --> 
+	94  / true
+98 --> 
+	99  / (!exitcond_i25)
+	102  / (exitcond_i25)
+99 --> 
+	100  / true
+100 --> 
+	101  / true
+101 --> 
+	98  / true
+102 --> 
+	103  / (!exitcond_i26)
+	105  / (exitcond_i26)
+103 --> 
+	104  / true
+104 --> 
+	102  / true
+105 --> 
+	106  / (!exitcond_i27)
+	108  / (exitcond_i27)
+106 --> 
+	107  / true
+107 --> 
+	105  / true
+108 --> 
+	109  / (!exitcond_i28)
+	111  / (exitcond_i28)
+109 --> 
+	110  / true
+110 --> 
+	108  / true
+111 --> 
+	112  / (!exitcond_i29)
+	114  / (exitcond_i29)
+112 --> 
+	113  / true
+113 --> 
+	111  / true
+114 --> 
+	115  / (!exitcond_i30)
+	117  / (exitcond_i30)
+115 --> 
+	116  / true
+116 --> 
+	114  / true
+117 --> 
+	118  / (!exitcond_i31)
+	120  / (exitcond_i31)
+118 --> 
+	119  / true
+119 --> 
+	117  / true
+120 --> 
+	121  / true
+121 --> 
+	122  / true
+122 --> 
+	123  / (!tmp_i)
+	130  / (tmp_i)
+123 --> 
+	124  / true
+124 --> 
+	125  / (!exitcond_i_i)
+	128  / (exitcond_i_i)
+125 --> 
+	126  / true
+126 --> 
+	127  / true
+127 --> 
+	124  / true
+128 --> 
+	129  / true
+129 --> 
+	122  / true
+130 --> 
+	131  / true
+131 --> 
+	132  / (!tmp_i_37)
+132 --> 
+	133  / true
+133 --> 
+	131  / true
+* FSM state operations: 
+
+ <State 1>: 1.59ns
+ST_1: output (6)  [1/1] 0.00ns  loc: NN.cpp:76->NN.cpp:23->classifier.cpp:10
+._crit_edge.i.0:0  %output = alloca [10 x i32], align 4
+
+ST_1: tempOut (7)  [1/1] 0.00ns  loc: NN.cpp:19->classifier.cpp:10
+._crit_edge.i.0:1  %tempOut = alloca [32 x i19], align 4
+
+ST_1: StgValue_136 (8)  [1/1] 0.00ns
+._crit_edge.i.0:2  call void (...)* @_ssdm_op_SpecBitsMap([16 x i8]* %img) nounwind, !map !59
+
+ST_1: StgValue_137 (9)  [1/1] 0.00ns
+._crit_edge.i.0:3  call void (...)* @_ssdm_op_SpecBitsMap(i8 0) nounwind, !map !64
+
+ST_1: StgValue_138 (10)  [1/1] 0.00ns
+._crit_edge.i.0:4  call void (...)* @_ssdm_op_SpecTopModule([9 x i8]* @classify_str) nounwind
+
+ST_1: empty (11)  [1/1] 0.00ns
+._crit_edge.i.0:5  %empty = call i32 (...)* @_ssdm_op_SpecMemCore([16 x i8]* %img, [1 x i8]* @p_str, [7 x i8]* @RAM_1P_str, [1 x i8]* @p_str, i32 -1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
+
+ST_1: StgValue_140 (12)  [1/1] 0.00ns
+._crit_edge.i.0:6  call void (...)* @_ssdm_op_SpecInterface([16 x i8]* %img, [10 x i8]* @p_str5, i32 0, i32 0, [1 x i8]* @p_str16, i32 0, i32 0, [5 x i8]* @p_str27, [1 x i8]* @p_str16, [1 x i8]* @p_str16, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str16, [1 x i8]* @p_str16) nounwind
+
+ST_1: StgValue_141 (13)  [1/1] 0.00ns  loc: classifier.cpp:7
+._crit_edge.i.0:7  call void (...)* @_ssdm_op_SpecInterface(i32 0, [10 x i8]* @p_str5, i32 0, i32 0, [1 x i8]* @p_str16, i32 0, i32 0, [5 x i8]* @p_str27, [1 x i8]* @p_str16, [1 x i8]* @p_str16, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str16, [1 x i8]* @p_str16) nounwind
+
+ST_1: StgValue_142 (14)  [1/1] 1.59ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+._crit_edge.i.0:8  br label %0
+
+
+ <State 2>: 4.83ns
+ST_2: result_i (16)  [1/1] 0.00ns
+:0  %result_i = phi i19 [ 0, %._crit_edge.i.0 ], [ %result_1, %1 ]
+
+ST_2: i_i (17)  [1/1] 0.00ns
+:1  %i_i = phi i5 [ 0, %._crit_edge.i.0 ], [ %i, %1 ]
+
+ST_2: exitcond_i (18)  [1/1] 3.31ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:2  %exitcond_i = icmp eq i5 %i_i, -16
+
+ST_2: empty_3 (19)  [1/1] 0.00ns
+:3  %empty_3 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 16, i64 16, i64 16) nounwind
+
+ST_2: i (20)  [1/1] 2.33ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:4  %i = add i5 %i_i, 1
+
+ST_2: StgValue_148 (21)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:5  br i1 %exitcond_i, label %neuron.exit, label %1
+
+ST_2: adjSize1359_cast (24)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:1  %adjSize1359_cast = zext i5 %i_i to i10
+
+ST_2: mem_index_gep (25)  [1/1] 2.32ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:2  %mem_index_gep = add i10 %adjSize1359_cast, -420
+
+ST_2: result (40)  [1/1] 2.51ns  loc: NN.cpp:35->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit:0  %result = add i19 %result_i, -2
+
+ST_2: tempOut_addr (41)  [1/1] 0.00ns  loc: NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit:1  %tempOut_addr = getelementptr [32 x i19]* %tempOut, i32 0, i32 0
+
+ST_2: StgValue_153 (42)  [1/1] 2.32ns  loc: NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit:2  store i19 %result, i19* %tempOut_addr, align 4
+
+ST_2: StgValue_154 (43)  [1/1] 1.59ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit:3  br label %2
+
+
+ <State 3>: 5.58ns
+ST_3: tmp_5_i (23)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:0  %tmp_5_i = zext i5 %i_i to i32
+
+ST_3: adjSize2057_cast (26)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:3  %adjSize2057_cast = zext i10 %mem_index_gep to i11
+
+ST_3: gepindex (27)  [1/1] 2.33ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:4  %gepindex = add i11 %adjSize2057_cast, -604
+
+ST_3: gepindex_cast (28)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:5  %gepindex_cast = zext i11 %gepindex to i32
+
+ST_3: W_addr (29)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:6  %W_addr = getelementptr [512 x i8]* @W, i32 0, i32 %gepindex_cast
+
+ST_3: W_load (30)  [2/2] 3.25ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:7  %W_load = load i8* %W_addr, align 1
+
+ST_3: img_addr (32)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:9  %img_addr = getelementptr [16 x i8]* %img, i32 0, i32 %tmp_5_i
+
+ST_3: img_load (33)  [2/2] 2.32ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:10  %img_load = load i8* %img_addr, align 1
+
+
+ <State 4>: 3.25ns
+ST_4: W_load (30)  [1/2] 3.25ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:7  %W_load = load i8* %W_addr, align 1
+
+ST_4: img_load (33)  [1/2] 2.32ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:10  %img_load = load i8* %img_addr, align 1
+
+
+ <State 5>: 6.38ns
+ST_5: tmp_6_cast_i (31)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:8  %tmp_6_cast_i = sext i8 %W_load to i16
+
+ST_5: tmp_7_cast_i (34)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:11  %tmp_7_cast_i = sext i8 %img_load to i16
+
+ST_5: tmp_8_i (35)  [1/1] 3.36ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:12  %tmp_8_i = mul i16 %tmp_7_cast_i, %tmp_6_cast_i
+
+ST_5: tmp_8_cast_i_cast (36)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:13  %tmp_8_cast_i_cast = sext i16 %tmp_8_i to i19
+
+ST_5: result_1 (37)  [1/1] 3.02ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:14  %result_1 = add i19 %result_i, %tmp_8_cast_i_cast
+
+ST_5: StgValue_170 (38)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:15  br label %0
+
+
+ <State 6>: 5.32ns
+ST_6: result_i3 (45)  [1/1] 0.00ns
+:0  %result_i3 = phi i19 [ 0, %neuron.exit ], [ %result_3, %3 ]
+
+ST_6: i_i4 (46)  [1/1] 0.00ns
+:1  %i_i4 = phi i5 [ 0, %neuron.exit ], [ %i_1, %3 ]
+
+ST_6: exitcond_i5 (47)  [1/1] 3.31ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:2  %exitcond_i5 = icmp eq i5 %i_i4, -16
+
+ST_6: empty_4 (48)  [1/1] 0.00ns
+:3  %empty_4 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 16, i64 16, i64 16) nounwind
+
+ST_6: i_1 (49)  [1/1] 2.33ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:4  %i_1 = add i5 %i_i4, 1
+
+ST_6: StgValue_176 (50)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:5  br i1 %exitcond_i5, label %neuron.exit20, label %3
+
+ST_6: tmp_5_i6 (52)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:0  %tmp_5_i6 = zext i5 %i_i4 to i32
+
+ST_6: gepindex1 (53)  [1/1] 2.07ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:1  %gepindex1 = xor i5 %i_i4, -16
+
+ST_6: gepindex2065_cast (54)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:2  %gepindex2065_cast = zext i5 %gepindex1 to i32
+
+ST_6: W_addr_1 (55)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:3  %W_addr_1 = getelementptr [512 x i8]* @W, i32 0, i32 %gepindex2065_cast
+
+ST_6: W_load_1 (56)  [2/2] 3.25ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:4  %W_load_1 = load i8* %W_addr_1, align 1
+
+ST_6: img_addr_1 (58)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:6  %img_addr_1 = getelementptr [16 x i8]* %img, i32 0, i32 %tmp_5_i6
+
+ST_6: img_load_1 (59)  [2/2] 2.32ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:7  %img_load_1 = load i8* %img_addr_1, align 1
+
+ST_6: result_2 (66)  [1/1] 2.51ns  loc: NN.cpp:35->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit20:0  %result_2 = add i19 %result_i3, 57
+
+ST_6: tempOut_addr_1 (67)  [1/1] 0.00ns  loc: NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit20:1  %tempOut_addr_1 = getelementptr [32 x i19]* %tempOut, i32 0, i32 1
+
+ST_6: StgValue_186 (68)  [1/1] 2.32ns  loc: NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit20:2  store i19 %result_2, i19* %tempOut_addr_1, align 4
+
+ST_6: StgValue_187 (69)  [1/1] 1.59ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit20:3  br label %4
+
+
+ <State 7>: 3.25ns
+ST_7: W_load_1 (56)  [1/2] 3.25ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:4  %W_load_1 = load i8* %W_addr_1, align 1
+
+ST_7: img_load_1 (59)  [1/2] 2.32ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:7  %img_load_1 = load i8* %img_addr_1, align 1
+
+
+ <State 8>: 6.38ns
+ST_8: tmp_6_cast_i9 (57)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:5  %tmp_6_cast_i9 = sext i8 %W_load_1 to i16
+
+ST_8: tmp_7_cast_i1 (60)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:8  %tmp_7_cast_i1 = sext i8 %img_load_1 to i16
+
+ST_8: tmp_8_i1 (61)  [1/1] 3.36ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:9  %tmp_8_i1 = mul i16 %tmp_7_cast_i1, %tmp_6_cast_i9
+
+ST_8: tmp_8_cast_i1_cast (62)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:10  %tmp_8_cast_i1_cast = sext i16 %tmp_8_i1 to i19
+
+ST_8: result_3 (63)  [1/1] 3.02ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:11  %result_3 = add i19 %result_i3, %tmp_8_cast_i1_cast
+
+ST_8: StgValue_195 (64)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:12  br label %2
+
+
+ <State 9>: 4.83ns
+ST_9: result_i1 (71)  [1/1] 0.00ns
+:0  %result_i1 = phi i19 [ 0, %neuron.exit20 ], [ %result_5, %5 ]
+
+ST_9: i_i1 (72)  [1/1] 0.00ns
+:1  %i_i1 = phi i5 [ 0, %neuron.exit20 ], [ %i_2, %5 ]
+
+ST_9: exitcond_i1 (73)  [1/1] 3.31ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:2  %exitcond_i1 = icmp eq i5 %i_i1, -16
+
+ST_9: empty_5 (74)  [1/1] 0.00ns
+:3  %empty_5 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 16, i64 16, i64 16) nounwind
+
+ST_9: i_2 (75)  [1/1] 2.33ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:4  %i_2 = add i5 %i_i1, 1
+
+ST_9: StgValue_201 (76)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:5  br i1 %exitcond_i1, label %neuron.exit40, label %5
+
+ST_9: tmp_5_i1 (78)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:0  %tmp_5_i1 = zext i5 %i_i1 to i32
+
+ST_9: gepindex2 (79)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:1  %gepindex2 = call i6 @_ssdm_op_BitConcatenate.i6.i1.i5(i1 true, i5 %i_i1)
+
+ST_9: gepindex2074_cast (80)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:2  %gepindex2074_cast = zext i6 %gepindex2 to i32
+
+ST_9: W_addr_2 (81)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:3  %W_addr_2 = getelementptr [512 x i8]* @W, i32 0, i32 %gepindex2074_cast
+
+ST_9: W_load_2 (82)  [2/2] 3.25ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:4  %W_load_2 = load i8* %W_addr_2, align 1
+
+ST_9: img_addr_2 (84)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:6  %img_addr_2 = getelementptr [16 x i8]* %img, i32 0, i32 %tmp_5_i1
+
+ST_9: img_load_2 (85)  [2/2] 2.32ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:7  %img_load_2 = load i8* %img_addr_2, align 1
+
+ST_9: result_4 (92)  [1/1] 2.51ns  loc: NN.cpp:35->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit40:0  %result_4 = add i19 %result_i1, -57
+
+ST_9: tempOut_addr_2 (93)  [1/1] 0.00ns  loc: NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit40:1  %tempOut_addr_2 = getelementptr [32 x i19]* %tempOut, i32 0, i32 2
+
+ST_9: StgValue_211 (94)  [1/1] 2.32ns  loc: NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit40:2  store i19 %result_4, i19* %tempOut_addr_2, align 4
+
+ST_9: StgValue_212 (95)  [1/1] 1.59ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit40:3  br label %6
+
+
+ <State 10>: 3.25ns
+ST_10: W_load_2 (82)  [1/2] 3.25ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:4  %W_load_2 = load i8* %W_addr_2, align 1
+
+ST_10: img_load_2 (85)  [1/2] 2.32ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:7  %img_load_2 = load i8* %img_addr_2, align 1
+
+
+ <State 11>: 6.38ns
+ST_11: tmp_6_cast_i1 (83)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:5  %tmp_6_cast_i1 = sext i8 %W_load_2 to i16
+
+ST_11: tmp_7_cast_i2 (86)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:8  %tmp_7_cast_i2 = sext i8 %img_load_2 to i16
+
+ST_11: tmp_8_i2 (87)  [1/1] 3.36ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:9  %tmp_8_i2 = mul i16 %tmp_7_cast_i2, %tmp_6_cast_i1
+
+ST_11: tmp_8_cast_i2_cast (88)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:10  %tmp_8_cast_i2_cast = sext i16 %tmp_8_i2 to i19
+
+ST_11: result_5 (89)  [1/1] 3.02ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:11  %result_5 = add i19 %result_i1, %tmp_8_cast_i2_cast
+
+ST_11: StgValue_220 (90)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:12  br label %4
+
+
+ <State 12>: 4.83ns
+ST_12: result_i2 (97)  [1/1] 0.00ns
+:0  %result_i2 = phi i19 [ 0, %neuron.exit40 ], [ %result_7, %7 ]
+
+ST_12: i_i2 (98)  [1/1] 0.00ns
+:1  %i_i2 = phi i5 [ 0, %neuron.exit40 ], [ %i_3, %7 ]
+
+ST_12: exitcond_i2 (99)  [1/1] 3.31ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:2  %exitcond_i2 = icmp eq i5 %i_i2, -16
+
+ST_12: empty_6 (100)  [1/1] 0.00ns
+:3  %empty_6 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 16, i64 16, i64 16) nounwind
+
+ST_12: i_3 (101)  [1/1] 2.33ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:4  %i_3 = add i5 %i_i2, 1
+
+ST_12: StgValue_226 (102)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:5  br i1 %exitcond_i2, label %neuron.exit60, label %7
+
+ST_12: adjSize1422_cast (105)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:1  %adjSize1422_cast = zext i5 %i_i2 to i10
+
+ST_12: mem_index_gep1 (106)  [1/1] 2.32ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:2  %mem_index_gep1 = add i10 %adjSize1422_cast, -372
+
+ST_12: result_6 (121)  [1/1] 2.51ns  loc: NN.cpp:35->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit60:0  %result_6 = add i19 %result_i2, -121
+
+ST_12: tempOut_addr_3 (122)  [1/1] 0.00ns  loc: NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit60:1  %tempOut_addr_3 = getelementptr [32 x i19]* %tempOut, i32 0, i32 3
+
+ST_12: StgValue_231 (123)  [1/1] 2.32ns  loc: NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit60:2  store i19 %result_6, i19* %tempOut_addr_3, align 4
+
+ST_12: StgValue_232 (124)  [1/1] 1.59ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit60:3  br label %8
+
+
+ <State 13>: 5.58ns
+ST_13: tmp_5_i2 (104)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:0  %tmp_5_i2 = zext i5 %i_i2 to i32
+
+ST_13: adjSize2078_cast (107)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:3  %adjSize2078_cast = zext i10 %mem_index_gep1 to i11
+
+ST_13: gepindex3 (108)  [1/1] 2.33ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:4  %gepindex3 = add i11 %adjSize2078_cast, -604
+
+ST_13: gepindex2082_cast (109)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:5  %gepindex2082_cast = zext i11 %gepindex3 to i32
+
+ST_13: W_addr_3 (110)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:6  %W_addr_3 = getelementptr [512 x i8]* @W, i32 0, i32 %gepindex2082_cast
+
+ST_13: W_load_3 (111)  [2/2] 3.25ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:7  %W_load_3 = load i8* %W_addr_3, align 1
+
+ST_13: img_addr_3 (113)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:9  %img_addr_3 = getelementptr [16 x i8]* %img, i32 0, i32 %tmp_5_i2
+
+ST_13: img_load_3 (114)  [2/2] 2.32ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:10  %img_load_3 = load i8* %img_addr_3, align 1
+
+
+ <State 14>: 3.25ns
+ST_14: W_load_3 (111)  [1/2] 3.25ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:7  %W_load_3 = load i8* %W_addr_3, align 1
+
+ST_14: img_load_3 (114)  [1/2] 2.32ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:10  %img_load_3 = load i8* %img_addr_3, align 1
+
+
+ <State 15>: 6.38ns
+ST_15: tmp_6_cast_i2 (112)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:8  %tmp_6_cast_i2 = sext i8 %W_load_3 to i16
+
+ST_15: tmp_7_cast_i3 (115)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:11  %tmp_7_cast_i3 = sext i8 %img_load_3 to i16
+
+ST_15: tmp_8_i3 (116)  [1/1] 3.36ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:12  %tmp_8_i3 = mul i16 %tmp_7_cast_i3, %tmp_6_cast_i2
+
+ST_15: tmp_8_cast_i3_cast (117)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:13  %tmp_8_cast_i3_cast = sext i16 %tmp_8_i3 to i19
+
+ST_15: result_7 (118)  [1/1] 3.02ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:14  %result_7 = add i19 %result_i2, %tmp_8_cast_i3_cast
+
+ST_15: StgValue_248 (119)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:15  br label %6
+
+
+ <State 16>: 3.31ns
+ST_16: result_8 (126)  [1/1] 0.00ns
+:0  %result_8 = phi i19 [ 0, %neuron.exit60 ], [ %result_9, %9 ]
+
+ST_16: i_i3 (127)  [1/1] 0.00ns
+:1  %i_i3 = phi i5 [ 0, %neuron.exit60 ], [ %i_4, %9 ]
+
+ST_16: exitcond_i3 (128)  [1/1] 3.31ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:2  %exitcond_i3 = icmp eq i5 %i_i3, -16
+
+ST_16: empty_7 (129)  [1/1] 0.00ns
+:3  %empty_7 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 16, i64 16, i64 16) nounwind
+
+ST_16: i_4 (130)  [1/1] 2.33ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:4  %i_4 = add i5 %i_i3, 1
+
+ST_16: StgValue_254 (131)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:5  br i1 %exitcond_i3, label %neuron.exit80, label %9
+
+ST_16: adjSize1443_cast (134)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:1  %adjSize1443_cast = zext i5 %i_i3 to i10
+
+ST_16: mem_index_gep2 (135)  [1/1] 2.32ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:2  %mem_index_gep2 = add i10 %adjSize1443_cast, -356
+
+ST_16: tempOut_addr_4 (150)  [1/1] 0.00ns  loc: NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit80:0  %tempOut_addr_4 = getelementptr [32 x i19]* %tempOut, i32 0, i32 4
+
+ST_16: StgValue_258 (151)  [1/1] 2.32ns  loc: NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit80:1  store i19 %result_8, i19* %tempOut_addr_4, align 4
+
+ST_16: StgValue_259 (152)  [1/1] 1.59ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit80:2  br label %10
+
+
+ <State 17>: 5.58ns
+ST_17: tmp_5_i3 (133)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:0  %tmp_5_i3 = zext i5 %i_i3 to i32
+
+ST_17: adjSize2087_cast (136)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:3  %adjSize2087_cast = zext i10 %mem_index_gep2 to i11
+
+ST_17: gepindex4 (137)  [1/1] 2.33ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:4  %gepindex4 = add i11 %adjSize2087_cast, -604
+
+ST_17: gepindex2091_cast (138)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:5  %gepindex2091_cast = zext i11 %gepindex4 to i32
+
+ST_17: W_addr_4 (139)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:6  %W_addr_4 = getelementptr [512 x i8]* @W, i32 0, i32 %gepindex2091_cast
+
+ST_17: W_load_4 (140)  [2/2] 3.25ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:7  %W_load_4 = load i8* %W_addr_4, align 1
+
+ST_17: img_addr_4 (142)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:9  %img_addr_4 = getelementptr [16 x i8]* %img, i32 0, i32 %tmp_5_i3
+
+ST_17: img_load_4 (143)  [2/2] 2.32ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:10  %img_load_4 = load i8* %img_addr_4, align 1
+
+
+ <State 18>: 3.25ns
+ST_18: W_load_4 (140)  [1/2] 3.25ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:7  %W_load_4 = load i8* %W_addr_4, align 1
+
+ST_18: img_load_4 (143)  [1/2] 2.32ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:10  %img_load_4 = load i8* %img_addr_4, align 1
+
+
+ <State 19>: 6.38ns
+ST_19: tmp_6_cast_i3 (141)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:8  %tmp_6_cast_i3 = sext i8 %W_load_4 to i16
+
+ST_19: tmp_7_cast_i4 (144)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:11  %tmp_7_cast_i4 = sext i8 %img_load_4 to i16
+
+ST_19: tmp_8_i4 (145)  [1/1] 3.36ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:12  %tmp_8_i4 = mul i16 %tmp_7_cast_i4, %tmp_6_cast_i3
+
+ST_19: tmp_8_cast_i4_cast (146)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:13  %tmp_8_cast_i4_cast = sext i16 %tmp_8_i4 to i19
+
+ST_19: result_9 (147)  [1/1] 3.02ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:14  %result_9 = add i19 %result_8, %tmp_8_cast_i4_cast
+
+ST_19: StgValue_275 (148)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:15  br label %8
+
+
+ <State 20>: 4.83ns
+ST_20: result_i5 (154)  [1/1] 0.00ns
+:0  %result_i5 = phi i19 [ 0, %neuron.exit80 ], [ %result_11, %11 ]
+
+ST_20: i_i5 (155)  [1/1] 0.00ns
+:1  %i_i5 = phi i5 [ 0, %neuron.exit80 ], [ %i_5, %11 ]
+
+ST_20: exitcond_i4 (156)  [1/1] 3.31ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:2  %exitcond_i4 = icmp eq i5 %i_i5, -16
+
+ST_20: empty_8 (157)  [1/1] 0.00ns
+:3  %empty_8 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 16, i64 16, i64 16) nounwind
+
+ST_20: i_5 (158)  [1/1] 2.33ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:4  %i_5 = add i5 %i_i5, 1
+
+ST_20: StgValue_281 (159)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:5  br i1 %exitcond_i4, label %neuron.exit100, label %11
+
+ST_20: adjSize1464_cast (162)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:1  %adjSize1464_cast = zext i5 %i_i5 to i10
+
+ST_20: mem_index_gep3 (163)  [1/1] 2.32ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:2  %mem_index_gep3 = add i10 %adjSize1464_cast, -340
+
+ST_20: result_10 (178)  [1/1] 2.51ns  loc: NN.cpp:35->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit100:0  %result_10 = add i19 %result_i5, 26
+
+ST_20: tempOut_addr_5 (179)  [1/1] 0.00ns  loc: NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit100:1  %tempOut_addr_5 = getelementptr [32 x i19]* %tempOut, i32 0, i32 5
+
+ST_20: StgValue_286 (180)  [1/1] 2.32ns  loc: NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit100:2  store i19 %result_10, i19* %tempOut_addr_5, align 4
+
+ST_20: StgValue_287 (181)  [1/1] 1.59ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit100:3  br label %12
+
+
+ <State 21>: 5.58ns
+ST_21: tmp_5_i4 (161)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:0  %tmp_5_i4 = zext i5 %i_i5 to i32
+
+ST_21: adjSize2096_cast (164)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:3  %adjSize2096_cast = zext i10 %mem_index_gep3 to i11
+
+ST_21: gepindex5 (165)  [1/1] 2.33ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:4  %gepindex5 = add i11 %adjSize2096_cast, -604
+
+ST_21: gepindex2100_cast (166)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:5  %gepindex2100_cast = zext i11 %gepindex5 to i32
+
+ST_21: W_addr_5 (167)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:6  %W_addr_5 = getelementptr [512 x i8]* @W, i32 0, i32 %gepindex2100_cast
+
+ST_21: W_load_5 (168)  [2/2] 3.25ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:7  %W_load_5 = load i8* %W_addr_5, align 1
+
+ST_21: img_addr_5 (170)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:9  %img_addr_5 = getelementptr [16 x i8]* %img, i32 0, i32 %tmp_5_i4
+
+ST_21: img_load_5 (171)  [2/2] 2.32ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:10  %img_load_5 = load i8* %img_addr_5, align 1
+
+
+ <State 22>: 3.25ns
+ST_22: W_load_5 (168)  [1/2] 3.25ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:7  %W_load_5 = load i8* %W_addr_5, align 1
+
+ST_22: img_load_5 (171)  [1/2] 2.32ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:10  %img_load_5 = load i8* %img_addr_5, align 1
+
+
+ <State 23>: 6.38ns
+ST_23: tmp_6_cast_i4 (169)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:8  %tmp_6_cast_i4 = sext i8 %W_load_5 to i16
+
+ST_23: tmp_7_cast_i5 (172)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:11  %tmp_7_cast_i5 = sext i8 %img_load_5 to i16
+
+ST_23: tmp_8_i5 (173)  [1/1] 3.36ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:12  %tmp_8_i5 = mul i16 %tmp_7_cast_i5, %tmp_6_cast_i4
+
+ST_23: tmp_8_cast_i5_cast (174)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:13  %tmp_8_cast_i5_cast = sext i16 %tmp_8_i5 to i19
+
+ST_23: result_11 (175)  [1/1] 3.02ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:14  %result_11 = add i19 %result_i5, %tmp_8_cast_i5_cast
+
+ST_23: StgValue_303 (176)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:15  br label %10
+
+
+ <State 24>: 4.83ns
+ST_24: result_i6 (183)  [1/1] 0.00ns
+:0  %result_i6 = phi i19 [ 0, %neuron.exit100 ], [ %result_13, %13 ]
+
+ST_24: i_i6 (184)  [1/1] 0.00ns
+:1  %i_i6 = phi i5 [ 0, %neuron.exit100 ], [ %i_6, %13 ]
+
+ST_24: exitcond_i6 (185)  [1/1] 3.31ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:2  %exitcond_i6 = icmp eq i5 %i_i6, -16
+
+ST_24: empty_9 (186)  [1/1] 0.00ns
+:3  %empty_9 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 16, i64 16, i64 16) nounwind
+
+ST_24: i_6 (187)  [1/1] 2.33ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:4  %i_6 = add i5 %i_i6, 1
+
+ST_24: StgValue_309 (188)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:5  br i1 %exitcond_i6, label %neuron.exit120, label %13
+
+ST_24: adjSize1485_cast (191)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:1  %adjSize1485_cast = zext i5 %i_i6 to i10
+
+ST_24: mem_index_gep4 (192)  [1/1] 2.32ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:2  %mem_index_gep4 = add i10 %adjSize1485_cast, -324
+
+ST_24: result_12 (207)  [1/1] 2.51ns  loc: NN.cpp:35->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit120:0  %result_12 = add i19 %result_i6, 12
+
+ST_24: tempOut_addr_6 (208)  [1/1] 0.00ns  loc: NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit120:1  %tempOut_addr_6 = getelementptr [32 x i19]* %tempOut, i32 0, i32 6
+
+ST_24: StgValue_314 (209)  [1/1] 2.32ns  loc: NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit120:2  store i19 %result_12, i19* %tempOut_addr_6, align 4
+
+ST_24: StgValue_315 (210)  [1/1] 1.59ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit120:3  br label %14
+
+
+ <State 25>: 5.58ns
+ST_25: tmp_5_i5 (190)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:0  %tmp_5_i5 = zext i5 %i_i6 to i32
+
+ST_25: adjSize2105_cast (193)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:3  %adjSize2105_cast = zext i10 %mem_index_gep4 to i11
+
+ST_25: gepindex6 (194)  [1/1] 2.33ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:4  %gepindex6 = add i11 %adjSize2105_cast, -604
+
+ST_25: gepindex2109_cast (195)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:5  %gepindex2109_cast = zext i11 %gepindex6 to i32
+
+ST_25: W_addr_6 (196)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:6  %W_addr_6 = getelementptr [512 x i8]* @W, i32 0, i32 %gepindex2109_cast
+
+ST_25: W_load_6 (197)  [2/2] 3.25ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:7  %W_load_6 = load i8* %W_addr_6, align 1
+
+ST_25: img_addr_6 (199)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:9  %img_addr_6 = getelementptr [16 x i8]* %img, i32 0, i32 %tmp_5_i5
+
+ST_25: img_load_6 (200)  [2/2] 2.32ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:10  %img_load_6 = load i8* %img_addr_6, align 1
+
+
+ <State 26>: 3.25ns
+ST_26: W_load_6 (197)  [1/2] 3.25ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:7  %W_load_6 = load i8* %W_addr_6, align 1
+
+ST_26: img_load_6 (200)  [1/2] 2.32ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:10  %img_load_6 = load i8* %img_addr_6, align 1
+
+
+ <State 27>: 6.38ns
+ST_27: tmp_6_cast_i5 (198)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:8  %tmp_6_cast_i5 = sext i8 %W_load_6 to i16
+
+ST_27: tmp_7_cast_i6 (201)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:11  %tmp_7_cast_i6 = sext i8 %img_load_6 to i16
+
+ST_27: tmp_8_i6 (202)  [1/1] 3.36ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:12  %tmp_8_i6 = mul i16 %tmp_7_cast_i6, %tmp_6_cast_i5
+
+ST_27: tmp_8_cast_i6_cast (203)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:13  %tmp_8_cast_i6_cast = sext i16 %tmp_8_i6 to i19
+
+ST_27: result_13 (204)  [1/1] 3.02ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:14  %result_13 = add i19 %result_i6, %tmp_8_cast_i6_cast
+
+ST_27: StgValue_331 (205)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:15  br label %12
+
+
+ <State 28>: 3.31ns
+ST_28: result_14 (212)  [1/1] 0.00ns
+:0  %result_14 = phi i19 [ 0, %neuron.exit120 ], [ %result_15, %15 ]
+
+ST_28: i_i7 (213)  [1/1] 0.00ns
+:1  %i_i7 = phi i5 [ 0, %neuron.exit120 ], [ %i_7, %15 ]
+
+ST_28: exitcond_i7 (214)  [1/1] 3.31ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:2  %exitcond_i7 = icmp eq i5 %i_i7, -16
+
+ST_28: empty_10 (215)  [1/1] 0.00ns
+:3  %empty_10 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 16, i64 16, i64 16) nounwind
+
+ST_28: i_7 (216)  [1/1] 2.33ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:4  %i_7 = add i5 %i_i7, 1
+
+ST_28: StgValue_337 (217)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:5  br i1 %exitcond_i7, label %neuron.exit140, label %15
+
+ST_28: adjSize1506_cast (220)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:1  %adjSize1506_cast = zext i5 %i_i7 to i10
+
+ST_28: mem_index_gep5 (221)  [1/1] 2.32ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:2  %mem_index_gep5 = add i10 %adjSize1506_cast, -308
+
+ST_28: tempOut_addr_7 (236)  [1/1] 0.00ns  loc: NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit140:0  %tempOut_addr_7 = getelementptr [32 x i19]* %tempOut, i32 0, i32 7
+
+ST_28: StgValue_341 (237)  [1/1] 2.32ns  loc: NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit140:1  store i19 %result_14, i19* %tempOut_addr_7, align 4
+
+ST_28: StgValue_342 (238)  [1/1] 1.59ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit140:2  br label %16
+
+
+ <State 29>: 5.58ns
+ST_29: tmp_5_i7 (219)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:0  %tmp_5_i7 = zext i5 %i_i7 to i32
+
+ST_29: adjSize2114_cast (222)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:3  %adjSize2114_cast = zext i10 %mem_index_gep5 to i11
+
+ST_29: gepindex7 (223)  [1/1] 2.33ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:4  %gepindex7 = add i11 %adjSize2114_cast, -604
+
+ST_29: gepindex2118_cast (224)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:5  %gepindex2118_cast = zext i11 %gepindex7 to i32
+
+ST_29: W_addr_7 (225)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:6  %W_addr_7 = getelementptr [512 x i8]* @W, i32 0, i32 %gepindex2118_cast
+
+ST_29: W_load_7 (226)  [2/2] 3.25ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:7  %W_load_7 = load i8* %W_addr_7, align 1
+
+ST_29: img_addr_7 (228)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:9  %img_addr_7 = getelementptr [16 x i8]* %img, i32 0, i32 %tmp_5_i7
+
+ST_29: img_load_7 (229)  [2/2] 2.32ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:10  %img_load_7 = load i8* %img_addr_7, align 1
+
+
+ <State 30>: 3.25ns
+ST_30: W_load_7 (226)  [1/2] 3.25ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:7  %W_load_7 = load i8* %W_addr_7, align 1
+
+ST_30: img_load_7 (229)  [1/2] 2.32ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:10  %img_load_7 = load i8* %img_addr_7, align 1
+
+
+ <State 31>: 6.38ns
+ST_31: tmp_6_cast_i6 (227)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:8  %tmp_6_cast_i6 = sext i8 %W_load_7 to i16
+
+ST_31: tmp_7_cast_i7 (230)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:11  %tmp_7_cast_i7 = sext i8 %img_load_7 to i16
+
+ST_31: tmp_8_i7 (231)  [1/1] 3.36ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:12  %tmp_8_i7 = mul i16 %tmp_7_cast_i7, %tmp_6_cast_i6
+
+ST_31: tmp_8_cast_i7_cast (232)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:13  %tmp_8_cast_i7_cast = sext i16 %tmp_8_i7 to i19
+
+ST_31: result_15 (233)  [1/1] 3.02ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:14  %result_15 = add i19 %result_14, %tmp_8_cast_i7_cast
+
+ST_31: StgValue_358 (234)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:15  br label %14
+
+
+ <State 32>: 4.83ns
+ST_32: result_i8 (240)  [1/1] 0.00ns
+:0  %result_i8 = phi i19 [ 0, %neuron.exit140 ], [ %result_17, %17 ]
+
+ST_32: i_i8 (241)  [1/1] 0.00ns
+:1  %i_i8 = phi i5 [ 0, %neuron.exit140 ], [ %i_8, %17 ]
+
+ST_32: exitcond_i8 (242)  [1/1] 3.31ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:2  %exitcond_i8 = icmp eq i5 %i_i8, -16
+
+ST_32: empty_11 (243)  [1/1] 0.00ns
+:3  %empty_11 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 16, i64 16, i64 16) nounwind
+
+ST_32: i_8 (244)  [1/1] 2.33ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:4  %i_8 = add i5 %i_i8, 1
+
+ST_32: StgValue_364 (245)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:5  br i1 %exitcond_i8, label %neuron.exit160, label %17
+
+ST_32: adjSize1527_cast (248)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:1  %adjSize1527_cast = zext i5 %i_i8 to i10
+
+ST_32: mem_index_gep6 (249)  [1/1] 2.32ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:2  %mem_index_gep6 = add i10 %adjSize1527_cast, -292
+
+ST_32: result_16 (264)  [1/1] 2.51ns  loc: NN.cpp:35->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit160:0  %result_16 = add i19 %result_i8, 9
+
+ST_32: tempOut_addr_8 (265)  [1/1] 0.00ns  loc: NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit160:1  %tempOut_addr_8 = getelementptr [32 x i19]* %tempOut, i32 0, i32 8
+
+ST_32: StgValue_369 (266)  [1/1] 2.32ns  loc: NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit160:2  store i19 %result_16, i19* %tempOut_addr_8, align 4
+
+ST_32: StgValue_370 (267)  [1/1] 1.59ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit160:3  br label %18
+
+
+ <State 33>: 5.58ns
+ST_33: tmp_5_i8 (247)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:0  %tmp_5_i8 = zext i5 %i_i8 to i32
+
+ST_33: adjSize2123_cast (250)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:3  %adjSize2123_cast = zext i10 %mem_index_gep6 to i11
+
+ST_33: gepindex8 (251)  [1/1] 2.33ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:4  %gepindex8 = add i11 %adjSize2123_cast, -604
+
+ST_33: gepindex2127_cast (252)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:5  %gepindex2127_cast = zext i11 %gepindex8 to i32
+
+ST_33: W_addr_8 (253)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:6  %W_addr_8 = getelementptr [512 x i8]* @W, i32 0, i32 %gepindex2127_cast
+
+ST_33: W_load_8 (254)  [2/2] 3.25ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:7  %W_load_8 = load i8* %W_addr_8, align 1
+
+ST_33: img_addr_8 (256)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:9  %img_addr_8 = getelementptr [16 x i8]* %img, i32 0, i32 %tmp_5_i8
+
+ST_33: img_load_8 (257)  [2/2] 2.32ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:10  %img_load_8 = load i8* %img_addr_8, align 1
+
+
+ <State 34>: 3.25ns
+ST_34: W_load_8 (254)  [1/2] 3.25ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:7  %W_load_8 = load i8* %W_addr_8, align 1
+
+ST_34: img_load_8 (257)  [1/2] 2.32ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:10  %img_load_8 = load i8* %img_addr_8, align 1
+
+
+ <State 35>: 6.38ns
+ST_35: tmp_6_cast_i7 (255)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:8  %tmp_6_cast_i7 = sext i8 %W_load_8 to i16
+
+ST_35: tmp_7_cast_i8 (258)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:11  %tmp_7_cast_i8 = sext i8 %img_load_8 to i16
+
+ST_35: tmp_8_i8 (259)  [1/1] 3.36ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:12  %tmp_8_i8 = mul i16 %tmp_7_cast_i8, %tmp_6_cast_i7
+
+ST_35: tmp_8_cast_i8_cast (260)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:13  %tmp_8_cast_i8_cast = sext i16 %tmp_8_i8 to i19
+
+ST_35: result_17 (261)  [1/1] 3.02ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:14  %result_17 = add i19 %result_i8, %tmp_8_cast_i8_cast
+
+ST_35: StgValue_386 (262)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:15  br label %16
+
+
+ <State 36>: 5.57ns
+ST_36: result_i9 (269)  [1/1] 0.00ns
+:0  %result_i9 = phi i19 [ 0, %neuron.exit160 ], [ %result_19, %19 ]
+
+ST_36: i_i9 (270)  [1/1] 0.00ns
+:1  %i_i9 = phi i5 [ 0, %neuron.exit160 ], [ %i_9, %19 ]
+
+ST_36: exitcond_i9 (271)  [1/1] 3.31ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:2  %exitcond_i9 = icmp eq i5 %i_i9, -16
+
+ST_36: empty_12 (272)  [1/1] 0.00ns
+:3  %empty_12 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 16, i64 16, i64 16) nounwind
+
+ST_36: i_9 (273)  [1/1] 2.33ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:4  %i_9 = add i5 %i_i9, 1
+
+ST_36: StgValue_392 (274)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:5  br i1 %exitcond_i9, label %neuron.exit180, label %19
+
+ST_36: tmp_5_i9 (276)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:0  %tmp_5_i9 = zext i5 %i_i9 to i32
+
+ST_36: adjSize1548_cast (277)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:1  %adjSize1548_cast = zext i5 %i_i9 to i8
+
+ST_36: gepindex9 (278)  [1/1] 2.32ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:2  %gepindex9 = add i8 %adjSize1548_cast, -112
+
+ST_36: gepindex2137_cast (279)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:3  %gepindex2137_cast = zext i8 %gepindex9 to i32
+
+ST_36: W_addr_9 (280)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:4  %W_addr_9 = getelementptr [512 x i8]* @W, i32 0, i32 %gepindex2137_cast
+
+ST_36: W_load_9 (281)  [2/2] 3.25ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:5  %W_load_9 = load i8* %W_addr_9, align 1
+
+ST_36: img_addr_9 (283)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:7  %img_addr_9 = getelementptr [16 x i8]* %img, i32 0, i32 %tmp_5_i9
+
+ST_36: img_load_9 (284)  [2/2] 2.32ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:8  %img_load_9 = load i8* %img_addr_9, align 1
+
+ST_36: result_18 (291)  [1/1] 2.51ns  loc: NN.cpp:35->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit180:0  %result_18 = add i19 %result_i9, 125
+
+ST_36: tempOut_addr_9 (292)  [1/1] 0.00ns  loc: NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit180:1  %tempOut_addr_9 = getelementptr [32 x i19]* %tempOut, i32 0, i32 9
+
+ST_36: StgValue_403 (293)  [1/1] 2.32ns  loc: NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit180:2  store i19 %result_18, i19* %tempOut_addr_9, align 4
+
+ST_36: StgValue_404 (294)  [1/1] 1.59ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit180:3  br label %20
+
+
+ <State 37>: 3.25ns
+ST_37: W_load_9 (281)  [1/2] 3.25ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:5  %W_load_9 = load i8* %W_addr_9, align 1
+
+ST_37: img_load_9 (284)  [1/2] 2.32ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:8  %img_load_9 = load i8* %img_addr_9, align 1
+
+
+ <State 38>: 6.38ns
+ST_38: tmp_6_cast_i8 (282)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:6  %tmp_6_cast_i8 = sext i8 %W_load_9 to i16
+
+ST_38: tmp_7_cast_i9 (285)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:9  %tmp_7_cast_i9 = sext i8 %img_load_9 to i16
+
+ST_38: tmp_8_i9 (286)  [1/1] 3.36ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:10  %tmp_8_i9 = mul i16 %tmp_7_cast_i9, %tmp_6_cast_i8
+
+ST_38: tmp_8_cast_i9_cast (287)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:11  %tmp_8_cast_i9_cast = sext i16 %tmp_8_i9 to i19
+
+ST_38: result_19 (288)  [1/1] 3.02ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:12  %result_19 = add i19 %result_i9, %tmp_8_cast_i9_cast
+
+ST_38: StgValue_412 (289)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:13  br label %18
+
+
+ <State 39>: 4.83ns
+ST_39: result_i4 (296)  [1/1] 0.00ns
+:0  %result_i4 = phi i19 [ 0, %neuron.exit180 ], [ %result_21, %21 ]
+
+ST_39: i_i10 (297)  [1/1] 0.00ns
+:1  %i_i10 = phi i5 [ 0, %neuron.exit180 ], [ %i_10, %21 ]
+
+ST_39: exitcond_i10 (298)  [1/1] 3.31ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:2  %exitcond_i10 = icmp eq i5 %i_i10, -16
+
+ST_39: empty_13 (299)  [1/1] 0.00ns
+:3  %empty_13 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 16, i64 16, i64 16) nounwind
+
+ST_39: i_10 (300)  [1/1] 2.33ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:4  %i_10 = add i5 %i_i10, 1
+
+ST_39: StgValue_418 (301)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:5  br i1 %exitcond_i10, label %neuron.exit200, label %21
+
+ST_39: tmp_5_i10 (303)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:0  %tmp_5_i10 = zext i5 %i_i10 to i32
+
+ST_39: gepindex10 (304)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:1  %gepindex10 = call i8 @_ssdm_op_BitConcatenate.i8.i3.i5(i3 -3, i5 %i_i10)
+
+ST_39: gepindex2146_cast (305)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:2  %gepindex2146_cast = zext i8 %gepindex10 to i32
+
+ST_39: W_addr_10 (306)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:3  %W_addr_10 = getelementptr [512 x i8]* @W, i32 0, i32 %gepindex2146_cast
+
+ST_39: W_load_10 (307)  [2/2] 3.25ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:4  %W_load_10 = load i8* %W_addr_10, align 1
+
+ST_39: img_addr_10 (309)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:6  %img_addr_10 = getelementptr [16 x i8]* %img, i32 0, i32 %tmp_5_i10
+
+ST_39: img_load_10 (310)  [2/2] 2.32ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:7  %img_load_10 = load i8* %img_addr_10, align 1
+
+ST_39: result_20 (317)  [1/1] 2.51ns  loc: NN.cpp:35->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit200:0  %result_20 = add i19 %result_i4, 8
+
+ST_39: tempOut_addr_10 (318)  [1/1] 0.00ns  loc: NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit200:1  %tempOut_addr_10 = getelementptr [32 x i19]* %tempOut, i32 0, i32 10
+
+ST_39: StgValue_428 (319)  [1/1] 2.32ns  loc: NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit200:2  store i19 %result_20, i19* %tempOut_addr_10, align 4
+
+ST_39: StgValue_429 (320)  [1/1] 1.59ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit200:3  br label %22
+
+
+ <State 40>: 3.25ns
+ST_40: W_load_10 (307)  [1/2] 3.25ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:4  %W_load_10 = load i8* %W_addr_10, align 1
+
+ST_40: img_load_10 (310)  [1/2] 2.32ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:7  %img_load_10 = load i8* %img_addr_10, align 1
+
+
+ <State 41>: 6.38ns
+ST_41: tmp_6_cast_i10 (308)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:5  %tmp_6_cast_i10 = sext i8 %W_load_10 to i16
+
+ST_41: tmp_7_cast_i10 (311)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:8  %tmp_7_cast_i10 = sext i8 %img_load_10 to i16
+
+ST_41: tmp_8_i10 (312)  [1/1] 3.36ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:9  %tmp_8_i10 = mul i16 %tmp_7_cast_i10, %tmp_6_cast_i10
+
+ST_41: tmp_8_cast_i10_cast (313)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:10  %tmp_8_cast_i10_cast = sext i16 %tmp_8_i10 to i19
+
+ST_41: result_21 (314)  [1/1] 3.02ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:11  %result_21 = add i19 %result_i4, %tmp_8_cast_i10_cast
+
+ST_41: StgValue_437 (315)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:12  br label %20
+
+
+ <State 42>: 3.31ns
+ST_42: result_22 (322)  [1/1] 0.00ns
+:0  %result_22 = phi i19 [ 0, %neuron.exit200 ], [ %result_23, %23 ]
+
+ST_42: i_i11 (323)  [1/1] 0.00ns
+:1  %i_i11 = phi i5 [ 0, %neuron.exit200 ], [ %i_11, %23 ]
+
+ST_42: exitcond_i11 (324)  [1/1] 3.31ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:2  %exitcond_i11 = icmp eq i5 %i_i11, -16
+
+ST_42: empty_14 (325)  [1/1] 0.00ns
+:3  %empty_14 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 16, i64 16, i64 16) nounwind
+
+ST_42: i_11 (326)  [1/1] 2.33ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:4  %i_11 = add i5 %i_i11, 1
+
+ST_42: StgValue_443 (327)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:5  br i1 %exitcond_i11, label %neuron.exit220, label %23
+
+ST_42: adjSize1590_cast_cas (330)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:1  %adjSize1590_cast_cas = zext i5 %i_i11 to i9
+
+ST_42: mem_index_gep7 (331)  [1/1] 2.32ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:2  %mem_index_gep7 = add i9 %adjSize1590_cast_cas, -244
+
+ST_42: tempOut_addr_11 (347)  [1/1] 0.00ns  loc: NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit220:0  %tempOut_addr_11 = getelementptr [32 x i19]* %tempOut, i32 0, i32 11
+
+ST_42: StgValue_447 (348)  [1/1] 2.32ns  loc: NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit220:1  store i19 %result_22, i19* %tempOut_addr_11, align 4
+
+ST_42: StgValue_448 (349)  [1/1] 1.59ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit220:2  br label %24
+
+
+ <State 43>: 5.58ns
+ST_43: tmp_5_i11 (329)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:0  %tmp_5_i11 = zext i5 %i_i11 to i32
+
+ST_43: mem_index_gep847_cas (332)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:3  %mem_index_gep847_cas = sext i9 %mem_index_gep7 to i10
+
+ST_43: adjSize2150_cast (333)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:4  %adjSize2150_cast = zext i10 %mem_index_gep847_cas to i11
+
+ST_43: gepindex11 (334)  [1/1] 2.33ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:5  %gepindex11 = add i11 %adjSize2150_cast, -604
+
+ST_43: gepindex2154_cast (335)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:6  %gepindex2154_cast = zext i11 %gepindex11 to i32
+
+ST_43: W_addr_11 (336)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:7  %W_addr_11 = getelementptr [512 x i8]* @W, i32 0, i32 %gepindex2154_cast
+
+ST_43: W_load_11 (337)  [2/2] 3.25ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:8  %W_load_11 = load i8* %W_addr_11, align 1
+
+ST_43: img_addr_11 (339)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:10  %img_addr_11 = getelementptr [16 x i8]* %img, i32 0, i32 %tmp_5_i11
+
+ST_43: img_load_11 (340)  [2/2] 2.32ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:11  %img_load_11 = load i8* %img_addr_11, align 1
+
+
+ <State 44>: 3.25ns
+ST_44: W_load_11 (337)  [1/2] 3.25ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:8  %W_load_11 = load i8* %W_addr_11, align 1
+
+ST_44: img_load_11 (340)  [1/2] 2.32ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:11  %img_load_11 = load i8* %img_addr_11, align 1
+
+
+ <State 45>: 6.38ns
+ST_45: tmp_6_cast_i11 (338)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:9  %tmp_6_cast_i11 = sext i8 %W_load_11 to i16
+
+ST_45: tmp_7_cast_i11 (341)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:12  %tmp_7_cast_i11 = sext i8 %img_load_11 to i16
+
+ST_45: tmp_8_i11 (342)  [1/1] 3.36ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:13  %tmp_8_i11 = mul i16 %tmp_6_cast_i11, %tmp_7_cast_i11
+
+ST_45: tmp_8_cast_i11_cast (343)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:14  %tmp_8_cast_i11_cast = sext i16 %tmp_8_i11 to i19
+
+ST_45: result_23 (344)  [1/1] 3.02ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:15  %result_23 = add i19 %tmp_8_cast_i11_cast, %result_22
+
+ST_45: StgValue_465 (345)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:16  br label %22
+
+
+ <State 46>: 4.83ns
+ST_46: result_i10 (351)  [1/1] 0.00ns
+:0  %result_i10 = phi i19 [ 0, %neuron.exit220 ], [ %result_25, %25 ]
+
+ST_46: i_i12 (352)  [1/1] 0.00ns
+:1  %i_i12 = phi i5 [ 0, %neuron.exit220 ], [ %i_12, %25 ]
+
+ST_46: exitcond_i12 (353)  [1/1] 3.31ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:2  %exitcond_i12 = icmp eq i5 %i_i12, -16
+
+ST_46: empty_15 (354)  [1/1] 0.00ns
+:3  %empty_15 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 16, i64 16, i64 16) nounwind
+
+ST_46: i_12 (355)  [1/1] 2.33ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:4  %i_12 = add i5 %i_i12, 1
+
+ST_46: StgValue_471 (356)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:5  br i1 %exitcond_i12, label %neuron.exit240, label %25
+
+ST_46: adjSize1611_cast_cas (359)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:1  %adjSize1611_cast_cas = zext i5 %i_i12 to i9
+
+ST_46: mem_index_gep8 (360)  [1/1] 2.32ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:2  %mem_index_gep8 = add i9 %adjSize1611_cast_cas, -228
+
+ST_46: result_24 (376)  [1/1] 2.51ns  loc: NN.cpp:35->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit240:0  %result_24 = add i19 %result_i10, 4
+
+ST_46: tempOut_addr_12 (377)  [1/1] 0.00ns  loc: NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit240:1  %tempOut_addr_12 = getelementptr [32 x i19]* %tempOut, i32 0, i32 12
+
+ST_46: StgValue_476 (378)  [1/1] 2.32ns  loc: NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit240:2  store i19 %result_24, i19* %tempOut_addr_12, align 4
+
+ST_46: StgValue_477 (379)  [1/1] 1.59ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit240:3  br label %26
+
+
+ <State 47>: 5.58ns
+ST_47: tmp_5_i12 (358)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:0  %tmp_5_i12 = zext i5 %i_i12 to i32
+
+ST_47: mem_index_gep853_cas (361)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:3  %mem_index_gep853_cas = sext i9 %mem_index_gep8 to i10
+
+ST_47: adjSize2159_cast (362)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:4  %adjSize2159_cast = zext i10 %mem_index_gep853_cas to i11
+
+ST_47: gepindex12 (363)  [1/1] 2.33ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:5  %gepindex12 = add i11 %adjSize2159_cast, -604
+
+ST_47: gepindex2163_cast (364)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:6  %gepindex2163_cast = zext i11 %gepindex12 to i32
+
+ST_47: W_addr_12 (365)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:7  %W_addr_12 = getelementptr [512 x i8]* @W, i32 0, i32 %gepindex2163_cast
+
+ST_47: W_load_12 (366)  [2/2] 3.25ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:8  %W_load_12 = load i8* %W_addr_12, align 1
+
+ST_47: img_addr_12 (368)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:10  %img_addr_12 = getelementptr [16 x i8]* %img, i32 0, i32 %tmp_5_i12
+
+ST_47: img_load_12 (369)  [2/2] 2.32ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:11  %img_load_12 = load i8* %img_addr_12, align 1
+
+
+ <State 48>: 3.25ns
+ST_48: W_load_12 (366)  [1/2] 3.25ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:8  %W_load_12 = load i8* %W_addr_12, align 1
+
+ST_48: img_load_12 (369)  [1/2] 2.32ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:11  %img_load_12 = load i8* %img_addr_12, align 1
+
+
+ <State 49>: 6.38ns
+ST_49: tmp_6_cast_i12 (367)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:9  %tmp_6_cast_i12 = sext i8 %W_load_12 to i16
+
+ST_49: tmp_7_cast_i12 (370)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:12  %tmp_7_cast_i12 = sext i8 %img_load_12 to i16
+
+ST_49: tmp_8_i12 (371)  [1/1] 3.36ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:13  %tmp_8_i12 = mul i16 %tmp_6_cast_i12, %tmp_7_cast_i12
+
+ST_49: tmp_8_cast_i12_cast (372)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:14  %tmp_8_cast_i12_cast = sext i16 %tmp_8_i12 to i19
+
+ST_49: result_25 (373)  [1/1] 3.02ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:15  %result_25 = add i19 %tmp_8_cast_i12_cast, %result_i10
+
+ST_49: StgValue_494 (374)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:16  br label %24
+
+
+ <State 50>: 4.83ns
+ST_50: result_i11 (381)  [1/1] 0.00ns
+:0  %result_i11 = phi i19 [ 0, %neuron.exit240 ], [ %result_27, %27 ]
+
+ST_50: i_i13 (382)  [1/1] 0.00ns
+:1  %i_i13 = phi i5 [ 0, %neuron.exit240 ], [ %i_13, %27 ]
+
+ST_50: exitcond_i13 (383)  [1/1] 3.31ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:2  %exitcond_i13 = icmp eq i5 %i_i13, -16
+
+ST_50: empty_16 (384)  [1/1] 0.00ns
+:3  %empty_16 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 16, i64 16, i64 16) nounwind
+
+ST_50: i_13 (385)  [1/1] 2.33ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:4  %i_13 = add i5 %i_i13, 1
+
+ST_50: StgValue_500 (386)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:5  br i1 %exitcond_i13, label %neuron.exit260, label %27
+
+ST_50: adjSize1632_cast_cas (389)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:1  %adjSize1632_cast_cas = zext i5 %i_i13 to i9
+
+ST_50: mem_index_gep9 (390)  [1/1] 2.32ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:2  %mem_index_gep9 = add i9 %adjSize1632_cast_cas, -212
+
+ST_50: result_26 (406)  [1/1] 2.51ns  loc: NN.cpp:35->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit260:0  %result_26 = add i19 %result_i11, -4
+
+ST_50: tempOut_addr_13 (407)  [1/1] 0.00ns  loc: NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit260:1  %tempOut_addr_13 = getelementptr [32 x i19]* %tempOut, i32 0, i32 13
+
+ST_50: StgValue_505 (408)  [1/1] 2.32ns  loc: NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit260:2  store i19 %result_26, i19* %tempOut_addr_13, align 4
+
+ST_50: StgValue_506 (409)  [1/1] 1.59ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit260:3  br label %28
+
+
+ <State 51>: 5.58ns
+ST_51: tmp_5_i13 (388)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:0  %tmp_5_i13 = zext i5 %i_i13 to i32
+
+ST_51: mem_index_gep859_cas (391)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:3  %mem_index_gep859_cas = sext i9 %mem_index_gep9 to i10
+
+ST_51: adjSize2168_cast (392)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:4  %adjSize2168_cast = zext i10 %mem_index_gep859_cas to i11
+
+ST_51: gepindex13 (393)  [1/1] 2.33ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:5  %gepindex13 = add i11 %adjSize2168_cast, -604
+
+ST_51: gepindex2172_cast (394)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:6  %gepindex2172_cast = zext i11 %gepindex13 to i32
+
+ST_51: W_addr_13 (395)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:7  %W_addr_13 = getelementptr [512 x i8]* @W, i32 0, i32 %gepindex2172_cast
+
+ST_51: W_load_13 (396)  [2/2] 3.25ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:8  %W_load_13 = load i8* %W_addr_13, align 1
+
+ST_51: img_addr_13 (398)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:10  %img_addr_13 = getelementptr [16 x i8]* %img, i32 0, i32 %tmp_5_i13
+
+ST_51: img_load_13 (399)  [2/2] 2.32ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:11  %img_load_13 = load i8* %img_addr_13, align 1
+
+
+ <State 52>: 3.25ns
+ST_52: W_load_13 (396)  [1/2] 3.25ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:8  %W_load_13 = load i8* %W_addr_13, align 1
+
+ST_52: img_load_13 (399)  [1/2] 2.32ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:11  %img_load_13 = load i8* %img_addr_13, align 1
+
+
+ <State 53>: 6.38ns
+ST_53: tmp_6_cast_i13 (397)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:9  %tmp_6_cast_i13 = sext i8 %W_load_13 to i16
+
+ST_53: tmp_7_cast_i13 (400)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:12  %tmp_7_cast_i13 = sext i8 %img_load_13 to i16
+
+ST_53: tmp_8_i13 (401)  [1/1] 3.36ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:13  %tmp_8_i13 = mul i16 %tmp_6_cast_i13, %tmp_7_cast_i13
+
+ST_53: tmp_8_cast_i13_cast (402)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:14  %tmp_8_cast_i13_cast = sext i16 %tmp_8_i13 to i19
+
+ST_53: result_27 (403)  [1/1] 3.02ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:15  %result_27 = add i19 %tmp_8_cast_i13_cast, %result_i11
+
+ST_53: StgValue_523 (404)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:16  br label %26
+
+
+ <State 54>: 4.83ns
+ST_54: result_i12 (411)  [1/1] 0.00ns
+:0  %result_i12 = phi i19 [ 0, %neuron.exit260 ], [ %result_29, %29 ]
+
+ST_54: i_i14 (412)  [1/1] 0.00ns
+:1  %i_i14 = phi i5 [ 0, %neuron.exit260 ], [ %i_14, %29 ]
+
+ST_54: exitcond_i14 (413)  [1/1] 3.31ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:2  %exitcond_i14 = icmp eq i5 %i_i14, -16
+
+ST_54: empty_17 (414)  [1/1] 0.00ns
+:3  %empty_17 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 16, i64 16, i64 16) nounwind
+
+ST_54: i_14 (415)  [1/1] 2.33ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:4  %i_14 = add i5 %i_i14, 1
+
+ST_54: StgValue_529 (416)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:5  br i1 %exitcond_i14, label %neuron.exit280, label %29
+
+ST_54: adjSize1653_cast_cas (419)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:1  %adjSize1653_cast_cas = zext i5 %i_i14 to i9
+
+ST_54: mem_index_gep10 (420)  [1/1] 2.32ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:2  %mem_index_gep10 = add i9 %adjSize1653_cast_cas, -196
+
+ST_54: result_28 (436)  [1/1] 2.51ns  loc: NN.cpp:35->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit280:0  %result_28 = add i19 %result_i12, 15
+
+ST_54: tempOut_addr_14 (437)  [1/1] 0.00ns  loc: NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit280:1  %tempOut_addr_14 = getelementptr [32 x i19]* %tempOut, i32 0, i32 14
+
+ST_54: StgValue_534 (438)  [1/1] 2.32ns  loc: NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit280:2  store i19 %result_28, i19* %tempOut_addr_14, align 4
+
+ST_54: StgValue_535 (439)  [1/1] 1.59ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit280:3  br label %30
+
+
+ <State 55>: 5.58ns
+ST_55: tmp_5_i14 (418)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:0  %tmp_5_i14 = zext i5 %i_i14 to i32
+
+ST_55: mem_index_gep865_cas (421)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:3  %mem_index_gep865_cas = sext i9 %mem_index_gep10 to i10
+
+ST_55: adjSize2177_cast (422)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:4  %adjSize2177_cast = zext i10 %mem_index_gep865_cas to i11
+
+ST_55: gepindex14 (423)  [1/1] 2.33ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:5  %gepindex14 = add i11 %adjSize2177_cast, -604
+
+ST_55: gepindex2181_cast (424)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:6  %gepindex2181_cast = zext i11 %gepindex14 to i32
+
+ST_55: W_addr_14 (425)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:7  %W_addr_14 = getelementptr [512 x i8]* @W, i32 0, i32 %gepindex2181_cast
+
+ST_55: W_load_14 (426)  [2/2] 3.25ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:8  %W_load_14 = load i8* %W_addr_14, align 1
+
+ST_55: img_addr_14 (428)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:10  %img_addr_14 = getelementptr [16 x i8]* %img, i32 0, i32 %tmp_5_i14
+
+ST_55: img_load_14 (429)  [2/2] 2.32ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:11  %img_load_14 = load i8* %img_addr_14, align 1
+
+
+ <State 56>: 3.25ns
+ST_56: W_load_14 (426)  [1/2] 3.25ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:8  %W_load_14 = load i8* %W_addr_14, align 1
+
+ST_56: img_load_14 (429)  [1/2] 2.32ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:11  %img_load_14 = load i8* %img_addr_14, align 1
+
+
+ <State 57>: 6.38ns
+ST_57: tmp_6_cast_i14 (427)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:9  %tmp_6_cast_i14 = sext i8 %W_load_14 to i16
+
+ST_57: tmp_7_cast_i14 (430)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:12  %tmp_7_cast_i14 = sext i8 %img_load_14 to i16
+
+ST_57: tmp_8_i14 (431)  [1/1] 3.36ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:13  %tmp_8_i14 = mul i16 %tmp_6_cast_i14, %tmp_7_cast_i14
+
+ST_57: tmp_8_cast_i14_cast (432)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:14  %tmp_8_cast_i14_cast = sext i16 %tmp_8_i14 to i19
+
+ST_57: result_29 (433)  [1/1] 3.02ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:15  %result_29 = add i19 %tmp_8_cast_i14_cast, %result_i12
+
+ST_57: StgValue_552 (434)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:16  br label %28
+
+
+ <State 58>: 3.31ns
+ST_58: result_30 (441)  [1/1] 0.00ns
+:0  %result_30 = phi i19 [ 0, %neuron.exit280 ], [ %result_31, %31 ]
+
+ST_58: i_i15 (442)  [1/1] 0.00ns
+:1  %i_i15 = phi i5 [ 0, %neuron.exit280 ], [ %i_15, %31 ]
+
+ST_58: exitcond_i15 (443)  [1/1] 3.31ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:2  %exitcond_i15 = icmp eq i5 %i_i15, -16
+
+ST_58: empty_18 (444)  [1/1] 0.00ns
+:3  %empty_18 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 16, i64 16, i64 16) nounwind
+
+ST_58: i_15 (445)  [1/1] 2.33ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:4  %i_15 = add i5 %i_i15, 1
+
+ST_58: StgValue_558 (446)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:5  br i1 %exitcond_i15, label %neuron.exit300, label %31
+
+ST_58: adjSize1674_cast_cas (449)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:1  %adjSize1674_cast_cas = zext i5 %i_i15 to i9
+
+ST_58: mem_index_gep11 (450)  [1/1] 2.32ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:2  %mem_index_gep11 = add i9 %adjSize1674_cast_cas, -180
+
+ST_58: tempOut_addr_15 (466)  [1/1] 0.00ns  loc: NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit300:0  %tempOut_addr_15 = getelementptr [32 x i19]* %tempOut, i32 0, i32 15
+
+ST_58: StgValue_562 (467)  [1/1] 2.32ns  loc: NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit300:1  store i19 %result_30, i19* %tempOut_addr_15, align 4
+
+ST_58: StgValue_563 (468)  [1/1] 1.59ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit300:2  br label %32
+
+
+ <State 59>: 5.58ns
+ST_59: tmp_5_i15 (448)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:0  %tmp_5_i15 = zext i5 %i_i15 to i32
+
+ST_59: mem_index_gep871_cas (451)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:3  %mem_index_gep871_cas = sext i9 %mem_index_gep11 to i10
+
+ST_59: adjSize2186_cast (452)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:4  %adjSize2186_cast = zext i10 %mem_index_gep871_cas to i11
+
+ST_59: gepindex15 (453)  [1/1] 2.33ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:5  %gepindex15 = add i11 %adjSize2186_cast, -604
+
+ST_59: gepindex2190_cast (454)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:6  %gepindex2190_cast = zext i11 %gepindex15 to i32
+
+ST_59: W_addr_15 (455)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:7  %W_addr_15 = getelementptr [512 x i8]* @W, i32 0, i32 %gepindex2190_cast
+
+ST_59: W_load_15 (456)  [2/2] 3.25ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:8  %W_load_15 = load i8* %W_addr_15, align 1
+
+ST_59: img_addr_15 (458)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:10  %img_addr_15 = getelementptr [16 x i8]* %img, i32 0, i32 %tmp_5_i15
+
+ST_59: img_load_15 (459)  [2/2] 2.32ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:11  %img_load_15 = load i8* %img_addr_15, align 1
+
+
+ <State 60>: 3.25ns
+ST_60: W_load_15 (456)  [1/2] 3.25ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:8  %W_load_15 = load i8* %W_addr_15, align 1
+
+ST_60: img_load_15 (459)  [1/2] 2.32ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:11  %img_load_15 = load i8* %img_addr_15, align 1
+
+
+ <State 61>: 6.38ns
+ST_61: tmp_6_cast_i15 (457)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:9  %tmp_6_cast_i15 = sext i8 %W_load_15 to i16
+
+ST_61: tmp_7_cast_i15 (460)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:12  %tmp_7_cast_i15 = sext i8 %img_load_15 to i16
+
+ST_61: tmp_8_i15 (461)  [1/1] 3.36ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:13  %tmp_8_i15 = mul i16 %tmp_6_cast_i15, %tmp_7_cast_i15
+
+ST_61: tmp_8_cast_i15_cast (462)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:14  %tmp_8_cast_i15_cast = sext i16 %tmp_8_i15 to i19
+
+ST_61: result_31 (463)  [1/1] 3.02ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:15  %result_31 = add i19 %tmp_8_cast_i15_cast, %result_30
+
+ST_61: StgValue_580 (464)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:16  br label %30
+
+
+ <State 62>: 4.83ns
+ST_62: result_i14 (470)  [1/1] 0.00ns
+:0  %result_i14 = phi i19 [ 0, %neuron.exit300 ], [ %result_33, %33 ]
+
+ST_62: i_i16 (471)  [1/1] 0.00ns
+:1  %i_i16 = phi i5 [ 0, %neuron.exit300 ], [ %i_16, %33 ]
+
+ST_62: exitcond_i16 (472)  [1/1] 3.31ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:2  %exitcond_i16 = icmp eq i5 %i_i16, -16
+
+ST_62: empty_19 (473)  [1/1] 0.00ns
+:3  %empty_19 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 16, i64 16, i64 16) nounwind
+
+ST_62: i_16 (474)  [1/1] 2.33ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:4  %i_16 = add i5 %i_i16, 1
+
+ST_62: StgValue_586 (475)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:5  br i1 %exitcond_i16, label %neuron.exit320, label %33
+
+ST_62: adjSize1695_cast_cas (478)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:1  %adjSize1695_cast_cas = zext i5 %i_i16 to i9
+
+ST_62: mem_index_gep12 (479)  [1/1] 2.32ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:2  %mem_index_gep12 = add i9 %adjSize1695_cast_cas, -164
+
+ST_62: result_32 (495)  [1/1] 2.51ns  loc: NN.cpp:35->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit320:0  %result_32 = add i19 %result_i14, -21
+
+ST_62: tempOut_addr_16 (496)  [1/1] 0.00ns  loc: NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit320:1  %tempOut_addr_16 = getelementptr [32 x i19]* %tempOut, i32 0, i32 16
+
+ST_62: StgValue_591 (497)  [1/1] 2.32ns  loc: NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit320:2  store i19 %result_32, i19* %tempOut_addr_16, align 4
+
+ST_62: StgValue_592 (498)  [1/1] 1.59ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit320:3  br label %34
+
+
+ <State 63>: 5.58ns
+ST_63: tmp_5_i16 (477)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:0  %tmp_5_i16 = zext i5 %i_i16 to i32
+
+ST_63: mem_index_gep877_cas (480)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:3  %mem_index_gep877_cas = sext i9 %mem_index_gep12 to i10
+
+ST_63: adjSize2195_cast (481)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:4  %adjSize2195_cast = zext i10 %mem_index_gep877_cas to i11
+
+ST_63: gepindex16 (482)  [1/1] 2.33ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:5  %gepindex16 = add i11 %adjSize2195_cast, -604
+
+ST_63: gepindex2199_cast (483)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:6  %gepindex2199_cast = zext i11 %gepindex16 to i32
+
+ST_63: W_addr_16 (484)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:7  %W_addr_16 = getelementptr [512 x i8]* @W, i32 0, i32 %gepindex2199_cast
+
+ST_63: W_load_16 (485)  [2/2] 3.25ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:8  %W_load_16 = load i8* %W_addr_16, align 1
+
+ST_63: img_addr_16 (487)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:10  %img_addr_16 = getelementptr [16 x i8]* %img, i32 0, i32 %tmp_5_i16
+
+ST_63: img_load_16 (488)  [2/2] 2.32ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:11  %img_load_16 = load i8* %img_addr_16, align 1
+
+
+ <State 64>: 3.25ns
+ST_64: W_load_16 (485)  [1/2] 3.25ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:8  %W_load_16 = load i8* %W_addr_16, align 1
+
+ST_64: img_load_16 (488)  [1/2] 2.32ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:11  %img_load_16 = load i8* %img_addr_16, align 1
+
+
+ <State 65>: 6.38ns
+ST_65: tmp_6_cast_i16 (486)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:9  %tmp_6_cast_i16 = sext i8 %W_load_16 to i16
+
+ST_65: tmp_7_cast_i16 (489)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:12  %tmp_7_cast_i16 = sext i8 %img_load_16 to i16
+
+ST_65: tmp_8_i16 (490)  [1/1] 3.36ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:13  %tmp_8_i16 = mul i16 %tmp_6_cast_i16, %tmp_7_cast_i16
+
+ST_65: tmp_8_cast_i16_cast (491)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:14  %tmp_8_cast_i16_cast = sext i16 %tmp_8_i16 to i19
+
+ST_65: result_33 (492)  [1/1] 3.02ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:15  %result_33 = add i19 %tmp_8_cast_i16_cast, %result_i14
+
+ST_65: StgValue_609 (493)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:16  br label %32
+
+
+ <State 66>: 3.31ns
+ST_66: result_34 (500)  [1/1] 0.00ns
+:0  %result_34 = phi i19 [ 0, %neuron.exit320 ], [ %result_35, %35 ]
+
+ST_66: i_i17 (501)  [1/1] 0.00ns
+:1  %i_i17 = phi i5 [ 0, %neuron.exit320 ], [ %i_17, %35 ]
+
+ST_66: exitcond_i17 (502)  [1/1] 3.31ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:2  %exitcond_i17 = icmp eq i5 %i_i17, -16
+
+ST_66: empty_20 (503)  [1/1] 0.00ns
+:3  %empty_20 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 16, i64 16, i64 16) nounwind
+
+ST_66: i_17 (504)  [1/1] 2.33ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:4  %i_17 = add i5 %i_i17, 1
+
+ST_66: StgValue_615 (505)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:5  br i1 %exitcond_i17, label %neuron.exit340, label %35
+
+ST_66: adjSize1716_cast_cas (508)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:1  %adjSize1716_cast_cas = zext i5 %i_i17 to i9
+
+ST_66: mem_index_gep13 (509)  [1/1] 2.32ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:2  %mem_index_gep13 = add i9 %adjSize1716_cast_cas, -148
+
+ST_66: tempOut_addr_17 (525)  [1/1] 0.00ns  loc: NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit340:0  %tempOut_addr_17 = getelementptr [32 x i19]* %tempOut, i32 0, i32 17
+
+ST_66: StgValue_619 (526)  [1/1] 2.32ns  loc: NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit340:1  store i19 %result_34, i19* %tempOut_addr_17, align 4
+
+ST_66: StgValue_620 (527)  [1/1] 1.59ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit340:2  br label %36
+
+
+ <State 67>: 5.58ns
+ST_67: tmp_5_i17 (507)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:0  %tmp_5_i17 = zext i5 %i_i17 to i32
+
+ST_67: mem_index_gep883_cas (510)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:3  %mem_index_gep883_cas = sext i9 %mem_index_gep13 to i10
+
+ST_67: adjSize2204_cast (511)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:4  %adjSize2204_cast = zext i10 %mem_index_gep883_cas to i11
+
+ST_67: gepindex17 (512)  [1/1] 2.33ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:5  %gepindex17 = add i11 %adjSize2204_cast, -604
+
+ST_67: gepindex2208_cast (513)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:6  %gepindex2208_cast = zext i11 %gepindex17 to i32
+
+ST_67: W_addr_17 (514)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:7  %W_addr_17 = getelementptr [512 x i8]* @W, i32 0, i32 %gepindex2208_cast
+
+ST_67: W_load_17 (515)  [2/2] 3.25ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:8  %W_load_17 = load i8* %W_addr_17, align 1
+
+ST_67: img_addr_17 (517)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:10  %img_addr_17 = getelementptr [16 x i8]* %img, i32 0, i32 %tmp_5_i17
+
+ST_67: img_load_17 (518)  [2/2] 2.32ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:11  %img_load_17 = load i8* %img_addr_17, align 1
+
+
+ <State 68>: 3.25ns
+ST_68: W_load_17 (515)  [1/2] 3.25ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:8  %W_load_17 = load i8* %W_addr_17, align 1
+
+ST_68: img_load_17 (518)  [1/2] 2.32ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:11  %img_load_17 = load i8* %img_addr_17, align 1
+
+
+ <State 69>: 6.38ns
+ST_69: tmp_6_cast_i17 (516)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:9  %tmp_6_cast_i17 = sext i8 %W_load_17 to i16
+
+ST_69: tmp_7_cast_i17 (519)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:12  %tmp_7_cast_i17 = sext i8 %img_load_17 to i16
+
+ST_69: tmp_8_i17 (520)  [1/1] 3.36ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:13  %tmp_8_i17 = mul i16 %tmp_6_cast_i17, %tmp_7_cast_i17
+
+ST_69: tmp_8_cast_i17_cast (521)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:14  %tmp_8_cast_i17_cast = sext i16 %tmp_8_i17 to i19
+
+ST_69: result_35 (522)  [1/1] 3.02ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:15  %result_35 = add i19 %tmp_8_cast_i17_cast, %result_34
+
+ST_69: StgValue_637 (523)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:16  br label %34
+
+
+ <State 70>: 4.83ns
+ST_70: result_i16 (529)  [1/1] 0.00ns
+:0  %result_i16 = phi i19 [ 0, %neuron.exit340 ], [ %result_37, %37 ]
+
+ST_70: i_i18 (530)  [1/1] 0.00ns
+:1  %i_i18 = phi i5 [ 0, %neuron.exit340 ], [ %i_18, %37 ]
+
+ST_70: exitcond_i18 (531)  [1/1] 3.31ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:2  %exitcond_i18 = icmp eq i5 %i_i18, -16
+
+ST_70: empty_21 (532)  [1/1] 0.00ns
+:3  %empty_21 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 16, i64 16, i64 16) nounwind
+
+ST_70: i_18 (533)  [1/1] 2.33ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:4  %i_18 = add i5 %i_i18, 1
+
+ST_70: StgValue_643 (534)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:5  br i1 %exitcond_i18, label %neuron.exit360, label %37
+
+ST_70: adjSize1737_cast_cas (537)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:1  %adjSize1737_cast_cas = zext i5 %i_i18 to i9
+
+ST_70: mem_index_gep14 (538)  [1/1] 2.32ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:2  %mem_index_gep14 = add i9 %adjSize1737_cast_cas, -132
+
+ST_70: result_36 (554)  [1/1] 2.51ns  loc: NN.cpp:35->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit360:0  %result_36 = add i19 %result_i16, -90
+
+ST_70: tempOut_addr_18 (555)  [1/1] 0.00ns  loc: NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit360:1  %tempOut_addr_18 = getelementptr [32 x i19]* %tempOut, i32 0, i32 18
+
+ST_70: StgValue_648 (556)  [1/1] 2.32ns  loc: NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit360:2  store i19 %result_36, i19* %tempOut_addr_18, align 4
+
+ST_70: StgValue_649 (557)  [1/1] 1.59ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit360:3  br label %38
+
+
+ <State 71>: 5.58ns
+ST_71: tmp_5_i18 (536)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:0  %tmp_5_i18 = zext i5 %i_i18 to i32
+
+ST_71: mem_index_gep889_cas (539)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:3  %mem_index_gep889_cas = sext i9 %mem_index_gep14 to i10
+
+ST_71: adjSize2213_cast (540)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:4  %adjSize2213_cast = zext i10 %mem_index_gep889_cas to i11
+
+ST_71: gepindex18 (541)  [1/1] 2.33ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:5  %gepindex18 = add i11 %adjSize2213_cast, -604
+
+ST_71: gepindex2217_cast (542)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:6  %gepindex2217_cast = zext i11 %gepindex18 to i32
+
+ST_71: W_addr_18 (543)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:7  %W_addr_18 = getelementptr [512 x i8]* @W, i32 0, i32 %gepindex2217_cast
+
+ST_71: W_load_18 (544)  [2/2] 3.25ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:8  %W_load_18 = load i8* %W_addr_18, align 1
+
+ST_71: img_addr_18 (546)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:10  %img_addr_18 = getelementptr [16 x i8]* %img, i32 0, i32 %tmp_5_i18
+
+ST_71: img_load_18 (547)  [2/2] 2.32ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:11  %img_load_18 = load i8* %img_addr_18, align 1
+
+
+ <State 72>: 3.25ns
+ST_72: W_load_18 (544)  [1/2] 3.25ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:8  %W_load_18 = load i8* %W_addr_18, align 1
+
+ST_72: img_load_18 (547)  [1/2] 2.32ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:11  %img_load_18 = load i8* %img_addr_18, align 1
+
+
+ <State 73>: 6.38ns
+ST_73: tmp_6_cast_i18 (545)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:9  %tmp_6_cast_i18 = sext i8 %W_load_18 to i16
+
+ST_73: tmp_7_cast_i18 (548)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:12  %tmp_7_cast_i18 = sext i8 %img_load_18 to i16
+
+ST_73: tmp_8_i18 (549)  [1/1] 3.36ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:13  %tmp_8_i18 = mul i16 %tmp_6_cast_i18, %tmp_7_cast_i18
+
+ST_73: tmp_8_cast_i18_cast (550)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:14  %tmp_8_cast_i18_cast = sext i16 %tmp_8_i18 to i19
+
+ST_73: result_37 (551)  [1/1] 3.02ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:15  %result_37 = add i19 %tmp_8_cast_i18_cast, %result_i16
+
+ST_73: StgValue_666 (552)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:16  br label %36
+
+
+ <State 74>: 4.83ns
+ST_74: result_i17 (559)  [1/1] 0.00ns
+:0  %result_i17 = phi i19 [ 0, %neuron.exit360 ], [ %result_39, %39 ]
+
+ST_74: i_i19 (560)  [1/1] 0.00ns
+:1  %i_i19 = phi i5 [ 0, %neuron.exit360 ], [ %i_19, %39 ]
+
+ST_74: exitcond_i19 (561)  [1/1] 3.31ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:2  %exitcond_i19 = icmp eq i5 %i_i19, -16
+
+ST_74: empty_22 (562)  [1/1] 0.00ns
+:3  %empty_22 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 16, i64 16, i64 16) nounwind
+
+ST_74: i_19 (563)  [1/1] 2.33ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:4  %i_19 = add i5 %i_i19, 1
+
+ST_74: StgValue_672 (564)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:5  br i1 %exitcond_i19, label %neuron.exit380, label %39
+
+ST_74: adjSize1758_cast_cas (567)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:1  %adjSize1758_cast_cas = zext i5 %i_i19 to i8
+
+ST_74: mem_index_gep15 (568)  [1/1] 2.32ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:2  %mem_index_gep15 = add i8 %adjSize1758_cast_cas, -116
+
+ST_74: result_38 (584)  [1/1] 2.51ns  loc: NN.cpp:35->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit380:0  %result_38 = add i19 %result_i17, -3
+
+ST_74: tempOut_addr_19 (585)  [1/1] 0.00ns  loc: NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit380:1  %tempOut_addr_19 = getelementptr [32 x i19]* %tempOut, i32 0, i32 19
+
+ST_74: StgValue_677 (586)  [1/1] 2.32ns  loc: NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit380:2  store i19 %result_38, i19* %tempOut_addr_19, align 4
+
+ST_74: StgValue_678 (587)  [1/1] 1.59ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit380:3  br label %40
+
+
+ <State 75>: 5.58ns
+ST_75: tmp_5_i19 (566)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:0  %tmp_5_i19 = zext i5 %i_i19 to i32
+
+ST_75: mem_index_gep895_cas (569)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:3  %mem_index_gep895_cas = sext i8 %mem_index_gep15 to i10
+
+ST_75: adjSize2222_cast (570)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:4  %adjSize2222_cast = zext i10 %mem_index_gep895_cas to i11
+
+ST_75: gepindex19 (571)  [1/1] 2.33ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:5  %gepindex19 = add i11 %adjSize2222_cast, -604
+
+ST_75: gepindex2226_cast (572)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:6  %gepindex2226_cast = zext i11 %gepindex19 to i32
+
+ST_75: W_addr_19 (573)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:7  %W_addr_19 = getelementptr [512 x i8]* @W, i32 0, i32 %gepindex2226_cast
+
+ST_75: W_load_19 (574)  [2/2] 3.25ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:8  %W_load_19 = load i8* %W_addr_19, align 1
+
+ST_75: img_addr_19 (576)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:10  %img_addr_19 = getelementptr [16 x i8]* %img, i32 0, i32 %tmp_5_i19
+
+ST_75: img_load_19 (577)  [2/2] 2.32ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:11  %img_load_19 = load i8* %img_addr_19, align 1
+
+
+ <State 76>: 3.25ns
+ST_76: W_load_19 (574)  [1/2] 3.25ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:8  %W_load_19 = load i8* %W_addr_19, align 1
+
+ST_76: img_load_19 (577)  [1/2] 2.32ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:11  %img_load_19 = load i8* %img_addr_19, align 1
+
+
+ <State 77>: 6.38ns
+ST_77: tmp_6_cast_i19 (575)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:9  %tmp_6_cast_i19 = sext i8 %W_load_19 to i16
+
+ST_77: tmp_7_cast_i19 (578)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:12  %tmp_7_cast_i19 = sext i8 %img_load_19 to i16
+
+ST_77: tmp_8_i19 (579)  [1/1] 3.36ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:13  %tmp_8_i19 = mul i16 %tmp_6_cast_i19, %tmp_7_cast_i19
+
+ST_77: tmp_8_cast_i19_cast (580)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:14  %tmp_8_cast_i19_cast = sext i16 %tmp_8_i19 to i19
+
+ST_77: result_39 (581)  [1/1] 3.02ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:15  %result_39 = add i19 %tmp_8_cast_i19_cast, %result_i17
+
+ST_77: StgValue_695 (582)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:16  br label %38
+
+
+ <State 78>: 4.83ns
+ST_78: result_i18 (589)  [1/1] 0.00ns
+:0  %result_i18 = phi i19 [ 0, %neuron.exit380 ], [ %result_41, %41 ]
+
+ST_78: i_i20 (590)  [1/1] 0.00ns
+:1  %i_i20 = phi i5 [ 0, %neuron.exit380 ], [ %i_20, %41 ]
+
+ST_78: exitcond_i20 (591)  [1/1] 3.31ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:2  %exitcond_i20 = icmp eq i5 %i_i20, -16
+
+ST_78: empty_23 (592)  [1/1] 0.00ns
+:3  %empty_23 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 16, i64 16, i64 16) nounwind
+
+ST_78: i_20 (593)  [1/1] 2.33ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:4  %i_20 = add i5 %i_i20, 1
+
+ST_78: StgValue_701 (594)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:5  br i1 %exitcond_i20, label %neuron.exit400, label %41
+
+ST_78: adjSize1779_cast_cas (597)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:1  %adjSize1779_cast_cas = zext i5 %i_i20 to i8
+
+ST_78: mem_index_gep16 (598)  [1/1] 2.32ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:2  %mem_index_gep16 = add i8 %adjSize1779_cast_cas, -100
+
+ST_78: result_40 (614)  [1/1] 2.51ns  loc: NN.cpp:35->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit400:0  %result_40 = add i19 %result_i18, -5
+
+ST_78: tempOut_addr_20 (615)  [1/1] 0.00ns  loc: NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit400:1  %tempOut_addr_20 = getelementptr [32 x i19]* %tempOut, i32 0, i32 20
+
+ST_78: StgValue_706 (616)  [1/1] 2.32ns  loc: NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit400:2  store i19 %result_40, i19* %tempOut_addr_20, align 4
+
+ST_78: StgValue_707 (617)  [1/1] 1.59ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit400:3  br label %42
+
+
+ <State 79>: 5.58ns
+ST_79: tmp_5_i20 (596)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:0  %tmp_5_i20 = zext i5 %i_i20 to i32
+
+ST_79: mem_index_gep901_cas (599)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:3  %mem_index_gep901_cas = sext i8 %mem_index_gep16 to i10
+
+ST_79: adjSize2231_cast (600)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:4  %adjSize2231_cast = zext i10 %mem_index_gep901_cas to i11
+
+ST_79: gepindex20 (601)  [1/1] 2.33ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:5  %gepindex20 = add i11 %adjSize2231_cast, -604
+
+ST_79: gepindex2235_cast (602)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:6  %gepindex2235_cast = zext i11 %gepindex20 to i32
+
+ST_79: W_addr_20 (603)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:7  %W_addr_20 = getelementptr [512 x i8]* @W, i32 0, i32 %gepindex2235_cast
+
+ST_79: W_load_20 (604)  [2/2] 3.25ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:8  %W_load_20 = load i8* %W_addr_20, align 1
+
+ST_79: img_addr_20 (606)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:10  %img_addr_20 = getelementptr [16 x i8]* %img, i32 0, i32 %tmp_5_i20
+
+ST_79: img_load_20 (607)  [2/2] 2.32ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:11  %img_load_20 = load i8* %img_addr_20, align 1
+
+
+ <State 80>: 3.25ns
+ST_80: W_load_20 (604)  [1/2] 3.25ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:8  %W_load_20 = load i8* %W_addr_20, align 1
+
+ST_80: img_load_20 (607)  [1/2] 2.32ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:11  %img_load_20 = load i8* %img_addr_20, align 1
+
+
+ <State 81>: 6.38ns
+ST_81: tmp_6_cast_i20 (605)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:9  %tmp_6_cast_i20 = sext i8 %W_load_20 to i16
+
+ST_81: tmp_7_cast_i20 (608)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:12  %tmp_7_cast_i20 = sext i8 %img_load_20 to i16
+
+ST_81: tmp_8_i20 (609)  [1/1] 3.36ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:13  %tmp_8_i20 = mul i16 %tmp_6_cast_i20, %tmp_7_cast_i20
+
+ST_81: tmp_8_cast_i20_cast (610)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:14  %tmp_8_cast_i20_cast = sext i16 %tmp_8_i20 to i19
+
+ST_81: result_41 (611)  [1/1] 3.02ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:15  %result_41 = add i19 %tmp_8_cast_i20_cast, %result_i18
+
+ST_81: StgValue_724 (612)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:16  br label %40
+
+
+ <State 82>: 4.83ns
+ST_82: result_i19 (619)  [1/1] 0.00ns
+:0  %result_i19 = phi i19 [ 0, %neuron.exit400 ], [ %result_43, %43 ]
+
+ST_82: i_i21 (620)  [1/1] 0.00ns
+:1  %i_i21 = phi i5 [ 0, %neuron.exit400 ], [ %i_21, %43 ]
+
+ST_82: exitcond_i21 (621)  [1/1] 3.31ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:2  %exitcond_i21 = icmp eq i5 %i_i21, -16
+
+ST_82: empty_24 (622)  [1/1] 0.00ns
+:3  %empty_24 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 16, i64 16, i64 16) nounwind
+
+ST_82: i_21 (623)  [1/1] 2.33ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:4  %i_21 = add i5 %i_i21, 1
+
+ST_82: StgValue_730 (624)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:5  br i1 %exitcond_i21, label %neuron.exit420, label %43
+
+ST_82: adjSize1800_cast_cas (627)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:1  %adjSize1800_cast_cas = zext i5 %i_i21 to i8
+
+ST_82: mem_index_gep17 (628)  [1/1] 2.32ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:2  %mem_index_gep17 = add i8 %adjSize1800_cast_cas, -84
+
+ST_82: result_42 (644)  [1/1] 2.51ns  loc: NN.cpp:35->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit420:0  %result_42 = add i19 %result_i19, 66
+
+ST_82: tempOut_addr_21 (645)  [1/1] 0.00ns  loc: NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit420:1  %tempOut_addr_21 = getelementptr [32 x i19]* %tempOut, i32 0, i32 21
+
+ST_82: StgValue_735 (646)  [1/1] 2.32ns  loc: NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit420:2  store i19 %result_42, i19* %tempOut_addr_21, align 4
+
+ST_82: StgValue_736 (647)  [1/1] 1.59ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit420:3  br label %44
+
+
+ <State 83>: 5.58ns
+ST_83: tmp_5_i21 (626)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:0  %tmp_5_i21 = zext i5 %i_i21 to i32
+
+ST_83: mem_index_gep907_cas (629)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:3  %mem_index_gep907_cas = sext i8 %mem_index_gep17 to i10
+
+ST_83: adjSize2240_cast (630)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:4  %adjSize2240_cast = zext i10 %mem_index_gep907_cas to i11
+
+ST_83: gepindex21 (631)  [1/1] 2.33ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:5  %gepindex21 = add i11 %adjSize2240_cast, -604
+
+ST_83: gepindex2244_cast (632)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:6  %gepindex2244_cast = zext i11 %gepindex21 to i32
+
+ST_83: W_addr_21 (633)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:7  %W_addr_21 = getelementptr [512 x i8]* @W, i32 0, i32 %gepindex2244_cast
+
+ST_83: W_load_21 (634)  [2/2] 3.25ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:8  %W_load_21 = load i8* %W_addr_21, align 1
+
+ST_83: img_addr_21 (636)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:10  %img_addr_21 = getelementptr [16 x i8]* %img, i32 0, i32 %tmp_5_i21
+
+ST_83: img_load_21 (637)  [2/2] 2.32ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:11  %img_load_21 = load i8* %img_addr_21, align 1
+
+
+ <State 84>: 3.25ns
+ST_84: W_load_21 (634)  [1/2] 3.25ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:8  %W_load_21 = load i8* %W_addr_21, align 1
+
+ST_84: img_load_21 (637)  [1/2] 2.32ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:11  %img_load_21 = load i8* %img_addr_21, align 1
+
+
+ <State 85>: 6.38ns
+ST_85: tmp_6_cast_i21 (635)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:9  %tmp_6_cast_i21 = sext i8 %W_load_21 to i16
+
+ST_85: tmp_7_cast_i21 (638)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:12  %tmp_7_cast_i21 = sext i8 %img_load_21 to i16
+
+ST_85: tmp_8_i21 (639)  [1/1] 3.36ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:13  %tmp_8_i21 = mul i16 %tmp_6_cast_i21, %tmp_7_cast_i21
+
+ST_85: tmp_8_cast_i21_cast (640)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:14  %tmp_8_cast_i21_cast = sext i16 %tmp_8_i21 to i19
+
+ST_85: result_43 (641)  [1/1] 3.02ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:15  %result_43 = add i19 %tmp_8_cast_i21_cast, %result_i19
+
+ST_85: StgValue_753 (642)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:16  br label %42
+
+
+ <State 86>: 4.83ns
+ST_86: result_i20 (649)  [1/1] 0.00ns
+:0  %result_i20 = phi i19 [ 0, %neuron.exit420 ], [ %result_45, %45 ]
+
+ST_86: i_i22 (650)  [1/1] 0.00ns
+:1  %i_i22 = phi i5 [ 0, %neuron.exit420 ], [ %i_22, %45 ]
+
+ST_86: exitcond_i22 (651)  [1/1] 3.31ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:2  %exitcond_i22 = icmp eq i5 %i_i22, -16
+
+ST_86: empty_25 (652)  [1/1] 0.00ns
+:3  %empty_25 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 16, i64 16, i64 16) nounwind
+
+ST_86: i_22 (653)  [1/1] 2.33ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:4  %i_22 = add i5 %i_i22, 1
+
+ST_86: StgValue_759 (654)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:5  br i1 %exitcond_i22, label %neuron.exit440, label %45
+
+ST_86: adjSize1821_cast_cas (657)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:1  %adjSize1821_cast_cas = zext i5 %i_i22 to i8
+
+ST_86: mem_index_gep18 (658)  [1/1] 2.32ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:2  %mem_index_gep18 = add i8 %adjSize1821_cast_cas, -68
+
+ST_86: result_44 (674)  [1/1] 2.51ns  loc: NN.cpp:35->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit440:0  %result_44 = add i19 %result_i20, -137
+
+ST_86: tempOut_addr_22 (675)  [1/1] 0.00ns  loc: NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit440:1  %tempOut_addr_22 = getelementptr [32 x i19]* %tempOut, i32 0, i32 22
+
+ST_86: StgValue_764 (676)  [1/1] 2.32ns  loc: NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit440:2  store i19 %result_44, i19* %tempOut_addr_22, align 4
+
+ST_86: StgValue_765 (677)  [1/1] 1.59ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit440:3  br label %46
+
+
+ <State 87>: 5.58ns
+ST_87: tmp_5_i22 (656)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:0  %tmp_5_i22 = zext i5 %i_i22 to i32
+
+ST_87: mem_index_gep913_cas (659)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:3  %mem_index_gep913_cas = sext i8 %mem_index_gep18 to i10
+
+ST_87: adjSize2249_cast (660)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:4  %adjSize2249_cast = zext i10 %mem_index_gep913_cas to i11
+
+ST_87: gepindex22 (661)  [1/1] 2.33ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:5  %gepindex22 = add i11 %adjSize2249_cast, -604
+
+ST_87: gepindex2253_cast (662)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:6  %gepindex2253_cast = zext i11 %gepindex22 to i32
+
+ST_87: W_addr_22 (663)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:7  %W_addr_22 = getelementptr [512 x i8]* @W, i32 0, i32 %gepindex2253_cast
+
+ST_87: W_load_22 (664)  [2/2] 3.25ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:8  %W_load_22 = load i8* %W_addr_22, align 1
+
+ST_87: img_addr_22 (666)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:10  %img_addr_22 = getelementptr [16 x i8]* %img, i32 0, i32 %tmp_5_i22
+
+ST_87: img_load_22 (667)  [2/2] 2.32ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:11  %img_load_22 = load i8* %img_addr_22, align 1
+
+
+ <State 88>: 3.25ns
+ST_88: W_load_22 (664)  [1/2] 3.25ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:8  %W_load_22 = load i8* %W_addr_22, align 1
+
+ST_88: img_load_22 (667)  [1/2] 2.32ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:11  %img_load_22 = load i8* %img_addr_22, align 1
+
+
+ <State 89>: 6.38ns
+ST_89: tmp_6_cast_i22 (665)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:9  %tmp_6_cast_i22 = sext i8 %W_load_22 to i16
+
+ST_89: tmp_7_cast_i22 (668)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:12  %tmp_7_cast_i22 = sext i8 %img_load_22 to i16
+
+ST_89: tmp_8_i22 (669)  [1/1] 3.36ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:13  %tmp_8_i22 = mul i16 %tmp_6_cast_i22, %tmp_7_cast_i22
+
+ST_89: tmp_8_cast_i22_cast (670)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:14  %tmp_8_cast_i22_cast = sext i16 %tmp_8_i22 to i19
+
+ST_89: result_45 (671)  [1/1] 3.02ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:15  %result_45 = add i19 %tmp_8_cast_i22_cast, %result_i20
+
+ST_89: StgValue_782 (672)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:16  br label %44
+
+
+ <State 90>: 4.83ns
+ST_90: result_i21 (679)  [1/1] 0.00ns
+:0  %result_i21 = phi i19 [ 0, %neuron.exit440 ], [ %result_47, %47 ]
+
+ST_90: i_i23 (680)  [1/1] 0.00ns
+:1  %i_i23 = phi i5 [ 0, %neuron.exit440 ], [ %i_23, %47 ]
+
+ST_90: exitcond_i23 (681)  [1/1] 3.31ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:2  %exitcond_i23 = icmp eq i5 %i_i23, -16
+
+ST_90: empty_26 (682)  [1/1] 0.00ns
+:3  %empty_26 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 16, i64 16, i64 16) nounwind
+
+ST_90: i_23 (683)  [1/1] 2.33ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:4  %i_23 = add i5 %i_i23, 1
+
+ST_90: StgValue_788 (684)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:5  br i1 %exitcond_i23, label %neuron.exit460, label %47
+
+ST_90: adjSize1842_cast_cas (687)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:1  %adjSize1842_cast_cas = zext i5 %i_i23 to i7
+
+ST_90: mem_index_gep19 (688)  [1/1] 2.32ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:2  %mem_index_gep19 = add i7 %adjSize1842_cast_cas, -52
+
+ST_90: result_46 (704)  [1/1] 2.51ns  loc: NN.cpp:35->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit460:0  %result_46 = add i19 %result_i21, -6
+
+ST_90: tempOut_addr_23 (705)  [1/1] 0.00ns  loc: NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit460:1  %tempOut_addr_23 = getelementptr [32 x i19]* %tempOut, i32 0, i32 23
+
+ST_90: StgValue_793 (706)  [1/1] 2.32ns  loc: NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit460:2  store i19 %result_46, i19* %tempOut_addr_23, align 4
+
+ST_90: StgValue_794 (707)  [1/1] 1.59ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit460:3  br label %48
+
+
+ <State 91>: 5.58ns
+ST_91: tmp_5_i23 (686)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:0  %tmp_5_i23 = zext i5 %i_i23 to i32
+
+ST_91: mem_index_gep919_cas (689)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:3  %mem_index_gep919_cas = sext i7 %mem_index_gep19 to i10
+
+ST_91: adjSize2258_cast (690)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:4  %adjSize2258_cast = zext i10 %mem_index_gep919_cas to i11
+
+ST_91: gepindex23 (691)  [1/1] 2.33ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:5  %gepindex23 = add i11 %adjSize2258_cast, -604
+
+ST_91: gepindex2262_cast (692)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:6  %gepindex2262_cast = zext i11 %gepindex23 to i32
+
+ST_91: W_addr_23 (693)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:7  %W_addr_23 = getelementptr [512 x i8]* @W, i32 0, i32 %gepindex2262_cast
+
+ST_91: W_load_23 (694)  [2/2] 3.25ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:8  %W_load_23 = load i8* %W_addr_23, align 1
+
+ST_91: img_addr_23 (696)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:10  %img_addr_23 = getelementptr [16 x i8]* %img, i32 0, i32 %tmp_5_i23
+
+ST_91: img_load_23 (697)  [2/2] 2.32ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:11  %img_load_23 = load i8* %img_addr_23, align 1
+
+
+ <State 92>: 3.25ns
+ST_92: W_load_23 (694)  [1/2] 3.25ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:8  %W_load_23 = load i8* %W_addr_23, align 1
+
+ST_92: img_load_23 (697)  [1/2] 2.32ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:11  %img_load_23 = load i8* %img_addr_23, align 1
+
+
+ <State 93>: 6.38ns
+ST_93: tmp_6_cast_i23 (695)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:9  %tmp_6_cast_i23 = sext i8 %W_load_23 to i16
+
+ST_93: tmp_7_cast_i23 (698)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:12  %tmp_7_cast_i23 = sext i8 %img_load_23 to i16
+
+ST_93: tmp_8_i23 (699)  [1/1] 3.36ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:13  %tmp_8_i23 = mul i16 %tmp_6_cast_i23, %tmp_7_cast_i23
+
+ST_93: tmp_8_cast_i23_cast (700)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:14  %tmp_8_cast_i23_cast = sext i16 %tmp_8_i23 to i19
+
+ST_93: result_47 (701)  [1/1] 3.02ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:15  %result_47 = add i19 %tmp_8_cast_i23_cast, %result_i21
+
+ST_93: StgValue_811 (702)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:16  br label %46
+
+
+ <State 94>: 4.83ns
+ST_94: result_i22 (709)  [1/1] 0.00ns
+:0  %result_i22 = phi i19 [ 0, %neuron.exit460 ], [ %result_49, %49 ]
+
+ST_94: i_i24 (710)  [1/1] 0.00ns
+:1  %i_i24 = phi i5 [ 0, %neuron.exit460 ], [ %i_24, %49 ]
+
+ST_94: exitcond_i24 (711)  [1/1] 3.31ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:2  %exitcond_i24 = icmp eq i5 %i_i24, -16
+
+ST_94: empty_27 (712)  [1/1] 0.00ns
+:3  %empty_27 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 16, i64 16, i64 16) nounwind
+
+ST_94: i_24 (713)  [1/1] 2.33ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:4  %i_24 = add i5 %i_i24, 1
+
+ST_94: StgValue_817 (714)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:5  br i1 %exitcond_i24, label %neuron.exit480, label %49
+
+ST_94: adjSize1863_cast_cas (717)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:1  %adjSize1863_cast_cas = zext i5 %i_i24 to i7
+
+ST_94: mem_index_gep20 (718)  [1/1] 2.32ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:2  %mem_index_gep20 = add i7 %adjSize1863_cast_cas, -36
+
+ST_94: result_48 (734)  [1/1] 2.51ns  loc: NN.cpp:35->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit480:0  %result_48 = add i19 %result_i22, -20
+
+ST_94: tempOut_addr_24 (735)  [1/1] 0.00ns  loc: NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit480:1  %tempOut_addr_24 = getelementptr [32 x i19]* %tempOut, i32 0, i32 24
+
+ST_94: StgValue_822 (736)  [1/1] 2.32ns  loc: NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit480:2  store i19 %result_48, i19* %tempOut_addr_24, align 4
+
+ST_94: StgValue_823 (737)  [1/1] 1.59ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit480:3  br label %50
+
+
+ <State 95>: 5.58ns
+ST_95: tmp_5_i24 (716)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:0  %tmp_5_i24 = zext i5 %i_i24 to i32
+
+ST_95: mem_index_gep925_cas (719)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:3  %mem_index_gep925_cas = sext i7 %mem_index_gep20 to i10
+
+ST_95: adjSize2267_cast (720)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:4  %adjSize2267_cast = zext i10 %mem_index_gep925_cas to i11
+
+ST_95: gepindex24 (721)  [1/1] 2.33ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:5  %gepindex24 = add i11 %adjSize2267_cast, -604
+
+ST_95: gepindex2271_cast (722)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:6  %gepindex2271_cast = zext i11 %gepindex24 to i32
+
+ST_95: W_addr_24 (723)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:7  %W_addr_24 = getelementptr [512 x i8]* @W, i32 0, i32 %gepindex2271_cast
+
+ST_95: W_load_24 (724)  [2/2] 3.25ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:8  %W_load_24 = load i8* %W_addr_24, align 1
+
+ST_95: img_addr_24 (726)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:10  %img_addr_24 = getelementptr [16 x i8]* %img, i32 0, i32 %tmp_5_i24
+
+ST_95: img_load_24 (727)  [2/2] 2.32ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:11  %img_load_24 = load i8* %img_addr_24, align 1
+
+
+ <State 96>: 3.25ns
+ST_96: W_load_24 (724)  [1/2] 3.25ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:8  %W_load_24 = load i8* %W_addr_24, align 1
+
+ST_96: img_load_24 (727)  [1/2] 2.32ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:11  %img_load_24 = load i8* %img_addr_24, align 1
+
+
+ <State 97>: 6.38ns
+ST_97: tmp_6_cast_i24 (725)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:9  %tmp_6_cast_i24 = sext i8 %W_load_24 to i16
+
+ST_97: tmp_7_cast_i24 (728)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:12  %tmp_7_cast_i24 = sext i8 %img_load_24 to i16
+
+ST_97: tmp_8_i24 (729)  [1/1] 3.36ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:13  %tmp_8_i24 = mul i16 %tmp_6_cast_i24, %tmp_7_cast_i24
+
+ST_97: tmp_8_cast_i24_cast (730)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:14  %tmp_8_cast_i24_cast = sext i16 %tmp_8_i24 to i19
+
+ST_97: result_49 (731)  [1/1] 3.02ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:15  %result_49 = add i19 %tmp_8_cast_i24_cast, %result_i22
+
+ST_97: StgValue_840 (732)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:16  br label %48
+
+
+ <State 98>: 4.83ns
+ST_98: result_i23 (739)  [1/1] 0.00ns
+:0  %result_i23 = phi i19 [ 0, %neuron.exit480 ], [ %result_51, %51 ]
+
+ST_98: i_i25 (740)  [1/1] 0.00ns
+:1  %i_i25 = phi i5 [ 0, %neuron.exit480 ], [ %i_25, %51 ]
+
+ST_98: exitcond_i25 (741)  [1/1] 3.31ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:2  %exitcond_i25 = icmp eq i5 %i_i25, -16
+
+ST_98: empty_28 (742)  [1/1] 0.00ns
+:3  %empty_28 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 16, i64 16, i64 16) nounwind
+
+ST_98: i_25 (743)  [1/1] 2.33ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:4  %i_25 = add i5 %i_i25, 1
+
+ST_98: StgValue_846 (744)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:5  br i1 %exitcond_i25, label %neuron.exit500, label %51
+
+ST_98: adjSize1884_cast_cas (747)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:1  %adjSize1884_cast_cas = zext i5 %i_i25 to i6
+
+ST_98: mem_index_gep21 (748)  [1/1] 2.31ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:2  %mem_index_gep21 = add i6 %adjSize1884_cast_cas, -20
+
+ST_98: result_50 (763)  [1/1] 2.51ns  loc: NN.cpp:35->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit500:0  %result_50 = add i19 %result_i23, 188
+
+ST_98: tempOut_addr_25 (764)  [1/1] 0.00ns  loc: NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit500:1  %tempOut_addr_25 = getelementptr [32 x i19]* %tempOut, i32 0, i32 25
+
+ST_98: StgValue_851 (765)  [1/1] 2.32ns  loc: NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit500:2  store i19 %result_50, i19* %tempOut_addr_25, align 4
+
+ST_98: StgValue_852 (766)  [1/1] 1.59ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit500:3  br label %52
+
+
+ <State 99>: 5.57ns
+ST_99: tmp_5_i25 (746)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:0  %tmp_5_i25 = zext i5 %i_i25 to i32
+
+ST_99: adjSize2276_cast (749)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:3  %adjSize2276_cast = sext i6 %mem_index_gep21 to i9
+
+ST_99: gepindex25 (750)  [1/1] 2.32ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:4  %gepindex25 = add i9 %adjSize2276_cast, -92
+
+ST_99: gepindex22282_cast (751)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:5  %gepindex22282_cast = zext i9 %gepindex25 to i32
+
+ST_99: W_addr_25 (752)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:6  %W_addr_25 = getelementptr [512 x i8]* @W, i32 0, i32 %gepindex22282_cast
+
+ST_99: W_load_25 (753)  [2/2] 3.25ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:7  %W_load_25 = load i8* %W_addr_25, align 1
+
+ST_99: img_addr_25 (755)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:9  %img_addr_25 = getelementptr [16 x i8]* %img, i32 0, i32 %tmp_5_i25
+
+ST_99: img_load_25 (756)  [2/2] 2.32ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:10  %img_load_25 = load i8* %img_addr_25, align 1
+
+
+ <State 100>: 3.25ns
+ST_100: W_load_25 (753)  [1/2] 3.25ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:7  %W_load_25 = load i8* %W_addr_25, align 1
+
+ST_100: img_load_25 (756)  [1/2] 2.32ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:10  %img_load_25 = load i8* %img_addr_25, align 1
+
+
+ <State 101>: 6.38ns
+ST_101: tmp_6_cast_i25 (754)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:8  %tmp_6_cast_i25 = sext i8 %W_load_25 to i16
+
+ST_101: tmp_7_cast_i25 (757)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:11  %tmp_7_cast_i25 = sext i8 %img_load_25 to i16
+
+ST_101: tmp_8_i25 (758)  [1/1] 3.36ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:12  %tmp_8_i25 = mul i16 %tmp_6_cast_i25, %tmp_7_cast_i25
+
+ST_101: tmp_8_cast_i25_cast (759)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:13  %tmp_8_cast_i25_cast = sext i16 %tmp_8_i25 to i19
+
+ST_101: result_51 (760)  [1/1] 3.02ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:14  %result_51 = add i19 %tmp_8_cast_i25_cast, %result_i23
+
+ST_101: StgValue_868 (761)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:15  br label %50
+
+
+ <State 102>: 4.83ns
+ST_102: result_i24 (768)  [1/1] 0.00ns
+:0  %result_i24 = phi i19 [ 0, %neuron.exit500 ], [ %result_53, %53 ]
+
+ST_102: i_i26 (769)  [1/1] 0.00ns
+:1  %i_i26 = phi i5 [ 0, %neuron.exit500 ], [ %i_26, %53 ]
+
+ST_102: exitcond_i26 (770)  [1/1] 3.31ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:2  %exitcond_i26 = icmp eq i5 %i_i26, -16
+
+ST_102: empty_29 (771)  [1/1] 0.00ns
+:3  %empty_29 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 16, i64 16, i64 16) nounwind
+
+ST_102: i_26 (772)  [1/1] 2.33ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:4  %i_26 = add i5 %i_i26, 1
+
+ST_102: StgValue_874 (773)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:5  br i1 %exitcond_i26, label %neuron.exit520, label %53
+
+ST_102: tmp_5_i26 (775)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:0  %tmp_5_i26 = zext i5 %i_i26 to i32
+
+ST_102: gepindex2289_cast (776)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:1  %gepindex2289_cast = call i9 @_ssdm_op_BitConcatenate.i9.i4.i5(i4 -3, i5 %i_i26)
+
+ST_102: gepindex22291_cast (777)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:2  %gepindex22291_cast = zext i9 %gepindex2289_cast to i32
+
+ST_102: W_addr_26 (778)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:3  %W_addr_26 = getelementptr [512 x i8]* @W, i32 0, i32 %gepindex22291_cast
+
+ST_102: W_load_26 (779)  [2/2] 3.25ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:4  %W_load_26 = load i8* %W_addr_26, align 1
+
+ST_102: img_addr_26 (781)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:6  %img_addr_26 = getelementptr [16 x i8]* %img, i32 0, i32 %tmp_5_i26
+
+ST_102: img_load_26 (782)  [2/2] 2.32ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:7  %img_load_26 = load i8* %img_addr_26, align 1
+
+ST_102: result_52 (789)  [1/1] 2.51ns  loc: NN.cpp:35->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit520:0  %result_52 = add i19 %result_i24, 111
+
+ST_102: tempOut_addr_26 (790)  [1/1] 0.00ns  loc: NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit520:1  %tempOut_addr_26 = getelementptr [32 x i19]* %tempOut, i32 0, i32 26
+
+ST_102: StgValue_884 (791)  [1/1] 2.32ns  loc: NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit520:2  store i19 %result_52, i19* %tempOut_addr_26, align 4
+
+ST_102: StgValue_885 (792)  [1/1] 1.59ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit520:3  br label %54
+
+
+ <State 103>: 3.25ns
+ST_103: W_load_26 (779)  [1/2] 3.25ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:4  %W_load_26 = load i8* %W_addr_26, align 1
+
+ST_103: img_load_26 (782)  [1/2] 2.32ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:7  %img_load_26 = load i8* %img_addr_26, align 1
+
+
+ <State 104>: 6.38ns
+ST_104: tmp_6_cast_i26 (780)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:5  %tmp_6_cast_i26 = sext i8 %W_load_26 to i16
+
+ST_104: tmp_7_cast_i26 (783)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:8  %tmp_7_cast_i26 = sext i8 %img_load_26 to i16
+
+ST_104: tmp_8_i26 (784)  [1/1] 3.36ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:9  %tmp_8_i26 = mul i16 %tmp_6_cast_i26, %tmp_7_cast_i26
+
+ST_104: tmp_8_cast_i26_cast (785)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:10  %tmp_8_cast_i26_cast = sext i16 %tmp_8_i26 to i19
+
+ST_104: result_53 (786)  [1/1] 3.02ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:11  %result_53 = add i19 %tmp_8_cast_i26_cast, %result_i24
+
+ST_104: StgValue_893 (787)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:12  br label %52
+
+
+ <State 105>: 5.58ns
+ST_105: result_i25 (794)  [1/1] 0.00ns
+:0  %result_i25 = phi i19 [ 0, %neuron.exit520 ], [ %result_55, %55 ]
+
+ST_105: i_i27 (795)  [1/1] 0.00ns
+:1  %i_i27 = phi i5 [ 0, %neuron.exit520 ], [ %i_27, %55 ]
+
+ST_105: exitcond_i27 (796)  [1/1] 3.31ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:2  %exitcond_i27 = icmp eq i5 %i_i27, -16
+
+ST_105: empty_30 (797)  [1/1] 0.00ns
+:3  %empty_30 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 16, i64 16, i64 16) nounwind
+
+ST_105: i_27 (798)  [1/1] 2.33ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:4  %i_27 = add i5 %i_i27, 1
+
+ST_105: StgValue_899 (799)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:5  br i1 %exitcond_i27, label %neuron.exit540, label %55
+
+ST_105: tmp_5_i27 (801)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:0  %tmp_5_i27 = zext i5 %i_i27 to i32
+
+ST_105: adjSize1926_cast (802)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:1  %adjSize1926_cast = zext i5 %i_i27 to i11
+
+ST_105: gepindex26 (803)  [1/1] 2.32ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:2  %gepindex26 = add i11 %adjSize1926_cast, 432
+
+ST_105: gepindex2298_cast (804)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:3  %gepindex2298_cast = zext i11 %gepindex26 to i32
+
+ST_105: W_addr_27 (805)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:4  %W_addr_27 = getelementptr [512 x i8]* @W, i32 0, i32 %gepindex2298_cast
+
+ST_105: W_load_27 (806)  [2/2] 3.25ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:5  %W_load_27 = load i8* %W_addr_27, align 1
+
+ST_105: img_addr_27 (808)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:7  %img_addr_27 = getelementptr [16 x i8]* %img, i32 0, i32 %tmp_5_i27
+
+ST_105: img_load_27 (809)  [2/2] 2.32ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:8  %img_load_27 = load i8* %img_addr_27, align 1
+
+ST_105: result_54 (816)  [1/1] 2.51ns  loc: NN.cpp:35->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit540:0  %result_54 = add i19 %result_i25, -9
+
+ST_105: tempOut_addr_27 (817)  [1/1] 0.00ns  loc: NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit540:1  %tempOut_addr_27 = getelementptr [32 x i19]* %tempOut, i32 0, i32 27
+
+ST_105: StgValue_910 (818)  [1/1] 2.32ns  loc: NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit540:2  store i19 %result_54, i19* %tempOut_addr_27, align 4
+
+ST_105: StgValue_911 (819)  [1/1] 1.59ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit540:3  br label %56
+
+
+ <State 106>: 3.25ns
+ST_106: W_load_27 (806)  [1/2] 3.25ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:5  %W_load_27 = load i8* %W_addr_27, align 1
+
+ST_106: img_load_27 (809)  [1/2] 2.32ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:8  %img_load_27 = load i8* %img_addr_27, align 1
+
+
+ <State 107>: 6.38ns
+ST_107: tmp_6_cast_i27 (807)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:6  %tmp_6_cast_i27 = sext i8 %W_load_27 to i16
+
+ST_107: tmp_7_cast_i27 (810)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:9  %tmp_7_cast_i27 = sext i8 %img_load_27 to i16
+
+ST_107: tmp_8_i27 (811)  [1/1] 3.36ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:10  %tmp_8_i27 = mul i16 %tmp_7_cast_i27, %tmp_6_cast_i27
+
+ST_107: tmp_8_cast_i27_cast (812)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:11  %tmp_8_cast_i27_cast = sext i16 %tmp_8_i27 to i19
+
+ST_107: result_55 (813)  [1/1] 3.02ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:12  %result_55 = add i19 %result_i25, %tmp_8_cast_i27_cast
+
+ST_107: StgValue_919 (814)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:13  br label %54
+
+
+ <State 108>: 4.83ns
+ST_108: result_i26 (821)  [1/1] 0.00ns
+:0  %result_i26 = phi i19 [ 0, %neuron.exit540 ], [ %result_57, %57 ]
+
+ST_108: i_i28 (822)  [1/1] 0.00ns
+:1  %i_i28 = phi i5 [ 0, %neuron.exit540 ], [ %i_28, %57 ]
+
+ST_108: exitcond_i28 (823)  [1/1] 3.31ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:2  %exitcond_i28 = icmp eq i5 %i_i28, -16
+
+ST_108: empty_31 (824)  [1/1] 0.00ns
+:3  %empty_31 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 16, i64 16, i64 16) nounwind
+
+ST_108: i_28 (825)  [1/1] 2.33ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:4  %i_28 = add i5 %i_i28, 1
+
+ST_108: StgValue_925 (826)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:5  br i1 %exitcond_i28, label %neuron.exit560, label %57
+
+ST_108: tmp_5_i28 (828)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:0  %tmp_5_i28 = zext i5 %i_i28 to i32
+
+ST_108: gepindex27 (829)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:1  %gepindex27 = call i11 @_ssdm_op_BitConcatenate.i11.i6.i5(i6 14, i5 %i_i28)
+
+ST_108: gepindex2307_cast (830)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:2  %gepindex2307_cast = zext i11 %gepindex27 to i32
+
+ST_108: W_addr_28 (831)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:3  %W_addr_28 = getelementptr [512 x i8]* @W, i32 0, i32 %gepindex2307_cast
+
+ST_108: W_load_28 (832)  [2/2] 3.25ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:4  %W_load_28 = load i8* %W_addr_28, align 1
+
+ST_108: img_addr_28 (834)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:6  %img_addr_28 = getelementptr [16 x i8]* %img, i32 0, i32 %tmp_5_i28
+
+ST_108: img_load_28 (835)  [2/2] 2.32ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:7  %img_load_28 = load i8* %img_addr_28, align 1
+
+ST_108: result_56 (842)  [1/1] 2.51ns  loc: NN.cpp:35->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit560:0  %result_56 = add i19 %result_i26, -46
+
+ST_108: tempOut_addr_28 (843)  [1/1] 0.00ns  loc: NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit560:1  %tempOut_addr_28 = getelementptr [32 x i19]* %tempOut, i32 0, i32 28
+
+ST_108: StgValue_935 (844)  [1/1] 2.32ns  loc: NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit560:2  store i19 %result_56, i19* %tempOut_addr_28, align 4
+
+ST_108: StgValue_936 (845)  [1/1] 1.59ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit560:3  br label %58
+
+
+ <State 109>: 3.25ns
+ST_109: W_load_28 (832)  [1/2] 3.25ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:4  %W_load_28 = load i8* %W_addr_28, align 1
+
+ST_109: img_load_28 (835)  [1/2] 2.32ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:7  %img_load_28 = load i8* %img_addr_28, align 1
+
+
+ <State 110>: 6.38ns
+ST_110: tmp_6_cast_i28 (833)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:5  %tmp_6_cast_i28 = sext i8 %W_load_28 to i16
+
+ST_110: tmp_7_cast_i28 (836)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:8  %tmp_7_cast_i28 = sext i8 %img_load_28 to i16
+
+ST_110: tmp_8_i28 (837)  [1/1] 3.36ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:9  %tmp_8_i28 = mul i16 %tmp_7_cast_i28, %tmp_6_cast_i28
+
+ST_110: tmp_8_cast_i28_cast (838)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:10  %tmp_8_cast_i28_cast = sext i16 %tmp_8_i28 to i19
+
+ST_110: result_57 (839)  [1/1] 3.02ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:11  %result_57 = add i19 %result_i26, %tmp_8_cast_i28_cast
+
+ST_110: StgValue_944 (840)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:12  br label %56
+
+
+ <State 111>: 5.57ns
+ST_111: result_i27 (847)  [1/1] 0.00ns
+:0  %result_i27 = phi i19 [ 0, %neuron.exit560 ], [ %result_59, %59 ]
+
+ST_111: i_i29 (848)  [1/1] 0.00ns
+:1  %i_i29 = phi i5 [ 0, %neuron.exit560 ], [ %i_29, %59 ]
+
+ST_111: exitcond_i29 (849)  [1/1] 3.31ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:2  %exitcond_i29 = icmp eq i5 %i_i29, -16
+
+ST_111: empty_32 (850)  [1/1] 0.00ns
+:3  %empty_32 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 16, i64 16, i64 16) nounwind
+
+ST_111: i_29 (851)  [1/1] 2.33ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:4  %i_29 = add i5 %i_i29, 1
+
+ST_111: StgValue_950 (852)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:5  br i1 %exitcond_i29, label %neuron.exit580, label %59
+
+ST_111: tmp_5_i29 (854)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:0  %tmp_5_i29 = zext i5 %i_i29 to i32
+
+ST_111: adjSize1968_cast (855)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:1  %adjSize1968_cast = zext i5 %i_i29 to i9
+
+ST_111: gepindex28 (856)  [1/1] 2.32ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:2  %gepindex28 = add i9 %adjSize1968_cast, -48
+
+ST_111: gepindex22318_cast (857)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:3  %gepindex22318_cast = zext i9 %gepindex28 to i32
+
+ST_111: W_addr_29 (858)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:4  %W_addr_29 = getelementptr [512 x i8]* @W, i32 0, i32 %gepindex22318_cast
+
+ST_111: W_load_29 (859)  [2/2] 3.25ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:5  %W_load_29 = load i8* %W_addr_29, align 1
+
+ST_111: img_addr_29 (861)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:7  %img_addr_29 = getelementptr [16 x i8]* %img, i32 0, i32 %tmp_5_i29
+
+ST_111: img_load_29 (862)  [2/2] 2.32ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:8  %img_load_29 = load i8* %img_addr_29, align 1
+
+ST_111: result_58 (869)  [1/1] 2.51ns  loc: NN.cpp:35->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit580:0  %result_58 = add i19 %result_i27, 201
+
+ST_111: tempOut_addr_29 (870)  [1/1] 0.00ns  loc: NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit580:1  %tempOut_addr_29 = getelementptr [32 x i19]* %tempOut, i32 0, i32 29
+
+ST_111: StgValue_961 (871)  [1/1] 2.32ns  loc: NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit580:2  store i19 %result_58, i19* %tempOut_addr_29, align 4
+
+ST_111: StgValue_962 (872)  [1/1] 1.59ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit580:3  br label %60
+
+
+ <State 112>: 3.25ns
+ST_112: W_load_29 (859)  [1/2] 3.25ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:5  %W_load_29 = load i8* %W_addr_29, align 1
+
+ST_112: img_load_29 (862)  [1/2] 2.32ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:8  %img_load_29 = load i8* %img_addr_29, align 1
+
+
+ <State 113>: 6.38ns
+ST_113: tmp_6_cast_i29 (860)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:6  %tmp_6_cast_i29 = sext i8 %W_load_29 to i16
+
+ST_113: tmp_7_cast_i29 (863)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:9  %tmp_7_cast_i29 = sext i8 %img_load_29 to i16
+
+ST_113: tmp_8_i29 (864)  [1/1] 3.36ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:10  %tmp_8_i29 = mul i16 %tmp_7_cast_i29, %tmp_6_cast_i29
+
+ST_113: tmp_8_cast_i29_cast (865)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:11  %tmp_8_cast_i29_cast = sext i16 %tmp_8_i29 to i19
+
+ST_113: result_59 (866)  [1/1] 3.02ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:12  %result_59 = add i19 %result_i27, %tmp_8_cast_i29_cast
+
+ST_113: StgValue_970 (867)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:13  br label %58
+
+
+ <State 114>: 4.83ns
+ST_114: result_i28 (874)  [1/1] 0.00ns
+:0  %result_i28 = phi i19 [ 0, %neuron.exit580 ], [ %result_61, %61 ]
+
+ST_114: i_i30 (875)  [1/1] 0.00ns
+:1  %i_i30 = phi i5 [ 0, %neuron.exit580 ], [ %i_30, %61 ]
+
+ST_114: exitcond_i30 (876)  [1/1] 3.31ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:2  %exitcond_i30 = icmp eq i5 %i_i30, -16
+
+ST_114: empty_33 (877)  [1/1] 0.00ns
+:3  %empty_33 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 16, i64 16, i64 16) nounwind
+
+ST_114: i_30 (878)  [1/1] 2.33ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:4  %i_30 = add i5 %i_i30, 1
+
+ST_114: StgValue_976 (879)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:5  br i1 %exitcond_i30, label %neuron.exit600, label %61
+
+ST_114: tmp_5_i30 (881)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:0  %tmp_5_i30 = zext i5 %i_i30 to i32
+
+ST_114: gepindex2325_cast (882)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:1  %gepindex2325_cast = call i9 @_ssdm_op_BitConcatenate.i9.i4.i5(i4 -1, i5 %i_i30)
+
+ST_114: gepindex22327_cast (883)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:2  %gepindex22327_cast = zext i9 %gepindex2325_cast to i32
+
+ST_114: W_addr_30 (884)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:3  %W_addr_30 = getelementptr [512 x i8]* @W, i32 0, i32 %gepindex22327_cast
+
+ST_114: W_load_30 (885)  [2/2] 3.25ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:4  %W_load_30 = load i8* %W_addr_30, align 1
+
+ST_114: img_addr_30 (887)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:6  %img_addr_30 = getelementptr [16 x i8]* %img, i32 0, i32 %tmp_5_i30
+
+ST_114: img_load_30 (888)  [2/2] 2.32ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:7  %img_load_30 = load i8* %img_addr_30, align 1
+
+ST_114: result_60 (895)  [1/1] 2.51ns  loc: NN.cpp:35->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit600:0  %result_60 = add i19 %result_i28, 73
+
+ST_114: tempOut_addr_30 (896)  [1/1] 0.00ns  loc: NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit600:1  %tempOut_addr_30 = getelementptr [32 x i19]* %tempOut, i32 0, i32 30
+
+ST_114: StgValue_986 (897)  [1/1] 2.32ns  loc: NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit600:2  store i19 %result_60, i19* %tempOut_addr_30, align 4
+
+ST_114: StgValue_987 (898)  [1/1] 1.59ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit600:3  br label %62
+
+
+ <State 115>: 3.25ns
+ST_115: W_load_30 (885)  [1/2] 3.25ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:4  %W_load_30 = load i8* %W_addr_30, align 1
+
+ST_115: img_load_30 (888)  [1/2] 2.32ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:7  %img_load_30 = load i8* %img_addr_30, align 1
+
+
+ <State 116>: 6.38ns
+ST_116: tmp_6_cast_i30 (886)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:5  %tmp_6_cast_i30 = sext i8 %W_load_30 to i16
+
+ST_116: tmp_7_cast_i30 (889)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:8  %tmp_7_cast_i30 = sext i8 %img_load_30 to i16
+
+ST_116: tmp_8_i30 (890)  [1/1] 3.36ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:9  %tmp_8_i30 = mul i16 %tmp_6_cast_i30, %tmp_7_cast_i30
+
+ST_116: tmp_8_cast_i30_cast (891)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:10  %tmp_8_cast_i30_cast = sext i16 %tmp_8_i30 to i19
+
+ST_116: result_61 (892)  [1/1] 3.02ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:11  %result_61 = add i19 %tmp_8_cast_i30_cast, %result_i28
+
+ST_116: StgValue_995 (893)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:12  br label %60
+
+
+ <State 117>: 5.59ns
+ST_117: result_62 (900)  [1/1] 0.00ns
+:0  %result_62 = phi i19 [ 0, %neuron.exit600 ], [ %result_63, %63 ]
+
+ST_117: i_i31 (901)  [1/1] 0.00ns
+:1  %i_i31 = phi i5 [ 0, %neuron.exit600 ], [ %i_31, %63 ]
+
+ST_117: exitcond_i31 (902)  [1/1] 3.31ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:2  %exitcond_i31 = icmp eq i5 %i_i31, -16
+
+ST_117: empty_34 (903)  [1/1] 0.00ns
+:3  %empty_34 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 16, i64 16, i64 16) nounwind
+
+ST_117: i_31 (904)  [1/1] 2.33ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:4  %i_31 = add i5 %i_i31, 1
+
+ST_117: StgValue_1001 (905)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:5  br i1 %exitcond_i31, label %neuron.exit620, label %63
+
+ST_117: tmp_5_i31 (907)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:0  %tmp_5_i31 = zext i5 %i_i31 to i32
+
+ST_117: adjSize2010_cast (908)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:1  %adjSize2010_cast = zext i5 %i_i31 to i9
+
+ST_117: gepindex29 (909)  [1/1] 2.33ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:2  %gepindex29 = add i9 %adjSize2010_cast, -16
+
+ST_117: gepindex22336_cast (910)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:3  %gepindex22336_cast = zext i9 %gepindex29 to i32
+
+ST_117: W_addr_31 (911)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:4  %W_addr_31 = getelementptr [512 x i8]* @W, i32 0, i32 %gepindex22336_cast
+
+ST_117: W_load_31 (912)  [2/2] 3.25ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:5  %W_load_31 = load i8* %W_addr_31, align 1
+
+ST_117: img_addr_31 (914)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:7  %img_addr_31 = getelementptr [16 x i8]* %img, i32 0, i32 %tmp_5_i31
+
+ST_117: img_load_31 (915)  [2/2] 2.32ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:8  %img_load_31 = load i8* %img_addr_31, align 1
+
+ST_117: tempOut_addr_31 (922)  [1/1] 0.00ns  loc: NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit620:0  %tempOut_addr_31 = getelementptr [32 x i19]* %tempOut, i32 0, i32 31
+
+ST_117: StgValue_1011 (923)  [1/1] 2.32ns  loc: NN.cpp:58->NN.cpp:21->classifier.cpp:10
+neuron.exit620:1  store i19 %result_62, i19* %tempOut_addr_31, align 4
+
+
+ <State 118>: 3.25ns
+ST_118: W_load_31 (912)  [1/2] 3.25ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:5  %W_load_31 = load i8* %W_addr_31, align 1
+
+ST_118: img_load_31 (915)  [1/2] 2.32ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:8  %img_load_31 = load i8* %img_addr_31, align 1
+
+
+ <State 119>: 6.38ns
+ST_119: tmp_6_cast_i31 (913)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:6  %tmp_6_cast_i31 = sext i8 %W_load_31 to i16
+
+ST_119: tmp_7_cast_i31 (916)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:9  %tmp_7_cast_i31 = sext i8 %img_load_31 to i16
+
+ST_119: tmp_8_i31 (917)  [1/1] 3.36ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:10  %tmp_8_i31 = mul i16 %tmp_7_cast_i31, %tmp_6_cast_i31
+
+ST_119: tmp_8_cast_i31_cast (918)  [1/1] 0.00ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:11  %tmp_8_cast_i31_cast = sext i16 %tmp_8_i31 to i19
+
+ST_119: result_63 (919)  [1/1] 3.02ns  loc: NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:12  %result_63 = add i19 %result_62, %tmp_8_cast_i31_cast
+
+ST_119: StgValue_1019 (920)  [1/1] 0.00ns  loc: NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10
+:13  br label %62
+
+
+ <State 120>: 0.00ns
+ST_120: StgValue_1020 (924)  [2/2] 0.00ns  loc: NN.cpp:60->NN.cpp:21->classifier.cpp:10
+neuron.exit620:2  call fastcc void @RELU([32 x i19]* %tempOut) nounwind
+
+
+ <State 121>: 1.59ns
+ST_121: StgValue_1021 (924)  [1/2] 0.00ns  loc: NN.cpp:60->NN.cpp:21->classifier.cpp:10
+neuron.exit620:2  call fastcc void @RELU([32 x i19]* %tempOut) nounwind
+
+ST_121: StgValue_1022 (925)  [1/1] 1.59ns  loc: NN.cpp:78->NN.cpp:23->classifier.cpp:10
+neuron.exit620:3  br label %64
+
+
+ <State 122>: 3.25ns
+ST_122: idx_assign_i (927)  [1/1] 0.00ns
+:0  %idx_assign_i = phi i4 [ 0, %neuron.exit620 ], [ %i_34, %neuron.1.exit.i ]
+
+ST_122: tmp_i (928)  [1/1] 3.10ns  loc: NN.cpp:78->NN.cpp:23->classifier.cpp:10
+:1  %tmp_i = icmp eq i4 %idx_assign_i, -6
+
+ST_122: empty_35 (929)  [1/1] 0.00ns
+:2  %empty_35 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 10, i64 10, i64 10) nounwind
+
+ST_122: i_34 (930)  [1/1] 2.35ns  loc: NN.cpp:78->NN.cpp:23->classifier.cpp:10
+:3  %i_34 = add i4 %idx_assign_i, 1
+
+ST_122: StgValue_1027 (931)  [1/1] 0.00ns  loc: NN.cpp:78->NN.cpp:23->classifier.cpp:10
+:4  br i1 %tmp_i, label %68, label %65
+
+ST_122: tmp_i_i (934)  [1/1] 0.00ns  loc: NN.cpp:46->NN.cpp:80->NN.cpp:23->classifier.cpp:10
+:1  %tmp_i_i = zext i4 %idx_assign_i to i32
+
+ST_122: nn_weightsSoftMax_in (935)  [1/1] 0.00ns  loc: NN.cpp:46->NN.cpp:80->NN.cpp:23->classifier.cpp:10
+:2  %nn_weightsSoftMax_in = getelementptr [10 x i9]* @nn_weightsSoftMax_in, i32 0, i32 %tmp_i_i
+
+ST_122: nn_weightsSoftMax_in_1 (936)  [2/2] 3.25ns  loc: NN.cpp:46->NN.cpp:80->NN.cpp:23->classifier.cpp:10
+:3  %nn_weightsSoftMax_in_1 = load i9* %nn_weightsSoftMax_in, align 2
+
+ST_122: output_addr (974)  [1/1] 0.00ns  loc: NN.cpp:82->NN.cpp:23->classifier.cpp:10
+:0  %output_addr = getelementptr [10 x i32]* %output, i32 0, i32 0
+
+ST_122: output_load (975)  [2/2] 2.32ns  loc: NN.cpp:82->NN.cpp:23->classifier.cpp:10
+:1  %output_load = load i32* %output_addr, align 4
+
+
+ <State 123>: 3.25ns
+ST_123: StgValue_1033 (933)  [1/1] 0.00ns  loc: NN.cpp:79->NN.cpp:23->classifier.cpp:10
+:0  call void (...)* @_ssdm_op_SpecLoopName([20 x i8]* @p_str4) nounwind
+
+ST_123: nn_weightsSoftMax_in_1 (936)  [1/2] 3.25ns  loc: NN.cpp:46->NN.cpp:80->NN.cpp:23->classifier.cpp:10
+:3  %nn_weightsSoftMax_in_1 = load i9* %nn_weightsSoftMax_in, align 2
+
+ST_123: StgValue_1035 (937)  [1/1] 1.59ns  loc: NN.cpp:44->NN.cpp:80->NN.cpp:23->classifier.cpp:10
+:4  br label %66
+
+
+ <State 124>: 5.34ns
+ST_124: result_i_i (939)  [1/1] 0.00ns
+:0  %result_i_i = phi i32 [ 0, %65 ], [ %result_65, %67 ]
+
+ST_124: i_i_i (940)  [1/1] 0.00ns
+:1  %i_i_i = phi i6 [ 0, %65 ], [ %i_33, %67 ]
+
+ST_124: exitcond_i_i (941)  [1/1] 3.88ns  loc: NN.cpp:44->NN.cpp:80->NN.cpp:23->classifier.cpp:10
+:2  %exitcond_i_i = icmp eq i6 %i_i_i, -32
+
+ST_124: empty_36 (942)  [1/1] 0.00ns
+:3  %empty_36 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 32, i64 32, i64 32) nounwind
+
+ST_124: i_33 (943)  [1/1] 2.31ns  loc: NN.cpp:44->NN.cpp:80->NN.cpp:23->classifier.cpp:10
+:4  %i_33 = add i6 %i_i_i, 1
+
+ST_124: StgValue_1041 (944)  [1/1] 0.00ns  loc: NN.cpp:44->NN.cpp:80->NN.cpp:23->classifier.cpp:10
+:5  br i1 %exitcond_i_i, label %neuron.1.exit.i, label %67
+
+ST_124: adjSize2031_cast (947)  [1/1] 0.00ns  loc: NN.cpp:44->NN.cpp:80->NN.cpp:23->classifier.cpp:10
+:1  %adjSize2031_cast = zext i6 %i_i_i to i9
+
+ST_124: mem_index_gep22 (948)  [1/1] 2.32ns  loc: NN.cpp:44->NN.cpp:80->NN.cpp:23->classifier.cpp:10
+:2  %mem_index_gep22 = add i9 %adjSize2031_cast, %nn_weightsSoftMax_in_1
+
+ST_124: addrCmp (949)  [1/1] 3.02ns  loc: NN.cpp:44->NN.cpp:80->NN.cpp:23->classifier.cpp:10
+:3  %addrCmp = icmp ugt i9 %mem_index_gep22, 119
+
+ST_124: addrCmp1 (950)  [1/1] 3.02ns  loc: NN.cpp:44->NN.cpp:80->NN.cpp:23->classifier.cpp:10
+:4  %addrCmp1 = icmp ult i9 %mem_index_gep22, -72
+
+ST_124: gepindex30 (951)  [1/1] 2.32ns  loc: NN.cpp:44->NN.cpp:80->NN.cpp:23->classifier.cpp:10
+:5  %gepindex30 = add i9 %mem_index_gep22, -120
+
+ST_124: b_sm_addr (966)  [1/1] 0.00ns  loc: NN.cpp:49->NN.cpp:80->NN.cpp:23->classifier.cpp:10
+neuron.1.exit.i:0  %b_sm_addr = getelementptr [10 x i10]* @b_sm, i32 0, i32 %tmp_i_i
+
+ST_124: b_sm_load (967)  [2/2] 3.25ns  loc: NN.cpp:49->NN.cpp:80->NN.cpp:23->classifier.cpp:10
+neuron.1.exit.i:1  %b_sm_load = load i10* %b_sm_addr, align 2
+
+
+ <State 125>: 5.32ns
+ST_125: tmp_1_i_i (946)  [1/1] 0.00ns  loc: NN.cpp:46->NN.cpp:80->NN.cpp:23->classifier.cpp:10
+:0  %tmp_1_i_i = zext i6 %i_i_i to i32
+
+ST_125: gepindex31 (952)  [1/1] 0.00ns  loc: NN.cpp:44->NN.cpp:80->NN.cpp:23->classifier.cpp:10 (grouped into LUT with out node gepindex32)
+:6  %gepindex31 = select i1 %addrCmp, i9 %gepindex30, i9 -193
+
+ST_125: gepindex32 (953)  [1/1] 2.07ns  loc: NN.cpp:44->NN.cpp:80->NN.cpp:23->classifier.cpp:10 (out node of the LUT)
+:7  %gepindex32 = select i1 %addrCmp1, i9 %gepindex31, i9 -193
+
+ST_125: gepindex22345_cast (954)  [1/1] 0.00ns  loc: NN.cpp:44->NN.cpp:80->NN.cpp:23->classifier.cpp:10
+:8  %gepindex22345_cast = zext i9 %gepindex32 to i32
+
+ST_125: W_sm_addr (955)  [1/1] 0.00ns  loc: NN.cpp:44->NN.cpp:80->NN.cpp:23->classifier.cpp:10
+:9  %W_sm_addr = getelementptr [320 x i8]* @W_sm, i32 0, i32 %gepindex22345_cast
+
+ST_125: W_sm_load (956)  [2/2] 3.25ns  loc: NN.cpp:44->NN.cpp:80->NN.cpp:23->classifier.cpp:10
+:10  %W_sm_load = load i8* %W_sm_addr, align 1
+
+ST_125: tempOut_addr_32 (957)  [1/1] 0.00ns  loc: NN.cpp:46->NN.cpp:80->NN.cpp:23->classifier.cpp:10
+:11  %tempOut_addr_32 = getelementptr [32 x i19]* %tempOut, i32 0, i32 %tmp_1_i_i
+
+ST_125: tempOut_load (958)  [2/2] 2.32ns  loc: NN.cpp:46->NN.cpp:80->NN.cpp:23->classifier.cpp:10
+:12  %tempOut_load = load i19* %tempOut_addr_32, align 4
+
+
+ <State 126>: 3.25ns
+ST_126: W_sm_load (956)  [1/2] 3.25ns  loc: NN.cpp:44->NN.cpp:80->NN.cpp:23->classifier.cpp:10
+:10  %W_sm_load = load i8* %W_sm_addr, align 1
+
+ST_126: tempOut_load (958)  [1/2] 2.32ns  loc: NN.cpp:46->NN.cpp:80->NN.cpp:23->classifier.cpp:10
+:12  %tempOut_load = load i19* %tempOut_addr_32, align 4
+
+
+ <State 127>: 6.38ns
+ST_127: tmp_2_i_i_cast (959)  [1/1] 0.00ns  loc: NN.cpp:46->NN.cpp:80->NN.cpp:23->classifier.cpp:10
+:13  %tmp_2_i_i_cast = sext i8 %W_sm_load to i28
+
+ST_127: tmp_3_i_i_cast (960)  [1/1] 0.00ns  loc: NN.cpp:46->NN.cpp:80->NN.cpp:23->classifier.cpp:10
+:14  %tmp_3_i_i_cast = sext i19 %tempOut_load to i28
+
+ST_127: tmp_4_i_i (961)  [1/1] 3.36ns  loc: NN.cpp:46->NN.cpp:80->NN.cpp:23->classifier.cpp:10
+:15  %tmp_4_i_i = mul i28 %tmp_2_i_i_cast, %tmp_3_i_i_cast
+
+ST_127: tmp_4_i_i_cast (962)  [1/1] 0.00ns  loc: NN.cpp:46->NN.cpp:80->NN.cpp:23->classifier.cpp:10
+:16  %tmp_4_i_i_cast = sext i28 %tmp_4_i_i to i32
+
+ST_127: result_65 (963)  [1/1] 3.02ns  loc: NN.cpp:46->NN.cpp:80->NN.cpp:23->classifier.cpp:10
+:17  %result_65 = add i32 %result_i_i, %tmp_4_i_i_cast
+
+ST_127: StgValue_1064 (964)  [1/1] 0.00ns  loc: NN.cpp:44->NN.cpp:80->NN.cpp:23->classifier.cpp:10
+:18  br label %66
+
+
+ <State 128>: 3.25ns
+ST_128: b_sm_load (967)  [1/2] 3.25ns  loc: NN.cpp:49->NN.cpp:80->NN.cpp:23->classifier.cpp:10
+neuron.1.exit.i:1  %b_sm_load = load i10* %b_sm_addr, align 2
+
+
+ <State 129>: 5.22ns
+ST_129: tmp_8_i_i (968)  [1/1] 0.00ns  loc: NN.cpp:49->NN.cpp:80->NN.cpp:23->classifier.cpp:10
+neuron.1.exit.i:2  %tmp_8_i_i = sext i10 %b_sm_load to i32
+
+ST_129: result_64 (969)  [1/1] 2.90ns  loc: NN.cpp:49->NN.cpp:80->NN.cpp:23->classifier.cpp:10
+neuron.1.exit.i:3  %result_64 = add nsw i32 %result_i_i, %tmp_8_i_i
+
+ST_129: output_addr_2 (970)  [1/1] 0.00ns  loc: NN.cpp:80->NN.cpp:23->classifier.cpp:10
+neuron.1.exit.i:4  %output_addr_2 = getelementptr [10 x i32]* %output, i32 0, i32 %tmp_i_i
+
+ST_129: StgValue_1069 (971)  [1/1] 2.32ns  loc: NN.cpp:80->NN.cpp:23->classifier.cpp:10
+neuron.1.exit.i:5  store i32 %result_64, i32* %output_addr_2, align 4
+
+ST_129: StgValue_1070 (972)  [1/1] 0.00ns  loc: NN.cpp:78->NN.cpp:23->classifier.cpp:10
+neuron.1.exit.i:6  br label %64
+
+
+ <State 130>: 3.91ns
+ST_130: output_load (975)  [1/2] 2.32ns  loc: NN.cpp:82->NN.cpp:23->classifier.cpp:10
+:1  %output_load = load i32* %output_addr, align 4
+
+ST_130: max (976)  [1/1] 0.00ns  loc: NN.cpp:82->NN.cpp:23->classifier.cpp:10
+:2  %max = sext i32 %output_load to i64
+
+ST_130: StgValue_1073 (977)  [1/1] 1.59ns  loc: NN.cpp:85->NN.cpp:23->classifier.cpp:10
+:3  br label %69
+
+
+ <State 131>: 3.10ns
+ST_131: max1_i (979)  [1/1] 0.00ns
+:0  %max1_i = phi i64 [ %max, %68 ], [ %max_2_max1_i, %._crit_edge.i ]
+
+ST_131: k_i (980)  [1/1] 0.00ns  loc: NN.cpp:87->NN.cpp:23->classifier.cpp:10
+:1  %k_i = phi i8 [ 0, %68 ], [ %k_2_k_i, %._crit_edge.i ]
+
+ST_131: k (981)  [1/1] 0.00ns
+:2  %k = phi i4 [ 0, %68 ], [ %i_32, %._crit_edge.i ]
+
+ST_131: k_1_cast1_i (982)  [1/1] 0.00ns  loc: NN.cpp:90->NN.cpp:23->classifier.cpp:10
+:3  %k_1_cast1_i = zext i4 %k to i8
+
+ST_131: tmp_i_37 (983)  [1/1] 3.10ns  loc: NN.cpp:85->NN.cpp:23->classifier.cpp:10
+:4  %tmp_i_37 = icmp eq i4 %k, -6
+
+ST_131: empty_38 (984)  [1/1] 0.00ns
+:5  %empty_38 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 10, i64 10, i64 10) nounwind
+
+ST_131: i_32 (985)  [1/1] 2.35ns  loc: NN.cpp:85->NN.cpp:23->classifier.cpp:10
+:6  %i_32 = add i4 %k, 1
+
+ST_131: StgValue_1081 (986)  [1/1] 0.00ns  loc: NN.cpp:85->NN.cpp:23->classifier.cpp:10
+:7  br i1 %tmp_i_37, label %SoftMaxLayer.exit, label %._crit_edge.i
+
+ST_131: tmp_1_i (988)  [1/1] 0.00ns  loc: NN.cpp:87->NN.cpp:23->classifier.cpp:10
+._crit_edge.i:0  %tmp_1_i = zext i4 %k to i32
+
+ST_131: output_addr_1 (989)  [1/1] 0.00ns  loc: NN.cpp:87->NN.cpp:23->classifier.cpp:10
+._crit_edge.i:1  %output_addr_1 = getelementptr [10 x i32]* %output, i32 0, i32 %tmp_1_i
+
+ST_131: output_load_1 (990)  [2/2] 2.32ns  loc: NN.cpp:87->NN.cpp:23->classifier.cpp:10
+._crit_edge.i:2  %output_load_1 = load i32* %output_addr_1, align 4
+
+ST_131: StgValue_1085 (997)  [1/1] 0.00ns  loc: classifier.cpp:10
+SoftMaxLayer.exit:0  ret i8 %k_i
+
+
+ <State 132>: 2.32ns
+ST_132: output_load_1 (990)  [1/2] 2.32ns  loc: NN.cpp:87->NN.cpp:23->classifier.cpp:10
+._crit_edge.i:2  %output_load_1 = load i32* %output_addr_1, align 4
+
+
+ <State 133>: 5.80ns
+ST_133: max_1 (991)  [1/1] 0.00ns  loc: NN.cpp:87->NN.cpp:23->classifier.cpp:10
+._crit_edge.i:3  %max_1 = sext i32 %output_load_1 to i64
+
+ST_133: tmp_2_i (992)  [1/1] 3.73ns  loc: NN.cpp:87->NN.cpp:23->classifier.cpp:10
+._crit_edge.i:4  %tmp_2_i = icmp sgt i64 %max_1, %max1_i
+
+ST_133: max_2_max1_i (993)  [1/1] 2.07ns  loc: NN.cpp:87->NN.cpp:23->classifier.cpp:10
+._crit_edge.i:5  %max_2_max1_i = select i1 %tmp_2_i, i64 %max_1, i64 %max1_i
+
+ST_133: k_2_k_i (994)  [1/1] 2.07ns  loc: NN.cpp:87->NN.cpp:23->classifier.cpp:10
+._crit_edge.i:6  %k_2_k_i = select i1 %tmp_2_i, i8 %k_1_cast1_i, i8 %k_i
+
+ST_133: StgValue_1091 (995)  [1/1] 0.00ns  loc: NN.cpp:85->NN.cpp:23->classifier.cpp:10
+._crit_edge.i:7  br label %69
+
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 8ns, clock uncertainty: 1ns.
+
+ <State 1>: 1.59ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('result') with incoming values : ('result', NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [16]  (1.59 ns)
+
+ <State 2>: 4.83ns
+The critical path consists of the following:
+	'phi' operation ('result') with incoming values : ('result', NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [16]  (0 ns)
+	'add' operation ('result', NN.cpp:35->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [40]  (2.51 ns)
+	'store' operation (NN.cpp:58->NN.cpp:21->classifier.cpp:10) of variable 'result', NN.cpp:35->NN.cpp:58->NN.cpp:21->classifier.cpp:10 on array 'tempOut', NN.cpp:19->classifier.cpp:10 [42]  (2.32 ns)
+
+ <State 3>: 5.58ns
+The critical path consists of the following:
+	'add' operation ('gepindex', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [27]  (2.33 ns)
+	'getelementptr' operation ('W_addr', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [29]  (0 ns)
+	'load' operation ('W_load', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) on array 'W' [30]  (3.25 ns)
+
+ <State 4>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('W_load', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) on array 'W' [30]  (3.25 ns)
+
+ <State 5>: 6.38ns
+The critical path consists of the following:
+	'mul' operation ('tmp_8_i', NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [35]  (3.36 ns)
+	'add' operation ('result', NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [37]  (3.02 ns)
+
+ <State 6>: 5.32ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [46]  (0 ns)
+	'xor' operation ('gepindex1', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [53]  (2.07 ns)
+	'getelementptr' operation ('W_addr_1', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [55]  (0 ns)
+	'load' operation ('W_load_1', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) on array 'W' [56]  (3.25 ns)
+
+ <State 7>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('W_load_1', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) on array 'W' [56]  (3.25 ns)
+
+ <State 8>: 6.38ns
+The critical path consists of the following:
+	'mul' operation ('tmp_8_i1', NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [61]  (3.36 ns)
+	'add' operation ('result', NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [63]  (3.02 ns)
+
+ <State 9>: 4.83ns
+The critical path consists of the following:
+	'phi' operation ('result') with incoming values : ('result', NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [71]  (0 ns)
+	'add' operation ('result', NN.cpp:35->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [92]  (2.51 ns)
+	'store' operation (NN.cpp:58->NN.cpp:21->classifier.cpp:10) of variable 'result', NN.cpp:35->NN.cpp:58->NN.cpp:21->classifier.cpp:10 on array 'tempOut', NN.cpp:19->classifier.cpp:10 [94]  (2.32 ns)
+
+ <State 10>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('W_load_2', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) on array 'W' [82]  (3.25 ns)
+
+ <State 11>: 6.38ns
+The critical path consists of the following:
+	'mul' operation ('tmp_8_i2', NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [87]  (3.36 ns)
+	'add' operation ('result', NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [89]  (3.02 ns)
+
+ <State 12>: 4.83ns
+The critical path consists of the following:
+	'phi' operation ('result') with incoming values : ('result', NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [97]  (0 ns)
+	'add' operation ('result', NN.cpp:35->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [121]  (2.51 ns)
+	'store' operation (NN.cpp:58->NN.cpp:21->classifier.cpp:10) of variable 'result', NN.cpp:35->NN.cpp:58->NN.cpp:21->classifier.cpp:10 on array 'tempOut', NN.cpp:19->classifier.cpp:10 [123]  (2.32 ns)
+
+ <State 13>: 5.58ns
+The critical path consists of the following:
+	'add' operation ('gepindex3', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [108]  (2.33 ns)
+	'getelementptr' operation ('W_addr_3', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [110]  (0 ns)
+	'load' operation ('W_load_3', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) on array 'W' [111]  (3.25 ns)
+
+ <State 14>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('W_load_3', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) on array 'W' [111]  (3.25 ns)
+
+ <State 15>: 6.38ns
+The critical path consists of the following:
+	'mul' operation ('tmp_8_i3', NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [116]  (3.36 ns)
+	'add' operation ('result', NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [118]  (3.02 ns)
+
+ <State 16>: 3.31ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [127]  (0 ns)
+	'icmp' operation ('exitcond_i3', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [128]  (3.31 ns)
+
+ <State 17>: 5.58ns
+The critical path consists of the following:
+	'add' operation ('gepindex4', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [137]  (2.33 ns)
+	'getelementptr' operation ('W_addr_4', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [139]  (0 ns)
+	'load' operation ('W_load_4', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) on array 'W' [140]  (3.25 ns)
+
+ <State 18>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('W_load_4', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) on array 'W' [140]  (3.25 ns)
+
+ <State 19>: 6.38ns
+The critical path consists of the following:
+	'mul' operation ('tmp_8_i4', NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [145]  (3.36 ns)
+	'add' operation ('result', NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [147]  (3.02 ns)
+
+ <State 20>: 4.83ns
+The critical path consists of the following:
+	'phi' operation ('result') with incoming values : ('result', NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [154]  (0 ns)
+	'add' operation ('result', NN.cpp:35->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [178]  (2.51 ns)
+	'store' operation (NN.cpp:58->NN.cpp:21->classifier.cpp:10) of variable 'result', NN.cpp:35->NN.cpp:58->NN.cpp:21->classifier.cpp:10 on array 'tempOut', NN.cpp:19->classifier.cpp:10 [180]  (2.32 ns)
+
+ <State 21>: 5.58ns
+The critical path consists of the following:
+	'add' operation ('gepindex5', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [165]  (2.33 ns)
+	'getelementptr' operation ('W_addr_5', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [167]  (0 ns)
+	'load' operation ('W_load_5', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) on array 'W' [168]  (3.25 ns)
+
+ <State 22>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('W_load_5', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) on array 'W' [168]  (3.25 ns)
+
+ <State 23>: 6.38ns
+The critical path consists of the following:
+	'mul' operation ('tmp_8_i5', NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [173]  (3.36 ns)
+	'add' operation ('result', NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [175]  (3.02 ns)
+
+ <State 24>: 4.83ns
+The critical path consists of the following:
+	'phi' operation ('result') with incoming values : ('result', NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [183]  (0 ns)
+	'add' operation ('result', NN.cpp:35->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [207]  (2.51 ns)
+	'store' operation (NN.cpp:58->NN.cpp:21->classifier.cpp:10) of variable 'result', NN.cpp:35->NN.cpp:58->NN.cpp:21->classifier.cpp:10 on array 'tempOut', NN.cpp:19->classifier.cpp:10 [209]  (2.32 ns)
+
+ <State 25>: 5.58ns
+The critical path consists of the following:
+	'add' operation ('gepindex6', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [194]  (2.33 ns)
+	'getelementptr' operation ('W_addr_6', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [196]  (0 ns)
+	'load' operation ('W_load_6', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) on array 'W' [197]  (3.25 ns)
+
+ <State 26>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('W_load_6', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) on array 'W' [197]  (3.25 ns)
+
+ <State 27>: 6.38ns
+The critical path consists of the following:
+	'mul' operation ('tmp_8_i6', NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [202]  (3.36 ns)
+	'add' operation ('result', NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [204]  (3.02 ns)
+
+ <State 28>: 3.31ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [213]  (0 ns)
+	'icmp' operation ('exitcond_i7', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [214]  (3.31 ns)
+
+ <State 29>: 5.58ns
+The critical path consists of the following:
+	'add' operation ('gepindex7', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [223]  (2.33 ns)
+	'getelementptr' operation ('W_addr_7', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [225]  (0 ns)
+	'load' operation ('W_load_7', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) on array 'W' [226]  (3.25 ns)
+
+ <State 30>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('W_load_7', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) on array 'W' [226]  (3.25 ns)
+
+ <State 31>: 6.38ns
+The critical path consists of the following:
+	'mul' operation ('tmp_8_i7', NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [231]  (3.36 ns)
+	'add' operation ('result', NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [233]  (3.02 ns)
+
+ <State 32>: 4.83ns
+The critical path consists of the following:
+	'phi' operation ('result') with incoming values : ('result', NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [240]  (0 ns)
+	'add' operation ('result', NN.cpp:35->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [264]  (2.51 ns)
+	'store' operation (NN.cpp:58->NN.cpp:21->classifier.cpp:10) of variable 'result', NN.cpp:35->NN.cpp:58->NN.cpp:21->classifier.cpp:10 on array 'tempOut', NN.cpp:19->classifier.cpp:10 [266]  (2.32 ns)
+
+ <State 33>: 5.58ns
+The critical path consists of the following:
+	'add' operation ('gepindex8', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [251]  (2.33 ns)
+	'getelementptr' operation ('W_addr_8', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [253]  (0 ns)
+	'load' operation ('W_load_8', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) on array 'W' [254]  (3.25 ns)
+
+ <State 34>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('W_load_8', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) on array 'W' [254]  (3.25 ns)
+
+ <State 35>: 6.38ns
+The critical path consists of the following:
+	'mul' operation ('tmp_8_i8', NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [259]  (3.36 ns)
+	'add' operation ('result', NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [261]  (3.02 ns)
+
+ <State 36>: 5.57ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [270]  (0 ns)
+	'add' operation ('gepindex9', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [278]  (2.32 ns)
+	'getelementptr' operation ('W_addr_9', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [280]  (0 ns)
+	'load' operation ('W_load_9', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) on array 'W' [281]  (3.25 ns)
+
+ <State 37>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('W_load_9', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) on array 'W' [281]  (3.25 ns)
+
+ <State 38>: 6.38ns
+The critical path consists of the following:
+	'mul' operation ('tmp_8_i9', NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [286]  (3.36 ns)
+	'add' operation ('result', NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [288]  (3.02 ns)
+
+ <State 39>: 4.83ns
+The critical path consists of the following:
+	'phi' operation ('result') with incoming values : ('result', NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [296]  (0 ns)
+	'add' operation ('result', NN.cpp:35->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [317]  (2.51 ns)
+	'store' operation (NN.cpp:58->NN.cpp:21->classifier.cpp:10) of variable 'result', NN.cpp:35->NN.cpp:58->NN.cpp:21->classifier.cpp:10 on array 'tempOut', NN.cpp:19->classifier.cpp:10 [319]  (2.32 ns)
+
+ <State 40>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('W_load_10', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) on array 'W' [307]  (3.25 ns)
+
+ <State 41>: 6.38ns
+The critical path consists of the following:
+	'mul' operation ('tmp_8_i10', NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [312]  (3.36 ns)
+	'add' operation ('result', NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [314]  (3.02 ns)
+
+ <State 42>: 3.31ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [323]  (0 ns)
+	'icmp' operation ('exitcond_i11', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [324]  (3.31 ns)
+
+ <State 43>: 5.58ns
+The critical path consists of the following:
+	'add' operation ('gepindex11', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [334]  (2.33 ns)
+	'getelementptr' operation ('W_addr_11', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [336]  (0 ns)
+	'load' operation ('W_load_11', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) on array 'W' [337]  (3.25 ns)
+
+ <State 44>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('W_load_11', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) on array 'W' [337]  (3.25 ns)
+
+ <State 45>: 6.38ns
+The critical path consists of the following:
+	'mul' operation ('tmp_8_i11', NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [342]  (3.36 ns)
+	'add' operation ('result', NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [344]  (3.02 ns)
+
+ <State 46>: 4.83ns
+The critical path consists of the following:
+	'phi' operation ('result') with incoming values : ('result', NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [351]  (0 ns)
+	'add' operation ('result', NN.cpp:35->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [376]  (2.51 ns)
+	'store' operation (NN.cpp:58->NN.cpp:21->classifier.cpp:10) of variable 'result', NN.cpp:35->NN.cpp:58->NN.cpp:21->classifier.cpp:10 on array 'tempOut', NN.cpp:19->classifier.cpp:10 [378]  (2.32 ns)
+
+ <State 47>: 5.58ns
+The critical path consists of the following:
+	'add' operation ('gepindex12', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [363]  (2.33 ns)
+	'getelementptr' operation ('W_addr_12', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [365]  (0 ns)
+	'load' operation ('W_load_12', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) on array 'W' [366]  (3.25 ns)
+
+ <State 48>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('W_load_12', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) on array 'W' [366]  (3.25 ns)
+
+ <State 49>: 6.38ns
+The critical path consists of the following:
+	'mul' operation ('tmp_8_i12', NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [371]  (3.36 ns)
+	'add' operation ('result', NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [373]  (3.02 ns)
+
+ <State 50>: 4.83ns
+The critical path consists of the following:
+	'phi' operation ('result') with incoming values : ('result', NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [381]  (0 ns)
+	'add' operation ('result', NN.cpp:35->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [406]  (2.51 ns)
+	'store' operation (NN.cpp:58->NN.cpp:21->classifier.cpp:10) of variable 'result', NN.cpp:35->NN.cpp:58->NN.cpp:21->classifier.cpp:10 on array 'tempOut', NN.cpp:19->classifier.cpp:10 [408]  (2.32 ns)
+
+ <State 51>: 5.58ns
+The critical path consists of the following:
+	'add' operation ('gepindex13', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [393]  (2.33 ns)
+	'getelementptr' operation ('W_addr_13', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [395]  (0 ns)
+	'load' operation ('W_load_13', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) on array 'W' [396]  (3.25 ns)
+
+ <State 52>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('W_load_13', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) on array 'W' [396]  (3.25 ns)
+
+ <State 53>: 6.38ns
+The critical path consists of the following:
+	'mul' operation ('tmp_8_i13', NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [401]  (3.36 ns)
+	'add' operation ('result', NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [403]  (3.02 ns)
+
+ <State 54>: 4.83ns
+The critical path consists of the following:
+	'phi' operation ('result') with incoming values : ('result', NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [411]  (0 ns)
+	'add' operation ('result', NN.cpp:35->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [436]  (2.51 ns)
+	'store' operation (NN.cpp:58->NN.cpp:21->classifier.cpp:10) of variable 'result', NN.cpp:35->NN.cpp:58->NN.cpp:21->classifier.cpp:10 on array 'tempOut', NN.cpp:19->classifier.cpp:10 [438]  (2.32 ns)
+
+ <State 55>: 5.58ns
+The critical path consists of the following:
+	'add' operation ('gepindex14', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [423]  (2.33 ns)
+	'getelementptr' operation ('W_addr_14', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [425]  (0 ns)
+	'load' operation ('W_load_14', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) on array 'W' [426]  (3.25 ns)
+
+ <State 56>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('W_load_14', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) on array 'W' [426]  (3.25 ns)
+
+ <State 57>: 6.38ns
+The critical path consists of the following:
+	'mul' operation ('tmp_8_i14', NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [431]  (3.36 ns)
+	'add' operation ('result', NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [433]  (3.02 ns)
+
+ <State 58>: 3.31ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [442]  (0 ns)
+	'icmp' operation ('exitcond_i15', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [443]  (3.31 ns)
+
+ <State 59>: 5.58ns
+The critical path consists of the following:
+	'add' operation ('gepindex15', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [453]  (2.33 ns)
+	'getelementptr' operation ('W_addr_15', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [455]  (0 ns)
+	'load' operation ('W_load_15', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) on array 'W' [456]  (3.25 ns)
+
+ <State 60>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('W_load_15', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) on array 'W' [456]  (3.25 ns)
+
+ <State 61>: 6.38ns
+The critical path consists of the following:
+	'mul' operation ('tmp_8_i15', NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [461]  (3.36 ns)
+	'add' operation ('result', NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [463]  (3.02 ns)
+
+ <State 62>: 4.83ns
+The critical path consists of the following:
+	'phi' operation ('result') with incoming values : ('result', NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [470]  (0 ns)
+	'add' operation ('result', NN.cpp:35->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [495]  (2.51 ns)
+	'store' operation (NN.cpp:58->NN.cpp:21->classifier.cpp:10) of variable 'result', NN.cpp:35->NN.cpp:58->NN.cpp:21->classifier.cpp:10 on array 'tempOut', NN.cpp:19->classifier.cpp:10 [497]  (2.32 ns)
+
+ <State 63>: 5.58ns
+The critical path consists of the following:
+	'add' operation ('gepindex16', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [482]  (2.33 ns)
+	'getelementptr' operation ('W_addr_16', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [484]  (0 ns)
+	'load' operation ('W_load_16', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) on array 'W' [485]  (3.25 ns)
+
+ <State 64>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('W_load_16', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) on array 'W' [485]  (3.25 ns)
+
+ <State 65>: 6.38ns
+The critical path consists of the following:
+	'mul' operation ('tmp_8_i16', NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [490]  (3.36 ns)
+	'add' operation ('result', NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [492]  (3.02 ns)
+
+ <State 66>: 3.31ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [501]  (0 ns)
+	'icmp' operation ('exitcond_i17', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [502]  (3.31 ns)
+
+ <State 67>: 5.58ns
+The critical path consists of the following:
+	'add' operation ('gepindex17', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [512]  (2.33 ns)
+	'getelementptr' operation ('W_addr_17', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [514]  (0 ns)
+	'load' operation ('W_load_17', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) on array 'W' [515]  (3.25 ns)
+
+ <State 68>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('W_load_17', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) on array 'W' [515]  (3.25 ns)
+
+ <State 69>: 6.38ns
+The critical path consists of the following:
+	'mul' operation ('tmp_8_i17', NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [520]  (3.36 ns)
+	'add' operation ('result', NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [522]  (3.02 ns)
+
+ <State 70>: 4.83ns
+The critical path consists of the following:
+	'phi' operation ('result') with incoming values : ('result', NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [529]  (0 ns)
+	'add' operation ('result', NN.cpp:35->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [554]  (2.51 ns)
+	'store' operation (NN.cpp:58->NN.cpp:21->classifier.cpp:10) of variable 'result', NN.cpp:35->NN.cpp:58->NN.cpp:21->classifier.cpp:10 on array 'tempOut', NN.cpp:19->classifier.cpp:10 [556]  (2.32 ns)
+
+ <State 71>: 5.58ns
+The critical path consists of the following:
+	'add' operation ('gepindex18', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [541]  (2.33 ns)
+	'getelementptr' operation ('W_addr_18', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [543]  (0 ns)
+	'load' operation ('W_load_18', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) on array 'W' [544]  (3.25 ns)
+
+ <State 72>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('W_load_18', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) on array 'W' [544]  (3.25 ns)
+
+ <State 73>: 6.38ns
+The critical path consists of the following:
+	'mul' operation ('tmp_8_i18', NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [549]  (3.36 ns)
+	'add' operation ('result', NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [551]  (3.02 ns)
+
+ <State 74>: 4.83ns
+The critical path consists of the following:
+	'phi' operation ('result') with incoming values : ('result', NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [559]  (0 ns)
+	'add' operation ('result', NN.cpp:35->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [584]  (2.51 ns)
+	'store' operation (NN.cpp:58->NN.cpp:21->classifier.cpp:10) of variable 'result', NN.cpp:35->NN.cpp:58->NN.cpp:21->classifier.cpp:10 on array 'tempOut', NN.cpp:19->classifier.cpp:10 [586]  (2.32 ns)
+
+ <State 75>: 5.58ns
+The critical path consists of the following:
+	'add' operation ('gepindex19', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [571]  (2.33 ns)
+	'getelementptr' operation ('W_addr_19', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [573]  (0 ns)
+	'load' operation ('W_load_19', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) on array 'W' [574]  (3.25 ns)
+
+ <State 76>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('W_load_19', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) on array 'W' [574]  (3.25 ns)
+
+ <State 77>: 6.38ns
+The critical path consists of the following:
+	'mul' operation ('tmp_8_i19', NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [579]  (3.36 ns)
+	'add' operation ('result', NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [581]  (3.02 ns)
+
+ <State 78>: 4.83ns
+The critical path consists of the following:
+	'phi' operation ('result') with incoming values : ('result', NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [589]  (0 ns)
+	'add' operation ('result', NN.cpp:35->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [614]  (2.51 ns)
+	'store' operation (NN.cpp:58->NN.cpp:21->classifier.cpp:10) of variable 'result', NN.cpp:35->NN.cpp:58->NN.cpp:21->classifier.cpp:10 on array 'tempOut', NN.cpp:19->classifier.cpp:10 [616]  (2.32 ns)
+
+ <State 79>: 5.58ns
+The critical path consists of the following:
+	'add' operation ('gepindex20', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [601]  (2.33 ns)
+	'getelementptr' operation ('W_addr_20', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [603]  (0 ns)
+	'load' operation ('W_load_20', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) on array 'W' [604]  (3.25 ns)
+
+ <State 80>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('W_load_20', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) on array 'W' [604]  (3.25 ns)
+
+ <State 81>: 6.38ns
+The critical path consists of the following:
+	'mul' operation ('tmp_8_i20', NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [609]  (3.36 ns)
+	'add' operation ('result', NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [611]  (3.02 ns)
+
+ <State 82>: 4.83ns
+The critical path consists of the following:
+	'phi' operation ('result') with incoming values : ('result', NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [619]  (0 ns)
+	'add' operation ('result', NN.cpp:35->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [644]  (2.51 ns)
+	'store' operation (NN.cpp:58->NN.cpp:21->classifier.cpp:10) of variable 'result', NN.cpp:35->NN.cpp:58->NN.cpp:21->classifier.cpp:10 on array 'tempOut', NN.cpp:19->classifier.cpp:10 [646]  (2.32 ns)
+
+ <State 83>: 5.58ns
+The critical path consists of the following:
+	'add' operation ('gepindex21', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [631]  (2.33 ns)
+	'getelementptr' operation ('W_addr_21', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [633]  (0 ns)
+	'load' operation ('W_load_21', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) on array 'W' [634]  (3.25 ns)
+
+ <State 84>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('W_load_21', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) on array 'W' [634]  (3.25 ns)
+
+ <State 85>: 6.38ns
+The critical path consists of the following:
+	'mul' operation ('tmp_8_i21', NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [639]  (3.36 ns)
+	'add' operation ('result', NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [641]  (3.02 ns)
+
+ <State 86>: 4.83ns
+The critical path consists of the following:
+	'phi' operation ('result') with incoming values : ('result', NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [649]  (0 ns)
+	'add' operation ('result', NN.cpp:35->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [674]  (2.51 ns)
+	'store' operation (NN.cpp:58->NN.cpp:21->classifier.cpp:10) of variable 'result', NN.cpp:35->NN.cpp:58->NN.cpp:21->classifier.cpp:10 on array 'tempOut', NN.cpp:19->classifier.cpp:10 [676]  (2.32 ns)
+
+ <State 87>: 5.58ns
+The critical path consists of the following:
+	'add' operation ('gepindex22', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [661]  (2.33 ns)
+	'getelementptr' operation ('W_addr_22', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [663]  (0 ns)
+	'load' operation ('W_load_22', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) on array 'W' [664]  (3.25 ns)
+
+ <State 88>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('W_load_22', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) on array 'W' [664]  (3.25 ns)
+
+ <State 89>: 6.38ns
+The critical path consists of the following:
+	'mul' operation ('tmp_8_i22', NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [669]  (3.36 ns)
+	'add' operation ('result', NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [671]  (3.02 ns)
+
+ <State 90>: 4.83ns
+The critical path consists of the following:
+	'phi' operation ('result') with incoming values : ('result', NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [679]  (0 ns)
+	'add' operation ('result', NN.cpp:35->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [704]  (2.51 ns)
+	'store' operation (NN.cpp:58->NN.cpp:21->classifier.cpp:10) of variable 'result', NN.cpp:35->NN.cpp:58->NN.cpp:21->classifier.cpp:10 on array 'tempOut', NN.cpp:19->classifier.cpp:10 [706]  (2.32 ns)
+
+ <State 91>: 5.58ns
+The critical path consists of the following:
+	'add' operation ('gepindex23', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [691]  (2.33 ns)
+	'getelementptr' operation ('W_addr_23', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [693]  (0 ns)
+	'load' operation ('W_load_23', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) on array 'W' [694]  (3.25 ns)
+
+ <State 92>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('W_load_23', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) on array 'W' [694]  (3.25 ns)
+
+ <State 93>: 6.38ns
+The critical path consists of the following:
+	'mul' operation ('tmp_8_i23', NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [699]  (3.36 ns)
+	'add' operation ('result', NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [701]  (3.02 ns)
+
+ <State 94>: 4.83ns
+The critical path consists of the following:
+	'phi' operation ('result') with incoming values : ('result', NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [709]  (0 ns)
+	'add' operation ('result', NN.cpp:35->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [734]  (2.51 ns)
+	'store' operation (NN.cpp:58->NN.cpp:21->classifier.cpp:10) of variable 'result', NN.cpp:35->NN.cpp:58->NN.cpp:21->classifier.cpp:10 on array 'tempOut', NN.cpp:19->classifier.cpp:10 [736]  (2.32 ns)
+
+ <State 95>: 5.58ns
+The critical path consists of the following:
+	'add' operation ('gepindex24', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [721]  (2.33 ns)
+	'getelementptr' operation ('W_addr_24', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [723]  (0 ns)
+	'load' operation ('W_load_24', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) on array 'W' [724]  (3.25 ns)
+
+ <State 96>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('W_load_24', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) on array 'W' [724]  (3.25 ns)
+
+ <State 97>: 6.38ns
+The critical path consists of the following:
+	'mul' operation ('tmp_8_i24', NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [729]  (3.36 ns)
+	'add' operation ('result', NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [731]  (3.02 ns)
+
+ <State 98>: 4.83ns
+The critical path consists of the following:
+	'phi' operation ('result') with incoming values : ('result', NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [739]  (0 ns)
+	'add' operation ('result', NN.cpp:35->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [763]  (2.51 ns)
+	'store' operation (NN.cpp:58->NN.cpp:21->classifier.cpp:10) of variable 'result', NN.cpp:35->NN.cpp:58->NN.cpp:21->classifier.cpp:10 on array 'tempOut', NN.cpp:19->classifier.cpp:10 [765]  (2.32 ns)
+
+ <State 99>: 5.57ns
+The critical path consists of the following:
+	'add' operation ('gepindex25', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [750]  (2.32 ns)
+	'getelementptr' operation ('W_addr_25', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [752]  (0 ns)
+	'load' operation ('W_load_25', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) on array 'W' [753]  (3.25 ns)
+
+ <State 100>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('W_load_25', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) on array 'W' [753]  (3.25 ns)
+
+ <State 101>: 6.38ns
+The critical path consists of the following:
+	'mul' operation ('tmp_8_i25', NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [758]  (3.36 ns)
+	'add' operation ('result', NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [760]  (3.02 ns)
+
+ <State 102>: 4.83ns
+The critical path consists of the following:
+	'phi' operation ('result') with incoming values : ('result', NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [768]  (0 ns)
+	'add' operation ('result', NN.cpp:35->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [789]  (2.51 ns)
+	'store' operation (NN.cpp:58->NN.cpp:21->classifier.cpp:10) of variable 'result', NN.cpp:35->NN.cpp:58->NN.cpp:21->classifier.cpp:10 on array 'tempOut', NN.cpp:19->classifier.cpp:10 [791]  (2.32 ns)
+
+ <State 103>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('W_load_26', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) on array 'W' [779]  (3.25 ns)
+
+ <State 104>: 6.38ns
+The critical path consists of the following:
+	'mul' operation ('tmp_8_i26', NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [784]  (3.36 ns)
+	'add' operation ('result', NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [786]  (3.02 ns)
+
+ <State 105>: 5.58ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [795]  (0 ns)
+	'add' operation ('gepindex26', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [803]  (2.32 ns)
+	'getelementptr' operation ('W_addr_27', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [805]  (0 ns)
+	'load' operation ('W_load_27', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) on array 'W' [806]  (3.25 ns)
+
+ <State 106>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('W_load_27', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) on array 'W' [806]  (3.25 ns)
+
+ <State 107>: 6.38ns
+The critical path consists of the following:
+	'mul' operation ('tmp_8_i27', NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [811]  (3.36 ns)
+	'add' operation ('result', NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [813]  (3.02 ns)
+
+ <State 108>: 4.83ns
+The critical path consists of the following:
+	'phi' operation ('result') with incoming values : ('result', NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [821]  (0 ns)
+	'add' operation ('result', NN.cpp:35->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [842]  (2.51 ns)
+	'store' operation (NN.cpp:58->NN.cpp:21->classifier.cpp:10) of variable 'result', NN.cpp:35->NN.cpp:58->NN.cpp:21->classifier.cpp:10 on array 'tempOut', NN.cpp:19->classifier.cpp:10 [844]  (2.32 ns)
+
+ <State 109>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('W_load_28', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) on array 'W' [832]  (3.25 ns)
+
+ <State 110>: 6.38ns
+The critical path consists of the following:
+	'mul' operation ('tmp_8_i28', NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [837]  (3.36 ns)
+	'add' operation ('result', NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [839]  (3.02 ns)
+
+ <State 111>: 5.57ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [848]  (0 ns)
+	'add' operation ('gepindex28', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [856]  (2.32 ns)
+	'getelementptr' operation ('W_addr_29', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [858]  (0 ns)
+	'load' operation ('W_load_29', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) on array 'W' [859]  (3.25 ns)
+
+ <State 112>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('W_load_29', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) on array 'W' [859]  (3.25 ns)
+
+ <State 113>: 6.38ns
+The critical path consists of the following:
+	'mul' operation ('tmp_8_i29', NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [864]  (3.36 ns)
+	'add' operation ('result', NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [866]  (3.02 ns)
+
+ <State 114>: 4.83ns
+The critical path consists of the following:
+	'phi' operation ('result') with incoming values : ('result', NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [874]  (0 ns)
+	'add' operation ('result', NN.cpp:35->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [895]  (2.51 ns)
+	'store' operation (NN.cpp:58->NN.cpp:21->classifier.cpp:10) of variable 'result', NN.cpp:35->NN.cpp:58->NN.cpp:21->classifier.cpp:10 on array 'tempOut', NN.cpp:19->classifier.cpp:10 [897]  (2.32 ns)
+
+ <State 115>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('W_load_30', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) on array 'W' [885]  (3.25 ns)
+
+ <State 116>: 6.38ns
+The critical path consists of the following:
+	'mul' operation ('tmp_8_i30', NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [890]  (3.36 ns)
+	'add' operation ('result', NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [892]  (3.02 ns)
+
+ <State 117>: 5.59ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [901]  (0 ns)
+	'add' operation ('gepindex29', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [909]  (2.33 ns)
+	'getelementptr' operation ('W_addr_31', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [911]  (0 ns)
+	'load' operation ('W_load_31', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) on array 'W' [912]  (3.25 ns)
+
+ <State 118>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('W_load_31', NN.cpp:31->NN.cpp:58->NN.cpp:21->classifier.cpp:10) on array 'W' [912]  (3.25 ns)
+
+ <State 119>: 6.38ns
+The critical path consists of the following:
+	'mul' operation ('tmp_8_i31', NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [917]  (3.36 ns)
+	'add' operation ('result', NN.cpp:33->NN.cpp:58->NN.cpp:21->classifier.cpp:10) [919]  (3.02 ns)
+
+ <State 120>: 0ns
+The critical path consists of the following:
+
+ <State 121>: 1.59ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('i') with incoming values : ('i', NN.cpp:78->NN.cpp:23->classifier.cpp:10) [927]  (1.59 ns)
+
+ <State 122>: 3.25ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', NN.cpp:78->NN.cpp:23->classifier.cpp:10) [927]  (0 ns)
+	'getelementptr' operation ('nn_weightsSoftMax_in', NN.cpp:46->NN.cpp:80->NN.cpp:23->classifier.cpp:10) [935]  (0 ns)
+	'load' operation ('nn_weightsSoftMax_in_1', NN.cpp:46->NN.cpp:80->NN.cpp:23->classifier.cpp:10) on array 'nn_weightsSoftMax_in' [936]  (3.25 ns)
+
+ <State 123>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('nn_weightsSoftMax_in_1', NN.cpp:46->NN.cpp:80->NN.cpp:23->classifier.cpp:10) on array 'nn_weightsSoftMax_in' [936]  (3.25 ns)
+
+ <State 124>: 5.34ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', NN.cpp:44->NN.cpp:80->NN.cpp:23->classifier.cpp:10) [940]  (0 ns)
+	'add' operation ('mem_index_gep22', NN.cpp:44->NN.cpp:80->NN.cpp:23->classifier.cpp:10) [948]  (2.32 ns)
+	'icmp' operation ('addrCmp', NN.cpp:44->NN.cpp:80->NN.cpp:23->classifier.cpp:10) [949]  (3.02 ns)
+
+ <State 125>: 5.32ns
+The critical path consists of the following:
+	'select' operation ('gepindex31', NN.cpp:44->NN.cpp:80->NN.cpp:23->classifier.cpp:10) [952]  (0 ns)
+	'select' operation ('gepindex32', NN.cpp:44->NN.cpp:80->NN.cpp:23->classifier.cpp:10) [953]  (2.07 ns)
+	'getelementptr' operation ('W_sm_addr', NN.cpp:44->NN.cpp:80->NN.cpp:23->classifier.cpp:10) [955]  (0 ns)
+	'load' operation ('W_sm_load', NN.cpp:44->NN.cpp:80->NN.cpp:23->classifier.cpp:10) on array 'W_sm' [956]  (3.25 ns)
+
+ <State 126>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('W_sm_load', NN.cpp:44->NN.cpp:80->NN.cpp:23->classifier.cpp:10) on array 'W_sm' [956]  (3.25 ns)
+
+ <State 127>: 6.38ns
+The critical path consists of the following:
+	'mul' operation ('tmp_4_i_i', NN.cpp:46->NN.cpp:80->NN.cpp:23->classifier.cpp:10) [961]  (3.36 ns)
+	'add' operation ('result', NN.cpp:46->NN.cpp:80->NN.cpp:23->classifier.cpp:10) [963]  (3.02 ns)
+
+ <State 128>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('b_sm_load', NN.cpp:49->NN.cpp:80->NN.cpp:23->classifier.cpp:10) on array 'b_sm' [967]  (3.25 ns)
+
+ <State 129>: 5.22ns
+The critical path consists of the following:
+	'add' operation ('result', NN.cpp:49->NN.cpp:80->NN.cpp:23->classifier.cpp:10) [969]  (2.9 ns)
+	'store' operation (NN.cpp:80->NN.cpp:23->classifier.cpp:10) of variable 'result', NN.cpp:49->NN.cpp:80->NN.cpp:23->classifier.cpp:10 on array 'output', NN.cpp:76->NN.cpp:23->classifier.cpp:10 [971]  (2.32 ns)
+
+ <State 130>: 3.91ns
+The critical path consists of the following:
+	'load' operation ('output_load', NN.cpp:82->NN.cpp:23->classifier.cpp:10) on array 'output', NN.cpp:76->NN.cpp:23->classifier.cpp:10 [975]  (2.32 ns)
+	multiplexor before 'phi' operation ('max') with incoming values : ('max', NN.cpp:82->NN.cpp:23->classifier.cpp:10) ('max_2_max1_i', NN.cpp:87->NN.cpp:23->classifier.cpp:10) [979]  (1.59 ns)
+
+ <State 131>: 3.1ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', NN.cpp:85->NN.cpp:23->classifier.cpp:10) [981]  (0 ns)
+	'icmp' operation ('tmp_i_37', NN.cpp:85->NN.cpp:23->classifier.cpp:10) [983]  (3.1 ns)
+
+ <State 132>: 2.32ns
+The critical path consists of the following:
+	'load' operation ('output_load_1', NN.cpp:87->NN.cpp:23->classifier.cpp:10) on array 'output', NN.cpp:76->NN.cpp:23->classifier.cpp:10 [990]  (2.32 ns)
+
+ <State 133>: 5.8ns
+The critical path consists of the following:
+	'icmp' operation ('tmp_2_i', NN.cpp:87->NN.cpp:23->classifier.cpp:10) [992]  (3.73 ns)
+	'select' operation ('max_2_max1_i', NN.cpp:87->NN.cpp:23->classifier.cpp:10) [993]  (2.07 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+	State 34
+	State 35
+	State 36
+	State 37
+	State 38
+	State 39
+	State 40
+	State 41
+	State 42
+	State 43
+	State 44
+	State 45
+	State 46
+	State 47
+	State 48
+	State 49
+	State 50
+	State 51
+	State 52
+	State 53
+	State 54
+	State 55
+	State 56
+	State 57
+	State 58
+	State 59
+	State 60
+	State 61
+	State 62
+	State 63
+	State 64
+	State 65
+	State 66
+	State 67
+	State 68
+	State 69
+	State 70
+	State 71
+	State 72
+	State 73
+	State 74
+	State 75
+	State 76
+	State 77
+	State 78
+	State 79
+	State 80
+	State 81
+	State 82
+	State 83
+	State 84
+	State 85
+	State 86
+	State 87
+	State 88
+	State 89
+	State 90
+	State 91
+	State 92
+	State 93
+	State 94
+	State 95
+	State 96
+	State 97
+	State 98
+	State 99
+	State 100
+	State 101
+	State 102
+	State 103
+	State 104
+	State 105
+	State 106
+	State 107
+	State 108
+	State 109
+	State 110
+	State 111
+	State 112
+	State 113
+	State 114
+	State 115
+	State 116
+	State 117
+	State 118
+	State 119
+	State 120
+	State 121
+	State 122
+	State 123
+	State 124
+	State 125
+	State 126
+	State 127
+	State 128
+	State 129
+	State 130
+	State 131
+	State 132
+	State 133
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

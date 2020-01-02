@@ -1,0 +1,1067 @@
+
+
+================================================================
+== Vivado HLS Report for 'RELU'
+================================================================
+* Date:           Tue Dec 31 14:49:04 2019
+
+* Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
+* Project:        neural.prj
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z010clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   8.00|      2.32|        1.00|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |   32|   32|   32|   32|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 33
+* Pipeline: 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+	10  / true
+10 --> 
+	11  / true
+11 --> 
+	12  / true
+12 --> 
+	13  / true
+13 --> 
+	14  / true
+14 --> 
+	15  / true
+15 --> 
+	16  / true
+16 --> 
+	17  / true
+17 --> 
+	18  / true
+18 --> 
+	19  / true
+19 --> 
+	20  / true
+20 --> 
+	21  / true
+21 --> 
+	22  / true
+22 --> 
+	23  / true
+23 --> 
+	24  / true
+24 --> 
+	25  / true
+25 --> 
+	26  / true
+26 --> 
+	27  / true
+27 --> 
+	28  / true
+28 --> 
+	29  / true
+29 --> 
+	30  / true
+30 --> 
+	31  / true
+31 --> 
+	32  / true
+32 --> 
+	33  / true
+33 --> 
+* FSM state operations: 
+
+ <State 1>: 2.32ns
+ST_1: data_addr (2)  [1/1] 0.00ns  loc: NN.cpp:67
+:0  %data_addr = getelementptr [32 x i19]* %data, i32 0, i32 0
+
+ST_1: data_load (3)  [2/2] 2.32ns  loc: NN.cpp:67
+:1  %data_load = load i19* %data_addr, align 4
+
+
+ <State 2>: 2.32ns
+ST_2: data_load (3)  [1/2] 2.32ns  loc: NN.cpp:67
+:1  %data_load = load i19* %data_addr, align 4
+
+ST_2: tmp (4)  [1/1] 0.00ns  loc: NN.cpp:67
+:2  %tmp = call i1 @_ssdm_op_BitSelect.i1.i19.i32(i19 %data_load, i32 18)
+
+ST_2: StgValue_38 (5)  [1/1] 0.00ns  loc: NN.cpp:67
+:3  br i1 %tmp, label %1, label %._crit_edge.0
+
+ST_2: StgValue_39 (7)  [1/1] 2.32ns  loc: NN.cpp:69
+:0  store i19 0, i19* %data_addr, align 4
+
+ST_2: StgValue_40 (8)  [1/1] 0.00ns  loc: NN.cpp:70
+:1  br label %._crit_edge.0
+
+ST_2: data_addr_1 (10)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.0:0  %data_addr_1 = getelementptr [32 x i19]* %data, i32 0, i32 1
+
+ST_2: data_load_1 (11)  [2/2] 2.32ns  loc: NN.cpp:67
+._crit_edge.0:1  %data_load_1 = load i19* %data_addr_1, align 4
+
+
+ <State 3>: 2.32ns
+ST_3: data_load_1 (11)  [1/2] 2.32ns  loc: NN.cpp:67
+._crit_edge.0:1  %data_load_1 = load i19* %data_addr_1, align 4
+
+ST_3: tmp_1 (12)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.0:2  %tmp_1 = call i1 @_ssdm_op_BitSelect.i1.i19.i32(i19 %data_load_1, i32 18)
+
+ST_3: StgValue_45 (13)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.0:3  br i1 %tmp_1, label %2, label %._crit_edge.1
+
+ST_3: StgValue_46 (15)  [1/1] 2.32ns  loc: NN.cpp:69
+:0  store i19 0, i19* %data_addr_1, align 4
+
+ST_3: StgValue_47 (16)  [1/1] 0.00ns  loc: NN.cpp:70
+:1  br label %._crit_edge.1
+
+ST_3: data_addr_2 (18)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.1:0  %data_addr_2 = getelementptr [32 x i19]* %data, i32 0, i32 2
+
+ST_3: data_load_2 (19)  [2/2] 2.32ns  loc: NN.cpp:67
+._crit_edge.1:1  %data_load_2 = load i19* %data_addr_2, align 4
+
+
+ <State 4>: 2.32ns
+ST_4: data_load_2 (19)  [1/2] 2.32ns  loc: NN.cpp:67
+._crit_edge.1:1  %data_load_2 = load i19* %data_addr_2, align 4
+
+ST_4: tmp_2 (20)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.1:2  %tmp_2 = call i1 @_ssdm_op_BitSelect.i1.i19.i32(i19 %data_load_2, i32 18)
+
+ST_4: StgValue_52 (21)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.1:3  br i1 %tmp_2, label %3, label %._crit_edge.2
+
+ST_4: StgValue_53 (23)  [1/1] 2.32ns  loc: NN.cpp:69
+:0  store i19 0, i19* %data_addr_2, align 4
+
+ST_4: StgValue_54 (24)  [1/1] 0.00ns  loc: NN.cpp:70
+:1  br label %._crit_edge.2
+
+ST_4: data_addr_3 (26)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.2:0  %data_addr_3 = getelementptr [32 x i19]* %data, i32 0, i32 3
+
+ST_4: data_load_3 (27)  [2/2] 2.32ns  loc: NN.cpp:67
+._crit_edge.2:1  %data_load_3 = load i19* %data_addr_3, align 4
+
+
+ <State 5>: 2.32ns
+ST_5: data_load_3 (27)  [1/2] 2.32ns  loc: NN.cpp:67
+._crit_edge.2:1  %data_load_3 = load i19* %data_addr_3, align 4
+
+ST_5: tmp_3 (28)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.2:2  %tmp_3 = call i1 @_ssdm_op_BitSelect.i1.i19.i32(i19 %data_load_3, i32 18)
+
+ST_5: StgValue_59 (29)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.2:3  br i1 %tmp_3, label %4, label %._crit_edge.3
+
+ST_5: StgValue_60 (31)  [1/1] 2.32ns  loc: NN.cpp:69
+:0  store i19 0, i19* %data_addr_3, align 4
+
+ST_5: StgValue_61 (32)  [1/1] 0.00ns  loc: NN.cpp:70
+:1  br label %._crit_edge.3
+
+ST_5: data_addr_4 (34)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.3:0  %data_addr_4 = getelementptr [32 x i19]* %data, i32 0, i32 4
+
+ST_5: data_load_4 (35)  [2/2] 2.32ns  loc: NN.cpp:67
+._crit_edge.3:1  %data_load_4 = load i19* %data_addr_4, align 4
+
+
+ <State 6>: 2.32ns
+ST_6: data_load_4 (35)  [1/2] 2.32ns  loc: NN.cpp:67
+._crit_edge.3:1  %data_load_4 = load i19* %data_addr_4, align 4
+
+ST_6: tmp_4 (36)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.3:2  %tmp_4 = call i1 @_ssdm_op_BitSelect.i1.i19.i32(i19 %data_load_4, i32 18)
+
+ST_6: StgValue_66 (37)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.3:3  br i1 %tmp_4, label %5, label %._crit_edge.4
+
+ST_6: StgValue_67 (39)  [1/1] 2.32ns  loc: NN.cpp:69
+:0  store i19 0, i19* %data_addr_4, align 4
+
+ST_6: StgValue_68 (40)  [1/1] 0.00ns  loc: NN.cpp:70
+:1  br label %._crit_edge.4
+
+ST_6: data_addr_5 (42)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.4:0  %data_addr_5 = getelementptr [32 x i19]* %data, i32 0, i32 5
+
+ST_6: data_load_5 (43)  [2/2] 2.32ns  loc: NN.cpp:67
+._crit_edge.4:1  %data_load_5 = load i19* %data_addr_5, align 4
+
+
+ <State 7>: 2.32ns
+ST_7: data_load_5 (43)  [1/2] 2.32ns  loc: NN.cpp:67
+._crit_edge.4:1  %data_load_5 = load i19* %data_addr_5, align 4
+
+ST_7: tmp_5 (44)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.4:2  %tmp_5 = call i1 @_ssdm_op_BitSelect.i1.i19.i32(i19 %data_load_5, i32 18)
+
+ST_7: StgValue_73 (45)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.4:3  br i1 %tmp_5, label %6, label %._crit_edge.5
+
+ST_7: StgValue_74 (47)  [1/1] 2.32ns  loc: NN.cpp:69
+:0  store i19 0, i19* %data_addr_5, align 4
+
+ST_7: StgValue_75 (48)  [1/1] 0.00ns  loc: NN.cpp:70
+:1  br label %._crit_edge.5
+
+ST_7: data_addr_6 (50)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.5:0  %data_addr_6 = getelementptr [32 x i19]* %data, i32 0, i32 6
+
+ST_7: data_load_6 (51)  [2/2] 2.32ns  loc: NN.cpp:67
+._crit_edge.5:1  %data_load_6 = load i19* %data_addr_6, align 4
+
+
+ <State 8>: 2.32ns
+ST_8: data_load_6 (51)  [1/2] 2.32ns  loc: NN.cpp:67
+._crit_edge.5:1  %data_load_6 = load i19* %data_addr_6, align 4
+
+ST_8: tmp_6 (52)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.5:2  %tmp_6 = call i1 @_ssdm_op_BitSelect.i1.i19.i32(i19 %data_load_6, i32 18)
+
+ST_8: StgValue_80 (53)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.5:3  br i1 %tmp_6, label %7, label %._crit_edge.6
+
+ST_8: StgValue_81 (55)  [1/1] 2.32ns  loc: NN.cpp:69
+:0  store i19 0, i19* %data_addr_6, align 4
+
+ST_8: StgValue_82 (56)  [1/1] 0.00ns  loc: NN.cpp:70
+:1  br label %._crit_edge.6
+
+ST_8: data_addr_7 (58)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.6:0  %data_addr_7 = getelementptr [32 x i19]* %data, i32 0, i32 7
+
+ST_8: data_load_7 (59)  [2/2] 2.32ns  loc: NN.cpp:67
+._crit_edge.6:1  %data_load_7 = load i19* %data_addr_7, align 4
+
+
+ <State 9>: 2.32ns
+ST_9: data_load_7 (59)  [1/2] 2.32ns  loc: NN.cpp:67
+._crit_edge.6:1  %data_load_7 = load i19* %data_addr_7, align 4
+
+ST_9: tmp_7 (60)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.6:2  %tmp_7 = call i1 @_ssdm_op_BitSelect.i1.i19.i32(i19 %data_load_7, i32 18)
+
+ST_9: StgValue_87 (61)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.6:3  br i1 %tmp_7, label %8, label %._crit_edge.7
+
+ST_9: StgValue_88 (63)  [1/1] 2.32ns  loc: NN.cpp:69
+:0  store i19 0, i19* %data_addr_7, align 4
+
+ST_9: StgValue_89 (64)  [1/1] 0.00ns  loc: NN.cpp:70
+:1  br label %._crit_edge.7
+
+ST_9: data_addr_8 (66)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.7:0  %data_addr_8 = getelementptr [32 x i19]* %data, i32 0, i32 8
+
+ST_9: data_load_8 (67)  [2/2] 2.32ns  loc: NN.cpp:67
+._crit_edge.7:1  %data_load_8 = load i19* %data_addr_8, align 4
+
+
+ <State 10>: 2.32ns
+ST_10: data_load_8 (67)  [1/2] 2.32ns  loc: NN.cpp:67
+._crit_edge.7:1  %data_load_8 = load i19* %data_addr_8, align 4
+
+ST_10: tmp_8 (68)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.7:2  %tmp_8 = call i1 @_ssdm_op_BitSelect.i1.i19.i32(i19 %data_load_8, i32 18)
+
+ST_10: StgValue_94 (69)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.7:3  br i1 %tmp_8, label %9, label %._crit_edge.8
+
+ST_10: StgValue_95 (71)  [1/1] 2.32ns  loc: NN.cpp:69
+:0  store i19 0, i19* %data_addr_8, align 4
+
+ST_10: StgValue_96 (72)  [1/1] 0.00ns  loc: NN.cpp:70
+:1  br label %._crit_edge.8
+
+ST_10: data_addr_9 (74)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.8:0  %data_addr_9 = getelementptr [32 x i19]* %data, i32 0, i32 9
+
+ST_10: data_load_9 (75)  [2/2] 2.32ns  loc: NN.cpp:67
+._crit_edge.8:1  %data_load_9 = load i19* %data_addr_9, align 4
+
+
+ <State 11>: 2.32ns
+ST_11: data_load_9 (75)  [1/2] 2.32ns  loc: NN.cpp:67
+._crit_edge.8:1  %data_load_9 = load i19* %data_addr_9, align 4
+
+ST_11: tmp_9 (76)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.8:2  %tmp_9 = call i1 @_ssdm_op_BitSelect.i1.i19.i32(i19 %data_load_9, i32 18)
+
+ST_11: StgValue_101 (77)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.8:3  br i1 %tmp_9, label %10, label %._crit_edge.9
+
+ST_11: StgValue_102 (79)  [1/1] 2.32ns  loc: NN.cpp:69
+:0  store i19 0, i19* %data_addr_9, align 4
+
+ST_11: StgValue_103 (80)  [1/1] 0.00ns  loc: NN.cpp:70
+:1  br label %._crit_edge.9
+
+ST_11: data_addr_10 (82)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.9:0  %data_addr_10 = getelementptr [32 x i19]* %data, i32 0, i32 10
+
+ST_11: data_load_10 (83)  [2/2] 2.32ns  loc: NN.cpp:67
+._crit_edge.9:1  %data_load_10 = load i19* %data_addr_10, align 4
+
+
+ <State 12>: 2.32ns
+ST_12: data_load_10 (83)  [1/2] 2.32ns  loc: NN.cpp:67
+._crit_edge.9:1  %data_load_10 = load i19* %data_addr_10, align 4
+
+ST_12: tmp_10 (84)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.9:2  %tmp_10 = call i1 @_ssdm_op_BitSelect.i1.i19.i32(i19 %data_load_10, i32 18)
+
+ST_12: StgValue_108 (85)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.9:3  br i1 %tmp_10, label %11, label %._crit_edge.10
+
+ST_12: StgValue_109 (87)  [1/1] 2.32ns  loc: NN.cpp:69
+:0  store i19 0, i19* %data_addr_10, align 4
+
+ST_12: StgValue_110 (88)  [1/1] 0.00ns  loc: NN.cpp:70
+:1  br label %._crit_edge.10
+
+ST_12: data_addr_11 (90)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.10:0  %data_addr_11 = getelementptr [32 x i19]* %data, i32 0, i32 11
+
+ST_12: data_load_11 (91)  [2/2] 2.32ns  loc: NN.cpp:67
+._crit_edge.10:1  %data_load_11 = load i19* %data_addr_11, align 4
+
+
+ <State 13>: 2.32ns
+ST_13: data_load_11 (91)  [1/2] 2.32ns  loc: NN.cpp:67
+._crit_edge.10:1  %data_load_11 = load i19* %data_addr_11, align 4
+
+ST_13: tmp_11 (92)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.10:2  %tmp_11 = call i1 @_ssdm_op_BitSelect.i1.i19.i32(i19 %data_load_11, i32 18)
+
+ST_13: StgValue_115 (93)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.10:3  br i1 %tmp_11, label %12, label %._crit_edge.11
+
+ST_13: StgValue_116 (95)  [1/1] 2.32ns  loc: NN.cpp:69
+:0  store i19 0, i19* %data_addr_11, align 4
+
+ST_13: StgValue_117 (96)  [1/1] 0.00ns  loc: NN.cpp:70
+:1  br label %._crit_edge.11
+
+ST_13: data_addr_12 (98)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.11:0  %data_addr_12 = getelementptr [32 x i19]* %data, i32 0, i32 12
+
+ST_13: data_load_12 (99)  [2/2] 2.32ns  loc: NN.cpp:67
+._crit_edge.11:1  %data_load_12 = load i19* %data_addr_12, align 4
+
+
+ <State 14>: 2.32ns
+ST_14: data_load_12 (99)  [1/2] 2.32ns  loc: NN.cpp:67
+._crit_edge.11:1  %data_load_12 = load i19* %data_addr_12, align 4
+
+ST_14: tmp_12 (100)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.11:2  %tmp_12 = call i1 @_ssdm_op_BitSelect.i1.i19.i32(i19 %data_load_12, i32 18)
+
+ST_14: StgValue_122 (101)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.11:3  br i1 %tmp_12, label %13, label %._crit_edge.12
+
+ST_14: StgValue_123 (103)  [1/1] 2.32ns  loc: NN.cpp:69
+:0  store i19 0, i19* %data_addr_12, align 4
+
+ST_14: StgValue_124 (104)  [1/1] 0.00ns  loc: NN.cpp:70
+:1  br label %._crit_edge.12
+
+ST_14: data_addr_13 (106)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.12:0  %data_addr_13 = getelementptr [32 x i19]* %data, i32 0, i32 13
+
+ST_14: data_load_13 (107)  [2/2] 2.32ns  loc: NN.cpp:67
+._crit_edge.12:1  %data_load_13 = load i19* %data_addr_13, align 4
+
+
+ <State 15>: 2.32ns
+ST_15: data_load_13 (107)  [1/2] 2.32ns  loc: NN.cpp:67
+._crit_edge.12:1  %data_load_13 = load i19* %data_addr_13, align 4
+
+ST_15: tmp_13 (108)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.12:2  %tmp_13 = call i1 @_ssdm_op_BitSelect.i1.i19.i32(i19 %data_load_13, i32 18)
+
+ST_15: StgValue_129 (109)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.12:3  br i1 %tmp_13, label %14, label %._crit_edge.13
+
+ST_15: StgValue_130 (111)  [1/1] 2.32ns  loc: NN.cpp:69
+:0  store i19 0, i19* %data_addr_13, align 4
+
+ST_15: StgValue_131 (112)  [1/1] 0.00ns  loc: NN.cpp:70
+:1  br label %._crit_edge.13
+
+ST_15: data_addr_14 (114)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.13:0  %data_addr_14 = getelementptr [32 x i19]* %data, i32 0, i32 14
+
+ST_15: data_load_14 (115)  [2/2] 2.32ns  loc: NN.cpp:67
+._crit_edge.13:1  %data_load_14 = load i19* %data_addr_14, align 4
+
+
+ <State 16>: 2.32ns
+ST_16: data_load_14 (115)  [1/2] 2.32ns  loc: NN.cpp:67
+._crit_edge.13:1  %data_load_14 = load i19* %data_addr_14, align 4
+
+ST_16: tmp_14 (116)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.13:2  %tmp_14 = call i1 @_ssdm_op_BitSelect.i1.i19.i32(i19 %data_load_14, i32 18)
+
+ST_16: StgValue_136 (117)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.13:3  br i1 %tmp_14, label %15, label %._crit_edge.14
+
+ST_16: StgValue_137 (119)  [1/1] 2.32ns  loc: NN.cpp:69
+:0  store i19 0, i19* %data_addr_14, align 4
+
+ST_16: StgValue_138 (120)  [1/1] 0.00ns  loc: NN.cpp:70
+:1  br label %._crit_edge.14
+
+ST_16: data_addr_15 (122)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.14:0  %data_addr_15 = getelementptr [32 x i19]* %data, i32 0, i32 15
+
+ST_16: data_load_15 (123)  [2/2] 2.32ns  loc: NN.cpp:67
+._crit_edge.14:1  %data_load_15 = load i19* %data_addr_15, align 4
+
+
+ <State 17>: 2.32ns
+ST_17: data_load_15 (123)  [1/2] 2.32ns  loc: NN.cpp:67
+._crit_edge.14:1  %data_load_15 = load i19* %data_addr_15, align 4
+
+ST_17: tmp_15 (124)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.14:2  %tmp_15 = call i1 @_ssdm_op_BitSelect.i1.i19.i32(i19 %data_load_15, i32 18)
+
+ST_17: StgValue_143 (125)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.14:3  br i1 %tmp_15, label %16, label %._crit_edge.15
+
+ST_17: StgValue_144 (127)  [1/1] 2.32ns  loc: NN.cpp:69
+:0  store i19 0, i19* %data_addr_15, align 4
+
+ST_17: StgValue_145 (128)  [1/1] 0.00ns  loc: NN.cpp:70
+:1  br label %._crit_edge.15
+
+ST_17: data_addr_16 (130)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.15:0  %data_addr_16 = getelementptr [32 x i19]* %data, i32 0, i32 16
+
+ST_17: data_load_16 (131)  [2/2] 2.32ns  loc: NN.cpp:67
+._crit_edge.15:1  %data_load_16 = load i19* %data_addr_16, align 4
+
+
+ <State 18>: 2.32ns
+ST_18: data_load_16 (131)  [1/2] 2.32ns  loc: NN.cpp:67
+._crit_edge.15:1  %data_load_16 = load i19* %data_addr_16, align 4
+
+ST_18: tmp_16 (132)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.15:2  %tmp_16 = call i1 @_ssdm_op_BitSelect.i1.i19.i32(i19 %data_load_16, i32 18)
+
+ST_18: StgValue_150 (133)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.15:3  br i1 %tmp_16, label %17, label %._crit_edge.16
+
+ST_18: StgValue_151 (135)  [1/1] 2.32ns  loc: NN.cpp:69
+:0  store i19 0, i19* %data_addr_16, align 4
+
+ST_18: StgValue_152 (136)  [1/1] 0.00ns  loc: NN.cpp:70
+:1  br label %._crit_edge.16
+
+ST_18: data_addr_17 (138)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.16:0  %data_addr_17 = getelementptr [32 x i19]* %data, i32 0, i32 17
+
+ST_18: data_load_17 (139)  [2/2] 2.32ns  loc: NN.cpp:67
+._crit_edge.16:1  %data_load_17 = load i19* %data_addr_17, align 4
+
+
+ <State 19>: 2.32ns
+ST_19: data_load_17 (139)  [1/2] 2.32ns  loc: NN.cpp:67
+._crit_edge.16:1  %data_load_17 = load i19* %data_addr_17, align 4
+
+ST_19: tmp_17 (140)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.16:2  %tmp_17 = call i1 @_ssdm_op_BitSelect.i1.i19.i32(i19 %data_load_17, i32 18)
+
+ST_19: StgValue_157 (141)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.16:3  br i1 %tmp_17, label %18, label %._crit_edge.17
+
+ST_19: StgValue_158 (143)  [1/1] 2.32ns  loc: NN.cpp:69
+:0  store i19 0, i19* %data_addr_17, align 4
+
+ST_19: StgValue_159 (144)  [1/1] 0.00ns  loc: NN.cpp:70
+:1  br label %._crit_edge.17
+
+ST_19: data_addr_18 (146)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.17:0  %data_addr_18 = getelementptr [32 x i19]* %data, i32 0, i32 18
+
+ST_19: data_load_18 (147)  [2/2] 2.32ns  loc: NN.cpp:67
+._crit_edge.17:1  %data_load_18 = load i19* %data_addr_18, align 4
+
+
+ <State 20>: 2.32ns
+ST_20: data_load_18 (147)  [1/2] 2.32ns  loc: NN.cpp:67
+._crit_edge.17:1  %data_load_18 = load i19* %data_addr_18, align 4
+
+ST_20: tmp_18 (148)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.17:2  %tmp_18 = call i1 @_ssdm_op_BitSelect.i1.i19.i32(i19 %data_load_18, i32 18)
+
+ST_20: StgValue_164 (149)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.17:3  br i1 %tmp_18, label %19, label %._crit_edge.18
+
+ST_20: StgValue_165 (151)  [1/1] 2.32ns  loc: NN.cpp:69
+:0  store i19 0, i19* %data_addr_18, align 4
+
+ST_20: StgValue_166 (152)  [1/1] 0.00ns  loc: NN.cpp:70
+:1  br label %._crit_edge.18
+
+ST_20: data_addr_19 (154)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.18:0  %data_addr_19 = getelementptr [32 x i19]* %data, i32 0, i32 19
+
+ST_20: data_load_19 (155)  [2/2] 2.32ns  loc: NN.cpp:67
+._crit_edge.18:1  %data_load_19 = load i19* %data_addr_19, align 4
+
+
+ <State 21>: 2.32ns
+ST_21: data_load_19 (155)  [1/2] 2.32ns  loc: NN.cpp:67
+._crit_edge.18:1  %data_load_19 = load i19* %data_addr_19, align 4
+
+ST_21: tmp_19 (156)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.18:2  %tmp_19 = call i1 @_ssdm_op_BitSelect.i1.i19.i32(i19 %data_load_19, i32 18)
+
+ST_21: StgValue_171 (157)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.18:3  br i1 %tmp_19, label %20, label %._crit_edge.19
+
+ST_21: StgValue_172 (159)  [1/1] 2.32ns  loc: NN.cpp:69
+:0  store i19 0, i19* %data_addr_19, align 4
+
+ST_21: StgValue_173 (160)  [1/1] 0.00ns  loc: NN.cpp:70
+:1  br label %._crit_edge.19
+
+ST_21: data_addr_20 (162)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.19:0  %data_addr_20 = getelementptr [32 x i19]* %data, i32 0, i32 20
+
+ST_21: data_load_20 (163)  [2/2] 2.32ns  loc: NN.cpp:67
+._crit_edge.19:1  %data_load_20 = load i19* %data_addr_20, align 4
+
+
+ <State 22>: 2.32ns
+ST_22: data_load_20 (163)  [1/2] 2.32ns  loc: NN.cpp:67
+._crit_edge.19:1  %data_load_20 = load i19* %data_addr_20, align 4
+
+ST_22: tmp_20 (164)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.19:2  %tmp_20 = call i1 @_ssdm_op_BitSelect.i1.i19.i32(i19 %data_load_20, i32 18)
+
+ST_22: StgValue_178 (165)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.19:3  br i1 %tmp_20, label %21, label %._crit_edge.20
+
+ST_22: StgValue_179 (167)  [1/1] 2.32ns  loc: NN.cpp:69
+:0  store i19 0, i19* %data_addr_20, align 4
+
+ST_22: StgValue_180 (168)  [1/1] 0.00ns  loc: NN.cpp:70
+:1  br label %._crit_edge.20
+
+ST_22: data_addr_21 (170)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.20:0  %data_addr_21 = getelementptr [32 x i19]* %data, i32 0, i32 21
+
+ST_22: data_load_21 (171)  [2/2] 2.32ns  loc: NN.cpp:67
+._crit_edge.20:1  %data_load_21 = load i19* %data_addr_21, align 4
+
+
+ <State 23>: 2.32ns
+ST_23: data_load_21 (171)  [1/2] 2.32ns  loc: NN.cpp:67
+._crit_edge.20:1  %data_load_21 = load i19* %data_addr_21, align 4
+
+ST_23: tmp_21 (172)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.20:2  %tmp_21 = call i1 @_ssdm_op_BitSelect.i1.i19.i32(i19 %data_load_21, i32 18)
+
+ST_23: StgValue_185 (173)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.20:3  br i1 %tmp_21, label %22, label %._crit_edge.21
+
+ST_23: StgValue_186 (175)  [1/1] 2.32ns  loc: NN.cpp:69
+:0  store i19 0, i19* %data_addr_21, align 4
+
+ST_23: StgValue_187 (176)  [1/1] 0.00ns  loc: NN.cpp:70
+:1  br label %._crit_edge.21
+
+ST_23: data_addr_22 (178)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.21:0  %data_addr_22 = getelementptr [32 x i19]* %data, i32 0, i32 22
+
+ST_23: data_load_22 (179)  [2/2] 2.32ns  loc: NN.cpp:67
+._crit_edge.21:1  %data_load_22 = load i19* %data_addr_22, align 4
+
+
+ <State 24>: 2.32ns
+ST_24: data_load_22 (179)  [1/2] 2.32ns  loc: NN.cpp:67
+._crit_edge.21:1  %data_load_22 = load i19* %data_addr_22, align 4
+
+ST_24: tmp_22 (180)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.21:2  %tmp_22 = call i1 @_ssdm_op_BitSelect.i1.i19.i32(i19 %data_load_22, i32 18)
+
+ST_24: StgValue_192 (181)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.21:3  br i1 %tmp_22, label %23, label %._crit_edge.22
+
+ST_24: StgValue_193 (183)  [1/1] 2.32ns  loc: NN.cpp:69
+:0  store i19 0, i19* %data_addr_22, align 4
+
+ST_24: StgValue_194 (184)  [1/1] 0.00ns  loc: NN.cpp:70
+:1  br label %._crit_edge.22
+
+ST_24: data_addr_23 (186)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.22:0  %data_addr_23 = getelementptr [32 x i19]* %data, i32 0, i32 23
+
+ST_24: data_load_23 (187)  [2/2] 2.32ns  loc: NN.cpp:67
+._crit_edge.22:1  %data_load_23 = load i19* %data_addr_23, align 4
+
+
+ <State 25>: 2.32ns
+ST_25: data_load_23 (187)  [1/2] 2.32ns  loc: NN.cpp:67
+._crit_edge.22:1  %data_load_23 = load i19* %data_addr_23, align 4
+
+ST_25: tmp_23 (188)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.22:2  %tmp_23 = call i1 @_ssdm_op_BitSelect.i1.i19.i32(i19 %data_load_23, i32 18)
+
+ST_25: StgValue_199 (189)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.22:3  br i1 %tmp_23, label %24, label %._crit_edge.23
+
+ST_25: StgValue_200 (191)  [1/1] 2.32ns  loc: NN.cpp:69
+:0  store i19 0, i19* %data_addr_23, align 4
+
+ST_25: StgValue_201 (192)  [1/1] 0.00ns  loc: NN.cpp:70
+:1  br label %._crit_edge.23
+
+ST_25: data_addr_24 (194)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.23:0  %data_addr_24 = getelementptr [32 x i19]* %data, i32 0, i32 24
+
+ST_25: data_load_24 (195)  [2/2] 2.32ns  loc: NN.cpp:67
+._crit_edge.23:1  %data_load_24 = load i19* %data_addr_24, align 4
+
+
+ <State 26>: 2.32ns
+ST_26: data_load_24 (195)  [1/2] 2.32ns  loc: NN.cpp:67
+._crit_edge.23:1  %data_load_24 = load i19* %data_addr_24, align 4
+
+ST_26: tmp_24 (196)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.23:2  %tmp_24 = call i1 @_ssdm_op_BitSelect.i1.i19.i32(i19 %data_load_24, i32 18)
+
+ST_26: StgValue_206 (197)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.23:3  br i1 %tmp_24, label %25, label %._crit_edge.24
+
+ST_26: StgValue_207 (199)  [1/1] 2.32ns  loc: NN.cpp:69
+:0  store i19 0, i19* %data_addr_24, align 4
+
+ST_26: StgValue_208 (200)  [1/1] 0.00ns  loc: NN.cpp:70
+:1  br label %._crit_edge.24
+
+ST_26: data_addr_25 (202)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.24:0  %data_addr_25 = getelementptr [32 x i19]* %data, i32 0, i32 25
+
+ST_26: data_load_25 (203)  [2/2] 2.32ns  loc: NN.cpp:67
+._crit_edge.24:1  %data_load_25 = load i19* %data_addr_25, align 4
+
+
+ <State 27>: 2.32ns
+ST_27: data_load_25 (203)  [1/2] 2.32ns  loc: NN.cpp:67
+._crit_edge.24:1  %data_load_25 = load i19* %data_addr_25, align 4
+
+ST_27: tmp_25 (204)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.24:2  %tmp_25 = call i1 @_ssdm_op_BitSelect.i1.i19.i32(i19 %data_load_25, i32 18)
+
+ST_27: StgValue_213 (205)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.24:3  br i1 %tmp_25, label %26, label %._crit_edge.25
+
+ST_27: StgValue_214 (207)  [1/1] 2.32ns  loc: NN.cpp:69
+:0  store i19 0, i19* %data_addr_25, align 4
+
+ST_27: StgValue_215 (208)  [1/1] 0.00ns  loc: NN.cpp:70
+:1  br label %._crit_edge.25
+
+ST_27: data_addr_26 (210)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.25:0  %data_addr_26 = getelementptr [32 x i19]* %data, i32 0, i32 26
+
+ST_27: data_load_26 (211)  [2/2] 2.32ns  loc: NN.cpp:67
+._crit_edge.25:1  %data_load_26 = load i19* %data_addr_26, align 4
+
+
+ <State 28>: 2.32ns
+ST_28: data_load_26 (211)  [1/2] 2.32ns  loc: NN.cpp:67
+._crit_edge.25:1  %data_load_26 = load i19* %data_addr_26, align 4
+
+ST_28: tmp_26 (212)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.25:2  %tmp_26 = call i1 @_ssdm_op_BitSelect.i1.i19.i32(i19 %data_load_26, i32 18)
+
+ST_28: StgValue_220 (213)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.25:3  br i1 %tmp_26, label %27, label %._crit_edge.26
+
+ST_28: StgValue_221 (215)  [1/1] 2.32ns  loc: NN.cpp:69
+:0  store i19 0, i19* %data_addr_26, align 4
+
+ST_28: StgValue_222 (216)  [1/1] 0.00ns  loc: NN.cpp:70
+:1  br label %._crit_edge.26
+
+ST_28: data_addr_27 (218)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.26:0  %data_addr_27 = getelementptr [32 x i19]* %data, i32 0, i32 27
+
+ST_28: data_load_27 (219)  [2/2] 2.32ns  loc: NN.cpp:67
+._crit_edge.26:1  %data_load_27 = load i19* %data_addr_27, align 4
+
+
+ <State 29>: 2.32ns
+ST_29: data_load_27 (219)  [1/2] 2.32ns  loc: NN.cpp:67
+._crit_edge.26:1  %data_load_27 = load i19* %data_addr_27, align 4
+
+ST_29: tmp_27 (220)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.26:2  %tmp_27 = call i1 @_ssdm_op_BitSelect.i1.i19.i32(i19 %data_load_27, i32 18)
+
+ST_29: StgValue_227 (221)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.26:3  br i1 %tmp_27, label %28, label %._crit_edge.27
+
+ST_29: StgValue_228 (223)  [1/1] 2.32ns  loc: NN.cpp:69
+:0  store i19 0, i19* %data_addr_27, align 4
+
+ST_29: StgValue_229 (224)  [1/1] 0.00ns  loc: NN.cpp:70
+:1  br label %._crit_edge.27
+
+ST_29: data_addr_28 (226)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.27:0  %data_addr_28 = getelementptr [32 x i19]* %data, i32 0, i32 28
+
+ST_29: data_load_28 (227)  [2/2] 2.32ns  loc: NN.cpp:67
+._crit_edge.27:1  %data_load_28 = load i19* %data_addr_28, align 4
+
+
+ <State 30>: 2.32ns
+ST_30: data_load_28 (227)  [1/2] 2.32ns  loc: NN.cpp:67
+._crit_edge.27:1  %data_load_28 = load i19* %data_addr_28, align 4
+
+ST_30: tmp_28 (228)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.27:2  %tmp_28 = call i1 @_ssdm_op_BitSelect.i1.i19.i32(i19 %data_load_28, i32 18)
+
+ST_30: StgValue_234 (229)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.27:3  br i1 %tmp_28, label %29, label %._crit_edge.28
+
+ST_30: StgValue_235 (231)  [1/1] 2.32ns  loc: NN.cpp:69
+:0  store i19 0, i19* %data_addr_28, align 4
+
+ST_30: StgValue_236 (232)  [1/1] 0.00ns  loc: NN.cpp:70
+:1  br label %._crit_edge.28
+
+ST_30: data_addr_29 (234)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.28:0  %data_addr_29 = getelementptr [32 x i19]* %data, i32 0, i32 29
+
+ST_30: data_load_29 (235)  [2/2] 2.32ns  loc: NN.cpp:67
+._crit_edge.28:1  %data_load_29 = load i19* %data_addr_29, align 4
+
+
+ <State 31>: 2.32ns
+ST_31: data_load_29 (235)  [1/2] 2.32ns  loc: NN.cpp:67
+._crit_edge.28:1  %data_load_29 = load i19* %data_addr_29, align 4
+
+ST_31: tmp_29 (236)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.28:2  %tmp_29 = call i1 @_ssdm_op_BitSelect.i1.i19.i32(i19 %data_load_29, i32 18)
+
+ST_31: StgValue_241 (237)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.28:3  br i1 %tmp_29, label %30, label %._crit_edge.29
+
+ST_31: StgValue_242 (239)  [1/1] 2.32ns  loc: NN.cpp:69
+:0  store i19 0, i19* %data_addr_29, align 4
+
+ST_31: StgValue_243 (240)  [1/1] 0.00ns  loc: NN.cpp:70
+:1  br label %._crit_edge.29
+
+ST_31: data_addr_30 (242)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.29:0  %data_addr_30 = getelementptr [32 x i19]* %data, i32 0, i32 30
+
+ST_31: data_load_30 (243)  [2/2] 2.32ns  loc: NN.cpp:67
+._crit_edge.29:1  %data_load_30 = load i19* %data_addr_30, align 4
+
+
+ <State 32>: 2.32ns
+ST_32: data_load_30 (243)  [1/2] 2.32ns  loc: NN.cpp:67
+._crit_edge.29:1  %data_load_30 = load i19* %data_addr_30, align 4
+
+ST_32: tmp_30 (244)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.29:2  %tmp_30 = call i1 @_ssdm_op_BitSelect.i1.i19.i32(i19 %data_load_30, i32 18)
+
+ST_32: StgValue_248 (245)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.29:3  br i1 %tmp_30, label %31, label %._crit_edge.30
+
+ST_32: StgValue_249 (247)  [1/1] 2.32ns  loc: NN.cpp:69
+:0  store i19 0, i19* %data_addr_30, align 4
+
+ST_32: StgValue_250 (248)  [1/1] 0.00ns  loc: NN.cpp:70
+:1  br label %._crit_edge.30
+
+ST_32: data_addr_31 (250)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.30:0  %data_addr_31 = getelementptr [32 x i19]* %data, i32 0, i32 31
+
+ST_32: data_load_31 (251)  [2/2] 2.32ns  loc: NN.cpp:67
+._crit_edge.30:1  %data_load_31 = load i19* %data_addr_31, align 4
+
+
+ <State 33>: 2.32ns
+ST_33: data_load_31 (251)  [1/2] 2.32ns  loc: NN.cpp:67
+._crit_edge.30:1  %data_load_31 = load i19* %data_addr_31, align 4
+
+ST_33: tmp_31 (252)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.30:2  %tmp_31 = call i1 @_ssdm_op_BitSelect.i1.i19.i32(i19 %data_load_31, i32 18)
+
+ST_33: StgValue_255 (253)  [1/1] 0.00ns  loc: NN.cpp:67
+._crit_edge.30:3  br i1 %tmp_31, label %32, label %._crit_edge.31
+
+ST_33: StgValue_256 (255)  [1/1] 2.32ns  loc: NN.cpp:69
+:0  store i19 0, i19* %data_addr_31, align 4
+
+ST_33: StgValue_257 (256)  [1/1] 0.00ns  loc: NN.cpp:70
+:1  br label %._crit_edge.31
+
+ST_33: StgValue_258 (258)  [1/1] 0.00ns  loc: NN.cpp:72
+._crit_edge.31:0  ret void
+
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 8ns, clock uncertainty: 1ns.
+
+ <State 1>: 2.32ns
+The critical path consists of the following:
+	'getelementptr' operation ('data_addr', NN.cpp:67) [2]  (0 ns)
+	'load' operation ('data_load', NN.cpp:67) on array 'data' [3]  (2.32 ns)
+
+ <State 2>: 2.32ns
+The critical path consists of the following:
+	'load' operation ('data_load', NN.cpp:67) on array 'data' [3]  (2.32 ns)
+
+ <State 3>: 2.32ns
+The critical path consists of the following:
+	'load' operation ('data_load_1', NN.cpp:67) on array 'data' [11]  (2.32 ns)
+
+ <State 4>: 2.32ns
+The critical path consists of the following:
+	'load' operation ('data_load_2', NN.cpp:67) on array 'data' [19]  (2.32 ns)
+
+ <State 5>: 2.32ns
+The critical path consists of the following:
+	'load' operation ('data_load_3', NN.cpp:67) on array 'data' [27]  (2.32 ns)
+
+ <State 6>: 2.32ns
+The critical path consists of the following:
+	'load' operation ('data_load_4', NN.cpp:67) on array 'data' [35]  (2.32 ns)
+
+ <State 7>: 2.32ns
+The critical path consists of the following:
+	'load' operation ('data_load_5', NN.cpp:67) on array 'data' [43]  (2.32 ns)
+
+ <State 8>: 2.32ns
+The critical path consists of the following:
+	'load' operation ('data_load_6', NN.cpp:67) on array 'data' [51]  (2.32 ns)
+
+ <State 9>: 2.32ns
+The critical path consists of the following:
+	'load' operation ('data_load_7', NN.cpp:67) on array 'data' [59]  (2.32 ns)
+
+ <State 10>: 2.32ns
+The critical path consists of the following:
+	'load' operation ('data_load_8', NN.cpp:67) on array 'data' [67]  (2.32 ns)
+
+ <State 11>: 2.32ns
+The critical path consists of the following:
+	'load' operation ('data_load_9', NN.cpp:67) on array 'data' [75]  (2.32 ns)
+
+ <State 12>: 2.32ns
+The critical path consists of the following:
+	'load' operation ('data_load_10', NN.cpp:67) on array 'data' [83]  (2.32 ns)
+
+ <State 13>: 2.32ns
+The critical path consists of the following:
+	'load' operation ('data_load_11', NN.cpp:67) on array 'data' [91]  (2.32 ns)
+
+ <State 14>: 2.32ns
+The critical path consists of the following:
+	'load' operation ('data_load_12', NN.cpp:67) on array 'data' [99]  (2.32 ns)
+
+ <State 15>: 2.32ns
+The critical path consists of the following:
+	'load' operation ('data_load_13', NN.cpp:67) on array 'data' [107]  (2.32 ns)
+
+ <State 16>: 2.32ns
+The critical path consists of the following:
+	'load' operation ('data_load_14', NN.cpp:67) on array 'data' [115]  (2.32 ns)
+
+ <State 17>: 2.32ns
+The critical path consists of the following:
+	'load' operation ('data_load_15', NN.cpp:67) on array 'data' [123]  (2.32 ns)
+
+ <State 18>: 2.32ns
+The critical path consists of the following:
+	'load' operation ('data_load_16', NN.cpp:67) on array 'data' [131]  (2.32 ns)
+
+ <State 19>: 2.32ns
+The critical path consists of the following:
+	'load' operation ('data_load_17', NN.cpp:67) on array 'data' [139]  (2.32 ns)
+
+ <State 20>: 2.32ns
+The critical path consists of the following:
+	'load' operation ('data_load_18', NN.cpp:67) on array 'data' [147]  (2.32 ns)
+
+ <State 21>: 2.32ns
+The critical path consists of the following:
+	'load' operation ('data_load_19', NN.cpp:67) on array 'data' [155]  (2.32 ns)
+
+ <State 22>: 2.32ns
+The critical path consists of the following:
+	'load' operation ('data_load_20', NN.cpp:67) on array 'data' [163]  (2.32 ns)
+
+ <State 23>: 2.32ns
+The critical path consists of the following:
+	'load' operation ('data_load_21', NN.cpp:67) on array 'data' [171]  (2.32 ns)
+
+ <State 24>: 2.32ns
+The critical path consists of the following:
+	'load' operation ('data_load_22', NN.cpp:67) on array 'data' [179]  (2.32 ns)
+
+ <State 25>: 2.32ns
+The critical path consists of the following:
+	'load' operation ('data_load_23', NN.cpp:67) on array 'data' [187]  (2.32 ns)
+
+ <State 26>: 2.32ns
+The critical path consists of the following:
+	'load' operation ('data_load_24', NN.cpp:67) on array 'data' [195]  (2.32 ns)
+
+ <State 27>: 2.32ns
+The critical path consists of the following:
+	'load' operation ('data_load_25', NN.cpp:67) on array 'data' [203]  (2.32 ns)
+
+ <State 28>: 2.32ns
+The critical path consists of the following:
+	'load' operation ('data_load_26', NN.cpp:67) on array 'data' [211]  (2.32 ns)
+
+ <State 29>: 2.32ns
+The critical path consists of the following:
+	'load' operation ('data_load_27', NN.cpp:67) on array 'data' [219]  (2.32 ns)
+
+ <State 30>: 2.32ns
+The critical path consists of the following:
+	'load' operation ('data_load_28', NN.cpp:67) on array 'data' [227]  (2.32 ns)
+
+ <State 31>: 2.32ns
+The critical path consists of the following:
+	'load' operation ('data_load_29', NN.cpp:67) on array 'data' [235]  (2.32 ns)
+
+ <State 32>: 2.32ns
+The critical path consists of the following:
+	'load' operation ('data_load_30', NN.cpp:67) on array 'data' [243]  (2.32 ns)
+
+ <State 33>: 2.32ns
+The critical path consists of the following:
+	'load' operation ('data_load_31', NN.cpp:67) on array 'data' [251]  (2.32 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

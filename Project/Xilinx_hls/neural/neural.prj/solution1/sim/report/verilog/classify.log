@@ -1,0 +1,122 @@
+@I [SIM-47] Using XSIM for RTL simulation.
+@I [SIM-14] Instrumenting C test bench ...
+   Build using "C:/Xilinx/Vivado_HLS/2017.2/msys/bin/g++.exe"
+   Compiling NN.cpp_pre.cpp.tb.cpp
+   Compiling apatb_classify.cpp
+   Compiling classifier.cpp_pre.cpp.tb.cpp
+   Compiling classifier_tb.cpp_pre.cpp.tb.cpp
+   Generating cosim.tv.exe
+@I [SIM-302] Starting C TB testing ... 
+@I [SIM-333] Generating C post check test bench ...
+@I [SIM-12] Generating RTL test bench ...
+@I [SIM-323] Starting verilog simulation. 
+@I [SIM-15] Starting XSIM ...
+@I [SIM-316] Starting C post checking ...
+test1: 7
+test2: 1
+
+C:\ERTS_repo\Project\Xilinx_hls\neural\neural.prj\solution1\sim\verilog>call C:/Xilinx/Vivado/2017.2/bin/xelab xil_defaultlib.apatb_classify_top -prj classify.prj -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 --initfile "C:/Xilinx/Vivado/2017.2/data/xsim/ip/xsim_ip.ini" --lib "ieee_proposed=./ieee_proposed" -s classify  
+INFO: [XSIM 43-3496] Using init file passed via -initfile option "C:/Xilinx/Vivado/2017.2/data/xsim/ip/xsim_ip.ini".
+Vivado Simulator 2017.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe xil_defaultlib.apatb_classify_top -prj classify.prj -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 --initfile C:/Xilinx/Vivado/2017.2/data/xsim/ip/xsim_ip.ini --lib ieee_proposed=./ieee_proposed -s classify 
+Multi-threading is on. Using 2 slave threads.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/ERTS_repo/Project/Xilinx_hls/neural/neural.prj/solution1/sim/verilog/AESL_axi_slave_NNIO.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_slave_NNIO
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/ERTS_repo/Project/Xilinx_hls/neural/neural.prj/solution1/sim/verilog/classify.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_classify_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/ERTS_repo/Project/Xilinx_hls/neural/neural.prj/solution1/sim/verilog/classify.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module classify
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/ERTS_repo/Project/Xilinx_hls/neural/neural.prj/solution1/sim/verilog/classify_b_sm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module classify_b_sm_rom
+INFO: [VRFC 10-311] analyzing module classify_b_sm
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/ERTS_repo/Project/Xilinx_hls/neural/neural.prj/solution1/sim/verilog/classify_mac_mulacud.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module classify_mac_mulacud_DSP48_0
+INFO: [VRFC 10-311] analyzing module classify_mac_mulacud
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/ERTS_repo/Project/Xilinx_hls/neural/neural.prj/solution1/sim/verilog/classify_mac_muladEe.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module classify_mac_muladEe_DSP48_1
+INFO: [VRFC 10-311] analyzing module classify_mac_muladEe
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/ERTS_repo/Project/Xilinx_hls/neural/neural.prj/solution1/sim/verilog/classify_NNIO_s_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module classify_NNIO_s_axi
+INFO: [VRFC 10-311] analyzing module classify_NNIO_s_axi_ram
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/ERTS_repo/Project/Xilinx_hls/neural/neural.prj/solution1/sim/verilog/classify_nn_weighbkb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module classify_nn_weighbkb_rom
+INFO: [VRFC 10-311] analyzing module classify_nn_weighbkb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/ERTS_repo/Project/Xilinx_hls/neural/neural.prj/solution1/sim/verilog/classify_output.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module classify_output_ram
+INFO: [VRFC 10-311] analyzing module classify_output
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/ERTS_repo/Project/Xilinx_hls/neural/neural.prj/solution1/sim/verilog/classify_tempOut.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module classify_tempOut_ram
+INFO: [VRFC 10-311] analyzing module classify_tempOut
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/ERTS_repo/Project/Xilinx_hls/neural/neural.prj/solution1/sim/verilog/classify_W.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module classify_W_rom
+INFO: [VRFC 10-311] analyzing module classify_W
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/ERTS_repo/Project/Xilinx_hls/neural/neural.prj/solution1/sim/verilog/classify_W_sm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module classify_W_sm_rom
+INFO: [VRFC 10-311] analyzing module classify_W_sm
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/ERTS_repo/Project/Xilinx_hls/neural/neural.prj/solution1/sim/verilog/RELU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RELU
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.classify_W_rom
+Compiling module xil_defaultlib.classify_W(DataWidth=8,AddressRa...
+Compiling module xil_defaultlib.classify_nn_weighbkb_rom
+Compiling module xil_defaultlib.classify_nn_weighbkb(DataWidth=9...
+Compiling module xil_defaultlib.classify_W_sm_rom
+Compiling module xil_defaultlib.classify_W_sm(DataWidth=8,Addres...
+Compiling module xil_defaultlib.classify_b_sm_rom
+Compiling module xil_defaultlib.classify_b_sm(DataWidth=10,Addre...
+Compiling module xil_defaultlib.classify_NNIO_s_axi_ram(DEPTH=4)
+Compiling module xil_defaultlib.classify_NNIO_s_axi(C_S_AXI_ADDR...
+Compiling module xil_defaultlib.classify_output_ram
+Compiling module xil_defaultlib.classify_output(DataWidth=32,Add...
+Compiling module xil_defaultlib.classify_tempOut_ram
+Compiling module xil_defaultlib.classify_tempOut(DataWidth=19,Ad...
+Compiling module xil_defaultlib.RELU
+Compiling module xil_defaultlib.classify_mac_mulacud_DSP48_0
+Compiling module xil_defaultlib.classify_mac_mulacud(ID=1,NUM_ST...
+Compiling module xil_defaultlib.classify_mac_muladEe_DSP48_1
+Compiling module xil_defaultlib.classify_mac_muladEe(ID=1,NUM_ST...
+Compiling module xil_defaultlib.classify
+Compiling module xil_defaultlib.AESL_axi_slave_NNIO
+Compiling module xil_defaultlib.apatb_classify_top
+Built simulation snapshot classify
+
+****** Webtalk v2017.2 (64-bit)
+  **** SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+  **** IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source C:/ERTS_repo/Project/Xilinx_hls/neural/neural.prj/solution1/sim/verilog/xsim.dir/classify/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Tue Dec 31 14:49:52 2019...
+
+****** xsim v2017.2 (64-bit)
+  **** SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+  **** IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/classify/xsim_script.tcl
+# xsim {classify} -autoloadwcfg -tclbatch {classify.tcl}
+Vivado Simulator 2017.2
+Time resolution is 1 ps
+source classify.tcl
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 2 [0.00%] @ "116000"
+// RTL Simulation : 1 / 2 [0.21%] @ "27308000"
+// RTL Simulation : 2 / 2 [0.00%] @ "54492000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 54524 ns : File "C:/ERTS_repo/Project/Xilinx_hls/neural/neural.prj/solution1/sim/verilog/classify.autotb.v" Line 305
+## quit
+INFO: [Common 17-206] Exiting xsim at Tue Dec 31 14:49:58 2019...
+test1: 7
+test2: 1
+@I [SIM-1000] *** C/RTL co-simulation finished: PASS ***

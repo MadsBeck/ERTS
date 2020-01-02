@@ -1,0 +1,186 @@
+/*
+
+Vivado v2017.2 (64-bit)
+SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+
+Process ID: 27688
+License: Customer
+
+Current time: 	12/30/19 7:16:13 PM CET
+Time zone: 	Central European Time (Europe/Paris)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 4
+
+Screen size: 1707x1067
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 27 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	C:/Xilinx/Vivado/2017.2/tps/win64/jre
+JVM executable location: 	C:/Xilinx/Vivado/2017.2/tps/win64/jre/bin/java.exe
+Java library paths: C:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o;C:/WINDOWS/Sun/Java/bin;C:/WINDOWS/system32;C:/WINDOWS;C:/Xilinx/Vivado/2017.2/bin;C:/Xilinx/Vivado/2017.2/lib/win64.o;C:/Xilinx/Vivado/2017.2/tps/win64/jre/bin/server;C:/Xilinx/Vivado/2017.2/tps/win64/jre/bin;C:/Xilinx/SDK/2017.2/bin;C:/Xilinx/Vivado/2017.2/ids_lite/ISE/bin/nt64;C:/Xilinx/Vivado/2017.2/ids_lite/ISE/lib/nt64;C:/Xilinx/Vivado_HLS/2017.2/bin;C:/WINDOWS/system32;C:/WINDOWS;C:/WINDOWS/System32/Wbem;C:/WINDOWS/System32/WindowsPowerShell/v1.0/;C:/WINDOWS/System32/OpenSSH/;C:/Program Files/MATLAB/R2019b/bin;C:/Program Files/dotnet/;C:/Program Files/Microsoft SQL Server/130/Tools/Binn/;C:/Users/Rasmus/AppData/Local/Microsoft/WindowsApps;C:/Users/Rasmus/AppData/Local/GitHubDesktop/bin;C:/Opencv/opencv/build/x64/vc15/bin;;C:/Xilinx/Vivado/2017.2/tps/mingw/6.2.0/win64.o/nt/bin;C:/Xilinx/Vivado/2017.2/tps/mingw/6.2.0/win64.o/nt/libexec/gcc/x86_64-w64-mingw32/6.2.0;.
+
+User name: 	Rasmus
+User home directory: C:/Users/Rasmus
+User working directory: C:/ERTS_repo/Assignment_2/vivado_2_7
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2017.2
+RDI_DATADIR: C:/Xilinx/Vivado/2017.2/data
+RDI_BINDIR: C:/Xilinx/Vivado/2017.2/bin
+
+User preferences location: C:/Users/Rasmus/AppData/Roaming/Xilinx/Vivado
+Vivado preferences directory: C:/Users/Rasmus/AppData/Roaming/Xilinx/Vivado/2017.2/vivado.xml
+Vivado layouts directory: C:/Users/Rasmus/AppData/Roaming/Xilinx/Vivado/2017.2/layouts
+PlanAhead jar location: 	C:/Xilinx/Vivado/2017.2/lib/classes/planAhead.jar
+Vivado Look & Feel: 	[Synthetica - the extended Synth Look and Feel. - ui.g.i.H]
+Engine tmp dir: 	C:/ERTS_repo/Assignment_2/vivado_2_7/.Xil/Vivado-27688-DESKTOP-A2UBRF5
+
+GUI allocated memory:	183 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 510 MB
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// Opening Vivado Project: C:\ERTS_repo\Assignment_2\vivado_2_7\vivado_2_7.xpr. Version: Vivado v2017.2 
+// bs:g (cg:JFrame):  Open Project : addNotify
+// [GUI Memory]: 51 MB (+50834kb) [00:00:11]
+// [Engine Memory]: 488 MB (+360086kb) [00:00:11]
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// HMemoryUtils.trashcanNow. Engine heap size: 520 MB. GUI used memory: 35 MB. Current time: 12/30/19 7:16:15 PM CET
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 520 MB (+8298kb) [00:00:16]
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 561 MB (+15585kb) [00:00:22]
+// [GUI Memory]: 60 MB (+7113kb) [00:00:23]
+// [GUI Memory]: 67 MB (+4192kb) [00:00:23]
+// Tcl Message: open_project C:/ERTS_repo/Assignment_2/vivado_2_7/vivado_2_7.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/ERTS_repo/Assignment_2/SC_IO_test/SC_IO/solution1/impl/ip'. INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.2/data/ip'. 
+// Project name: vivado_2_7; location: C:/ERTS_repo/Assignment_2/vivado_2_7; part: xc7z010clg400-1
+// [GUI Memory]: 76 MB (+5130kb) [00:00:26]
+// Tcl Message: open_project: Time (s): cpu = 00:00:23 ; elapsed = 00:00:13 . Memory (MB): peak = 775.785 ; gain = 55.125 
+dismissDialog("Open Project"); // bs:g (cg:JFrame)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking too long to process. Increasing delay to 3000 ms.
+// TclEventType: DG_GRAPH_GENERATED
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking too long to process. Increasing delay to 3000 ms.
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 13 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, IP Integrator, Open Block Design]", 7, false); // u:M (JViewport:JComponent, cg:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_BLOCK_DESIGN
+// bs:g (cg:JFrame):  Open Block Design : addNotify
+// TclEventType: LOAD_FEATURE
+// Tcl Message: open_bd_design {C:/ERTS_repo/Assignment_2/vivado_2_7/vivado_2_7.srcs/sources_1/bd/system/system.bd} 
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: LOAD_FEATURE
+// Tcl Message: Adding cell -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0 
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_100M Adding cell -- xilinx.com:hls:iosc:1.0 - iosc_0 
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_OPEN_DIAGRAM
+// [Engine Memory]: 591 MB (+2390kb) [00:00:43]
+// TclEventType: RSB_OPEN_DIAGRAM
+// [Engine Memory]: 647 MB (+27299kb) [00:00:50]
+// Tcl Message: Adding cell -- xilinx.com:ip:axi_crossbar:2.1 - xbar Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc Successfully read diagram <system> from BD file <C:/ERTS_repo/Assignment_2/vivado_2_7/vivado_2_7.srcs/sources_1/bd/system/system.bd> 
+// TclEventType: RSB_CONNECTION_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 664 MB. GUI used memory: 45 MB. Current time: 12/30/19 7:16:51 PM CET
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_LOCK_CHANGE
+// Tcl Message: open_bd_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:10 . Memory (MB): peak = 862.320 ; gain = 81.949 
+// 'bv' command handler elapsed time: 9 seconds
+// Elapsed time: 10 seconds
+dismissDialog("Open Block Design"); // bs:g (cg:JFrame)
+// [Engine Memory]: 686 MB (+6807kb) [00:00:52]
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, IP Integrator, Open Block Design]", 7, false, false, false, false, true, false); // u:M (JViewport:JComponent, cg:JFrame) - Popup Trigger
+// Elapsed time: 46 seconds
+setText(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, (String) null); // ak:X (Q:ag, cg:JFrame)
+// Elapsed time: 25 seconds
+setText(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, (String) null); // ak:X (Q:ag, cg:JFrame)
+// Elapsed time: 262 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager, Settings]", 1, false); // u:M (JViewport:JComponent, cg:JFrame)
+// Run Command: RDIResourceCommand.RDICommands_SETTINGS
+// Tcl Command: 'rdi::info_commands {device::*}'
+// Tcl Command: 'rdi::info_commands {debug::*}'
+// Tcl Command: 'rdi::info_commands {*}'
+// u:p (cg:JFrame): Settings: addNotify
+dismissDialog("Settings"); // u:p (cg:JFrame)
+// [GUI Memory]: 80 MB (+685kb) [00:06:53]
+// [GUI Memory]: 85 MB (+1302kb) [00:07:08]
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking too long to process. Increasing delay to 4000 ms.
+// [GUI Memory]: 90 MB (+988kb) [00:10:54]
+// [GUI Memory]: 96 MB (+1262kb) [00:11:59]
+// [GUI Memory]: 101 MB (+483kb) [00:14:39]
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking too long to process. Increasing delay to 4000 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking too long to process. Increasing delay to 5000 ms.
+// [GUI Memory]: 107 MB (+488kb) [00:29:05]
+// HMemoryUtils.trashcanNow. Engine heap size: 705 MB. GUI used memory: 55 MB. Current time: 12/30/19 7:46:52 PM CET
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking too long to process. Increasing delay to 6000 ms.
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking too long to process. Increasing delay to 2000 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking too long to process. Increasing delay to 7000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking too long to process. Increasing delay to 5000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking too long to process. Increasing delay to 6000 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking too long to process. Increasing delay to 8000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking too long to process. Increasing delay to 7000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking too long to process. Increasing delay to 8000 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking too long to process. Increasing delay to 9000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking too long to process. Increasing delay to 9000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking too long to process. Increasing delay to 10000 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking too long to process. Increasing delay to 10000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking too long to process. Increasing delay to 10000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking too long to process. Increasing delay to 10000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking too long to process. Increasing delay to 10000 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking too long to process. Increasing delay to 10000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking too long to process. Increasing delay to 10000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking too long to process. Increasing delay to 10000 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking too long to process. Increasing delay to 10000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking too long to process. Increasing delay to 10000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 705 MB. GUI used memory: 53 MB. Current time: 12/30/19 8:16:57 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 705 MB. GUI used memory: 53 MB. Current time: 12/30/19 8:46:56 PM CET
+// [GUI Memory]: 113 MB (+780kb) [01:39:59]
+// [GUI Memory]: 119 MB (+106kb) [01:40:24]
+// [GUI Memory]: 126 MB (+752kb) [01:40:49]
+// HMemoryUtils.trashcanNow. Engine heap size: 705 MB. GUI used memory: 57 MB. Current time: 12/30/19 9:16:57 PM CET
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking too long to process. Increasing delay to 10000 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking too long to process. Increasing delay to 10000 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking too long to process. Increasing delay to 10000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 705 MB. GUI used memory: 57 MB. Current time: 12/30/19 9:47:02 PM CET
+// Elapsed time: 9309 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // U:JideMenu (CommandMenuBar:CommandBar, cg:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // Z:JMenu (JPopupMenu:JComponent, cg:JFrame)
+selectMenuItem(PAResourceCommand.PACommandNames_LAUNCH_HARDWARE, "Launch SDK"); // ac:JMenuItem (JPopupMenu:JComponent, cg:JFrame)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // U:JideMenu (CommandMenuBar:CommandBar, cg:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_LAUNCH_HARDWARE
+// aa:p (cg:JFrame): Launch SDK: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, aa:p)
+// 'o' command handler elapsed time: 3 seconds
+selectButton("PAResourceItoN.NewLaunchHardwareDialog_EXPORTED_HARDWARE_SYSTEM_OUT_OF_DATE_Yes", "Yes"); // JButton:AbstractButton (JPanel:JComponent, H:JDialog)
+dismissDialog("Launch SDK"); // aa:p (cg:JFrame)
+// Tcl Message: launch_sdk -workspace C:/ERTS_repo/Assignment_2/vivado_2_7/vivado_2_7.sdk -hwspec C:/ERTS_repo/Assignment_2/vivado_2_7/vivado_2_7.sdk/system_wrapper.hdf 
+// Tcl Message: INFO: [Vivado 12-393] Launching SDK... INFO: [Vivado 12-417] Running xsdk -workspace C:/ERTS_repo/Assignment_2/vivado_2_7/vivado_2_7.sdk -hwspec C:/ERTS_repo/Assignment_2/vivado_2_7/vivado_2_7.sdk/system_wrapper.hdf INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages. 
+// PAPropertyPanels.initPanels (inSwitch) elapsed time: 0.3s
+// HMemoryUtils.trashcanNow. Engine heap size: 705 MB. GUI used memory: 59 MB. Current time: 12/30/19 10:17:03 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 705 MB. GUI used memory: 58 MB. Current time: 12/30/19 10:47:04 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 705 MB. GUI used memory: 58 MB. Current time: 12/30/19 11:17:05 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 705 MB. GUI used memory: 59 MB. Current time: 12/30/19 11:47:06 PM CET
+// WARNING: HTimer (MainWindowUtils Timer) is taking too long to process. Increasing delay to 11000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking too long to process. Increasing delay to 10000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 705 MB. GUI used memory: 58 MB. Current time: 12/31/19 12:15:32 PM CET
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking too long to process. Increasing delay to 10000 ms.

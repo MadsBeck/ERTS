@@ -1,0 +1,73 @@
+/*
+ * Empty C++ Application
+ */
+
+#include "xparameters.h"
+#include "xgpio.h"
+#include "xil_printf.h"
+#include "led_ip.h"
+#include "xclassify.h"
+
+XGpio btn;
+XClassify nn;
+int main()
+{
+	xil_printf("Starting program\r\n");
+
+	int Status;
+	u32 state;
+	char image[16] = {0, 2, 0, 0, 3, 33, 58, 26, 0, 10, 59, 17, 0, 34, 50, 0};
+
+	if (XClassify_Initialize(&nn,XPAR_CLASSIFY_0_DEVICE_ID) != XST_SUCCESS)
+				{
+					return XST_FAILURE;
+				}
+
+	XClassify_Start(&nn);
+	xil_printf("Starting classifier\r\n");
+
+	while(!XClassify_IsReady(&nn))
+	{
+
+	}
+	xil_printf("Is ready\r\n");
+
+	Status = XClassify_Write_img_Bytes(&nn,0,image,16);
+
+	xil_printf("wrote %d\r\n",Status);
+
+	if(Status != 16)
+		xil_printf("didnt write all\r\n");
+
+	while(!XClassify_IsReady(&nn))
+	{
+
+	}
+	xil_printf("Is ready\r\n");
+
+	XClassify_Start(&nn);
+
+	while(!XClassify_IsReady(&nn))
+	{
+
+	}
+	xil_printf("Is ready\r\n");
+
+	xil_printf("got %X\r\n",nn.Nnio_BaseAddress);
+
+	xil_printf("got %X\r\n",XPAR_CLASSIFY_0_S_AXI_NNIO_BASEADDR);
+
+	state = XClassify_ReadReg(XPAR_CLASSIFY_0_S_AXI_NNIO_BASEADDR,XCLASSIFY_NNIO_ADDR_AP_RETURN);
+
+	xil_printf("got %d\r\n",state);
+
+	state = XClassify_Get_return(&nn);
+
+	xil_printf("got %d\r\n",state);
+
+	xil_printf("Ending program\r\n");
+
+
+
+	return 0;
+}

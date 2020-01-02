@@ -1,0 +1,20 @@
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vivado_HLS/2017.2/bin/unwrapped/win64.o/vivado_hls.exe'
+INFO: [HLS 200-10] For user 'Rasmus' on host 'desktop-a2ubrf5' (Windows NT_amd64 version 6.2) on Fri Dec 27 23:07:18 +0100 2019
+INFO: [HLS 200-10] In directory 'C:/ERTS_repo/Project/Xilinx_hls/test'
+INFO: [HLS 200-10] Opening project 'C:/ERTS_repo/Project/Xilinx_hls/test/test.prj'.
+INFO: [HLS 200-10] Opening solution 'C:/ERTS_repo/Project/Xilinx_hls/test/test.prj/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 8ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z010clg400-1'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../../../../Assignment_2/Assignment_2_Kim/HLS_labs/lab1/matrixmul_test.cpp in debug mode
+   Compiling ../../../../../../../Assignment_2/Assignment_2_Kim/HLS_labs/lab1/matrixmul.cpp in debug mode
+   Generating csim.exe
+{
+{870,906,942}
+{1086,1131,1176}
+{1302,1356,1410}
+}
+Test passed.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************

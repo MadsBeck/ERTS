@@ -1,0 +1,13 @@
+vhdl xil_defaultlib "AESL_sim_pkg.vhd"
+vhdl xil_defaultlib "AESL_automem_img.vhd"
+vhdl xil_defaultlib "classify.autotb.vhd"
+vhdl xil_defaultlib "classify.vhd"
+vhdl xil_defaultlib "classify_mac_mulabkb.vhd"
+vhdl xil_defaultlib "classify_mac_mulacud.vhd"
+vhdl xil_defaultlib "classify_mac_muladEe.vhd"
+vhdl xil_defaultlib "classify_output.vhd"
+vhdl xil_defaultlib "classify_tempOut.vhd"
+vhdl xil_defaultlib "classify_W.vhd"
+vhdl xil_defaultlib "classify_W_sm.vhd"
+vhdl xil_defaultlib "RELU.vhd"
+

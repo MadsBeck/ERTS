@@ -1,0 +1,49 @@
+/*
+ * main.c
+ *
+ *  Created on: 30 Dec 2019
+ *      Author: Rasmus
+ */
+#include "xparameters.h"
+#include "xgpio.h"
+#include "xil_printf.h"
+
+XGpio btn;
+XGpio led;
+
+int main(void)
+{
+	int Status;
+	u32 state;
+
+	/* Initialize the GPIO driver */
+	Status = XGpio_Initialize(&btn,  XPAR_AXI_GPIO_0_DEVICE_ID);
+	if (Status != XST_SUCCESS) {
+		xil_printf("Gpio Initialization Failed\r\n");
+		return XST_FAILURE;
+	}
+
+	Status = XGpio_Initialize(&led,  XPAR_AXI_GPIO_1_DEVICE_ID);
+		if (Status != XST_SUCCESS) {
+			xil_printf("Gpio Initialization Failed\r\n");
+			return XST_FAILURE;
+		}
+
+	/* Set the direction for all signals as inputs except the LED output */
+	XGpio_SetDataDirection(&btn, 1, 0x01);
+	XGpio_SetDataDirection(&btn, 1, ~0x01);
+
+	/* Loop forever blinking the LED */
+
+	while (1) {
+		/* Set the LED to High */
+		state¨= XGpio_DiscreteRead(&btn, 1);
+
+		/* Clear the LED bit */
+		XGpio_DiscreteWrite(&Gpio, LED_CHANNEL, LED);
+
+	}
+
+	xil_printf("Successfully ran Gpio Example\r\n");
+	return XST_SUCCESS;
+}

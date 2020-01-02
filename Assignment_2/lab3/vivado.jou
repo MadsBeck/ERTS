@@ -2,14 +2,16 @@
 # Vivado v2017.2 (64-bit)
 # SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
 # IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
-# Start of session at: Mon Oct  7 13:46:00 2019
-# Process ID: 9016
-# Current directory: C:/ERTS_Repo/Assignment_2/lab3
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16852 C:\ERTS_Repo\Assignment_2\lab3\lab3.xpr
-# Log file: C:/ERTS_Repo/Assignment_2/lab3/vivado.log
-# Journal file: C:/ERTS_Repo/Assignment_2/lab3\vivado.jou
+# Start of session at: Sat Dec 28 14:28:02 2019
+# Process ID: 13024
+# Current directory: C:/ERTS_repo/Assignment_2/lab3
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5536 C:\ERTS_repo\Assignment_2\lab3\lab3.xpr
+# Log file: C:/ERTS_repo/Assignment_2/lab3/vivado.log
+# Journal file: C:/ERTS_repo/Assignment_2/lab3\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project C:/ERTS_Repo/Assignment_2/lab3/lab3.xpr
+open_project C:/ERTS_repo/Assignment_2/lab3/lab3.xpr
 update_compile_order -fileset sources_1
-launch_sdk -workspace C:/ERTS_Repo/Assignment_2/lab3/lab3.sdk -hwspec C:/ERTS_Repo/Assignment_2/lab3/lab3.sdk/system_wrapper.hdf
+launch_sdk -workspace C:/ERTS_repo/Assignment_2/lab3/lab3.sdk -hwspec C:/ERTS_repo/Assignment_2/lab3/lab3.sdk/system_wrapper.hdf
+open_bd_design {C:/ERTS_repo/Assignment_2/lab3/lab3.srcs/sources_1/bd/system/system.bd}
+save_project_as project_1_opencv C:/ERTS_repo/Project/opencv_test_vivado/project_1_opencv -force

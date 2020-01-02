@@ -1,0 +1,16 @@
+com.xilinx.sdk.linkgen.prefs.classifierApp\:.bss=ps7_ddr_0
+com.xilinx.sdk.linkgen.prefs.classifierApp\:.data=ps7_ddr_0
+com.xilinx.sdk.linkgen.prefs.classifierApp\:.data1=ps7_ddr_0
+com.xilinx.sdk.linkgen.prefs.classifierApp\:.fixup=ps7_ddr_0
+com.xilinx.sdk.linkgen.prefs.classifierApp\:.rodata=ps7_ddr_0
+com.xilinx.sdk.linkgen.prefs.classifierApp\:.rodata1=ps7_ddr_0
+com.xilinx.sdk.linkgen.prefs.classifierApp\:.sbss=ps7_ddr_0
+com.xilinx.sdk.linkgen.prefs.classifierApp\:.sbss2=ps7_ddr_0
+com.xilinx.sdk.linkgen.prefs.classifierApp\:.sdata=ps7_ddr_0
+com.xilinx.sdk.linkgen.prefs.classifierApp\:.sdata2=ps7_ddr_0
+com.xilinx.sdk.linkgen.prefs.classifierApp\:.text=ps7_ddr_0
+com.xilinx.sdk.linkgen.prefs.classifierApp\:heap=ps7_ddr_0
+com.xilinx.sdk.linkgen.prefs.classifierApp\:heap-size=1024
+com.xilinx.sdk.linkgen.prefs.classifierApp\:stack=ps7_ddr_0
+com.xilinx.sdk.linkgen.prefs.classifierApp\:stack-size=1024
+eclipse.preferences.version=1

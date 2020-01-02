@@ -1,0 +1,41 @@
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vivado_HLS/2017.2/bin/unwrapped/win64.o/vivado_hls.exe'
+INFO: [HLS 200-10] For user 'Rasmus' on host 'desktop-a2ubrf5' (Windows NT_amd64 version 6.2) on Sat Dec 28 18:28:26 +0100 2019
+INFO: [HLS 200-10] In directory 'C:/ERTS_repo/Project/Xilinx_hls/PreProcess'
+INFO: [HLS 200-10] Opening project 'C:/ERTS_repo/Project/Xilinx_hls/PreProcess/PreProcess'.
+INFO: [HLS 200-10] Adding design file '../../../../Users/Rasmus/Desktop/xfopencv-master/examples/pyrdown/xf_pyr_down_accel.cpp' to the project
+INFO: [HLS 200-10] Adding test bench file '../../../../Users/Rasmus/Desktop/xfopencv-master/examples/pyrdown/xf_pyr_down_tb.cpp' to the project
+INFO: [HLS 200-10] Opening solution 'C:/ERTS_repo/Project/Xilinx_hls/PreProcess/PreProcess/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 8ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z010clg400-1'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 8ns.
+INFO: [HLS 200-10] Analyzing design file '../../../../Users/Rasmus/Desktop/xfopencv-master/examples/pyrdown/xf_pyr_down_accel.cpp' ... 
+WARNING: [HLS 200-40] In file included from ../../../../Users/Rasmus/Desktop/xfopencv-master/examples/pyrdown/xf_pyr_down_accel.cpp:30:
+In file included from ../../../../Users/Rasmus/Desktop/xfopencv-master/examples/pyrdown/xf_pyr_down_config.h:38:
+C:/Users/Rasmus/Desktop/xfopencv-master/include\imgproc/xf_pyr_down.hpp:87:54: warning: default template arguments for a function template are a C++11 extension [-Wc++11-extensions]
+template<int TYPE, int ROWS, int COLS, int NPC, bool USE_URAM = false> 
+                                                     ^          ~~~~~
+1 warning generated.
+INFO: [HLS 200-10] Validating synthesis directives ...
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:06 ; elapsed = 00:01:01 . Memory (MB): peak = 95.895 ; gain = 46.344
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:06 ; elapsed = 00:01:04 . Memory (MB): peak = 95.930 ; gain = 46.379
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'xFPyrDownApplykernel<1, 0, 5, 25, 1>' into 'xFPyrDownprocessgaussian<28, 28, 0, 1, 1, 30, 5, 25, 1>' (C:/Users/Rasmus/Desktop/xfopencv-master/include\imgproc/xf_pyr_down_gaussian_blur.hpp:140).
+INFO: [XFORM 203-603] Inlining function 'xFPyrDownprocessgaussian<28, 28, 0, 1, 1, 30, 5, 25, 1>' into 'xf_pyrdown_gaussian_nxn<28, 28, 0, 1, 1, 30, 5, 25, 1>' (C:/Users/Rasmus/Desktop/xfopencv-master/include\imgproc/xf_pyr_down_gaussian_blur.hpp:233).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:07 ; elapsed = 00:01:07 . Memory (MB): peak = 114.391 ; gain = 64.840
+INFO: [HLS 200-10] Checking synthesizability ...
+WARNING: [SYNCHK 200-23] C:/Users/Rasmus/Desktop/xfopencv-master/include\imgproc/xf_pyr_down_gaussian_blur.hpp:73: variable-indexed range selection may cause suboptimal QoR.
+ERROR: [SYNCHK 200-11] C:/Users/Rasmus/Desktop/xfopencv-master/include\imgproc/xf_pyr_down.hpp:41: Argument '_src.data.V' of function 'pyrDown<0, 28, 28, 1, false>' (C:/Users/Rasmus/Desktop/xfopencv-master/include\imgproc/xf_pyr_down.hpp:88) has an unsynthesizable type (possible cause(s): pointer to pointer or global pointer).
+ERROR: [SYNCHK 200-61] C:/Users/Rasmus/Desktop/xfopencv-master/include\common/xf_structs.h:650: unsupported memory access on variable 'Mat<0, 28, 28, 1>.data.V' which is (or contains) an array with unknown size at compile time.
+INFO: [SYNCHK 200-10] 2 error(s), 1 warning(s).
+ERROR: [HLS 200-70] Synthesizability check failed.
+command 'ap_source' returned error code
+    while executing
+"source C:/ERTS_repo/Project/Xilinx_hls/PreProcess/PreProcess/solution1/csynth.tcl"
+    invoked from within
+"hls::main C:/ERTS_repo/Project/Xilinx_hls/PreProcess/PreProcess/solution1/csynth.tcl"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel 1 hls::main {*}$args"
+    (procedure "hls_proc" line 5)
+    invoked from within
+"hls_proc $argv"

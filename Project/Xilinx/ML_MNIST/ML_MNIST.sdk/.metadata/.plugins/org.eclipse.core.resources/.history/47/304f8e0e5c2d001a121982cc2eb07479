@@ -1,0 +1,35 @@
+/*
+ * nnClassifier.cpp
+ *
+ *  Created on: 2 Jan 2020
+ *      Author: Rasmus
+ */
+#include "nnClassifier.h"
+
+nnClassifier* nnClassifier::getInstance()
+{
+	if(instance == 0)
+	{
+		instance = new nnClassifier();
+	}
+
+	return instance;
+
+}
+
+nnClassifier::nnClassifier()
+{
+	if (XClassify_Initialize(&nnObj,XPAR_CLASSIFY_0_DEVICE_ID) != XST_SUCCESS)
+	{
+		instance = 0;
+	}
+	XClassify_Start(&nnObj);
+
+}
+
+
+u32 nnClassifier::run(char*)
+{
+
+}
+

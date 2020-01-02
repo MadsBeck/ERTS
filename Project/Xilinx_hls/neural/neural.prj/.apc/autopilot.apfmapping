@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="classifier.cpp" path="C:\ERTS_repo\Project\Xilinx_hls\neural\classifier.cpp"/>
+    <originFiles name="NN.cpp" path="C:\ERTS_repo\Project\Xilinx_hls\neural\NN.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="classifier_tb.cpp" path="C:\ERTS_repo\Project\Xilinx_hls\neural\classifier_tb.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

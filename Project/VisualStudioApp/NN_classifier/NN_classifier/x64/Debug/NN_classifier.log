@@ -1,0 +1,4 @@
+﻿  NN_classifier.cpp
+C:\ERTS_repo\Project\VisualStudioApp\NN_classifier\NN_classifier\Classifier.h(76,44): warning C4244: '+=': conversion from 'int64_t' to 'int', possible loss of data
+C:\ERTS_repo\Project\VisualStudioApp\NN_classifier\NN_classifier\PreProcessing.h(213): warning C4715: 'gaussianBlur': not all control paths return a value
+  NN_classifier.vcxproj -> C:\ERTS_repo\Project\VisualStudioApp\NN_classifier\x64\Debug\NN_classifier.exe

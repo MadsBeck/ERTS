@@ -1,0 +1,20 @@
+/*
+ * nnClassifier.cpp
+ *
+ *  Created on: 2 Jan 2020
+ *      Author: Rasmus
+ */
+#include "nnClassifier.h"
+
+static nnClassifier* nnClassifier::instance = 0;
+
+static nnClassifier* nnClassifier::getInstance()
+{
+	if(instance == 0)
+	{
+		instance = new nnClassfier();
+	}
+
+	return instance;
+
+}

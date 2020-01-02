@@ -1,0 +1,15 @@
+14:01:04 **** Incremental Build of configuration Debug for project classifierApp ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.cc'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_1/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:63:24: error: 'XClassify_' was not declared in this scope
+  state = XClassify_(&nn);
+                        ^
+make: *** [src/main.o] Error 1
+
+14:01:04 Build Finished (took 680ms)
+

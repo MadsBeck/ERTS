@@ -1,0 +1,192 @@
+#include "FileSDCard.h"
+#include <stdint.h>
+#include <stdio.h>
+#include <cstdio>
+#include <string>
+#include "xil_types.h"
+
+#define HEIGHT 28
+#define WIDTH 28
+#define headerBytes 3
+#define chunkSize 4
+
+char chPtr[28];
+u8 ch;
+
+u8 gaussianBlur(u8* pixPtr, u8* upPtr, u8* dwnPtr, u8 i, u8 j, u8 size);
+
+
+void loadGrayScaleImagePGM(const char* path, u8 img[][28])
+{
+	// Load header
+	FileSDCard reader(path);
+	reader.open(path,FA_OPEN_EXISTING);
+	u8 cnt = 0;
+	while (cnt < headerBytes)
+	{
+		memset(chPtr, 0, sizeof(chPtr));
+		reader.getline(chPtr, 256, 0x0A);
+		cnt++;
+	}
+
+	for (u8 i = 0; i < HEIGHT; i++)
+	{
+		for (u8 j = 0; j < 28; j++)
+		{
+			ch = reader.get();
+			img[i][j] = ch;
+		}
+	}
+}
+
+
+void downsampling(u8 img[][28], s8 out[16])
+{
+	u8 temp[14][14];
+	for (u8 k = 0; k < HEIGHT / 2; k++) {
+		for (u8 l = 0; l < WIDTH / 2; l++) {
+			temp[k][l] = gaussianBlur(&img[k * 2][l * 2], &img[k * 2 - 1][l * 2], &img[k * 2 + 1][l * 2], k * 2, l * 2, 28);
+		}
+	}
+
+	for (u8 i = 0; i < 14; i++)
+	u8 temp2[7][7];
+	for (u8 k = 0; k < HEIGHT / 4; k++) {
+		for (u8 l = 0; l < WIDTH / 4; l++) {
+			temp2[k][l] = gaussianBlur(&temp[k * 2][l * 2], &temp[k * 2 - 1][l * 2], &temp[k * 2 + 1][l * 2], k * 2, l * 2, 14);
+		}
+	}
+	u8 count = 0;
+	for (u8 k = 0; k < HEIGHT / 7; k++) {
+		for (u8 l = 0; l < WIDTH / 7; l++) {
+			out[count++] = (gaussianBlur(&temp2[k * 2][l * 2], &temp2[k * 2 - 1][l * 2], &temp2[k * 2 + 1][l * 2], k * 2, l * 2, 7) > 127) ? 127 :
+				(s8)gaussianBlur(&temp2[k * 2][l * 2], &temp2[k * 2 - 1][l * 2], &temp2[k * 2 + 1][l * 2], k * 2, l * 2, 7);
+		}
+	}
+}
+
+
+
+u8 gaussianBlur(u8* pixPtr, u8* upPtr, u8* dwnPtr, u8 i, u8 j, u8 size)
+{
+	size--;
+	u32 sum = 0;
+	char edge;
+
+
+	if (i == 0 && j == 0)
+		edge = 5;
+	else if (i >= size && j >= size)
+		edge = 6;
+	else if (i >= size && j == 0)
+		edge = 7;
+	else if (i == 0 && j >= size)
+		edge = 8;
+	else if (i == 0)
+		edge = 3;
+	else if (i >= size)
+		edge = 4;
+	else if (j == 0)
+		edge = 1;
+	else if (j >= size)
+		edge = 2;
+	else
+		edge = 0;
+
+
+	    switch (edge)
+	    {
+	    case 0:
+	        sum += upPtr[-1] * 16;
+	        sum += pixPtr[-1] * 24;
+	        sum += dwnPtr[-1] * 16;
+	
+	        sum += upPtr[0] * 24;
+	        sum += pixPtr[0] * 36;
+	        sum += dwnPtr[0] * 24;
+	
+	        sum += upPtr[1] * 16;
+	        sum += pixPtr[1] * 24;
+	        sum += dwnPtr[1] * 16;
+	        return sum / 196;
+	
+	    case 1:
+	        sum += upPtr[0] * 24;
+	        sum += pixPtr[0] * 36;
+	        sum += dwnPtr[0] * 24;
+	
+	        sum += upPtr[1] * 16;
+	        sum += pixPtr[1] * 24;
+	        sum += dwnPtr[1] * 16;
+	        return sum / 140;
+	
+	    case 2:
+	        sum += upPtr[0] * 24;
+	        sum += pixPtr[0] * 36;
+	        sum += dwnPtr[0] * 24;
+	
+	        sum += upPtr[-1] * 16;
+	        sum += pixPtr[-1] * 24;
+	        sum += dwnPtr[-1] * 16;
+	        return sum / 140;
+	
+	    case 3:
+	        sum += pixPtr[-1] * 24;
+	        sum += dwnPtr[-1] * 16;
+	
+	        sum += pixPtr[0] * 36;
+	        sum += dwnPtr[0] * 24;
+	
+	        sum += pixPtr[1] * 24;
+	        sum += dwnPtr[1] * 16;
+	        return sum / 140;
+	
+	    case 4:
+	        sum += pixPtr[-1] * 24;
+	        sum += upPtr[-1] * 16;
+	
+	        sum += pixPtr[0] * 36;
+	        sum += upPtr[0] * 24;
+	
+	        sum += pixPtr[1] * 24;
+	        sum += upPtr[1] * 16;
+	        return sum / 140;
+	
+	    case 5:
+	        sum += pixPtr[0] * 36;
+	        sum += dwnPtr[0] * 24;
+	
+	        sum += pixPtr[1] * 24;
+	        sum += dwnPtr[1] * 16;
+	        return sum / 100;
+	
+	    case 6:
+	        sum += pixPtr[0] * 36;
+	        sum += upPtr[0] * 24;
+	
+	        sum += pixPtr[-1] * 24;
+	        sum += upPtr[-1] * 16;
+	
+	        return sum / 100;
+	
+	    case 7:
+	        sum += pixPtr[0] * 36;
+	        sum += upPtr[0] * 24;
+	
+	        sum += pixPtr[1] * 24;
+	        sum += upPtr[1] * 16;
+	
+	        return sum / 100;
+	
+	    case 8:
+	        sum += pixPtr[0] * 36;
+	        sum += dwnPtr[0] * 24;
+	
+	        sum += pixPtr[-1] * 24;
+	        sum += dwnPtr[-1] * 16;
+	
+	        return sum / 100;
+	    }
+}
+
+

@@ -1,0 +1,29 @@
+/*
+ * nnClassifier.h
+ *
+ *  Created on: 2 Jan 2020
+ *      Author: Rasmus
+ */
+
+#ifndef SRC_NNCLASSIFIER_H_
+#define SRC_NNCLASSIFIER_H_
+#include "xclassify.h"
+
+class nnClassifier
+{
+public:
+	static nnClassifier* getInstance();
+
+
+private:
+	nnClassifier();
+	static nnClassifier* instance;
+	u32 run(char*);
+	XClassify nnObj;
+
+};
+
+nnClassifier* nnClassifier::instance = 0;
+
+
+#endif /* SRC_NNCLASSIFIER_H_ */

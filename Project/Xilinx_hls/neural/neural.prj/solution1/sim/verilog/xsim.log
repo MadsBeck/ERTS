@@ -1,0 +1,30 @@
+#-----------------------------------------------------------
+# xsim v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Tue Dec 31 14:49:53 2019
+# Process ID: 12292
+# Current directory: C:/ERTS_repo/Project/Xilinx_hls/neural/neural.prj/solution1/sim/verilog
+# Command line: xsim.exe -mode tcl -source {xsim.dir/classify/xsim_script.tcl}
+# Log file: C:/ERTS_repo/Project/Xilinx_hls/neural/neural.prj/solution1/sim/verilog/xsim.log
+# Journal file: C:/ERTS_repo/Project/Xilinx_hls/neural/neural.prj/solution1/sim/verilog\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/classify/xsim_script.tcl
+# xsim {classify} -autoloadwcfg -tclbatch {classify.tcl}
+Vivado Simulator 2017.2
+Time resolution is 1 ps
+source classify.tcl
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 2 [0.00%] @ "116000"
+// RTL Simulation : 1 / 2 [0.21%] @ "27308000"
+// RTL Simulation : 2 / 2 [0.00%] @ "54492000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 54524 ns : File "C:/ERTS_repo/Project/Xilinx_hls/neural/neural.prj/solution1/sim/verilog/classify.autotb.v" Line 305
+## quit
+INFO: [Common 17-206] Exiting xsim at Tue Dec 31 14:49:58 2019...

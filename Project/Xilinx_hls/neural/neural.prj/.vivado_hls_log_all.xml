@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'b_sm' will not be exposed as RTL port." projectName="neural.prj" solutionName="solution1" date="2019-12-31T14:49:07.566+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'W_sm' will not be exposed as RTL port." projectName="neural.prj" solutionName="solution1" date="2019-12-31T14:49:07.552+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'W' will not be exposed as RTL port." projectName="neural.prj" solutionName="solution1" date="2019-12-31T14:49:07.541+0100" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'Classifier::RELU' (NN.cpp:63) into RELU." projectName="neural.prj" solutionName="solution1" date="2019-12-31T14:49:04.397+0100" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Wed Dec 25 13:52:51 2019
+# Process ID: 12760
+# Current directory: C:/ERTS_repo/Assignment_2/lab3
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11360 C:\ERTS_repo\Assignment_2\lab3\lab3.xpr
+# Log file: C:/ERTS_repo/Assignment_2/lab3/vivado.log
+# Journal file: C:/ERTS_repo/Assignment_2/lab3\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/ERTS_repo/Assignment_2/lab3/lab3.xpr
+update_compile_order -fileset sources_1

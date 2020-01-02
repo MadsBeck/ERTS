@@ -1,0 +1,67 @@
+/*
+ * Empty C++ Application
+ */
+
+#include "xparameters.h"
+#include "xgpio.h"
+#include "xil_printf.h"
+#include "led_ip.h"
+#include "xclassify.h"
+
+XGpio btn;
+XClassify nn;
+int main()
+{
+	xil_printf("Starting program\r\n");
+
+	int Status;
+	u32 state;
+	char image[16] = {0, 3, 31, 10, 0, 37, 43, 10, 0, 70, 70, 16, 0, 33, 65, 12};
+
+	if (XClassify_Initialize(&nn,XPAR_CLASSIFY_0_DEVICE_ID) != XST_SUCCESS)
+				{
+					return XST_FAILURE;
+				}
+
+	XClassify_Start(&nn);
+	xil_printf("Starting classifier\r\n");
+
+	while(!XClassify_IsReady(&nn))
+	{
+
+	}
+	xil_printf("Is ready\r\n");
+
+	Status = XClassify_Write_img_Bytes(&nn,0,image,16);
+
+	xil_printf("wrote %d\r\n",Status);
+
+	if(Status != 16)
+		xil_printf("didnt write all\r\n");
+
+	while(!XClassify_IsReady(&nn))
+	{
+
+	}
+	xil_printf("Is ready\r\n");
+
+	XClassify_Start(&nn);
+
+	while(!XClassify_IsReady(&nn))
+	{
+
+	}
+	xil_printf("Is ready\r\n");
+
+	state = XClassify_Get_return(&nn);
+
+
+
+	xil_printf("got %X\r\n",state);
+
+	xil_printf("Ending program\r\n");
+
+
+
+	return 0;
+}

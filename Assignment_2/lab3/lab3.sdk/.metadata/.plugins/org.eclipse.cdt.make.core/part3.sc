@@ -708,8 +708,11 @@
 </instance>
 <instance id="xilinx.gnu.armv7.exe.debug.686000151;xilinx.gnu.armv7.exe.debug.686000151.;xilinx.gnu.armv7.c.toolchain.compiler.debug.1683375045;xilinx.gnu.armv7.c.compiler.input.1077245398">
 <collector id="org.eclipse.cdt.make.core.PerProjectSICollector">
+<includePath path="#undef __thumb__" removed="true"/>
 <includePath path="c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/6.2.1/include"/>
+<includePath path="#undef __thumb2__" removed="true"/>
 <includePath path="c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/6.2.1/include-fixed"/>
+<includePath path="#undef __THUMBEL__" removed="true"/>
 <includePath path="c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/6.2.1/../../../../arm-none-eabi/include"/>
 <includePath path="c:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\bin\../arm-none-eabi/libc/usr/include"/>
 <definedSymbol symbol="__STDC__=1"/>

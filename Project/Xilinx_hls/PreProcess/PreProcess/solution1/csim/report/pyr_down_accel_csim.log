@@ -1,0 +1,12 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../../../../../Users/Rasmus/Desktop/xfopencv-master/examples/pyrdown/xf_pyr_down_tb.cpp in debug mode
+   Compiling ../../../../../../../../Users/Rasmus/Desktop/xfopencv-master/examples/pyrdown/xf_pyr_down_accel.cpp in debug mode
+   Generating csim.exe
+/ERTS_repo/Project/Xilinx_hls/PreProcess/PreProcess/0.png
+Input Height 28 Input_Width 28
+Output Height 14 Output_Width 14
+
+Test Pass
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

@@ -1,0 +1,168 @@
+/*
+ * Empty C++ Application
+ */
+
+#include "xparameters.h"
+#include "xgpio.h"
+#include "xil_printf.h"
+#include "led_ip.h"
+#include "xclassify.h"
+#include "PreProcessing.h"
+
+
+// For SD
+#include <stdio.h>
+#include <string.h>
+#include "FileSDCard.h"
+
+XGpio btn;
+XClassify nn;
+int main()
+{
+//	static const char writeText[] = "This is a read me file\r\nWith more lines\r\n";
+//	static char readText[256];
+//
+//	int result;
+//	FileSDCard file((char*)"0:/");
+//
+//	result = file.mount();
+//	if (result != XST_SUCCESS) printf("Failed to mount SD card\r\n");
+//
+//	// Create a new file if doesn't exist
+//	result = file.open((char*)"README.txt", FA_CREATE_ALWAYS | FA_WRITE);
+//	if (result != XST_SUCCESS) printf("Failed open file for writing\r\n");
+//
+//	// Write to start of file
+//	result = file.write((void *)writeText, sizeof(writeText));
+//	if (result != XST_SUCCESS) printf("Failed writing to file\r\n");
+//
+//	result = file.close();
+//	if (result != XST_SUCCESS) printf("Failed closing file\r\n");
+//
+//	// Open created test file
+//	result = file.open((char*)"README.txt", FA_OPEN_EXISTING | FA_READ);
+//	if (result != XST_SUCCESS) printf("Failed open file for reading\r\n");
+//
+//	// Read contents of test file
+//	result = file.read((void *)readText, sizeof(readText));
+//	if (result != XST_SUCCESS) printf("Failed reading from file\r\n");
+//
+//	printf(readText);
+//
+//	result = file.close();
+//	if (result != XST_SUCCESS) printf("Failed closing file\r\n");
+
+
+	xil_printf("Starting program\r\n");
+
+	int Status;
+	char image[16];
+	u32 state;
+
+	char file1[] = "0.pgm";
+	char file2[] = "1.pgm";
+	char file3[] = "2.pgm";
+	char file4[] = "3.pgm";
+	char file5[] = "4.pgm";
+	char file6[] = "5.pgm";
+	char file7[] = "6.pgm";
+	char file8[] = "98.pgm";
+	char file9[] = "74.pgm" ;
+	char file10[] = "120.pgm";
+	char file11[] = "121.pgm";
+	char file12[] = "138.pgm";
+	char file13[] = "186.pgm";
+	char file14[] = "499.pgm";
+	char file15[] = "500.pgm";
+	char file16[] = "5139.pgm";
+	char file17[] = "2723.pgm";
+	char file18[] = "4409.pgm";
+	char file19[] = "8067.pgm";
+	char file20[] = "5608.pgm";
+	char file21[] = "8357.pgm";
+	char file21[] = "8387.pgm";
+	char file22[] = "8717.pgm";
+
+	u8 correct[] = {7, 2, 1, 0, 4, 1, 4, 6, 1, 5, 6, 6, 2, 6, 3, 0, 2, 1, 0,8,9,9,8};
+
+	char* images[8] = {file1,file2,file3,file4,file5,file6,file7,file8};
+
+
+	if (XGpio_Initialize(&btn,XPAR_AXI_GPIO_0_DEVICE_ID) != XST_SUCCESS)
+		return XST_FAILURE;
+
+	xil_printf("Starting GPIO\r\n");
+
+	XGpio_SetDataDirection(&btn,1,0xFF);
+
+	xil_printf("Setting direction\r\n");
+
+	if (XClassify_Initialize(&nn,XPAR_CLASSIFY_0_DEVICE_ID) != XST_SUCCESS)
+	{
+		return XST_FAILURE;
+	}
+
+	for(u8 i = 0; i < 8; i++)
+	{
+
+		xil_printf("Waiting for button push\r\n");
+		while(!XGpio_DiscreteRead(&btn,1))
+		{}
+
+		runPreProcessing(images[i],image);
+
+		xil_printf("Image: ");
+		for(u8 i = 0; i<16;i++)
+		{
+			xil_printf("%X, ",image[i]);
+		}
+		xil_printf("\r\n");
+
+		XClassify_Start(&nn);
+		xil_printf("Starting classifier\r\n");
+
+		while(!XClassify_IsReady(&nn))
+		{
+
+		}
+		xil_printf("Is ready\r\n");
+
+
+
+		Status = XClassify_Write_img_Bytes(&nn,0,image,16);
+
+		xil_printf("wrote %d\r\n",Status);
+
+		if(Status != 16)
+			xil_printf("didnt write all\r\n");
+
+		while(!XClassify_IsReady(&nn))
+		{
+
+		}
+		xil_printf("Is ready\r\n");
+
+		XClassify_Start(&nn);
+
+		while(!XClassify_IsReady(&nn))
+		{
+
+		}
+		xil_printf("Is ready\r\n");
+
+		state = XClassify_Get_return(&nn);
+
+		LED_IP_mWriteReg(XPAR_LED_IP_S_AXI_BASEADDR,0,state);
+
+
+
+		xil_printf("got %X\r\n",state);
+		while(XGpio_DiscreteRead(&btn,1))
+		{}
+
+	}
+
+
+	xil_printf("Ending program\r\n");
+	return 0;
+}

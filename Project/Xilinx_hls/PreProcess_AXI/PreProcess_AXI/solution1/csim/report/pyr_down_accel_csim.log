@@ -1,0 +1,25 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../../../../../Users/Rasmus/Desktop/xfopencv-master/examples_sdaccel/pyrdown/xf_pyr_down_tb.cpp in debug mode
+In file included from C:/Xilinx/Vivado_HLS/2017.2/include/floating_point_v7_0_bitacc_cmodel.h:143:0,
+                 from C:/Xilinx/Vivado_HLS/2017.2/include/hls_fpo.h:172,
+                 from C:/Xilinx/Vivado_HLS/2017.2/include/hls_half.h:57,
+                 from C:/Xilinx/Vivado_HLS/2017.2/include/ap_int.h:74,
+                 from ../../../../../../../../Users/Rasmus/Desktop/xfopencv-master/include/common/xf_types.h:37,
+                 from ../../../../../../../../Users/Rasmus/Desktop/xfopencv-master/include/common/xf_structs.h:44,
+                 from ../../../../../../../../Users/Rasmus/Desktop/xfopencv-master/include/common/xf_common.h:34,
+                 from ../../../../../../../../Users/Rasmus/Desktop/xfopencv-master/include/common/xf_sw_utils.h:33,
+                 from ../../../../../../../../Users/Rasmus/Desktop/xfopencv-master/examples_sdaccel/pyrdown/xf_headers.h:59,
+                 from ../../../../../../../../Users/Rasmus/Desktop/xfopencv-master/examples_sdaccel/pyrdown/xf_pyr_down_tb.cpp:30:
+C:/Xilinx/Vivado_HLS/2017.2/include/gmp.h:62:0: warning: "__GMP_LIBGMP_DLL" redefined [enabled by default]
+C:/Xilinx/Vivado_HLS/2017.2/include/floating_point_v7_0_bitacc_cmodel.h:135:0: note: this is the location of the previous definition
+In file included from ../../../../../../../../Users/Rasmus/Desktop/xfopencv-master/include/common/xf_common.h:34:0,
+                 from ../../../../../../../../Users/Rasmus/Desktop/xfopencv-master/include/common/xf_sw_utils.h:33,
+                 from ../../../../../../../../Users/Rasmus/Desktop/xfopencv-master/examples_sdaccel/pyrdown/xf_headers.h:59,
+                 from ../../../../../../../../Users/Rasmus/Desktop/xfopencv-master/examples_sdaccel/pyrdown/xf_pyr_down_tb.cpp:30:
+../../../../../../../../Users/Rasmus/Desktop/xfopencv-master/include/common/xf_structs.h:777:9: warning: this decimal constant is unsigned only in ISO C90 [enabled by default]
+../../../../../../../../Users/Rasmus/Desktop/xfopencv-master/examples_sdaccel/pyrdown/xf_pyr_down_tb.cpp:33:19: fatal error: CL/cl.h: No such file or directory
+compilation terminated.
+make: *** [obj/xf_pyr_down_tb.o] Error 1
+CRITICAL WARNING: [SIM 100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 3] *************** CSIM finish ***************

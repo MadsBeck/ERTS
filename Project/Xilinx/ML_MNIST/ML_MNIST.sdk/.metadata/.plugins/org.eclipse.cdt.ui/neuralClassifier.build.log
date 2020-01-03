@@ -1,8 +1,8 @@
-13:51:09 **** Incremental Build of configuration Debug for project neuralClassifier ****
+13:47:56 **** Incremental Build of configuration Debug for project neuralClassifier ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
 make: Nothing to be done for `main-build'.
 
-13:51:10 Build Finished (took 433ms)
+13:47:56 Build Finished (took 564ms)
 

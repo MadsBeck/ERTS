@@ -9,6 +9,7 @@
 //#include "xclassify.h"
 #include "PreProcessing.h"
 #include "nnClassifier.h"
+#include "xscutimer.h"
 
 // For SD
 #include <stdio.h>
@@ -16,14 +17,22 @@
 #include "FileSDCard.h"
 
 XGpio btn;
+XScuTimer Timer;
 //XClassify nn;
 int main()
 {
+	XScuTimer_Config *ConfigPtr;
+	XScuTimer *TimerInstancePtr = &Timer;
+	ConfigPtr = XScuTimer_LookupConfig(XPAR_PS7_SCUTIMER_0_DEVICE_ID);
+	if (XScuTimer_CfgInitialize(TimerInstancePtr,ConfigPtr,ConfigPtr->BaseAddr) != XST_SUCCESS)
+		xil_printf("failed to start timer\r\n");
 	xil_printf("Starting program\r\n");
+	XScuTimer_LoadTimer(TimerInstancePtr,0xFFFFFF);
 
 	int Status;
 	char image[16];
 	u32 state;
+	u32 startT,endT,startNN,endNN;
 
 	char file1[] = "0.pgm";
 	char file2[] = "1.pgm";
@@ -73,25 +82,36 @@ int main()
 //	{
 //		return XST_FAILURE;
 //	}
+	XScuTimer_Start(TimerInstancePtr);
 
 	for(u8 i = 0; i < 23; i++)
 	{
 
+
 		xil_printf("Waiting for button push\r\n");
 		while(!XGpio_DiscreteRead(&btn,1))
 		{}
+		XScuTimer_RestartTimer(TimerInstancePtr);
+		startT = XScuTimer_GetCounterValue(TimerInstancePtr);
+
 
 		pp->runPreProcessing(images[i],image);
-
 		//XClassify_Start(&nn);
+
 		xil_printf("Starting classifier\r\n");
+
 
 //		while(!XClassify_IsReady(&nn))
 //		{
 //
 //		}
 
+		startNN = XScuTimer_GetCounterValue(TimerInstancePtr);
 		state = net->run(image);
+		endNN = XScuTimer_GetCounterValue(TimerInstancePtr);
+
+
+
 		//Status = XClassify_Write_img_Bytes(&nn,0,image,16);
 
 //		while(!XClassify_IsReady(&nn))
@@ -117,7 +137,10 @@ int main()
 			xil_printf("The prediction is wrong: ");
 
 		xil_printf("got %d, the correct is %d\r\n",state, correct[i]);
+		endT = XScuTimer_GetCounterValue(TimerInstancePtr);
 
+		xil_printf("start time: %u, end time: %u. difference: %u\r\n",startT,endT,startT-endT);
+		xil_printf("Neural network: start time: %u, end time: %u. difference: %u\r\n",startNN,endNN,startNN-endNN);
 		while(XGpio_DiscreteRead(&btn,1))
 		{}
 

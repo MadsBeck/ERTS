@@ -17,16 +17,19 @@ int main()
     
     Classifier nn(W,B,W_sm,b_sm);
 
-    loadGrayScaleImagePNG("../8387.pgm",image);
+    for (int i = 0; i < 10000; i++)
+    {
 
-    downsampling(image, outImg);
+        loadGrayScaleImagePNG("../8387.pgm", image);
 
-    std::cout << std::endl;
+        downsampling(image, outImg);
 
-    for(int i = 0; i < 16; i++)
-        std::cout << std::dec << (int)outImg[i] << ", ";
-    std::cout << std::endl;
-    std::cout << std::endl << std::dec << (int)nn.run(outImg) << std::endl;
-    
+        std::cout << std::endl;
+
+        for (int i = 0; i < 16; i++)
+            std::cout << std::dec << (int)outImg[i] << ", ";
+        std::cout << std::endl;
+        std::cout << std::endl << std::dec << (int)nn.run(outImg) << std::endl;
+    }
 }
 

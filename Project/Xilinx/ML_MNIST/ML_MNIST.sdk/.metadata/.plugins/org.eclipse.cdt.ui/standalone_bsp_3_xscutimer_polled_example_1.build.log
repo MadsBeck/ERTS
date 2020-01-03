@@ -1,0 +1,8 @@
+13:47:57 **** Incremental Build of configuration Debug for project standalone_bsp_3_xscutimer_polled_example_1 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+
+13:47:58 Build Finished (took 686ms)
+

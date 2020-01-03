@@ -18,6 +18,8 @@ private:
 	u8 gaussianBlur(u8* pixPtr, u8* upPtr, u8* dwnPtr, u8 i, u8 j, u8 size);
 	void loadGrayScaleImagePGM(char* path, u8 img[][28]);
 	void downsampling(u8 img[][28], char out[16]);
+	FileSDCard *reader;
+	u8 image[28][28];
 public:
 
     static PreProcesser* getInstance();
@@ -33,6 +35,8 @@ PreProcesser* PreProcesser::instance = 0;
 
 PreProcesser::PreProcesser()
 {
+	reader = new FileSDCard((char*)"0:/");
+	reader->mount();
 }
 
 PreProcesser::~PreProcesser()
@@ -51,7 +55,6 @@ PreProcesser* PreProcesser::getInstance()
 
 void PreProcesser::runPreProcessing(char* path,char out[16])
 {
-	u8 image[28][28];
 	loadGrayScaleImagePGM(path,image);
 	downsampling(image,out);
 }
@@ -62,16 +65,14 @@ void PreProcesser::loadGrayScaleImagePGM(char* path, u8 img[][28])
 	// Load header
 	//char chPtr[28];
 	s8 ch[1];
-	FileSDCard reader((char*)"0:/");
-	reader.mount();
-	reader.open((char*)path,FA_OPEN_EXISTING| FA_READ);
+	reader->open((char*)path,FA_OPEN_EXISTING| FA_READ);
 	u8 cnt = 0;
-	reader.read((char*)ch,1,1);
+	reader->read((char*)ch,1,1);
 	while (cnt < headerBytes)
 	{
 		do
 		{
-			reader.read((char*)ch,1,0);
+			reader->read((char*)ch,1,0);
 		}while(ch[0] != 0x0A);
 		cnt++;
 
@@ -81,10 +82,11 @@ void PreProcesser::loadGrayScaleImagePGM(char* path, u8 img[][28])
 	{
 		for (u8 j = 0; j < 28; j++)
 		{
-			reader.read((char*)ch,1,0);
+			reader->read((char*)ch,1,0);
 			img[i][j] = ch[0];
 		}
 	}
+	reader->close();
 }
 
 
